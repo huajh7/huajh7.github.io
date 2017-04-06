@@ -33,7 +33,7 @@ date: 2017-4-6  8:40:25
 >  帧差可说是最简单的一种背景模型，指定视频中的一幅图像为背景，用当前帧与背景进行比较，根据需要过滤较小的差异 （阈值），得到的结果就是前景了
 
 ### 2. 背景减除法 (Background subtraction) 
-> Background subtraction, also known as <font color=red>foreground detection(前景检测)</font> , is a technique in the fields of image processing and computer vision wherein an image's foreground is extracted for further processing (object recognition etc.). Generally an image's regions of interest are objects (humans, cars, text etc.) in its foreground. After the stage of image preprocessing (which may include image denoising, post processing like morphology etc.) object localisation is required which may make use of this technique.
+> Background subtraction, also known as `foreground detection(前景检测)`, is a technique in the fields of image processing and computer vision wherein an image's foreground is extracted for further processing (object recognition etc.). Generally an image's regions of interest are objects (humans, cars, text etc.) in its foreground. After the stage of image preprocessing (which may include image denoising, post processing like morphology etc.) object localisation is required which may make use of this technique.
 > 
 >  from [wiki/Background_subtraction](https://en.wikipedia.org/wiki/Background_subtraction)
 
@@ -48,20 +48,20 @@ date: 2017-4-6  8:40:25
 
 ##### Single Gussian & Running Gaussian average
 
-+ Wren, Pfinder: **Real-time tracking of the human body**, <font color=red>1997</font>, cited by `5000+`
++ Wren, Pfinder: **Real-time tracking of the human body**, `1997`, cited by `5000+`
 
 > *Abstract* -- Pfinder is a real-time system for tracking people and interpreting thier behavior. It runs at 10Hz on a standard SGI Indy computer, and has performed reliably on thousands of people in many different physical locations. The system uses a multi-class statistical model of color and shape to obtain a 2-D representation of head and hands in a wide range of viewing conditions. Pfinder has been successfully used in a wide range of applications including wireless interfaces, video databases, and low-bandwidth coding.
 
 ##### Mixture of Gaussian Model
 
-+ KaewTraKulPong, **An improved adaptive background mixture model for real-time tracking with shadow detection**, <font color=red>2001</font>, cited by `1400+`
++ KaewTraKulPong, **An improved adaptive background mixture model for real-time tracking with shadow detection**, `2001`, cited by `1400+`
 
 > *Abstract* -- Real-time segmentation of moving regions in image sequences is a fundamental step in many vision systems including automated visual surveillance, human-machine interface, and very low-bandwidth telecommunications. A typical method is background subtraction. Many background models have been introduced to deal with different problems. One of the successful solutions to these problems is to use a multi-colour background model per pixel proposed by Grimson et al [1,2,3]. However, the method suffers
 from slow learning at the beginning, especially in busy environments. In addition, it can not distinguish between moving shadows and moving objects. This paper presents a method which improves this adaptive background mixture model. By reinvestigating the update equations, we utilise different equations at different phases. This allows our system learn faster and more accurately as well as adapt effectively to changing environments. A shadow detection scheme is also introduced in this paper. It is based on a computational colour space that makes use of our background model. A comparison has been made
 between the two algorithms. The results show the speed of learning and the accuracy of the model using our update algorithm over the Grimson et al’s tracker. When incorporate with the shadow detection, our method results in far better segmentation than that of Grimson et al.
 
-+ 李鸿, **基于混合高斯模型的运动检测及阴影消除算法研究**, 中国民航大学硕士论文，<font color=red>2013</font>, cited by `10`
-+ 卢章平，**背景差分与三帧差分结合的运动目标检测算法** ，计算机测量与控制，<font color=red>2013</font>, cited by `44`
++ 李鸿, **基于混合高斯模型的运动检测及阴影消除算法研究**, 中国民航大学硕士论文， `2013`, cited by `10`
++ 卢章平，**背景差分与三帧差分结合的运动目标检测算法** ，计算机测量与控制，`2013`, cited by `44`
 
 `comment`
 > 混合高斯在现有的背景建模算法中应该算是比较好的，很多新的算法或改进的算法都是基于它的一些原理的不同变体，但混合高斯算法的缺点是计算量相对比较大，速度偏慢，对光照敏感
@@ -69,17 +69,17 @@ between the two algorithms. The results show the speed of learning and the accur
 
 #### 2.2 W4 algorithm (What? Where? Who? When?)
 
-+ Ismail Haritaoglu, **W4: A Real Time System for Detecting and Tracking People**, <font color=red>1998</font>, cited by `1100+`
++ Ismail Haritaoglu, **W4: A Real Time System for Detecting and Tracking People**, 1998, cited by `1100+`
 
 > *Abstract*  W^4 is a real time visual surveil lance system for detecting and tracking people and monitoring their activities in an outdoor environment. It operates on monocular grayscale video imagery, or on video imagery from an infrared camera. Unlike many of systems for tracking people, W^4 makes no use of color cues. Instead, W^4 employs a combination of shape analysis and tracking to locate people and their parts (head, hands, feet, torso) and to create models of people's appearance so that they can be tracked through
 interactions such as occlusions. W^4 is capable of simultaneously tracking multiple people even with occlusion. It runs at 25 Hz for 320x240 resolution images on a dual-pentium PC.
 
 `comment`
-> W4算法应该是最早被用于<font color=red>实际应用</font>的一个算法.
+> W4算法应该是最早被用于实际应用的一个算法.
 
 #### 2.3 基于颜色信息的背景建模 (color)
 
-+ Horprasert, **A statistical approach for real-time robust background subtraction and shadow detection**, <font color=red>1999</font>, cited by `1200+`
++ Horprasert, **A statistical approach for real-time robust background subtraction and shadow detection**, `1999`, cited by `1200+`
 
 > *Abstract* This paper presents a novel algorithm for detecting moving objects from a static background scene that contains shading and shadows using color images. We develop a robust and efficiently computed background subtraction algorithm that is able to cope with local il lumination changes,
 such as shadows and highlights, as wel l as global il lumination changes. The algorithm is based on a proposed computational color model which separates the brightness from the chromaticity component. We have applied this method to real image sequences of both indoor and outdoor scenes. The results, which demonstrate the system's performance, and some speed up techniques we employed in our implementation are also shown.
@@ -90,7 +90,7 @@ such as shadows and highlights, as wel l as global il lumination changes. The al
 
 #### 2.4 本征背景法
 
-+ Nuria M. Oliver, **A Bayesian computer vision system for modeling human interactions** <font color=red>2000</font>, cited by `1500+`
++ Nuria M. Oliver, **A Bayesian computer vision system for modeling human interactions**, `2000`, cited by `1500+`
 
 > *Abstract* — We describe a real-time computer vision and machine learning system for modeling and recognizing human behaviors in a visual surveillance task [1]. The system is particularly concerned with detecting when interactions between people occur and classifying the type of interaction. Examples of interesting interaction behaviors include following another person, altering one’s path to meet another, and so forth. Our system combines top-down with bottom-up information in a closed feedback loop, with both
 components employing a statistical Bayesian approach [2]. We propose and compare two different state-based learning architectures, namely, HMMs and CHMMs for modeling behaviors and interactions. The CHMM model is shown to work much more efficiently and accurately. Finally, to deal with the problem of limited training data, a synthetic “Alife-style” training system is used to develop flexible prior models for recognizing human interactions. We demonstrate the ability to use these a priori models to accurately classify real human behaviors and interactions with no additional tuning or training.
@@ -101,7 +101,7 @@ components employing a statistical Bayesian approach [2]. We propose and compare
 
 ####  2.5 核密度估计方法
 
-+ Ahmed Elgammal, **Non-parametric model for background subtraction**, <font color=red>2000</font>, cited by `2500+`
++ Ahmed Elgammal, **Non-parametric model for background subtraction**, `2000`, cited by `2500+`
 
 > *Abstract* Background subtraction is a method typically used to segment moving regions in image sequences taken from a static camera
 by comparing each new frame to a model of the scene background. We
@@ -123,7 +123,7 @@ achieves very sensitive detection with very low false alarm rates.
 > 对一段时间的背景进行统计，然后计算其统计数据（例如平均值、平均差分、标准差、均值漂移值等等），将统计数据作为背景的方法。
 
 ##### 统计平均法
-+ BPL Lo, **Automatic congestion detection system for underground platform**, <font color=red>2001</font>, cited by `300+`
++ BPL Lo, **Automatic congestion detection system for underground platform**, `2001`, cited by `300+`
 
 > *Abstract* - An automatic monitoring system is proposed in this paper for detecting overcrowding conditions in the platforms of underground train services.
 Whenever overcrowding is detected, the system will notify the station operators to take appropriate actions to prevent accidents, such as
@@ -133,7 +133,7 @@ to optimize the removal of background pixels. A multi-layer feed forward neural 
 
 ##### 中值滤波法 (Temporal Median filter)
 
-+ R Cucchiara, **Detecting Moving Objects, Ghosts, and Shadows in Video Streams**, <font color=red>2003</font>, cited by `1600+`
++ R Cucchiara, **Detecting Moving Objects, Ghosts, and Shadows in Video Streams**, `2003`, cited by `1600+`
 
 > *Abstract* — Background subtraction methods are widely exploited for moving
 object detection in videos in many applications, such as traffic monitoring, human motion capture, and video surveillance. How to correctly and efficiently model and update the background model and how to deal with shadows are two of the most distinguishing and challenging aspects of such approaches. This work proposes a general-purpose method that combines statistical assumptions with the objectlevel knowledge of moving objects, apparent objects (ghosts), and shadows acquired in the processing of the previous frames. Pixels belonging to moving objects, ghosts, and shadows are processed differently in order to supply an object-based selective update. The proposed approach exploits color information for both background subtraction and shadow detection to improve object segmentation and background update. The approach proves fast, flexible, and precise in terms of both pixel accuracy and reactivity to background changes.
@@ -146,7 +146,7 @@ object detection in videos in many applications, such as traffic monitoring, hum
 
 #### 2.7 复杂背景下的前景物体检测 (FGD)
 
-+ Liyuan Li, **Foreground Object Detection from Videos Containing Complex Background**, <font color=red>2003</font>, cited by `500+`
++ Liyuan Li, **Foreground Object Detection from Videos Containing Complex Background**, `2003`, cited by `500+`
 
 > *Abstract* --  This paper proposes a novel method for detection and segmentation of foreground objects from a video which contains both stationary and moving background objects and undergoes both gradual and sudden “once-off” changes. A Bayes decision rule for classification of background and foreground
 from selected feature vectors is formulated. Under this rule, different types of background objects will be classified from foreground objects by choosing a proper feature vector. The stationary background object is described by the color feature, and the moving background object is represented by the color co-occurrence feature. Foreground objects are extracted by fusing the classification results from both stationary and moving pixels. Learning strategies for the gradual and sudden “once-off” background changes are proposed to adapt to various changes in background through the video. The convergence of the learning process is proved and a formula to select a proper learning rate is also derived. Experiments have shown promising results in extracting foreground objects from many complex backgrounds including wavering
@@ -157,9 +157,9 @@ tree branches, flickering screens and water surfaces, moving escalators, opening
 
 > 编码本的基本思路是这样的：针对每个像素在时间轴上的变动，建立多个（或者一个）包容近期所有变化的Box（变动范围）；在检测时，用当前像素与Box去比较，如果当前像素落在任何Box的范围内，则为背景。
 
-+ K Kim, **Real-time foreground–background segmentation using codebook model**, <font color=red>2005</font>, cited by `1400+`
++ K Kim, **Real-time foreground–background segmentation using codebook model**, `2005`, cited by `1400+`
 
-+ A Ilyas, **Real-time foreground-background segmentation using a modified codebook model**, <font color=red>2008</font>, cited by `50+`
++ A Ilyas, **Real-time foreground-background segmentation using a modified codebook model**, `2008`, cited by `50+`
 
 > *Abstract* -- We present a real-time algorithm for foreground–background segmentation. Sample background values at each pixel are quantized into codebooks which represent a compressed form of background model for a long image sequence. This allows us to capture structural background variation due to periodic-like motion over a long period of time under limited memory. The
 codebook representation is efficient in memory and speed compared with other background modeling techniques. Our method can handle scenes containing moving backgrounds or illumination variations, and it achieves robust detection for different types of videos. We compared our method with other multimode modeling techniques. In addition to the basic algorithm, two features improving the algorithm are presented—layered modeling/detection and adaptive
@@ -172,7 +172,7 @@ codebook updating.
 
 #### 2.9 样本一致性背景建模算法  (SACON)
 
-+ Hanzi Wang, **A consensus-based method for tracking: Modelling background scenario and foreground appearance**, <font color=red>2007</font>, cited by `100+`.
++ Hanzi Wang, **A consensus-based method for tracking: Modelling background scenario and foreground appearance**, `2007`, cited by `100+`.
 
 > *Abstract* -- Modelling of the background ("uninteresting parts of the scene"), and of the foreground, play important roles in the tasks of visual
 detection and tracking of objects. This paper presents an effective and adaptive background modelling method for detecting foreground objects in both static and dynamic scenes. The proposed method computes SAmple CONsensus (SACON) of the background samples and estimates a statistical model of the background, per pixel. SACON exploits both color and motion information to detect foreground objects. SACON can deal with complex background scenarios including nonstationary scenes (such as moving trees, rain, and fountains),
@@ -186,7 +186,7 @@ segment and track people through occlusions. Experimental results from several v
 
 #### 2.10 自组织背景建模  (SOBS: Self-organization background subtraction)
 
-+ Lucia Maddalena, **A self-Organizing approach to background subtraction for visual surveillance Applications**, <font color=red>2008</font>, cited by `580+`
++ Lucia Maddalena, **A self-Organizing approach to background subtraction for visual surveillance Applications**, `2008`, cited by `580+`
 
 > *Abstract* — Detection of moving objects in video streams is the first relevant step of information extraction in many computer vision applications. Aside from the intrinsic usefulness of being able to segment video streams into moving and background components, detecting moving objects provides a focus of attention for recognition, classification, and activity analysis, making these later steps more efficient. We propose an approach based on self organization through artificial neural networks, widely applied in human image processing systems and more generally in cognitive science. The proposed approach can handle scenes containing moving backgrounds, gradual illumination variations and camouflage, has no bootstrapping limitations, can include
 into the background model shadows cast by moving objects, and achieves robust detection for different types of videos taken with stationary cameras. We compare our method with other modeling techniques and report experimental results, both in terms of detection accuracy and in terms of processing speed, for color video sequences that represent typical situations critical for video
@@ -199,7 +199,7 @@ surveillance systems.
 #### 2.11 ViBe (A Universal Background Subtraction): 
        
 
-+ Olivier Barnich, **ViBe: A universal background subtraction algorithm for video sequences**, <font color=red>2011</font>, cited by `800+`
++ Olivier Barnich, **ViBe: A universal background subtraction algorithm for video sequences**, `2011`, cited by `800+`
 
 
 > *Abstract* — This paper presents a technique for motion detection
@@ -226,7 +226,7 @@ at http://www.motiondetection.org.
 
 `comment`
 
-> VIBE算法是Barnich的一个大作，已<font color=red>申请了专利</font>。 
+> VIBE算法是Barnich的一个大作，已申请了专利。 
 > 
 > ViBe是一种像素级视频背景建模或前景检测的算法。
 > 
@@ -264,18 +264,18 @@ at http://www.motiondetection.org.
  
 `More`
 
-+ M Van Droogenbroeck, **Background subtraction: Experiments and improvements for ViBe**, <font color=red>2012</font>, cited by `140+`
-+ 余烨, **EVibe:一种改进的Vibe运动目标检测算法**,仪器仪表学报,<font color=red>2014</font>, cited by `27`
++ M Van Droogenbroeck, **Background subtraction: Experiments and improvements for ViBe**, `2012`, cited by `140+`
++ 余烨, **EVibe:一种改进的Vibe运动目标检测算法**,仪器仪表学报,2014, cited by `27`
 
 > 此算法扩大了样本的取值范围，避免了样本的重复选取;采用隔行更新方式对邻域进行更新， 避免了错误分类的扩散;采用小目标丢弃和空洞填充策略去除了噪声的影响;添加了阴影去除模块, 增强了算法对阴影的鲁棒性
 
-+ 胡小冉, **一种新的基于ViBe的运动目标检测方法**,计算机科学,<font color=red>2014</font>, cited by `20`
++ 胡小冉, **一种新的基于ViBe的运动目标检测方法**,计算机科学,`2014`, cited by `20`
 
 > 预处理阶段通过三帧差分获得真实背景并消除鬼影，运动目标检测阶段结合先验知识和边缘检测方法获得真实的运动目标以消除阴影，目标描述与跟踪阶段运用像素标记分割方法得到目标描述 并实现目标跟踪。
 
 
-+ 桂斌, **基于ViBe的运动目标检测与阴影消除方法研究**, 安徽大学硕士论文, <font color=red>2015</font>, cited by `0`
-+ 王彬, **基于改进的ViBE和HOG的运动目标检测系统研究与实现**, 沈阳工业大学硕士论文,  <font color=red>2016</font>, cited by `0` 
++ 桂斌, **基于ViBe的运动目标检测与阴影消除方法研究**, 安徽大学硕士论文, `2015`, cited by `0`
++ 王彬, **基于改进的ViBE和HOG的运动目标检测系统研究与实现**, 沈阳工业大学硕士论文,  `2016`, cited by `0` 
 
 #### 2.12 Summary
 SOBS、Color、VIBE、SACON、W4等可以进行深入的了解，特别是近年来出现的Block-based或Region-Based、Features-Based、基于层次分类或层次训练器的算法可以进行深入的研究。
@@ -296,10 +296,10 @@ SOBS、Color、VIBE、SACON、W4等可以进行深入的了解，特别是近年
 
 
 
-+ David J. Fleet, **Optical Flow Estimation**, chapter15, <font color=red>2005</font>, cited by `200+`
-+ Stefan Roth, **On the spatial statistics of optical flow**, <font color=red>2005</font>, cited by `260+`
-+ 董颖, **基于光流场的视频运动检测**, 山东大学硕士论文, <font color=red>2008</font>, cited by `58`.
-+ 裴巧娜，**基于光流法的运动目标检测与跟踪技术**，北方工业大学硕士论文，<font color=red>2009</font>, cited by `107`.
++ David J. Fleet, **Optical Flow Estimation**, chapter15, `2005`, cited by `200+`
++ Stefan Roth, **On the spatial statistics of optical flow**, `2005`, cited by `260+`
++ 董颖, **基于光流场的视频运动检测**, 山东大学硕士论文, `2008`, cited by `58`.
++ 裴巧娜，**基于光流法的运动目标检测与跟踪技术**，北方工业大学硕士论文，2009, cited by `107`.
 + sparse and dense optical flow
 
 MathWorks: [Live Motion Detection Using Optical Flow](https://cn.mathworks.com/help/imaq/examples/live-motion-detection-using-optical-flow.html)
@@ -308,15 +308,15 @@ MathWorks: [Live Motion Detection Using Optical Flow](https://cn.mathworks.com/h
 
 #### 4.1 运动竞争 (Motion Competition) 
 
-+ Daniel Cremers, **Motion Competition: A Variational Approach to Piecewise Parametric Motion Segmentation**,<font color=red>2005</font>, cited by `260+`
++ Daniel Cremers, **Motion Competition: A Variational Approach to Piecewise Parametric Motion Segmentation**,`2005`, cited by `260+`
 
 > Abstract. We present a novel variational approach for segmenting the image plane into a set of regions of parametric motion on the basis of two consecutive frames from an image sequence. Our model is based on a conditional probability for the spatio-temporal image gradient, given a particular velocity model, and on a geometric prior on the estimated motion field favoring motion boundaries of minimal length. Exploiting the Bayesian framework, we derive a cost functional which depends on parametric motion models for each of a set of regions and on the boundary separating these regions. The resulting functional can be interpreted as an extension of the Mumford-Shah functional from intensity segmentation to motion segmentation. In contrast to most alternative approaches, the problems of segmentation and motion estimation are jointly solved by continuous minimization of a single functional. Minimizing this functional with respect to its dynamic variables results in an eigenvalue problem for the motion parameters and in a gradient descent evolution for the motion discontinuity set. We propose two different representations of this motion boundary: an explicit spline-based implementation which can be applied to the motion-based tracking of a single moving object, and an implicit multiphase level set implementation which allows for the segmentation of an arbitrary number of multiply connected moving objects. Numerical results both for simulated ground truth experiments and for real-world sequences demonstrate the capacity of our approach to segment objects based exclusively on their relative motion.
 > 
 
 #### 4.2 运动历史图像 （motion history image, MHI）
 
-+ James W. Davis, **Hierarchical Motion History Images for Recognizing Human Motion**, <font color=red>2001</font>, cited by `170+`
-+ MAR Ahad, **Motion history image: its variants and applications**, <font color=red>2012</font>, cited by `170+`
++ James W. Davis, **Hierarchical Motion History Images for Recognizing Human Motion**, `2001`, cited by `170+`
++ MAR Ahad, **Motion history image: its variants and applications**, `2012`, cited by `170+`
 
 > The motion history image (MHI) is a static image template helps in understanding the motion location and path as it progresses.[1] In MHI, the temporal motion information is collapsed into a single image template where intensity is a function of recency of motion. Thus, the MHI pixel intensity is a function of the motion history at that location, where brighter values correspond to a more recent motion. Using MHI, moving parts of a video sequence can be engraved with a single image, from where one can predict the motion flow as well as the moving parts of the video action.
 
@@ -336,15 +336,15 @@ MathWorks: [Live Motion Detection Using Optical Flow](https://cn.mathworks.com/h
 ## Paper Lists
 
 ### Recent papers
-1. X zhou, **Moving object detection by detecting contiguous outliers in the low-rank representation**, <font color=red>2013</font>, cited by `200+`
-2. Pierre-Luc St-Charles, **SuBSENSE: A Universal Change Detection Method With Local Adaptive Sensitivity**, <font color=red>2015</font>, cited by `80+`
+1. X zhou, **Moving object detection by detecting contiguous outliers in the low-rank representation**, `2013`, cited by `200+`
+2. Pierre-Luc St-Charles, **SuBSENSE: A Universal Change Detection Method With Local Adaptive Sensitivity**, `2015`, cited by `80+`
 
 ### Survey
-1. W Hu, **A survey on visual surveillance of object motion and behaviors**, <font color=red>2004</font>, cited by `2300+`
-2. Thomas B. Moeslund, **A survey of advances in vision-based human motion capture and analysis**, 2006, cited by `2400+`
-3. S Brutzer, **Evaluation of Background Subtraction Techniques for Video Surveillance**, <font color=red>2011</font>, cited by `400+`
-4. A Sobral, **A comprehensive review of background subtraction algorithms evaluated with synthetic and real videos**, <font color=red>2014</font>, cited by `200+`
-5. T Bouwmans, **Traditional and recent approaches in background modeling for foreground detection  An overview**, <font color=red>2014</font>, cited by `180+` 
+1. W Hu, **A survey on visual surveillance of object motion and behaviors**, `2004`, cited by `2300+`
+2. Thomas B. Moeslund, **A survey of advances in vision-based human motion capture and analysis**, `2006`, cited by `2400+`
+3. S Brutzer, **Evaluation of Background Subtraction Techniques for Video Surveillance**, `2011`, cited by `400+`
+4. A Sobral, **A comprehensive review of background subtraction algorithms evaluated with synthetic and real videos**, `2014`, cited by `200+`
+5. T Bouwmans, **Traditional and recent approaches in background modeling for foreground detection  An overview**, `2014`, cited by `180+` 
 
 ## Library
 
