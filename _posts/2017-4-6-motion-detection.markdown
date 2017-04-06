@@ -69,13 +69,13 @@ of the scene (called `background`).
 
 #### 2.1 高斯模型 (Gaussian Model)
 
-##### Single Gussian & Running Gaussian average
+**Single Gussian & Running Gaussian average**
 
 + Wren, Pfinder: **Real-time tracking of the human body**, `1997`, cited by `5000+`
 
 > *Abstract* -- Pfinder is a real-time system for tracking people and interpreting thier behavior. It runs at 10Hz on a standard SGI Indy computer, and has performed reliably on thousands of people in many different physical locations. The system uses a multi-class statistical model of color and shape to obtain a 2-D representation of head and hands in a wide range of viewing conditions. Pfinder has been successfully used in a wide range of applications including wireless interfaces, video databases, and low-bandwidth coding.
 
-##### Mixture of Gaussian Model
+**Mixture of Gaussian Model**
 
 + KaewTraKulPong, **An improved adaptive background mixture model for real-time tracking with shadow detection**, `2001`, cited by `1400+`
 
@@ -147,7 +147,8 @@ achieves very sensitive detection with very low false alarm rates.
 
 > 对一段时间的背景进行统计，然后计算其统计数据（例如平均值、平均差分、标准差、均值漂移值等等），将统计数据作为背景的方法。
 
-##### 统计平均法
+**统计平均法**
+
 + BPL Lo, **Automatic congestion detection system for underground platform**, `2001`, cited by `300+`
 
 > *Abstract* - An automatic monitoring system is proposed in this paper for detecting overcrowding conditions in the platforms of underground train services.
@@ -156,7 +157,7 @@ people falling off or being pushed onto the tracks. The system is designed to us
 images of the platforms. In order to focus on the passengers on the platform, background subtraction and update techniques are used. In addition, due to the high variation of brightness on the platforms, a variance filter is introduced
 to optimize the removal of background pixels. A multi-layer feed forward neural network was developed for classifying the levels of congestion. The system was tested with recorded video from the London Bridge station, and the testing results were shown to be accurate in identifying overcrowding conditions for the unique platform environment. 
 
-##### 中值滤波法 (Temporal Median filter)
+**中值滤波法 (Temporal Median filter)**
 
 + R Cucchiara, **Detecting Moving Objects, Ghosts, and Shadows in Video Streams**, `2003`, cited by `1600+`
 
@@ -192,14 +193,14 @@ codebook representation is efficient in memory and speed compared with other bac
 > In addition to the basic algorithm, two features improving the algorithm are presented—layered modeling/detection and adaptive
 codebook updating.
 
-#####  Background modeling 
+**Background modeling**
 
 The CB algorithm adopts a **quantization/clustering** technique to construct a
 background model from long observation sequences. For each pixel, it builds a `codebook` consisting of one or more codewords. Samples at each pixel are clustered into the set of codewords based on `a color distortion metric` together with brightness bounds. Not all pixels have the same number of codewords. The clusters represented by codewords do not necessarily correspond
 to single Gaussian or other parametric distributions. Even if the distribution at a pixel were a single normal, there could be several codewords for that pixel. The background is encoded on a `pixel-by-pixel basis`. 
 
 
-##### Detection 
+**Detection** 
 
 Detection involves testing the difference of the current image from the background model with respect to `color and brightness differences`. If an incoming pixel meets two conditions, it is classified as background — (1) the color distortion to some codeword is less than the `detection threshold`, and (2) its brightness lies within the `brightness range` of that codeword. Otherwise, it is classified as foreground.
 
@@ -298,7 +299,6 @@ at http://www.motiondetection.org.
 * 自适应阈值
 * 形态学处理
 * 结合三帧差分、边缘检测等技术
-
  
 `More`
 
@@ -425,12 +425,12 @@ a large, heterogeneous benchmark with 59 sequences and pixel-accurate ground tru
 
 ## Library
 
-### Background subtraction Library
+**Background subtraction Library**
 
 1. [**BGSLibrary**](https://github.com/andrewssobral/bgslibrary): The BGS Library (A. Sobral, Univ. La Rochelle, France) provides a C++ framework to perform background subtraction algorithms. The code works either on Windows or on Linux. Currently the library offers more than 30 BGS algorithms. 
 2. [**LRS Library**](https://github.com/andrewssobral/lrslibrary) - Low-Rank and Sparse tools for Background Modeling and Subtraction in Videos. The LRSLibrary (A. Sobral, Univ. La Rochelle, France) provides a collection of low-rank and sparse decomposition algorithms in MATLAB. The library was designed for motion segmentation in videos, but it can be also used or adapted for other computer vision problems. Currently the LRSLibrary contains more than 100 matrix-based and tensor-based algorithms. 
 
-### Other libary
+**Other libary**
 
 1. [**Motion Detection Algorithms**](https://www.codeproject.com/Articles/10248/Motion-Detection-Algorithms): There are many approaches for motion detection in a continuous video stream. All of them are based on comparing of the current video frame with one from the previous frames or with something that we'll call background. In this article, I'll try to describe some of the most common approaches.
 
