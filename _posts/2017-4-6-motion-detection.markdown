@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:    "运动检测 (Motion Detection)"
-subtitle:   "markdown"
+subtitle:   "运动侦测，移动侦测，移动检测"
 author:     "huajh7"
 catalog:    true
 header-img: "img/post-bg-universe.jpg"
@@ -69,7 +69,7 @@ between the two algorithms. The results show the speed of learning and the accur
 
 #### 2.2 W4 algorithm (What? Where? Who? When?)
 
-+ Ismail Haritaoglu, **W4: A Real Time System for Detecting and Tracking People**, 1998, cited by `1100+`
++ Ismail Haritaoglu, **W4: A Real Time System for Detecting and Tracking People**, `1998`, cited by `1100+`
 
 > *Abstract*  W^4 is a real time visual surveil lance system for detecting and tracking people and monitoring their activities in an outdoor environment. It operates on monocular grayscale video imagery, or on video imagery from an infrared camera. Unlike many of systems for tracking people, W^4 makes no use of color cues. Instead, W^4 employs a combination of shape analysis and tracking to locate people and their parts (head, hands, feet, torso) and to create models of people's appearance so that they can be tracked through
 interactions such as occlusions. W^4 is capable of simultaneously tracking multiple people even with occlusion. It runs at 25 Hz for 320x240 resolution images on a dual-pentium PC.
@@ -226,7 +226,7 @@ at http://www.motiondetection.org.
 
 `comment`
 
-> VIBE算法是Barnich的一个大作，已申请了专利。 
+> VIBE算法是Barnich的一个大作，已申请了`专利`。 
 > 
 > ViBe是一种像素级视频背景建模或前景检测的算法。
 > 
@@ -284,7 +284,7 @@ SOBS、Color、VIBE、SACON、W4等可以进行深入的了解，特别是近年
 
 ### 3. 光流法 (optical flow) 
 
-光流是一种可以观察到的目标的运行信息。当运动目标和摄像头发生相对运动，运动目标表明所携带的光学特征就能为我们带来目标的运动信息。光流就是运动目标在成像平面上像素点运动的随机速度。是非常经典（古老）基于运动的目标检测方法。
+光流是一种可以观察到的目标的运行信息。当运动目标和摄像头发生相对运动，运动目标表明所携带的光学特征就能为我们带来目标的运动信息。光流就是运动目标在成像平面上像素点运动的随机速度。是非常`经典（古老）`基于运动的目标检测方法。
 
 > Optical flow or optic flow is the pattern of apparent motion of objects, surfaces, and edges in a visual scene caused by the relative motion between an observer and a scene.[1][2] The concept of optical flow was introduced by the American psychologist James J. Gibson in the 1940s to describe the visual stimulus provided to animals moving through the world.[3] Gibson stressed the importance of optic flow for affordance perception, the ability to discern possibilities for action within the environment. Followers of Gibson and his ecological approach to psychology have further demonstrated the role of the optical flow stimulus for the perception of movement by the observer in the world; perception of the shape, distance and movement of objects in the world; and the control of locomotion.[4]
 > 
