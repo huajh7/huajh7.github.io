@@ -33,13 +33,36 @@ date: 2017-4-6  8:40:25
 >  帧差可说是最简单的一种背景模型，指定视频中的一幅图像为背景，用当前帧与背景进行比较，根据需要过滤较小的差异 （阈值），得到的结果就是前景了
 
 ### 2. 背景减除法 (Background subtraction) 
+
+**定义:** 
+
+**Background subtraction algorithm** is to distinguish moving objects (hereafter referred to as the `foreground`) from static, or slow moving, parts
+of the scene (called `background`).
+
 > Background subtraction, also known as `foreground detection(前景检测)`, is a technique in the fields of image processing and computer vision wherein an image's foreground is extracted for further processing (object recognition etc.). Generally an image's regions of interest are objects (humans, cars, text etc.) in its foreground. After the stage of image preprocessing (which may include image denoising, post processing like morphology etc.) object localisation is required which may make use of this technique.
 > 
 >  from [wiki/Background_subtraction](https://en.wikipedia.org/wiki/Background_subtraction)
 
+
+**需要解决的问题：**
+
++ **light changes(光照)**: the background model should adapt to gradual or fast `illumination changes` (changing time of day, clouds, etc);
++ **moving background** or **high frequency background objects**(树叶等): the background model should include changing background that is not of interest for visual surveillance, such as `waving trees or branches`;
++ **cast shadows(阴影)**: the background model should include the `shadow cast by moving objects` that apparently behaves itself moving, in order to have a more accurate detection of the moving objects shape;
++ **bootstrapping(初始化)**: the background model should be properly set up even in the absence of a complete and static (free of moving objects) training set at the beginning of the sequence;
++ **camouflage(背景相似)**: moving objects should be detected even if their chromatic features are similar to those of the background model.
++ **motion changes** (camera oscillations);
++ changes in the **background geometry** (e.g., parked cars).
++ **Ghost**区域：当一个原本静止的物体开始运动，背静差检测算法可能会将原来该物体所覆盖的区域错误的检测为运动的，这块区域就成为Ghost.
+
+
+**技术**：
+`Pixel-based` background subtraction: a static background frame, the (weighted) running average [21], first-order low-pass filtering [22], temporal median filtering [23], [24], and the modeling of each pixel with a Gaussian [25]–[27].
+
+
 需要考虑三个问题：
 
-* 如何 **建立** 和使用背景模型
+* 如何 **建立和使用** 背景模型
 * 如何 **初始化** 背景模型
 * 如何 **实时更新** 背景模型
 
@@ -86,6 +109,8 @@ such as shadows and highlights, as wel l as global il lumination changes. The al
 
 `comment`
 
+> 算法初衷：解决关于全局或局部的光照变化问题，例如阴影和高亮
+> 
 > 基于颜色信息的背景建模方法,简称Color算法，该算法将像素点的差异分解成Chromaticity差异和Brightness差异，对光照具有很强的鲁棒性，并有比较好的效果，计算速度也比较快，基本可以满足实时性的要求，做了许多视频序列的检测，效果比较理想；
 
 #### 2.4 本征背景法
@@ -162,8 +187,21 @@ tree branches, flickering screens and water surfaces, moving escalators, opening
 + A Ilyas, **Real-time foreground-background segmentation using a modified codebook model**, `2008`, cited by `50+`
 
 > *Abstract* -- We present a real-time algorithm for foreground–background segmentation. Sample background values at each pixel are quantized into codebooks which represent a compressed form of background model for a long image sequence. This allows us to capture structural background variation due to periodic-like motion over a long period of time under limited memory. The
-codebook representation is efficient in memory and speed compared with other background modeling techniques. Our method can handle scenes containing moving backgrounds or illumination variations, and it achieves robust detection for different types of videos. We compared our method with other multimode modeling techniques. In addition to the basic algorithm, two features improving the algorithm are presented—layered modeling/detection and adaptive
+codebook representation is efficient in memory and speed compared with other background modeling techniques. Our method can handle scenes containing moving backgrounds or illumination variations, and it achieves robust detection for different types of videos. We compared our method with other multimode modeling techniques. 
+
+> In addition to the basic algorithm, two features improving the algorithm are presented—layered modeling/detection and adaptive
 codebook updating.
+
+#####  Background modeling 
+
+The CB algorithm adopts a **quantization/clustering** technique to construct a
+background model from long observation sequences. For each pixel, it builds a `codebook` consisting of one or more codewords. Samples at each pixel are clustered into the set of codewords based on `a color distortion metric` together with brightness bounds. Not all pixels have the same number of codewords. The clusters represented by codewords do not necessarily correspond
+to single Gaussian or other parametric distributions. Even if the distribution at a pixel were a single normal, there could be several codewords for that pixel. The background is encoded on a `pixel-by-pixel basis`. 
+
+
+##### Detection 
+
+Detection involves testing the difference of the current image from the background model with respect to `color and brightness differences`. If an incoming pixel meets two conditions, it is classified as background — (1) the color distortion to some codeword is less than the `detection threshold`, and (2) its brightness lies within the `brightness range` of that codeword. Otherwise, it is classified as foreground.
 
 `comment`
 >  效果还可以，有多种变体，对光照敏感
@@ -251,7 +289,7 @@ at http://www.motiondetection.org.
 
 算法的缺点：
 
-* 存在 **ghost** 区域，“鬼影”。
+* 容易引入**ghost** 区域，“鬼影”。
 * 对 **光照** 强弱变化等动态场景敏感，不适用动态背景下的目标检测。
 * 无法消除运动目标的 **阴影** 。
 
@@ -283,6 +321,8 @@ SOBS、Color、VIBE、SACON、W4等可以进行深入的了解，特别是近年
 
 ### 3. 运动分割（motion segmentation）
 
+In **motion segmentation**, the moving objects are continuously present in the scene, and the background may also move due to camera motion. The target is **to separate different motions**.
+
 #### 3.1 光流法 (optical flow) 
 
 光流是一种可以观察到的目标的运行信息。当运动目标和摄像头发生相对运动，运动目标表明所携带的光学特征就能为我们带来目标的运动信息。光流就是运动目标在成像平面上像素点运动的随机速度。是非常`经典（古老）`基于运动的目标检测方法。
@@ -294,17 +334,14 @@ SOBS、Color、VIBE、SACON、W4等可以进行深入的了解，特别是近年
 >  from [wikipedia/Optical_flow](https://en.wikipedia.org/wiki/Optical_flow)
 >
 
-sparse and dense optical flow
 
 The dense optical flow is often used for **Motion Segmentation(运动分割)**.
 
-**Motion Segmentation** is to separate different motions.
 
 + David J. Fleet, **Optical Flow Estimation**, chapter15, `2005`, cited by `200+`
 + Stefan Roth, **On the spatial statistics of optical flow**, `2005`, cited by `260+`
 + 董颖, **基于光流场的视频运动检测**, 山东大学硕士论文, `2008`, cited by `58`.
 + 裴巧娜，**基于光流法的运动目标检测与跟踪技术**，北方工业大学硕士论文，2009, cited by `107`.
-+  Peter Ochs, **Segmentation of Moving Objects by Long Term Video Analysis**, `2014`, cited by `130+`
 
 MathWorks: [Live Motion Detection Using Optical Flow](https://cn.mathworks.com/help/imaq/examples/live-motion-detection-using-optical-flow.html)
 
@@ -313,8 +350,42 @@ MathWorks: [Live Motion Detection Using Optical Flow](https://cn.mathworks.com/h
 
 + Daniel Cremers, **Motion Competition: A Variational Approach to Piecewise Parametric Motion Segmentation**,`2005`, cited by `260+`
 
-> Abstract. We present a novel variational approach for segmenting the image plane into a set of regions of parametric motion on the basis of two consecutive frames from an image sequence. Our model is based on a conditional probability for the spatio-temporal image gradient, given a particular velocity model, and on a geometric prior on the estimated motion field favoring motion boundaries of minimal length. Exploiting the Bayesian framework, we derive a cost functional which depends on parametric motion models for each of a set of regions and on the boundary separating these regions. The resulting functional can be interpreted as an extension of the Mumford-Shah functional from intensity segmentation to motion segmentation. In contrast to most alternative approaches, the problems of segmentation and motion estimation are jointly solved by continuous minimization of a single functional. Minimizing this functional with respect to its dynamic variables results in an eigenvalue problem for the motion parameters and in a gradient descent evolution for the motion discontinuity set. We propose two different representations of this motion boundary: an explicit spline-based implementation which can be applied to the motion-based tracking of a single moving object, and an implicit multiphase level set implementation which allows for the segmentation of an arbitrary number of multiply connected moving objects. Numerical results both for simulated ground truth experiments and for real-world sequences demonstrate the capacity of our approach to segment objects based exclusively on their relative motion.
-> 
+> *Abstract* -  We present a novel variational approach for segmenting the image plane into a set of regions of parametric motion on the basis of two consecutive frames from an image sequence. Our model is based on a conditional probability for the spatio-temporal image gradient, given a particular velocity model, and on a geometric prior on the estimated motion field favoring motion boundaries of minimal length. Exploiting the Bayesian framework, we derive a cost functional which depends on parametric motion models for each of a set of regions and on the boundary separating these regions. The resulting functional can be interpreted as an extension of the Mumford-Shah functional from intensity segmentation to motion segmentation. In contrast to most alternative approaches, the problems of segmentation and motion estimation are jointly solved by continuous minimization of a single functional. Minimizing this functional with respect to its dynamic variables results in an eigenvalue problem for the motion parameters and in a gradient descent evolution for the motion discontinuity set. We propose two different representations of this motion boundary: an explicit spline-based implementation which can be applied to the motion-based tracking of a single moving object, and an implicit multiphase level set implementation which allows for the segmentation of an arbitrary number of multiply connected moving objects. Numerical results both for simulated ground truth experiments and for real-world sequences demonstrate the capacity of our approach to segment objects based exclusively on their relative motion.
+
+#### 3.3 DECOLOR
+
+DEtecting Contiguous Outliers in the LOw-rank Representation (DECOLOR)
+
++ Xiaowei zhou, **Moving object detection by detecting contiguous outliers in the low-rank representation**, `2013`, cited by `200+`
+
+> *Abstract* — Object detection is a fundamental step for automated video analysis in many vision applications. Object detection in a video
+is usually performed by object detectors or background subtraction techniques. Often, an object detector requires manually labeled
+examples to train a binary classifier, while background subtraction needs a training sequence that contains no objects to build a
+background model. To automate the analysis, object detection without a separate training phase becomes a critical task. People have
+tried to tackle this task by using motion information. But existing motion-based methods are usually limited when coping with complex
+scenarios such as nonrigid motion and dynamic background. In this paper, we show that the above challenges can be addressed in a
+unified framework named DEtecting Contiguous Outliers in the LOw-rank Representation (DECOLOR). This formulation integrates
+object detection and background learning into a single process of optimization, which can be solved by an alternating algorithm
+efficiently. We explain the relations between DECOLOR and other sparsity-based methods. Experiments on both simulated data and
+real sequences demonstrate that DECOLOR outperforms the state-of-the-art approaches and it can work effectively on a wide range of
+complex scenarios.
+
+> *Index Terms* — Moving object detection, low-rank modeling, Markov Random Fields, motion segmentation
+
+
+#### 3.4 Long Term Video Analysis
+
++  Peter Ochs, **Segmentation of Moving Objects by Long Term Video Analysis**, `2014`, cited by `130+`
+
+> *Abstract* — Motion is a strong cue for unsupervised object-level grouping. In this paper, we demonstrate that motion will be exploited
+most effectively, if it is regarded over larger time windows. Opposed to classical two-frame optical flow, point trajectories that span
+hundreds of frames are less susceptible to short-term variations that hinder separating different objects. As a positive side effect, the
+resulting groupings are temporally consistent over a whole video shot, a property that requires tedious post-processing in the vast
+majority of existing approaches. We suggest working with a paradigm that starts with semi-dense motion cues first and that fills up
+textureless areas afterwards based on color. This paper also contributes the Freiburg-Berkeley motion segmentation (FBMS) dataset,
+a large, heterogeneous benchmark with 59 sequences and pixel-accurate ground truth annotation of moving objects.
+
+> *Index Terms* — Motion segmentation, point trajectories, variational methods
 
 ### 4. 其他方法
 
@@ -341,11 +412,12 @@ MathWorks: [Live Motion Detection Using Optical Flow](https://cn.mathworks.com/h
 ## Paper Lists
 
 ### Recent papers
-1. X zhou, **Moving object detection by detecting contiguous outliers in the low-rank representation**, `2013`, cited by `200+`
+
 2. Pierre-Luc St-Charles, **SuBSENSE: A Universal Change Detection Method With Local Adaptive Sensitivity**, `2015`, cited by `80+`
 
 ### Survey
 1. W Hu, **A survey on visual surveillance of object motion and behaviors**, `2004`, cited by `2300+`
+2. M Piccardi, **Background subtraction techniques: A review**, `2004`, cited by `1900+`
 2. Thomas B. Moeslund, **A survey of advances in vision-based human motion capture and analysis**, `2006`, cited by `2400+`
 3. S Brutzer, **Evaluation of Background Subtraction Techniques for Video Surveillance**, `2011`, cited by `400+`
 4. A Sobral, **A comprehensive review of background subtraction algorithms evaluated with synthetic and real videos**, `2014`, cited by `200+`

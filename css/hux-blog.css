@@ -230,6 +230,9 @@ pre code {
 .postlist-container {
   margin-bottom: 15px;
 }
+.post-container {
+  width: 140px;
+}
 .post-container a {
   color: #337ab7;
 }
