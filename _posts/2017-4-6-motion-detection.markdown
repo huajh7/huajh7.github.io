@@ -281,7 +281,7 @@ at http://www.motiondetection.org.
 SOBS、Color、VIBE、SACON、W4等可以进行深入的了解，特别是近年来出现的Block-based或Region-Based、Features-Based、基于层次分类或层次训练器的算法可以进行深入的研究。
 
 
-### 3. motion segmentation
+### 3. 运动分割（motion segmentation）
 
 #### 3.1 光流法 (optical flow) 
 
@@ -294,6 +294,7 @@ SOBS、Color、VIBE、SACON、W4等可以进行深入的了解，特别是近年
 >  from [wikipedia/Optical_flow](https://en.wikipedia.org/wiki/Optical_flow)
 >
 
+sparse and dense optical flow
 
 The dense optical flow is often used for **Motion Segmentation(运动分割)**.
 
@@ -303,7 +304,7 @@ The dense optical flow is often used for **Motion Segmentation(运动分割)**.
 + Stefan Roth, **On the spatial statistics of optical flow**, `2005`, cited by `260+`
 + 董颖, **基于光流场的视频运动检测**, 山东大学硕士论文, `2008`, cited by `58`.
 + 裴巧娜，**基于光流法的运动目标检测与跟踪技术**，北方工业大学硕士论文，2009, cited by `107`.
-+ sparse and dense optical flow
++  Peter Ochs, **Segmentation of Moving Objects by Long Term Video Analysis**, `2014`, cited by `130+`
 
 MathWorks: [Live Motion Detection Using Optical Flow](https://cn.mathworks.com/help/imaq/examples/live-motion-detection-using-optical-flow.html)
 
