@@ -23,7 +23,6 @@ date: 2017-4-6  8:40:25
 * 帧间差分法
 * 三帧差分法
 
-
 > 背景差分法(Background difference) : 视频帧图像与背景模型图像进行差分和阈值分割
 > 
 > 帧差分法： 视频中的一帧图像与另一帧图像进行差分运算
@@ -43,7 +42,6 @@ of the scene (called `background`).
 > 
 >  from [wiki/Background_subtraction](https://en.wikipedia.org/wiki/Background_subtraction)
 
-
 **需要解决的问题：**
 
 + **light changes(光照)**: the background model should adapt to gradual or fast `illumination changes` (changing time of day, clouds, etc);
@@ -55,10 +53,8 @@ of the scene (called `background`).
 + changes in the **background geometry** (e.g., parked cars).
 + **Ghost**区域：当一个原本静止的物体开始运动，背静差检测算法可能会将原来该物体所覆盖的区域错误的检测为运动的，这块区域就成为Ghost.
 
-
 **技术**：
 `Pixel-based` background subtraction: a static background frame, the (weighted) running average [21], first-order low-pass filtering [22], temporal median filtering [23], [24], and the modeling of each pixel with a Gaussian [25]–[27].
-
 
 需要考虑三个问题：
 
@@ -88,7 +84,6 @@ between the two algorithms. The results show the speed of learning and the accur
 
 `comment`
 > 混合高斯在现有的背景建模算法中应该算是比较好的，很多新的算法或改进的算法都是基于它的一些原理的不同变体，但混合高斯算法的缺点是计算量相对比较大，速度偏慢，对光照敏感
-
 
 #### 2.2 W4 algorithm (What? Where? Who? When?)
 
@@ -122,7 +117,6 @@ components employing a statistical Bayesian approach [2]. We propose and compare
 
 `comment`
 > 基于贝叶斯框架 
-
 
 ####  2.5 核密度估计方法
 
@@ -169,7 +163,6 @@ object detection in videos in many applications, such as traffic monitoring, hum
 > 
 > 统计平均法和中值滤波法，算法的应用具有很大的局限性，只能算是理论上的一个补充.
 
-
 #### 2.7 复杂背景下的前景物体检测 (FGD)
 
 + Liyuan Li, **Foreground Object Detection from Videos Containing Complex Background**, `2003`, cited by `500+`
@@ -177,7 +170,6 @@ object detection in videos in many applications, such as traffic monitoring, hum
 > *Abstract* --  This paper proposes a novel method for detection and segmentation of foreground objects from a video which contains both stationary and moving background objects and undergoes both gradual and sudden “once-off” changes. A Bayes decision rule for classification of background and foreground
 from selected feature vectors is formulated. Under this rule, different types of background objects will be classified from foreground objects by choosing a proper feature vector. The stationary background object is described by the color feature, and the moving background object is represented by the color co-occurrence feature. Foreground objects are extracted by fusing the classification results from both stationary and moving pixels. Learning strategies for the gradual and sudden “once-off” background changes are proposed to adapt to various changes in background through the video. The convergence of the learning process is proved and a formula to select a proper learning rate is also derived. Experiments have shown promising results in extracting foreground objects from many complex backgrounds including wavering
 tree branches, flickering screens and water surfaces, moving escalators, opening and closing doors, switching lights and shadows of moving objects.
-
 
 #### 2.8 码本 (CodeBook)
 
@@ -189,7 +181,6 @@ tree branches, flickering screens and water surfaces, moving escalators, opening
 
 > *Abstract* -- We present a real-time algorithm for foreground–background segmentation. Sample background values at each pixel are quantized into codebooks which represent a compressed form of background model for a long image sequence. This allows us to capture structural background variation due to periodic-like motion over a long period of time under limited memory. The
 codebook representation is efficient in memory and speed compared with other background modeling techniques. Our method can handle scenes containing moving backgrounds or illumination variations, and it achieves robust detection for different types of videos. We compared our method with other multimode modeling techniques. 
-
 > In addition to the basic algorithm, two features improving the algorithm are presented—layered modeling/detection and adaptive
 codebook updating.
 
@@ -199,15 +190,12 @@ The CB algorithm adopts a **quantization/clustering** technique to construct a
 background model from long observation sequences. For each pixel, it builds a `codebook` consisting of one or more codewords. Samples at each pixel are clustered into the set of codewords based on `a color distortion metric` together with brightness bounds. Not all pixels have the same number of codewords. The clusters represented by codewords do not necessarily correspond
 to single Gaussian or other parametric distributions. Even if the distribution at a pixel were a single normal, there could be several codewords for that pixel. The background is encoded on a `pixel-by-pixel basis`. 
 
-
 **Detection** 
 
 Detection involves testing the difference of the current image from the background model with respect to `color and brightness differences`. If an incoming pixel meets two conditions, it is classified as background — (1) the color distortion to some codeword is less than the `detection threshold`, and (2) its brightness lies within the `brightness range` of that codeword. Otherwise, it is classified as foreground.
 
 `comment`
 >  效果还可以，有多种变体，对光照敏感
-
-
 
 #### 2.9 样本一致性背景建模算法  (SACON)
 
@@ -222,7 +210,6 @@ segment and track people through occlusions. Experimental results from several v
 
 > 基于统计知识，效果还可以
 
-
 #### 2.10 自组织背景建模  (SOBS: Self-organization background subtraction)
 
 + Lucia Maddalena, **A self-Organizing approach to background subtraction for visual surveillance Applications**, `2008`, cited by `580+`
@@ -234,12 +221,9 @@ surveillance systems.
 `comment` 
 >  对光照有一定的鲁棒性，但MAP的模型比输入图片大，计算量比较大，但是可以通过并行处理来解决算法的速度问题，可以进行尝试
 
-
 #### 2.11 ViBe (A Universal Background Subtraction): 
        
-
 + Olivier Barnich, **ViBe: A universal background subtraction algorithm for video sequences**, `2011`, cited by `800+`
-
 
 > *Abstract* — This paper presents a technique for motion detection
 that incorporates several innovative mechanisms. For example,
@@ -271,7 +255,7 @@ at http://www.motiondetection.org.
 > 
 > 利用视频第一帧图像就能完成背景建模初始化工作，根据邻近像素点之间具有相似性完成初始化和更新，依据当前图像的像素和背景模型中对应像素之间的相似性程度来检测前景目标。
 
-视频帧序列 -> 第1帧 -> 初始化背景模型 -> 第2,...,N帧 -> 前景目标检测->更新背景模型
+**步骤：**视频帧序列 -> 第1帧 -> 初始化背景模型 -> 第2,...,N帧 -> 前景目标检测->更新背景模型
 
 **模型初始化**： 为图像中每个像素建立一个大小为N的背景样本集，这个样本存储了该像素点邻近像素点的像素值以及过去这一点的像素值。
 
@@ -279,8 +263,7 @@ at http://www.motiondetection.org.
 
 **背景模型实时更新**： 当前像素点被检测为背景像素，将按照一定概率用该像素点去更新自己的背景样本集或者是它的邻居点背景样本。
 
-算法的主要优势：
-
+**算法的主要优势：**
 - 内存占用少，没有浮点运算，计算量低，算法效率高，
 - 一个像素需要作一次比较，占用一个字节的内存；
 - 像素级算法，视频处理中的预处理关键步骤；
@@ -288,14 +271,12 @@ at http://www.motiondetection.org.
 - 总体性能优于帧差发，光流法，混合高斯，SACON等，具有较好的抗噪能力。
 - 可直接应用在产品中，软硬件兼容性好；
 
-算法的缺点：
-
+**算法的缺点：**
 * 容易引入**ghost** 区域，“鬼影”。
 * 对 **光照** 强弱变化等动态场景敏感，不适用动态背景下的目标检测。
 * 无法消除运动目标的 **阴影** 。
 
-改进：
-
+**改进：**
 * 自适应阈值
 * 形态学处理
 * 结合三帧差分、边缘检测等技术
@@ -432,7 +413,5 @@ a large, heterogeneous benchmark with 59 sequences and pixel-accurate ground tru
 
 ## Reference 
 
-1.  运动检测（前景检测）之（一）ViBe [http://blog.csdn.net/zouxy09/article/details/9622285](http://blog.csdn.net/zouxy09/article/details/9622285)
-2. [http://www.motiondetection.org](http://www.motiondetection.org)
-3. 目标检测中背景建模方法 [http://www.cnblogs.com/ronny/archive/2012/04/12/2444053.html](http://www.cnblogs.com/ronny/archive/2012/04/12/2444053.html)
-4. [http://www.changedetection.net/](http://www.changedetection.net/)
+1. 目标检测中背景建模方法 [http://www.cnblogs.com/ronny/archive/2012/04/12/2444053.html](http://www.cnblogs.com/ronny/archive/2012/04/12/2444053.html)
+2. A video database for testing change detection algorithms [http://www.changedetection.net/](http://www.changedetection.net/)
