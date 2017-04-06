@@ -409,13 +409,11 @@ a large, heterogeneous benchmark with 59 sequences and pixel-accurate ground tru
 >  from [wikipedia/Motion_History_Images](https://en.wikipedia.org/wiki/Motion_History_Images)
 
 
-## Paper Lists
+## Recent papers
 
-### Recent papers
+1. Pierre-Luc St-Charles, **SuBSENSE: A Universal Change Detection Method With Local Adaptive Sensitivity**, `2015`, cited by `80+`
 
-2. Pierre-Luc St-Charles, **SuBSENSE: A Universal Change Detection Method With Local Adaptive Sensitivity**, `2015`, cited by `80+`
-
-### Survey
+## Survey
 1. W Hu, **A survey on visual surveillance of object motion and behaviors**, `2004`, cited by `2300+`
 2. M Piccardi, **Background subtraction techniques: A review**, `2004`, cited by `1900+`
 2. Thomas B. Moeslund, **A survey of advances in vision-based human motion capture and analysis**, `2006`, cited by `2400+`
@@ -423,15 +421,13 @@ a large, heterogeneous benchmark with 59 sequences and pixel-accurate ground tru
 4. A Sobral, **A comprehensive review of background subtraction algorithms evaluated with synthetic and real videos**, `2014`, cited by `200+`
 5. T Bouwmans, **Traditional and recent approaches in background modeling for foreground detection  An overview**, `2014`, cited by `180+` 
 
-## Library
+## Library/Software
 
 **Background subtraction Library**
-
 1. [**BGSLibrary**](https://github.com/andrewssobral/bgslibrary): The BGS Library (A. Sobral, Univ. La Rochelle, France) provides a C++ framework to perform background subtraction algorithms. The code works either on Windows or on Linux. Currently the library offers more than 30 BGS algorithms. 
 2. [**LRS Library**](https://github.com/andrewssobral/lrslibrary) - Low-Rank and Sparse tools for Background Modeling and Subtraction in Videos. The LRSLibrary (A. Sobral, Univ. La Rochelle, France) provides a collection of low-rank and sparse decomposition algorithms in MATLAB. The library was designed for motion segmentation in videos, but it can be also used or adapted for other computer vision problems. Currently the LRSLibrary contains more than 100 matrix-based and tensor-based algorithms. 
 
 **Other libary**
-
 1. [**Motion Detection Algorithms**](https://www.codeproject.com/Articles/10248/Motion-Detection-Algorithms): There are many approaches for motion detection in a continuous video stream. All of them are based on comparing of the current video frame with one from the previous frames or with something that we'll call background. In this article, I'll try to describe some of the most common approaches.
 
 ## Reference 
