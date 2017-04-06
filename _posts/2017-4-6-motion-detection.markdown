@@ -6,7 +6,7 @@ author:     "huajh7"
 catalog:    true
 header-img: "img/post-bg-universe.jpg"
 tags:
-  - markdown  
+  - Motion Detection  
 date: 2017-4-6  8:40:25
 ---
 # 运动检测 (Motion Detection)
