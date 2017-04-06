@@ -7,8 +7,7 @@ author:     "Hux"
 header-img: "img/post-bg-universe.jpg"
 catalog:    true
 tags:
-    - Unix
-    - Linux
+    - markdown
 ---
 
 > This document is not completed and will be updated anytime.

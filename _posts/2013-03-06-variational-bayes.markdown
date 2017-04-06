@@ -2,11 +2,7 @@
 layout: post
 title: Variational Bayes
 tags:
-  - Approximation
-  - Determine methods
-  - KL Divergence
   - Machine Learning
-  - Mean field Method
   - Variational Inference
 author: "huajh7"
 permalink: "variational-bayes" 
