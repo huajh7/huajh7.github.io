@@ -281,8 +281,9 @@ at http://www.motiondetection.org.
 SOBS、Color、VIBE、SACON、W4等可以进行深入的了解，特别是近年来出现的Block-based或Region-Based、Features-Based、基于层次分类或层次训练器的算法可以进行深入的研究。
 
 
+### 3. motion segmentation
 
-### 3. 光流法 (optical flow) 
+#### 3.1 光流法 (optical flow) 
 
 光流是一种可以观察到的目标的运行信息。当运动目标和摄像头发生相对运动，运动目标表明所携带的光学特征就能为我们带来目标的运动信息。光流就是运动目标在成像平面上像素点运动的随机速度。是非常`经典（古老）`基于运动的目标检测方法。
 
@@ -294,7 +295,9 @@ SOBS、Color、VIBE、SACON、W4等可以进行深入的了解，特别是近年
 >
 
 
+The dense optical flow is often used for **Motion Segmentation(运动分割)**.
 
+**Motion Segmentation** is to separate different motions.
 
 + David J. Fleet, **Optical Flow Estimation**, chapter15, `2005`, cited by `200+`
 + Stefan Roth, **On the spatial statistics of optical flow**, `2005`, cited by `260+`
@@ -304,16 +307,17 @@ SOBS、Color、VIBE、SACON、W4等可以进行深入的了解，特别是近年
 
 MathWorks: [Live Motion Detection Using Optical Flow](https://cn.mathworks.com/help/imaq/examples/live-motion-detection-using-optical-flow.html)
 
-### 4. 其他方法
 
-#### 4.1 运动竞争 (Motion Competition) 
+#### 3.2  运动竞争 (Motion Competition) 
 
 + Daniel Cremers, **Motion Competition: A Variational Approach to Piecewise Parametric Motion Segmentation**,`2005`, cited by `260+`
 
 > Abstract. We present a novel variational approach for segmenting the image plane into a set of regions of parametric motion on the basis of two consecutive frames from an image sequence. Our model is based on a conditional probability for the spatio-temporal image gradient, given a particular velocity model, and on a geometric prior on the estimated motion field favoring motion boundaries of minimal length. Exploiting the Bayesian framework, we derive a cost functional which depends on parametric motion models for each of a set of regions and on the boundary separating these regions. The resulting functional can be interpreted as an extension of the Mumford-Shah functional from intensity segmentation to motion segmentation. In contrast to most alternative approaches, the problems of segmentation and motion estimation are jointly solved by continuous minimization of a single functional. Minimizing this functional with respect to its dynamic variables results in an eigenvalue problem for the motion parameters and in a gradient descent evolution for the motion discontinuity set. We propose two different representations of this motion boundary: an explicit spline-based implementation which can be applied to the motion-based tracking of a single moving object, and an implicit multiphase level set implementation which allows for the segmentation of an arbitrary number of multiply connected moving objects. Numerical results both for simulated ground truth experiments and for real-world sequences demonstrate the capacity of our approach to segment objects based exclusively on their relative motion.
 > 
 
-#### 4.2 运动历史图像 （motion history image, MHI）
+### 4. 其他方法
+
+#### 4.1 运动历史图像 （motion history image, MHI）
 
 + James W. Davis, **Hierarchical Motion History Images for Recognizing Human Motion**, `2001`, cited by `170+`
 + MAR Ahad, **Motion history image: its variants and applications**, `2012`, cited by `170+`
