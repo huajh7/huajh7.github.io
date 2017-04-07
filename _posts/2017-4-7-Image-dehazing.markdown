@@ -84,7 +84,7 @@ Jean-Philippe Tarel, **Fast visibility restoration from a single color or gray l
 
 Qingsong Zhu, **A fast single image haze removal algorithm using color attenuation prior**, TIP, `2015`, cited by `60+`
 
-![img](/img/posts/haze_removal/post_haze_removal_zhu2016.jpg)
+![img](/img/posts/haze-removal/post-haze-removal-zhu2016.jpg)
 
 ## 3. 综述
 
