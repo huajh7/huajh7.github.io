@@ -273,7 +273,7 @@ of the scene (called <code class="highlighter-rouge">background</code>).</p>
 
 <h4 id="21-高斯模型-gaussian-model">2.1 高斯模型 (Gaussian Model)</h4>
 
-<h5 id="single-gussian--running-gaussian-average">Single Gussian &amp; Running Gaussian average</h5>
+<p><strong>Single Gussian &amp; Running Gaussian average</strong></p>
 
 <ul>
   <li>Wren, Pfinder: <strong>Real-time tracking of the human body</strong>, <code class="highlighter-rouge">1997</code>, cited by <code class="highlighter-rouge">5000+</code></li>
@@ -283,7 +283,7 @@ of the scene (called <code class="highlighter-rouge">background</code>).</p>
   <p><em>Abstract</em> – Pfinder is a real-time system for tracking people and interpreting thier behavior. It runs at 10Hz on a standard SGI Indy computer, and has performed reliably on thousands of people in many different physical locations. The system uses a multi-class statistical model of color and shape to obtain a 2-D representation of head and hands in a wide range of viewing conditions. Pfinder has been successfully used in a wide range of applications including wireless interfaces, video databases, and low-bandwidth coding.</p>
 </blockquote>
 
-<h5 id="mixture-of-gaussian-model">Mixture of Gaussian Model</h5>
+<p><strong>Mixture of Gaussian Model</strong></p>
 
 <ul>
   <li>KaewTraKulPong, <strong>An improved adaptive background mixture model for real-time tracking with shadow detection</strong>, <code class="highlighter-rouge">2001</code>, cited by <code class="highlighter-rouge">1400+</code></li>
@@ -387,7 +387,8 @@ achieves very sensitive detection with very low false alarm rates.</p>
   <p>对一段时间的背景进行统计，然后计算其统计数据（例如平均值、平均差分、标准差、均值漂移值等等），将统计数据作为背景的方法。</p>
 </blockquote>
 
-<h5 id="统计平均法">统计平均法</h5>
+<p><strong>统计平均法</strong></p>
+
 <ul>
   <li>BPL Lo, <strong>Automatic congestion detection system for underground platform</strong>, <code class="highlighter-rouge">2001</code>, cited by <code class="highlighter-rouge">300+</code></li>
 </ul>
@@ -400,7 +401,7 @@ images of the platforms. In order to focus on the passengers on the platform, ba
 to optimize the removal of background pixels. A multi-layer feed forward neural network was developed for classifying the levels of congestion. The system was tested with recorded video from the London Bridge station, and the testing results were shown to be accurate in identifying overcrowding conditions for the unique platform environment.</p>
 </blockquote>
 
-<h5 id="中值滤波法-temporal-median-filter">中值滤波法 (Temporal Median filter)</h5>
+<p><strong>中值滤波法 (Temporal Median filter)</strong></p>
 
 <ul>
   <li>R Cucchiara, <strong>Detecting Moving Objects, Ghosts, and Shadows in Video Streams</strong>, <code class="highlighter-rouge">2003</code>, cited by <code class="highlighter-rouge">1600+</code></li>
@@ -447,21 +448,18 @@ tree branches, flickering screens and water surfaces, moving escalators, opening
 
 <blockquote>
   <p><em>Abstract</em> – We present a real-time algorithm for foreground–background segmentation. Sample background values at each pixel are quantized into codebooks which represent a compressed form of background model for a long image sequence. This allows us to capture structural background variation due to periodic-like motion over a long period of time under limited memory. The
-codebook representation is efficient in memory and speed compared with other background modeling techniques. Our method can handle scenes containing moving backgrounds or illumination variations, and it achieves robust detection for different types of videos. We compared our method with other multimode modeling techniques.</p>
-</blockquote>
-
-<blockquote>
-  <p>In addition to the basic algorithm, two features improving the algorithm are presented—layered modeling/detection and adaptive
+codebook representation is efficient in memory and speed compared with other background modeling techniques. Our method can handle scenes containing moving backgrounds or illumination variations, and it achieves robust detection for different types of videos. We compared our method with other multimode modeling techniques. 
+In addition to the basic algorithm, two features improving the algorithm are presented—layered modeling/detection and adaptive
 codebook updating.</p>
 </blockquote>
 
-<h5 id="background-modeling">Background modeling</h5>
+<p><strong>Background modeling</strong></p>
 
 <p>The CB algorithm adopts a <strong>quantization/clustering</strong> technique to construct a
 background model from long observation sequences. For each pixel, it builds a <code class="highlighter-rouge">codebook</code> consisting of one or more codewords. Samples at each pixel are clustered into the set of codewords based on <code class="highlighter-rouge">a color distortion metric</code> together with brightness bounds. Not all pixels have the same number of codewords. The clusters represented by codewords do not necessarily correspond
 to single Gaussian or other parametric distributions. Even if the distribution at a pixel were a single normal, there could be several codewords for that pixel. The background is encoded on a <code class="highlighter-rouge">pixel-by-pixel basis</code>.</p>
 
-<h5 id="detection">Detection</h5>
+<p><strong>Detection</strong></p>
 
 <p>Detection involves testing the difference of the current image from the background model with respect to <code class="highlighter-rouge">color and brightness differences</code>. If an incoming pixel meets two conditions, it is classified as background — (1) the color distortion to some codeword is less than the <code class="highlighter-rouge">detection threshold</code>, and (2) its brightness lies within the <code class="highlighter-rouge">brightness range</code> of that codeword. Otherwise, it is classified as foreground.</p>
 
@@ -546,7 +544,7 @@ at http://www.motiondetection.org.</p>
   <p>利用视频第一帧图像就能完成背景建模初始化工作，根据邻近像素点之间具有相似性完成初始化和更新，依据当前图像的像素和背景模型中对应像素之间的相似性程度来检测前景目标。</p>
 </blockquote>
 
-<p>视频帧序列 -&gt; 第1帧 -&gt; 初始化背景模型 -&gt; 第2,…,N帧 -&gt; 前景目标检测-&gt;更新背景模型</p>
+<p><strong>步骤：</strong>视频帧序列 -&gt; 第1帧 -&gt; 初始化背景模型 -&gt; 第2,…,N帧 -&gt; 前景目标检测-&gt;更新背景模型</p>
 
 <p><strong>模型初始化</strong>： 为图像中每个像素建立一个大小为N的背景样本集，这个样本存储了该像素点邻近像素点的像素值以及过去这一点的像素值。</p>
 
@@ -554,8 +552,7 @@ at http://www.motiondetection.org.</p>
 
 <p><strong>背景模型实时更新</strong>： 当前像素点被检测为背景像素，将按照一定概率用该像素点去更新自己的背景样本集或者是它的邻居点背景样本。</p>
 
-<p>算法的主要优势：</p>
-
+<p><strong>算法的主要优势：</strong></p>
 <ul>
   <li>内存占用少，没有浮点运算，计算量低，算法效率高，</li>
   <li>一个像素需要作一次比较，占用一个字节的内存；</li>
@@ -565,16 +562,14 @@ at http://www.motiondetection.org.</p>
   <li>可直接应用在产品中，软硬件兼容性好；</li>
 </ul>
 
-<p>算法的缺点：</p>
-
+<p><strong>算法的缺点：</strong></p>
 <ul>
   <li>容易引入<strong>ghost</strong> 区域，“鬼影”。</li>
   <li>对 <strong>光照</strong> 强弱变化等动态场景敏感，不适用动态背景下的目标检测。</li>
   <li>无法消除运动目标的 <strong>阴影</strong> 。</li>
 </ul>
 
-<p>改进：</p>
-
+<p><strong>改进：</strong></p>
 <ul>
   <li>自适应阈值</li>
   <li>形态学处理</li>
@@ -721,15 +716,13 @@ a large, heterogeneous benchmark with 59 sequences and pixel-accurate ground tru
   <p>from <a href="https://en.wikipedia.org/wiki/Motion_History_Images">wikipedia/Motion_History_Images</a></p>
 </blockquote>
 
-<h2 id="paper-lists">Paper Lists</h2>
-
-<h3 id="recent-papers">Recent papers</h3>
+<h2 id="recent-papers">Recent papers</h2>
 
 <ol>
   <li>Pierre-Luc St-Charles, <strong>SuBSENSE: A Universal Change Detection Method With Local Adaptive Sensitivity</strong>, <code class="highlighter-rouge">2015</code>, cited by <code class="highlighter-rouge">80+</code></li>
 </ol>
 
-<h3 id="survey">Survey</h3>
+<h2 id="survey">Survey</h2>
 <ol>
   <li>W Hu, <strong>A survey on visual surveillance of object motion and behaviors</strong>, <code class="highlighter-rouge">2004</code>, cited by <code class="highlighter-rouge">2300+</code></li>
   <li>M Piccardi, <strong>Background subtraction techniques: A review</strong>, <code class="highlighter-rouge">2004</code>, cited by <code class="highlighter-rouge">1900+</code></li>
@@ -739,17 +732,15 @@ a large, heterogeneous benchmark with 59 sequences and pixel-accurate ground tru
   <li>T Bouwmans, <strong>Traditional and recent approaches in background modeling for foreground detection  An overview</strong>, <code class="highlighter-rouge">2014</code>, cited by <code class="highlighter-rouge">180+</code></li>
 </ol>
 
-<h2 id="library">Library</h2>
+<h2 id="librarysoftware">Library/Software</h2>
 
-<h3 id="background-subtraction-library">Background subtraction Library</h3>
-
+<p><strong>Background subtraction Library</strong></p>
 <ol>
   <li><a href="https://github.com/andrewssobral/bgslibrary"><strong>BGSLibrary</strong></a>: The BGS Library (A. Sobral, Univ. La Rochelle, France) provides a C++ framework to perform background subtraction algorithms. The code works either on Windows or on Linux. Currently the library offers more than 30 BGS algorithms.</li>
   <li><a href="https://github.com/andrewssobral/lrslibrary"><strong>LRS Library</strong></a> - Low-Rank and Sparse tools for Background Modeling and Subtraction in Videos. The LRSLibrary (A. Sobral, Univ. La Rochelle, France) provides a collection of low-rank and sparse decomposition algorithms in MATLAB. The library was designed for motion segmentation in videos, but it can be also used or adapted for other computer vision problems. Currently the LRSLibrary contains more than 100 matrix-based and tensor-based algorithms.</li>
 </ol>
 
-<h3 id="other-libary">Other libary</h3>
-
+<p><strong>Other libary</strong></p>
 <ol>
   <li><a href="https://www.codeproject.com/Articles/10248/Motion-Detection-Algorithms"><strong>Motion Detection Algorithms</strong></a>: There are many approaches for motion detection in a continuous video stream. All of them are based on comparing of the current video frame with one from the previous frames or with something that we’ll call background. In this article, I’ll try to describe some of the most common approaches.</li>
 </ol>
@@ -757,10 +748,8 @@ a large, heterogeneous benchmark with 59 sequences and pixel-accurate ground tru
 <h2 id="reference">Reference</h2>
 
 <ol>
-  <li>运动检测（前景检测）之（一）ViBe <a href="http://blog.csdn.net/zouxy09/article/details/9622285">http://blog.csdn.net/zouxy09/article/details/9622285</a></li>
-  <li><a href="http://www.motiondetection.org">http://www.motiondetection.org</a></li>
   <li>目标检测中背景建模方法 <a href="http://www.cnblogs.com/ronny/archive/2012/04/12/2444053.html">http://www.cnblogs.com/ronny/archive/2012/04/12/2444053.html</a></li>
-  <li><a href="http://www.changedetection.net/">http://www.changedetection.net/</a></li>
+  <li>A video database for testing change detection algorithms <a href="http://www.changedetection.net/">http://www.changedetection.net/</a></li>
 </ol>
 
 

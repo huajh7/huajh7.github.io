@@ -5,8 +5,8 @@
     <description>Imagination is more important than knowledge. -Albert Einstein</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 06 Apr 2017 18:31:07 +0800</pubDate>
-    <lastBuildDate>Thu, 06 Apr 2017 18:31:07 +0800</lastBuildDate>
+    <pubDate>Fri, 07 Apr 2017 22:03:03 +0800</pubDate>
+    <lastBuildDate>Fri, 07 Apr 2017 22:03:03 +0800</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
       <item>
@@ -84,7 +84,7 @@ of the scene (called &lt;code class=&quot;highlighter-rouge&quot;&gt;background&
 
 &lt;h4 id=&quot;21-高斯模型-gaussian-model&quot;&gt;2.1 高斯模型 (Gaussian Model)&lt;/h4&gt;
 
-&lt;h5 id=&quot;single-gussian--running-gaussian-average&quot;&gt;Single Gussian &amp;amp; Running Gaussian average&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;Single Gussian &amp;amp; Running Gaussian average&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Wren, Pfinder: &lt;strong&gt;Real-time tracking of the human body&lt;/strong&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;1997&lt;/code&gt;, cited by &lt;code class=&quot;highlighter-rouge&quot;&gt;5000+&lt;/code&gt;&lt;/li&gt;
@@ -94,7 +94,7 @@ of the scene (called &lt;code class=&quot;highlighter-rouge&quot;&gt;background&
   &lt;p&gt;&lt;em&gt;Abstract&lt;/em&gt; – Pfinder is a real-time system for tracking people and interpreting thier behavior. It runs at 10Hz on a standard SGI Indy computer, and has performed reliably on thousands of people in many different physical locations. The system uses a multi-class statistical model of color and shape to obtain a 2-D representation of head and hands in a wide range of viewing conditions. Pfinder has been successfully used in a wide range of applications including wireless interfaces, video databases, and low-bandwidth coding.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h5 id=&quot;mixture-of-gaussian-model&quot;&gt;Mixture of Gaussian Model&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;Mixture of Gaussian Model&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;KaewTraKulPong, &lt;strong&gt;An improved adaptive background mixture model for real-time tracking with shadow detection&lt;/strong&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;2001&lt;/code&gt;, cited by &lt;code class=&quot;highlighter-rouge&quot;&gt;1400+&lt;/code&gt;&lt;/li&gt;
@@ -198,7 +198,8 @@ achieves very sensitive detection with very low false alarm rates.&lt;/p&gt;
   &lt;p&gt;对一段时间的背景进行统计，然后计算其统计数据（例如平均值、平均差分、标准差、均值漂移值等等），将统计数据作为背景的方法。&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h5 id=&quot;统计平均法&quot;&gt;统计平均法&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;统计平均法&lt;/strong&gt;&lt;/p&gt;
+
 &lt;ul&gt;
   &lt;li&gt;BPL Lo, &lt;strong&gt;Automatic congestion detection system for underground platform&lt;/strong&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;2001&lt;/code&gt;, cited by &lt;code class=&quot;highlighter-rouge&quot;&gt;300+&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -211,7 +212,7 @@ images of the platforms. In order to focus on the passengers on the platform, ba
 to optimize the removal of background pixels. A multi-layer feed forward neural network was developed for classifying the levels of congestion. The system was tested with recorded video from the London Bridge station, and the testing results were shown to be accurate in identifying overcrowding conditions for the unique platform environment.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h5 id=&quot;中值滤波法-temporal-median-filter&quot;&gt;中值滤波法 (Temporal Median filter)&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;中值滤波法 (Temporal Median filter)&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;R Cucchiara, &lt;strong&gt;Detecting Moving Objects, Ghosts, and Shadows in Video Streams&lt;/strong&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;2003&lt;/code&gt;, cited by &lt;code class=&quot;highlighter-rouge&quot;&gt;1600+&lt;/code&gt;&lt;/li&gt;
@@ -258,21 +259,18 @@ tree branches, flickering screens and water surfaces, moving escalators, opening
 
 &lt;blockquote&gt;
   &lt;p&gt;&lt;em&gt;Abstract&lt;/em&gt; – We present a real-time algorithm for foreground–background segmentation. Sample background values at each pixel are quantized into codebooks which represent a compressed form of background model for a long image sequence. This allows us to capture structural background variation due to periodic-like motion over a long period of time under limited memory. The
-codebook representation is efficient in memory and speed compared with other background modeling techniques. Our method can handle scenes containing moving backgrounds or illumination variations, and it achieves robust detection for different types of videos. We compared our method with other multimode modeling techniques.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;In addition to the basic algorithm, two features improving the algorithm are presented—layered modeling/detection and adaptive
+codebook representation is efficient in memory and speed compared with other background modeling techniques. Our method can handle scenes containing moving backgrounds or illumination variations, and it achieves robust detection for different types of videos. We compared our method with other multimode modeling techniques. 
+In addition to the basic algorithm, two features improving the algorithm are presented—layered modeling/detection and adaptive
 codebook updating.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h5 id=&quot;background-modeling&quot;&gt;Background modeling&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;Background modeling&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;The CB algorithm adopts a &lt;strong&gt;quantization/clustering&lt;/strong&gt; technique to construct a
 background model from long observation sequences. For each pixel, it builds a &lt;code class=&quot;highlighter-rouge&quot;&gt;codebook&lt;/code&gt; consisting of one or more codewords. Samples at each pixel are clustered into the set of codewords based on &lt;code class=&quot;highlighter-rouge&quot;&gt;a color distortion metric&lt;/code&gt; together with brightness bounds. Not all pixels have the same number of codewords. The clusters represented by codewords do not necessarily correspond
 to single Gaussian or other parametric distributions. Even if the distribution at a pixel were a single normal, there could be several codewords for that pixel. The background is encoded on a &lt;code class=&quot;highlighter-rouge&quot;&gt;pixel-by-pixel basis&lt;/code&gt;.&lt;/p&gt;
 
-&lt;h5 id=&quot;detection&quot;&gt;Detection&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;Detection&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Detection involves testing the difference of the current image from the background model with respect to &lt;code class=&quot;highlighter-rouge&quot;&gt;color and brightness differences&lt;/code&gt;. If an incoming pixel meets two conditions, it is classified as background — (1) the color distortion to some codeword is less than the &lt;code class=&quot;highlighter-rouge&quot;&gt;detection threshold&lt;/code&gt;, and (2) its brightness lies within the &lt;code class=&quot;highlighter-rouge&quot;&gt;brightness range&lt;/code&gt; of that codeword. Otherwise, it is classified as foreground.&lt;/p&gt;
 
@@ -357,7 +355,7 @@ at http://www.motiondetection.org.&lt;/p&gt;
   &lt;p&gt;利用视频第一帧图像就能完成背景建模初始化工作，根据邻近像素点之间具有相似性完成初始化和更新，依据当前图像的像素和背景模型中对应像素之间的相似性程度来检测前景目标。&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;视频帧序列 -&amp;gt; 第1帧 -&amp;gt; 初始化背景模型 -&amp;gt; 第2,…,N帧 -&amp;gt; 前景目标检测-&amp;gt;更新背景模型&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;步骤：&lt;/strong&gt;视频帧序列 -&amp;gt; 第1帧 -&amp;gt; 初始化背景模型 -&amp;gt; 第2,…,N帧 -&amp;gt; 前景目标检测-&amp;gt;更新背景模型&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;模型初始化&lt;/strong&gt;： 为图像中每个像素建立一个大小为N的背景样本集，这个样本存储了该像素点邻近像素点的像素值以及过去这一点的像素值。&lt;/p&gt;
 
@@ -365,8 +363,7 @@ at http://www.motiondetection.org.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;背景模型实时更新&lt;/strong&gt;： 当前像素点被检测为背景像素，将按照一定概率用该像素点去更新自己的背景样本集或者是它的邻居点背景样本。&lt;/p&gt;
 
-&lt;p&gt;算法的主要优势：&lt;/p&gt;
-
+&lt;p&gt;&lt;strong&gt;算法的主要优势：&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;内存占用少，没有浮点运算，计算量低，算法效率高，&lt;/li&gt;
   &lt;li&gt;一个像素需要作一次比较，占用一个字节的内存；&lt;/li&gt;
@@ -376,16 +373,14 @@ at http://www.motiondetection.org.&lt;/p&gt;
   &lt;li&gt;可直接应用在产品中，软硬件兼容性好；&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;算法的缺点：&lt;/p&gt;
-
+&lt;p&gt;&lt;strong&gt;算法的缺点：&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;容易引入&lt;strong&gt;ghost&lt;/strong&gt; 区域，“鬼影”。&lt;/li&gt;
   &lt;li&gt;对 &lt;strong&gt;光照&lt;/strong&gt; 强弱变化等动态场景敏感，不适用动态背景下的目标检测。&lt;/li&gt;
   &lt;li&gt;无法消除运动目标的 &lt;strong&gt;阴影&lt;/strong&gt; 。&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;改进：&lt;/p&gt;
-
+&lt;p&gt;&lt;strong&gt;改进：&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;自适应阈值&lt;/li&gt;
   &lt;li&gt;形态学处理&lt;/li&gt;
@@ -532,15 +527,13 @@ a large, heterogeneous benchmark with 59 sequences and pixel-accurate ground tru
   &lt;p&gt;from &lt;a href=&quot;https://en.wikipedia.org/wiki/Motion_History_Images&quot;&gt;wikipedia/Motion_History_Images&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h2 id=&quot;paper-lists&quot;&gt;Paper Lists&lt;/h2&gt;
-
-&lt;h3 id=&quot;recent-papers&quot;&gt;Recent papers&lt;/h3&gt;
+&lt;h2 id=&quot;recent-papers&quot;&gt;Recent papers&lt;/h2&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Pierre-Luc St-Charles, &lt;strong&gt;SuBSENSE: A Universal Change Detection Method With Local Adaptive Sensitivity&lt;/strong&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;2015&lt;/code&gt;, cited by &lt;code class=&quot;highlighter-rouge&quot;&gt;80+&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&quot;survey&quot;&gt;Survey&lt;/h3&gt;
+&lt;h2 id=&quot;survey&quot;&gt;Survey&lt;/h2&gt;
 &lt;ol&gt;
   &lt;li&gt;W Hu, &lt;strong&gt;A survey on visual surveillance of object motion and behaviors&lt;/strong&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;2004&lt;/code&gt;, cited by &lt;code class=&quot;highlighter-rouge&quot;&gt;2300+&lt;/code&gt;&lt;/li&gt;
   &lt;li&gt;M Piccardi, &lt;strong&gt;Background subtraction techniques: A review&lt;/strong&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;2004&lt;/code&gt;, cited by &lt;code class=&quot;highlighter-rouge&quot;&gt;1900+&lt;/code&gt;&lt;/li&gt;
@@ -550,17 +543,15 @@ a large, heterogeneous benchmark with 59 sequences and pixel-accurate ground tru
   &lt;li&gt;T Bouwmans, &lt;strong&gt;Traditional and recent approaches in background modeling for foreground detection  An overview&lt;/strong&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;2014&lt;/code&gt;, cited by &lt;code class=&quot;highlighter-rouge&quot;&gt;180+&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&quot;library&quot;&gt;Library&lt;/h2&gt;
+&lt;h2 id=&quot;librarysoftware&quot;&gt;Library/Software&lt;/h2&gt;
 
-&lt;h3 id=&quot;background-subtraction-library&quot;&gt;Background subtraction Library&lt;/h3&gt;
-
+&lt;p&gt;&lt;strong&gt;Background subtraction Library&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/andrewssobral/bgslibrary&quot;&gt;&lt;strong&gt;BGSLibrary&lt;/strong&gt;&lt;/a&gt;: The BGS Library (A. Sobral, Univ. La Rochelle, France) provides a C++ framework to perform background subtraction algorithms. The code works either on Windows or on Linux. Currently the library offers more than 30 BGS algorithms.&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/andrewssobral/lrslibrary&quot;&gt;&lt;strong&gt;LRS Library&lt;/strong&gt;&lt;/a&gt; - Low-Rank and Sparse tools for Background Modeling and Subtraction in Videos. The LRSLibrary (A. Sobral, Univ. La Rochelle, France) provides a collection of low-rank and sparse decomposition algorithms in MATLAB. The library was designed for motion segmentation in videos, but it can be also used or adapted for other computer vision problems. Currently the LRSLibrary contains more than 100 matrix-based and tensor-based algorithms.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&quot;other-libary&quot;&gt;Other libary&lt;/h3&gt;
-
+&lt;p&gt;&lt;strong&gt;Other libary&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.codeproject.com/Articles/10248/Motion-Detection-Algorithms&quot;&gt;&lt;strong&gt;Motion Detection Algorithms&lt;/strong&gt;&lt;/a&gt;: There are many approaches for motion detection in a continuous video stream. All of them are based on comparing of the current video frame with one from the previous frames or with something that we’ll call background. In this article, I’ll try to describe some of the most common approaches.&lt;/li&gt;
 &lt;/ol&gt;
@@ -568,10 +559,8 @@ a large, heterogeneous benchmark with 59 sequences and pixel-accurate ground tru
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;运动检测（前景检测）之（一）ViBe &lt;a href=&quot;http://blog.csdn.net/zouxy09/article/details/9622285&quot;&gt;http://blog.csdn.net/zouxy09/article/details/9622285&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.motiondetection.org&quot;&gt;http://www.motiondetection.org&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;目标检测中背景建模方法 &lt;a href=&quot;http://www.cnblogs.com/ronny/archive/2012/04/12/2444053.html&quot;&gt;http://www.cnblogs.com/ronny/archive/2012/04/12/2444053.html&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.changedetection.net/&quot;&gt;http://www.changedetection.net/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;A video database for testing change detection algorithms &lt;a href=&quot;http://www.changedetection.net/&quot;&gt;http://www.changedetection.net/&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
         <pubDate>Thu, 06 Apr 2017 16:40:25 +0800</pubDate>
