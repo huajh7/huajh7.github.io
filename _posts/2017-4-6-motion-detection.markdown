@@ -1,15 +1,16 @@
 ---
 layout:     post
-title:    "运动检测 (Motion Detection)"
-subtitle:   "运动侦测，移动侦测，移动检测"
+title:    "运动检测文献综述"
+subtitle:   "Motion Detection, 运动侦测，移动侦测，移动检测"
 author:     "huajh7"
 catalog:    true
 header-img: "img/post-bg-universe.jpg"
 tags:
   - Motion Detection
+  - Computer Vision
 date: 2017-4-6  8:40:25
 ---
-# 运动检测 (Motion Detection)
+ 
 
 > 又名：运动侦测，移动侦测，移动检测 
 

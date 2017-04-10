@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Imagination is more important than knowledge. -Albert Einstein">
+    <meta name="keywords"  content="华俊豪, huajh, huajh7, Junhao Hua, @huajh, 华俊豪的博客, huajh7's Blog, 博客, 机器学习, 贝叶斯">
+    <meta name="theme-color" content="#000000">
+    
+    <title>变分贝叶斯算法理解与推导 - Junhao Hua 博客 | huajh7's Blog</title>
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/pwa/manifest.json">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="http://localhost:4000/2013/03/07/variational-bayes/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">huajh7's Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/about/">about</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/archives/">Archives</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tags/">Tags</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    var __HuxNav__ = {
+        close: function(){
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        },
+        open: function(){
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+
+    // Bind Event
+    $toggle.addEventListener('click', function(e){
+        if ($navbar.className.indexOf('in') > 0) {
+            __HuxNav__.close()
+        }else{
+            __HuxNav__.open()
+        }
+    })
+
+    /**
+     * Since Fastclick is used to delegate 'touchstart' globally
+     * to hack 300ms delay in iOS by performing a fake 'click',
+     * Using 'e.stopPropagation' to stop 'touchstart' event from 
+     * $toggle/$collapse will break global delegation.
+     * 
+     * Instead, we use a 'e.target' filter to prevent handler
+     * added to document close HuxNav.  
+     *
+     * Also, we use 'click' instead of 'touchstart' as compromise
+     */
+    document.addEventListener('click', function(e){
+        if(e.target == $toggle) return;
+        if(e.target.className == 'icon-bar') return;
+        __HuxNav__.close();
+    })
+</script>
+
+
+    <!-- Image to hack wechat -->
+<!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="/img/post-bg-2015.jpg" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        position: relative;
+        background-image: url('/img/post-bg-2015.jpg')
+    }
+
+    
+</style>
+<header class="intro-header" >
+    <div class="header-mask"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/#Machine Learning" title="Machine Learning">Machine Learning</a>
+                        
+                        <a class="tag" href="/tags/#Variational Inference" title="Variational Inference">Variational Inference</a>
+                        
+                    </div>
+                    <h1>变分贝叶斯算法理解与推导</h1>
+                    
+                    
+                    <h2 class="subheading">Variational Bayes</h2>
+                    
+                    <span class="meta">Posted by huajh7 on March 7, 2013</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-9 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                post-container"> <!-- style="width:70%"  col-lg-9 col-lg-offset-1  col-lg-8 col-lg-offset-2 -->
+
+				<p><strong>关键词</strong>: 贝叶斯推断，平均场理论，变分估计，贝叶斯推断，KL散度，确定性估计</p>
+
+<h2 id="前言">前言</h2>
+
+<p>上世纪90年代，变分推断在概率模型上得到迅速发展，在贝叶斯框架下一般的变分法由Attias的两篇文章给出。Matthew J.Beal的博士论文《Variational Algorithms for Approximate Bayesian Inference》中有比较充分地论述，作者将其应用于隐马尔科夫模型，混合因子分析，线性动力学，图模型等。变分贝叶斯是一类用于贝叶斯估计和机器学习领域中近似计算复杂（intractable）积分的技术。它主要应用于复杂的统计模型中，这种模型一般包括三类变量：观测变量(observed variables, data)，未知参数（parameters）和潜变量（latent variables）。在贝叶斯推断中，参数和潜变量统称为不可观测变量(unobserved variables)。变分贝叶斯方法主要是两个目的:</p>
+
+<ol>
+  <li>
+    <p>近似不可观测变量的后验概率，以便通过这些变量作出统计推断。</p>
+  </li>
+  <li>
+    <p>对一个特定的模型，给出观测变量的边缘似然函数（或称为证据，evidence）的下界。主要用于模型的选择，认为模型的边缘似然值越高，则模型对数据拟合程度越好，该模型产生Data的概率也越高。</p>
+  </li>
+</ol>
+
+<p>对于第一个目的，蒙特卡洛模拟，特别是用Gibbs取样的MCMC方法，可以近似计算复杂的后验分布，能很好地应用到贝叶斯统计推断。此方法通过大量的样本估计真实的后验，因而近似结果带有一定的随机性。与此不同的是，变分贝叶斯方法提供一种局部最优，但具有确定解的近似后验方法。</p>
+
+<p>从某种角度看，变分贝叶斯可以看做是EM算法的扩展，因为它也是采用极大后验估计(MAP)，即用单个最有可能的参数值来代替完全贝叶斯估计。另外，变分贝叶斯也通过一组相互依然（mutually dependent）的等式进行不断的迭代来获得最优解。</p>
+
+<h2 id="问题描述">问题描述</h2>
+
+<p>重新考虑一个问题：1）有一组观测数据<script type="math/tex">D</script>，并且已知模型的形式，求参数与潜变量（或不可观测变量）<script type="math/tex">Z = \{ {Z_1},...,{Z_n}\}</script> 的后验分布: P(Z | D)。</p>
+
+<p>正如上文所描述的后验概率的形式通常是很复杂(Intractable)的,对于一种算法如果不能在多项式时间内求解，往往不是我们所考虑的。因而我们想能不能在误差允许的范围内，用更简单、容易理解(tractable)的数学形式Q(Z)来近似P(Z|D),即 <script type="math/tex">P(Z\|D) \approx Q(Z)</script>。</p>
+
+<p>由此引出如下两个问题：</p>
+
+<ol>
+  <li>
+    <p>假设存在这样的Q(Z),那么如何度量Q(Z)与P(Z|D)之间的差异性 (dissimilarity).</p>
+  </li>
+  <li>
+    <p>如何得到简单的Q(Z)?</p>
+  </li>
+</ol>
+
+<p>对于问题一，幸运的是，我们不需要重新定义一个度量指标。在信息论中，已经存在描述两个随机分布之间距离的度量，即相对熵，或者称为Kullback-Leibler散度。</p>
+
+<p>对于问题二，显然我们可以自主决定Q(Z)的分布，只要它足够简单，且与P(Z|D)接近。然而不可能每次都手工给出一个与P(Z|D)接近且简单的Q(Z)，其方法本身已经不具备可操作性。所以需要一种通用的形式帮助简化问题。那么数学形式复杂的原因是什么？在“模型的选择”部分，曾提到Occam’s razor，认为一个模型的参数个数越多，那么模型复杂的概率越大;此外，如果参数之间具有相互依赖关系(mutually dependent)，那么通常很难对参数的边缘概率精确求解。</p>
+
+<p>幸运的是，统计物理学界很早就关注了高维概率函数与它的简单形式，并发展了平均场理论。简单讲就是：系统中个体的局部相互作用可以产生宏观层面较为稳定的行为。于是我们可以作出后验条件独立（posterior independence）的假设。即，<script type="math/tex">\forall i,p(Z \| D) = p(Z_i \| D)p({Z_{-i}}\|D)</script></p>
+
+<h2 id="kullback-leibler散度">Kullback-Leibler散度</h2>
+
+<p>在统计学中，相对熵对应的是似然比的对数期望，相对熵 <script type="math/tex">D(p\|\|q)</script> 度量当真实分布为 P而假定分布为Q时的无效性。</p>
+
+<p><strong>定义</strong>  两个概率密度函数为<script type="math/tex">p(x)</script>和<script type="math/tex">q(x)</script>之间的相对熵定义为</p>
+
+<p><script type="math/tex">D_{KL}(p\|\|q) = \sum_{x} p(x) \log \frac{p(x)}{q(x)}</script>.</p>
+
+<p>KL散度有如下性质：</p>
+
+<ol>
+  <li><script type="math/tex">{D_{KL}}(p\|\|q) \ne {D_{KL}}(q\|\|p)</script>;</li>
+  <li><script type="math/tex">{D_{KL}}(p\|\|q) \ge 0</script> ，当且仅当<script type="math/tex">p=q</script>时为零；</li>
+  <li>不满足三角不等式。</li>
+</ol>
+
+<p>Q分布与P分布的KL散度为：</p>
+
+<script type="math/tex; mode=display">D_{KL}(Q\|\|P) = \sum\limits_Z Q(Z)\log \frac{Q(Z)}{P(Z\|D)} = \sum\limits_Z Q(Z)\log \frac{Q(Z)}{P(Z,D)} + \log P(D)</script>
+
+<p>或者</p>
+
+<script type="math/tex; mode=display">\log P(D) = {D_{KL}}(Q\|\|P) - \sum\limits_Z {Q(Z)\log \frac{Q(Z)}{P(Z,D)}} ={D_{KL}}(Q\|\|P) + L(Q).</script>
+
+<p>由于对数证据<script type="math/tex">logP(D)</script>被相应的Q所固定，为了使KL散度最小，则只要极大化<script type="math/tex">L(Q)</script>。通过选择合适的Q，使<script type="math/tex">L(Q)</script>便于计算和求极值。这样就可以得到后验P(Z|D)的近似解析表达式和证据（log evidence）的下界<script type="math/tex">L(Q)</script>，又称为变分自由能（variational free energy）：</p>
+
+<script type="math/tex; mode=display">L(Q)=\sum\limits_Z {Q(Z)\log P(Z,D)}-\sum\limits_Z {Q(Z)\log Q(Z)}={E_Q}[\log P(Z,D)]+H(Q)</script>
+
+<p><img src="/img/posts/variational-bayes/vb-1.png" alt="vb1" /></p>
+
+<h2 id="平均场理论mean-field-method">平均场理论（Mean Field Method）</h2>
+
+<p>数学上说，平均场的适用范围只能是完全图，或者说系统结构是well-mixed，在这种情况下，系统中的任何一个个体以等可能接触其他个体。反观物理，平均场与其说是一种方法，不如说是一种思想。其实统计物理的研究目的就是期望对宏观的热力学现象给予合理的微观理论。物理学家坚信，即便不满足完全图的假设，但既然这种“局部”到“整体”的作用得以实现，那么个体之间的局部作用相较于“全局”的作用是可以忽略不计的。</p>
+
+<p>根据平均场理论，变分分布Q(Z)可以通过参数和潜在变量的划分（partition）因式分解，比如将<script type="math/tex">Z</script>划分为<script type="math/tex">{Z_1} \ldots {Z_M}</script></p>
+
+<script type="math/tex; mode=display">Q(Z) = \prod\limits_{i = 1}^M {q(Z_i\|D)}</script>
+
+<p>注意这里并非一个不可观测变量一个划分，而应该根据实际情况做决定。当然你也可以这么做，但是有时候，将几个潜变量放在一起会更容易处理。</p>
+
+<h3 id="平均场方法的合理性">平均场方法的合理性</h3>
+
+<p>在量子多体问题中，用一个（单体）有效场来代替电子所受到的其他电子的库仑相互作用。这个有效场包含所有其他电受到的其他电子的库仑相互作用。这个有效场包含了所有其他电子对该电子的相互作用。利用有效场取代电子之间的库仑相互作用之后，每一个电子在一个有效场中运动，电子与电子之间的运动是独立的(除了需要考虑泡利不相容原理)，原来的多体问题转化为单体问题。</p>
+
+<p>同样在变分分布Q(Z)这个系统中，我们也可以将每一个潜变量划分看成是一个单体，其他划分对其的影响都可以用一个看做是其自身的作用。采用的办法是迭代(Iterative VB(IVB) algorithm)。这是由于当变分自由能取得最大值的时候，划分<script type="math/tex">Z_i</script>与它的互斥集<script type="math/tex">{Z_{-i}}</script>(或者更进一步，马尔科夫毯(Markov blanket), <script type="math/tex">mb(Z_i) )</script>具有一个简单的关系：</p>
+
+<script type="math/tex; mode=display">Q(Z_i) \propto \frac{1}{C}\exp {\left\langle {\ln P(Z_i,{Z_{-i}},D)} \right\rangle _{Q({Z_{-i}}) or Q(mb(Z_i))}}</script>
+
+<p>（为保持文章的连贯性，此处先不证明，下文将详细说明）</p>
+
+<p>于是，对于某个划分<script type="math/tex">Z_i</script>,我们可以先保持其他划分<script type="math/tex">{Z_{-i}}</script>不变，然后用以上关系式更新<script type="math/tex">Z_i</script>。相同步骤应用于其他划分的更新，使得每个划分之间充分相互作用，最终达到稳定值。</p>
+
+<p>具体更新边缘概率（VB-marginal）步骤如下：</p>
+
+<ol>
+  <li>初始化<script type="math/tex">{Q^{(0)}}(Z_i)</script>，可随机取；</li>
+  <li>在第k步，计算<script type="math/tex">{Z_{-i}}</script>的边缘密度<script type="math/tex">Q^{[k]}({Z_{-i}}\|D) \propto \exp \int\limits_{Z_i^*} Q^{[k - 1]}(Z_i\|D) \log P(Z_i,Z_{-i},D)dZ_i</script></li>
+  <li>计算<script type="math/tex">Z_i</script>的边缘密度<script type="math/tex">Q^{[k]}(Z_i\|D) \propto \exp \int\limits_{Z_{-i}^*} Q^{[k]}({Z_{-i}}\|D) \log P(Z_i,{Z_{-i}},D)d{Z_{-i}}</script></li>
+  <li>理论上<script type="math/tex">{Q^{[\infty ]}}(Z_i\|D)</script>将会收敛，则反复执行(2), (3)直到<script type="math/tex">Q(Z_i)</script>,<script type="math/tex">Q({Z_{-i}})</script>稳定，或稳定在某个小范围内。</li>
+  <li>最后，得 <script type="math/tex">Q(Z) = Q(Z_i\|D)Q({Z_{-i}}\|D)</script></li>
+</ol>
+
+<h3 id="平均场估计下边缘概率的无意义性-vb-marginals">平均场估计下边缘概率的无意义性 (VB-marginals)</h3>
+
+<p>注意到Q(Z)估计的是联合概率密度，而对于每一个<script type="math/tex">Q_i(Z_i)</script>，其与真实的边缘概率密度<script type="math/tex">{P_i}(Z_i)</script>的差别可能是很大的。不应该用<script type="math/tex">Q_i(Z_i)</script>来估计真实的边缘密度，比如在一个贝叶斯网络中，你不应该用它来推测某个节点的状态。而这其实是很糟糕的，相比于其他能够使用节点状态信息来进行局部推测的算法，变分贝叶斯方法更不利于调试。</p>
+
+<p>比如一个标准的高斯联合分布<script type="math/tex">P(\mu ,x)</script>和最优的平均场高斯估计<script type="math/tex">Q(\mu ,x)</script>。Q选择了在它自己作用域中的高斯分布，因而变得很窄。此时边缘密度<script type="math/tex">{Q_x}(x)</script>变得非常小，完全与<script type="math/tex">{P_x}(x)</script>不同。</p>
+
+<p><img src="/img/posts/variational-bayes/vb-2.png" alt="vb2" /></p>
+
+<h2 id="边缘密度vb-marginal公式的推导">边缘密度（VB-marginal）公式的推导</h2>
+
+<p>上文已经提到我们要找到一个更加简单的函数<script type="math/tex">D(Z)</script>来近似P(Z|D)，同时问题转化为求解证据<script type="math/tex">logP(Z)</script>的下界<script type="math/tex">L(Q)</script>，或者<script type="math/tex">L(Q(Z))</script>。应该注意到<script type="math/tex">L(Q)</script>并非普通的函数，而是以整个函数为自变量的函数，这便是泛函。我们先介绍一下什么是泛函，以及泛函取得极值的必要条件。</p>
+
+<h3 id="泛函的概念">泛函的概念</h3>
+
+<p><strong>泛函</strong></p>
+
+<blockquote>
+  <p>设对于(某一函数集合内的)任意一个函数<script type="math/tex">y(x)</script>，有另一个数<script type="math/tex">J[y]</script>与之对应，则称<script type="math/tex">J[y]</script>为<script type="math/tex">y(x)</script>的泛函。泛函可以看成是函数概念的推广。
+这里的函数集合，即泛函的定义域，通常要求<script type="math/tex">y(x)</script> 满足一定的边界条件，并且具有连续的二阶导数．这样的<script type="math/tex">y(x)</script>称为可取函数。</p>
+</blockquote>
+
+<p><strong>泛函不同于复合函数</strong>，</p>
+
+<blockquote>
+  <p>例如<script type="math/tex">g=g(f(x))</script>; 对于后者，给定一个<script type="math/tex">x</script>值，仍然是有一个<script type="math/tex">g</script>值与之对应；
+对于前者，则必须给出某一区间上的函数<script type="math/tex">y(x)</script>，才能得到一个泛函值<script type="math/tex">J[y]</script>。(定义在同一区间上的)函数不同，泛函值当然不同，
+为了强调泛函值<script type="math/tex">J[y]</script>与函数<script type="math/tex">y(x)</script>之间的依赖关系，常常又把函数<script type="math/tex">y(x)</script>称为变量函数。</p>
+</blockquote>
+
+<p>泛函的形式多种多样，通常可以积分形式：<script type="math/tex">J[y] = \int_{x_0}^{x_1} {F(x,y,y')} dx</script></p>
+
+<h3 id="泛函取极值的必要条件">泛函取极值的必要条件</h3>
+
+<p><strong>泛函的极值</strong></p>
+
+<p>“当变量函数为<script type="math/tex">y(x)</script>时，泛函<script type="math/tex">J [y]</script>取极大值”的含义就是：对于极值函数<script type="math/tex">y(x)</script>及其“附近”的变量函数<script type="math/tex">y(x) + \delta y(x)</script>，恒有<script type="math/tex">J\left[ {y + \delta y} \right] \le J[y]</script>;</p>
+
+<p>所谓函数<script type="math/tex">y(x) + \delta y(x)</script>在另一个函数<script type="math/tex">y(x)</script>的“附近”，指的是：</p>
+
+<ol>
+  <li><script type="math/tex">% <![CDATA[
+\|\delta y(x)\| < \varepsilon %]]></script>;</li>
+  <li>有时还要求<script type="math/tex">% <![CDATA[
+\|(\delta y)'(x) \| < \varepsilon %]]></script>.</li>
+</ol>
+
+<p>这里的<script type="math/tex">\delta y(x)</script>称为函数<script type="math/tex">y(x)</script>的变分。</p>
+
+<p><strong>Euler–Lagrange方程</strong></p>
+
+<p>可以仿造函数极值必要条件的导出办法，导出泛函取极值的必要条件，这里不做严格的证明，直接给出。
+泛函<script type="math/tex">J[y]</script>取到极大值的必要条件是一级变分<script type="math/tex">\delta J[y]</script>为0，其微分形式一般为二阶常微分方程，即Euler-Largange方程：</p>
+
+<script type="math/tex; mode=display">\frac{\partial F}\partial y - \frac{d}dx\frac{\partial F}\partial y' = 0</script>
+
+<p><strong>泛函的条件极值</strong></p>
+
+<p>在约束条件 下求函数<script type="math/tex">J[y]</script>的极值，可以引入Largange乘子<script type="math/tex">\lambda</script>，从而定义一个新的泛函，
+<script type="math/tex">\tilde J[y] = J[y] - \lambda {J_0}[y]</script>。仍将<script type="math/tex">\delta y</script>看成是独立的，则泛函<script type="math/tex">\tilde J[y]</script>在边界条件下取极值的必要条件就是，</p>
+
+<script type="math/tex; mode=display">(\frac{\partial}{\partial y} - \frac{d}{dx} \frac{\partial}{\partial y'})
+(F - \lambda G) = 0</script>
+
+<h3 id="问题求解">问题求解</h3>
+
+<p>对于<script type="math/tex">L(Q(Z)) = {E_Q(Z)}[\ln P(Z,D)] + H(Q(Z))</script>，将右式第一项定义为能量(Energy)，第二项看做是信息熵(Shannon entropy)。我们只考虑自然对数的形式，因为对于任何底数的对数总是可以通过换底公式将其写成自然对数与一个常量的乘积形式。另外根据平均场假设可以得到如下积分形式，</p>
+
+<script type="math/tex; mode=display">L(Q(Z)) = \int {(\prod\limits_i {Q_i(Z_i)})} \ln P(Z,D)dZ - \int {(\prod\limits_k {Q_k({Z_k})} )} \sum\limits_i {\ln Q_i(Z_i)} dZ</script>
+
+<p>其中<script type="math/tex">Q(Z) = \prod\limits_i {Q_i(Z_i)}</script>，且满足 <script type="math/tex">\forall i.{\rm{ }}\int {Q_i(Z_i)} dZ_i = 1</script></p>
+
+<p>考虑划分<script type="math/tex">Z = \left\{ Z_i,{\rm{ }}{Z_{-i}} \right\}</script>，其中<script type="math/tex">Z_{-i} = Z\backslash Z_i</script>，先考虑能量项(Energy)（第一项），</p>
+
+<p><script type="math/tex">{E_Q(Z)}[\ln P(Z,D)]</script>
+<script type="math/tex">= \int {(\prod\limits_i {Q_i(Z_i)} )} \ln P(Z, D)dZ</script>
+<script type="math/tex">=\int Q_i(Z_i)dZ_i\int Q_{-i}({Z_{-i}})\ln P(Z, D)d{Z_{-i}}</script>
+<script type="math/tex">=\int Q_i(Z_i){\left\langle \ln P(Z, D) \right\rangle }_{Q_{-i}(Z_{-i})}dZ_i</script>
+<script type="math/tex">=\int Q_i(Z_i)\ln \exp { \left\langle {\ln P(Z,D)} \right\rangle }_{Q_{-i}({Z_{-i}})} dZ_i</script>
+<script type="math/tex">=\int Q_i(Z_i) \ln Q_i^*(Z_i) dZ_i + \ln C</script></p>
+
+<p>其中定义<script type="math/tex">Q_i^*(Z_i) = \frac{1}{C}\exp {\left\langle {\ln P(Z,D)} \right\rangle _{Q_{-i}({Z_{-i}})}}</script>，<script type="math/tex">C</script>为的归一化常数。再考虑熵量(entropy)（第二项），</p>
+
+<p><script type="math/tex">H(Q(Z)) = -\sum\limits_i {\int {(\prod\limits_k {Q_k({Z_k})} )} \ln Q_i(Z_i)dZ} =-\sum\limits_i {\int {\int {Q_i(Z_i)Q_{-i}({Z_{-i}})\ln Q_i(Z_i dZ_id{Z_{-i}}} } }</script>
+ <script type="math/tex">=-{\sum\limits_i {\left\langle {\int {Q_i(Z_i)\ln Q_i(Z_i)dZ_i} } \right\rangle } _{Q_{-i}({Z_{-i}})}}</script>
+ <script type="math/tex">=-\sum\limits_i {\int {Q_i(Z_i)\ln Q_i(Z_i)dZ_i} }</script></p>
+
+<p>此时得到泛函，</p>
+
+<p><script type="math/tex">L(Q(Z)) = \int {Q_i(Z_i)\ln Q_i^*(Z_i)} dZ_i-\sum\limits_i {\int {Q_i(Z_i)\ln Q_i(Z_i)dZ_i} } + {\rm{lnC}}</script>
+<script type="math/tex">= (\int {Q_i(Z_i)\ln Q_i^*(Z_i)} dZ_i - \int {Q_i(Z_i)\ln Q_i(Z_i)dZ_i} )-\sum\limits_{k \ne i} {\int {Q_k({Z_k})\ln Q_k({Z_k})d{Z_k}} } + {\rm{lnC}}</script>
+<script type="math/tex">=\int Q_i(Z_i)\ln \frac{Q_i^*(Z_i)}{Q_i(Z_i)} dZ_i-\sum\limits_{k \ne i} \int Q_k({Z_k})\ln Q_k({Z_k})d{Z_k} +\ln C</script>
+<script type="math/tex">= - {D_{KL}}(Q_i(Z_i)\|\|Q_i^*(Z_i)) + H[Q_{-i}({Z_{-i}})] + \ln C</script></p>
+
+<p>注意到<script type="math/tex">L(Q(Z))</script> 并非只有一个等式，如果不可观测变量有M个划分。 那么将有M个方程。 为了使得<script type="math/tex">L(Q(Z))</script>达到最大值, 同时注意到约束条件, 根据泛函求条件极值的必要条件, 得,</p>
+
+<script type="math/tex; mode=display">\forall i. \frac{\partial}{\partial Q_i(Z_i)} \{- {D_{KL}}[Q_i(Z_i)\|\|Q_i^*(Z_i)] - {\lambda _i}(\int {Q_i(Z_i)} dZ_i - 1)\} : = 0</script>
+
+<p>直接求解将得到Gibbs分布，略显复杂;实际上，注意到KL散度，我们可以直接得到KL散度等于0的时候，<script type="math/tex">L(D)</script>达到最大值，最终得到</p>
+
+<script type="math/tex; mode=display">Q_i(Z_i) = Q_i^*(Z_i) = \frac{1}{C}\exp {\left\langle {\ln P(Z_i,{Z_{-i}},D)} \right\rangle _{Q_{-i}({Z_{-i}})}}</script>
+
+<p>C为归一化常数<script type="math/tex">C = \int \exp \left\langle {\ln (Z_i,{Z_{-i}},D)} \right\rangle_{Q_{-i}({Z_{-i}})} d Z_{-i}</script> , <script type="math/tex">Q(Z_i)</script>为联合概率函数在除<script type="math/tex">Z_i</script>本身外的其他划分下的对数期望。又可以写为 <script type="math/tex">\ln Q_i(Z_i) = {\left\langle {\ln P(Z_i,{Z_{-i}},D)} \right\rangle_{Q_{-i}({Z_{-i}})}} + const</script>.</p>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>[1] Smídl, Václav, and Anthony Quinn. <em>The variational Bayes method in signal processing</em>. Springer, 2006.</p>
+
+<p>[2] Beal, Matthew James. <em>Variational algorithms for approximate Bayesian inference</em>. Diss. University of London, 2003.</p>
+
+<p>[3] Fox, Charles W., and Stephen J. Roberts. “A tutorial on variational Bayesian inference.” <em>Artificial Intelligence Review</em> 38.2 (2012): 85-95.</p>
+
+<p>[4] Attias, Hagai. “Inferring parameters and structure of latent variable models by variational Bayes.” <em>Proceedings of the Fifteenth conference on Uncertainty in artificial intelligence</em>. Morgan Kaufmann Publishers Inc., 1999.</p>
+
+<p>[5] Attias, Hagai. “A variational Bayesian framework for graphical models.”<em>Advances in neural information processing systems</em> 12.1-2 (2000): 209-215.</p>
+
+<p>完整文章下载: <a href="/pdf/intro_vb_2013.pdf">[pdf]</a></p>
+
+<p> </p>
+
+
+                <hr style="visibility: hidden;">
+
+                
+                <!-- 多说 Share start -->
+                <div class="ds-share"
+                    style="text-align: right"
+                    data-thread-key="/2013/03/07/variational-bayes"
+                    data-title="变分贝叶斯算法理解与推导"
+                    data-url="http://localhost:4000/2013/03/07/variational-bayes/"
+                    data-images="http://localhost:4000/img/post-bg-2015.jpg"
+                    data-content="关键词: 贝叶斯推断，平均场理论，变分估计，贝叶斯推断，KL散度，确定性估计
+
+前言
+
+上世纪90年代，变分推断在概率模型上得到迅速发展，在贝叶斯框架下一... | Junhao Hua 博客 | huajh7's Blog " >
+                    <div class="ds-share-inline">
+                      <style> 
+                        .ds-share-icons-16 {display:none;} 
+                      </style>
+                      <ul class="ds-share-icons-16">
+                        <li data-toggle="ds-share-icons-more"><a class="ds-more" href="#">分享到：</a></li>
+                        <li><a class="ds-wechat flat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+                        <li><a class="ds-weibo flat" href="javascript:void(0);" data-service="weibo">微博</a></li>
+                        <li><a class="ds-douban flat" href="javascript:void(0);" data-service="douban">豆瓣</a></li>
+                      </ul>
+                      <div class="ds-share-icons-more">
+                      </div>
+                    </div>
+                <hr>
+                </div>
+                <!-- 多说 Share end-->
+                
+
+
+                <ul class="pager">
+                    
+                    
+                    <li class="next">
+                        <a href="/2013/03/23/variational-message-passing/" data-toggle="tooltip" data-placement="top" title="变分消息传播模型与算法">
+                        Next<br>
+                        <span>变分消息传播模型与算法</span>
+                        </a>
+                    </li>
+                    
+                </ul>
+
+
+                
+                <!-- 多说评论框 start -->
+                <div class="comment">
+                    <div class="ds-thread"
+                        data-thread-key="/2013/03/07/variational-bayes"
+                        data-title="变分贝叶斯算法理解与推导"
+                        data-url="http://localhost:4000/2013/03/07/variational-bayes/" >
+                    </div>
+                </div>
+                <!-- 多说评论框 end -->
+                
+
+                
+
+            </div>  
+
+    <!-- Side Catalog Container -->
+        
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+        
+
+    <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+        				
+                            
+                				<a href="/tags/#Machine Learning" title="Machine Learning" rel="4">
+                                    Machine Learning
+                                </a>
+                            
+        				
+                            
+                				<a href="/tags/#Variational Inference" title="Variational Inference" rel="3">
+                                    Variational Inference
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#Computer Vision" title="Computer Vision" rel="3">
+                                    Computer Vision
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+        			</div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+                    
+                        <li><a href="http://www.huajh7.com">My academic Website</a></li>
+                    
+                        <li><a href="http://www.homfen.me">Homfen</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    // dynamic User by Hux
+    var _user = 'huajh7';
+
+    // duoshuo comment query.
+    var duoshuoQuery = {short_name: _user };
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+</script>
+<!-- 多说公共JS代码 end -->
+
+
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("//cdnjs.cloudflare.com/ajax/libs/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'always',
+          placement: 'right',
+          icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+
+                    
+                    <li>
+                        <a target="_blank" href="http://weibo.com/huajh7">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/huajh">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+                    
+
+                    <!-- add Weibo, Zhihu by Hux, add target = "_blank" to <a> by Hux -->
+                    
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/hua-jun-hao">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+
+                    
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/in/junhao-hua-01b03150">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+                                        
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; huajh7's Blog 2017
+                    <br>
+                    Theme by <a href="https://github.com/Huxpro/huxpro.github.io">Hux</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js "></script>
+
+<!-- Service Worker -->
+
+<script type="text/javascript">
+    if(navigator.serviceWorker){
+        // For security reasons, a service worker can only control the pages that are in the same directory level or below it. That's why we put sw.js at ROOT level.
+        navigator.serviceWorker
+            .register('/sw.js')
+            .then((registration) => {console.log('Service Worker Registered. ', registration)})
+            .catch((error) => {console.log('ServiceWorker registration failed: ', error)})
+    }
+</script>
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/ 
+     - https://github.com/jneen/rouge/wiki/list-of-supported-languages-and-lexers   
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async('/js/jquery.tagcloud.js',function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+
+
+
+<!-- Side Catalog -->
+
+<script type="text/javascript">
+    function generateCatalog (selector) {
+        var P = $('div.post-container'),a,n,t,l,i,c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#"+$(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="'+i+'" rel="nofollow">'+t+'</a>');
+            l = $('<li class="'+n+'_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;    
+    }
+
+    generateCatalog(".catalog-body");
+
+    // toggle side catalog
+    $(".catalog-toggle").click((function(e){
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    /*
+     * Doc: https://github.com/davist11/jQuery-One-Page-Nav
+     * Fork by Hux to support padding
+     */
+    async("/js/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+
+<!-- Image to hack wechat -->
+<!-- <img src="/img/icon_wechat.png" width="0" height="0" /> -->
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
+
+</html>

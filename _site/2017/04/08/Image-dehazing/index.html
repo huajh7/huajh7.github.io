@@ -174,7 +174,7 @@
                 <div class="post-heading">
                     <div class="tags">
                         
-                        <a class="tag" href="/tags/#Computer vision" title="Computer vision">Computer vision</a>
+                        <a class="tag" href="/tags/#Computer Vision" title="Computer Vision">Computer Vision</a>
                         
                         <a class="tag" href="/tags/#Image Processing" title="Image Processing">Image Processing</a>
                         
@@ -204,15 +204,11 @@
                 col-md-10 col-md-offset-1
                 post-container"> <!-- style="width:70%"  col-lg-9 col-lg-offset-1  col-lg-8 col-lg-offset-2 -->
 
-				<h1 id="除雾算法最新进展">除雾算法最新进展</h1>
+				<p>除雾算法主要包括 1) 图像增强方法，和2) 基于物理模型的方法。</p>
 
-<h2 id="1-图像增强方法">1. 图像增强方法</h2>
+<p>后者又包括(1)基于景物深度信息, (2)基于大气光偏振特性, 以及(3)基于雾天图像的先验知识。</p>
 
-<h2 id="2-基于物理模型">2. 基于物理模型</h2>
-
-<h3 id="21-基于景物深度信息">2.1 基于景物深度信息</h3>
-<h3 id="22-基于大气光偏振特性">2.2 基于大气光偏振特性</h3>
-<h3 id="23-基于雾天图像的先验知识">2.3 基于雾天图像的先验知识</h3>
+<p>下面总结下基于雾天图像的先验知识的去雾算法。</p>
 
 <h4 id="maximum-contrast">Maximum Contrast</h4>
 
@@ -301,8 +297,6 @@
 <p><code class="highlighter-rouge">expermental results</code>
 <img src="/img/posts/haze-removal/post-haze-removal-zhu2016.jpg" alt="img" /></p>
 
-<p><img src="img/posts/haze-removal/post-haze-removal-zhu2016.jpg" alt="img2" /></p>
-
 <h2 id="3-综述">3. 综述</h2>
 
 <p>吴迪, <strong>图像去雾的最新研究进展</strong>, 自动化学报, <code class="highlighter-rouge">2015</code>, cited by <code class="highlighter-rouge">55</code>.</p>
@@ -346,17 +340,9 @@
                     data-title="除雾算法最新进展"
                     data-url="http://localhost:4000/2017/04/08/Image-dehazing/"
                     data-images="http://localhost:4000/img/post-bg-universe.jpg"
-                    data-content="除雾算法最新进展
+                    data-content="除雾算法主要包括 1) 图像增强方法，和2) 基于物理模型的方法。
 
-1. 图像增强方法
-
-2. 基于物理模型
-
-2.1 基于景物深度信息
-2.2 基于大气光偏振特性
-2.3 基于雾天图像的先验知识
-
-M... | Junhao Hua 博客 | huajh7's Blog " >
+后者又包括(1)基于景物深度信息, (2)基于大气光偏振特性, 以及(3)基于雾天图... | Junhao Hua 博客 | huajh7's Blog " >
                     <div class="ds-share-inline">
                       <style> 
                         .ds-share-icons-16 {display:none;} 
@@ -379,9 +365,9 @@ M... | Junhao Hua 博客 | huajh7's Blog " >
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/2017/04/06/motion-detection/" data-toggle="tooltip" data-placement="top" title="运动检测 (Motion Detection)">
+                        <a href="/2017/04/06/motion-detection/" data-toggle="tooltip" data-placement="top" title="运动检测文献综述">
                         Previous<br>
-                        <span>运动检测 (Motion Detection)</span>
+                        <span>运动检测文献综述</span>
                         </a>
                     </li>
                     
@@ -436,13 +422,13 @@ M... | Junhao Hua 博客 | huajh7's Blog " >
                     <div class="tags">
         				
                             
-                				<a href="/tags/#Machine Learning" title="Machine Learning" rel="2">
+                				<a href="/tags/#Machine Learning" title="Machine Learning" rel="4">
                                     Machine Learning
                                 </a>
                             
         				
                             
-                				<a href="/tags/#Variational Inference" title="Variational Inference" rel="2">
+                				<a href="/tags/#Variational Inference" title="Variational Inference" rel="3">
                                     Variational Inference
                                 </a>
                             
@@ -450,13 +436,11 @@ M... | Junhao Hua 博客 | huajh7's Blog " >
                             
         				
                             
-                				<a href="/tags/#markdown" title="markdown" rel="3">
-                                    markdown
+        				
+                            
+                				<a href="/tags/#Computer Vision" title="Computer Vision" rel="3">
+                                    Computer Vision
                                 </a>
-                            
-        				
-                            
-        				
                             
         				
                             
@@ -593,15 +577,6 @@ M... | Junhao Hua 博客 | huajh7's Blog " >
                     
 
                     
-                    <li>
-                        <a target="_blank" href="https://scholar.google.com/citations?user=hua-jun-hao">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-google fa-stack-1x  fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
 
                     <!-- add Weibo, Zhihu by Hux, add target = "_blank" to <a> by Hux -->
                     
@@ -722,20 +697,6 @@ M... | Junhao Hua 博客 | huajh7's Blog " >
 
 
 <!-- Baidu Tongji -->
-
-<script>
-    // dynamic User by Hux
-    var _baId = '32d5043f5e31b2de0d1f27fa0dec9da9';
-
-    // Originial
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?" + _baId;
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-</script>
 
 
 

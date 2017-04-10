@@ -5,21 +5,17 @@
     <description>Imagination is more important than knowledge. -Albert Einstein</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 09 Apr 2017 12:31:11 +0800</pubDate>
-    <lastBuildDate>Sun, 09 Apr 2017 12:31:11 +0800</lastBuildDate>
+    <pubDate>Mon, 10 Apr 2017 22:46:22 +0800</pubDate>
+    <lastBuildDate>Mon, 10 Apr 2017 22:46:22 +0800</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
       <item>
         <title>除雾算法最新进展</title>
-        <description>&lt;h1 id=&quot;除雾算法最新进展&quot;&gt;除雾算法最新进展&lt;/h1&gt;
+        <description>&lt;p&gt;除雾算法主要包括 1) 图像增强方法，和2) 基于物理模型的方法。&lt;/p&gt;
 
-&lt;h2 id=&quot;1-图像增强方法&quot;&gt;1. 图像增强方法&lt;/h2&gt;
+&lt;p&gt;后者又包括(1)基于景物深度信息, (2)基于大气光偏振特性, 以及(3)基于雾天图像的先验知识。&lt;/p&gt;
 
-&lt;h2 id=&quot;2-基于物理模型&quot;&gt;2. 基于物理模型&lt;/h2&gt;
-
-&lt;h3 id=&quot;21-基于景物深度信息&quot;&gt;2.1 基于景物深度信息&lt;/h3&gt;
-&lt;h3 id=&quot;22-基于大气光偏振特性&quot;&gt;2.2 基于大气光偏振特性&lt;/h3&gt;
-&lt;h3 id=&quot;23-基于雾天图像的先验知识&quot;&gt;2.3 基于雾天图像的先验知识&lt;/h3&gt;
+&lt;p&gt;下面总结下基于雾天图像的先验知识的去雾算法。&lt;/p&gt;
 
 &lt;h4 id=&quot;maximum-contrast&quot;&gt;Maximum Contrast&lt;/h4&gt;
 
@@ -108,8 +104,6 @@
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;expermental results&lt;/code&gt;
 &lt;img src=&quot;/img/posts/haze-removal/post-haze-removal-zhu2016.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;img/posts/haze-removal/post-haze-removal-zhu2016.jpg&quot; alt=&quot;img2&quot; /&gt;&lt;/p&gt;
-
 &lt;h2 id=&quot;3-综述&quot;&gt;3. 综述&lt;/h2&gt;
 
 &lt;p&gt;吴迪, &lt;strong&gt;图像去雾的最新研究进展&lt;/strong&gt;, 自动化学报, &lt;code class=&quot;highlighter-rouge&quot;&gt;2015&lt;/code&gt;, cited by &lt;code class=&quot;highlighter-rouge&quot;&gt;55&lt;/code&gt;.&lt;/p&gt;
@@ -146,7 +140,7 @@
         <link>http://localhost:4000/2017/04/08/Image-dehazing/</link>
         <guid isPermaLink="true">http://localhost:4000/2017/04/08/Image-dehazing/</guid>
         
-        <category>Computer vision</category>
+        <category>Computer Vision</category>
         
         <category>Image Processing</category>
         
@@ -156,10 +150,8 @@
       </item>
     
       <item>
-        <title>运动检测 (Motion Detection)</title>
-        <description>&lt;h1 id=&quot;运动检测-motion-detection&quot;&gt;运动检测 (Motion Detection)&lt;/h1&gt;
-
-&lt;blockquote&gt;
+        <title>运动检测文献综述</title>
+        <description>&lt;blockquote&gt;
   &lt;p&gt;又名：运动侦测，移动侦测，移动检测&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -715,24 +707,14 @@ a large, heterogeneous benchmark with 59 sequences and pixel-accurate ground tru
         
         <category>Motion Detection</category>
         
+        <category>Computer Vision</category>
+        
         
       </item>
     
       <item>
-        <title>Markdown简介BY马克飞象</title>
+        <title>Markdown简介</title>
         <description>&lt;h1 id=&quot;欢迎使用马克飞象&quot;&gt;欢迎使用马克飞象&lt;/h1&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;@(示例笔记本)[马克飞象&lt;/td&gt;
-      &lt;td&gt;帮助&lt;/td&gt;
-      &lt;td&gt;Markdown]&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;strong&gt;马克飞象&lt;/strong&gt;是一款专为印象笔记（Evernote）打造的Markdown编辑器，通过精心的设计与技术实现，配合印象笔记强大的存储和同步功能，带来前所未有的书写体验。特点概述：&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;功能丰富&lt;/strong&gt; ：支持高亮代码块、&lt;em&gt;LaTeX&lt;/em&gt; 公式、流程图，本地图片以及附件上传，甚至截图粘贴，工作学习好帮手；&lt;/li&gt;
@@ -750,22 +732,16 @@ a large, heterogeneous benchmark with 59 sequences and pixel-accurate ground tru
           &lt;li&gt;&lt;a href=&quot;#表格&quot; id=&quot;markdown-toc-表格&quot;&gt;表格&lt;/a&gt;&lt;/li&gt;
           &lt;li&gt;&lt;a href=&quot;#流程图&quot; id=&quot;markdown-toc-流程图&quot;&gt;流程图&lt;/a&gt;&lt;/li&gt;
           &lt;li&gt;&lt;a href=&quot;#复选框&quot; id=&quot;markdown-toc-复选框&quot;&gt;复选框&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#脚注footnote&quot; id=&quot;markdown-toc-脚注footnote&quot;&gt;脚注（footnote）&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#引用方式&quot; id=&quot;markdown-toc-引用方式&quot;&gt;引用方式：&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#下划线&quot; id=&quot;markdown-toc-下划线&quot;&gt;下划线&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#images&quot; id=&quot;markdown-toc-images&quot;&gt;Images&lt;/a&gt;            &lt;ul&gt;
+              &lt;li&gt;&lt;a href=&quot;#内联方式&quot; id=&quot;markdown-toc-内联方式&quot;&gt;内联方式：&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;#引用方式-1&quot; id=&quot;markdown-toc-引用方式-1&quot;&gt;引用方式：&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#印象笔记相关&quot; id=&quot;markdown-toc-印象笔记相关&quot;&gt;印象笔记相关&lt;/a&gt;        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;#笔记本和标签&quot; id=&quot;markdown-toc-笔记本和标签&quot;&gt;笔记本和标签&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#笔记标题&quot; id=&quot;markdown-toc-笔记标题&quot;&gt;笔记标题&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#快捷编辑&quot; id=&quot;markdown-toc-快捷编辑&quot;&gt;快捷编辑&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#数据同步&quot; id=&quot;markdown-toc-数据同步&quot;&gt;数据同步&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#离线存储&quot; id=&quot;markdown-toc-离线存储&quot;&gt;离线存储&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#编辑器相关&quot; id=&quot;markdown-toc-编辑器相关&quot;&gt;编辑器相关&lt;/a&gt;        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;#设置&quot; id=&quot;markdown-toc-设置&quot;&gt;设置&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#快捷键&quot; id=&quot;markdown-toc-快捷键&quot;&gt;快捷键&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#关于收费&quot; id=&quot;markdown-toc-关于收费&quot;&gt;关于收费&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#反馈与建议&quot; id=&quot;markdown-toc-反馈与建议&quot;&gt;反馈与建议&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
@@ -974,247 +950,6 @@ Bob--&amp;gt;Alice: I am good thanks!
   &lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;目前支持尚不完全，在印象笔记中勾选复选框是无效、不能同步的，所以必须在&lt;strong&gt;马克飞象&lt;/strong&gt;中修改 Markdown 原文才可生效。下个版本将会全面支持。&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h2 id=&quot;印象笔记相关&quot;&gt;印象笔记相关&lt;/h2&gt;
-
-&lt;h3 id=&quot;笔记本和标签&quot;&gt;笔记本和标签&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;马克飞象&lt;/strong&gt;增加了&lt;code class=&quot;highlighter-rouge&quot;&gt;@(笔记本)[标签A|标签B]&lt;/code&gt;语法, 以选择笔记本和添加标签。 &lt;strong&gt;绑定账号后&lt;/strong&gt;， 输入&lt;code class=&quot;highlighter-rouge&quot;&gt;(&lt;/code&gt;自动会出现笔记本列表，请从中选择。&lt;/p&gt;
-
-&lt;h3 id=&quot;笔记标题&quot;&gt;笔记标题&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;马克飞象&lt;/strong&gt;会自动使用文档内出现的第一个标题作为笔记标题。例如本文，就是第一行的 &lt;code class=&quot;highlighter-rouge&quot;&gt;欢迎使用马克飞象&lt;/code&gt;。&lt;/p&gt;
-
-&lt;h3 id=&quot;快捷编辑&quot;&gt;快捷编辑&lt;/h3&gt;
-&lt;p&gt;保存在印象笔记中的笔记，右上角会有一个红色的编辑按钮，点击后会回到&lt;strong&gt;马克飞象&lt;/strong&gt;中打开并编辑该笔记。&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;目前用户在印象笔记中单方面做的任何修改，马克飞象是无法自动感知和更新的。所以请务必回到马克飞象编辑。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;数据同步&quot;&gt;数据同步&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;马克飞象&lt;/strong&gt;通过&lt;strong&gt;将Markdown原文以隐藏内容保存在笔记中&lt;/strong&gt;的精妙设计，实现了对Markdown的存储和再次编辑。既解决了其他产品只是单向导出HTML的单薄，又规避了服务端存储Markdown带来的隐私安全问题。这样，服务端仅作为对印象笔记 API调用和数据转换之用。&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;隐私声明：用户所有的笔记数据，均保存在印象笔记中。马克飞象不存储用户的任何笔记数据。&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;离线存储&quot;&gt;离线存储&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;马克飞象&lt;/strong&gt;使用浏览器离线存储将内容实时保存在本地，不必担心网络断掉或浏览器崩溃。为了节省空间和避免冲突，已同步至印象笔记并且不再修改的笔记将删除部分本地缓存，不过依然可以随时通过&lt;code class=&quot;highlighter-rouge&quot;&gt;文档管理&lt;/code&gt;打开。&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;虽然浏览器存储大部分时候都比较可靠，但印象笔记作为专业云存储，更值得信赖。以防万一，&lt;strong&gt;请务必经常及时同步到印象笔记&lt;/strong&gt;。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;编辑器相关&quot;&gt;编辑器相关&lt;/h2&gt;
-&lt;h3 id=&quot;设置&quot;&gt;设置&lt;/h3&gt;
-&lt;p&gt;右侧系统菜单（快捷键&lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl + M&lt;/code&gt;）的&lt;code class=&quot;highlighter-rouge&quot;&gt;设置&lt;/code&gt;中，提供了界面字体、字号、自定义CSS、vim/emacs 键盘模式等高级选项。&lt;/p&gt;
-
-&lt;h3 id=&quot;快捷键&quot;&gt;快捷键&lt;/h3&gt;
-
-&lt;p&gt;帮助    &lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl + /&lt;/code&gt;
-同步文档    &lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl + S&lt;/code&gt;
-创建文档    &lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl + Alt + N&lt;/code&gt;
-最大化编辑器    &lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl + Enter&lt;/code&gt;
-预览文档 &lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl + Alt + Enter&lt;/code&gt;
-文档管理    &lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl + O&lt;/code&gt;
-系统菜单    &lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl + M&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;加粗    &lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl + B&lt;/code&gt;
-插入图片    &lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl + G&lt;/code&gt;
-插入链接    &lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl + L&lt;/code&gt;
-提升标题    &lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl + H&lt;/code&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;关于收费&quot;&gt;关于收费&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;马克飞象&lt;/strong&gt;为新用户提供 10 天的试用期，试用期过后需要&lt;a href=&quot;maxiang.info/vip.html&quot;&gt;续费&lt;/a&gt;才能继续使用。未购买或者未及时续费，将不能同步新的笔记。之前保存过的笔记依然可以编辑。&lt;/p&gt;
-
-&lt;h2 id=&quot;反馈与建议&quot;&gt;反馈与建议&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;微博：&lt;a href=&quot;http://weibo.com/u/2788354117&quot;&gt;@马克飞象&lt;/a&gt;，&lt;a href=&quot;http://weibo.com/ggock&quot; title=&quot;开发者个人账号&quot;&gt;@GGock&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;邮箱：&lt;a href=&quot;mailto:hustgock@gmail.com&quot;&gt;hustgock@gmail.com&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;感谢阅读这份帮助文档。请点击右上角，绑定印象笔记账号，开启全新的记录与分享体验吧。&lt;/p&gt;
-
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:demo&quot;&gt;
-      &lt;p&gt;这是一个示例脚注。请查阅 &lt;a href=&quot;https://github.com/fletcher/MultiMarkdown/wiki/MultiMarkdown-Syntax-Guide#footnotes&quot;&gt;MultiMarkdown 文档&lt;/a&gt; 关于脚注的说明。 &lt;strong&gt;限制：&lt;/strong&gt; 印象笔记的笔记内容使用 &lt;a href=&quot;https://dev.yinxiang.com/doc/articles/enml.php&quot;&gt;ENML&lt;/a&gt; 格式，基于 HTML，但是不支持某些标签和属性，例如id，这就导致&lt;code class=&quot;highlighter-rouge&quot;&gt;脚注&lt;/code&gt;和&lt;code class=&quot;highlighter-rouge&quot;&gt;TOC&lt;/code&gt;无法正常点击。&amp;nbsp;&lt;a href=&quot;#fnref:demo&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
-</description>
-        <pubDate>Tue, 04 Apr 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2017/04/04/markdown_maxiang/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/04/04/markdown_maxiang/</guid>
-        
-        <category>markdown</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>markdown test</title>
-        <description>&lt;h2 id=&quot;example-of-markdown&quot;&gt;example of markdown&lt;/h2&gt;
-
-&lt;h3 id=&quot;homepage&quot;&gt;homepage&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;http://huajh7.com&quot;&gt;huajh7.com&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;quotes&quot;&gt;quotes&lt;/h3&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
-consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.&lt;/p&gt;
-
-  &lt;p&gt;Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
-id sem consectetuer libero luctus adipiscing.&lt;/p&gt;
-
-  &lt;p&gt;machine&lt;/p&gt;
-  &lt;blockquote&gt;
-    &lt;p&gt;This is nested blockquote.&lt;/p&gt;
-  &lt;/blockquote&gt;
-
-  &lt;p&gt;Back to the first level.
-return shell_exec(“echo $input | $markdown_script”);&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;pargraphs&quot;&gt;pargraphs&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Red&lt;/li&gt;
-  &lt;li&gt;Bule
-    &lt;ul&gt;
-      &lt;li&gt;machine&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;good
-    &lt;ol&gt;
-      &lt;li&gt;Bird&lt;/li&gt;
-      &lt;li&gt;parish&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;del&gt;strik through&lt;/del&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;import tempfile; print(tempfile.gettempdir())&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;==hightlight==&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;代码段和代码高亮&quot;&gt;代码段和代码高亮&lt;/h3&gt;
-
-&lt;p&gt;using &lt;code class=&quot;highlighter-rouge&quot;&gt;molokai.css&lt;/code&gt;  by 
-&lt;code class=&quot;highlighter-rouge&quot;&gt;rougify style molokai &amp;gt; css/syntax.css&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Add the code in &lt;code class=&quot;highlighter-rouge&quot;&gt;syntax.css&lt;/code&gt; to change the font and font-size&lt;/p&gt;
-
-&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.highlight&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#F5F5F5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#272822&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  &lt;span class=&quot;c&quot;&gt;/*#1b1d1e  f8f8f2  272822*/&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;font-family&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;'Consolas'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;serif&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;15px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ruby&lt;/code&gt;&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;show&lt;/span&gt;
-  &lt;span class=&quot;vi&quot;&gt;@widget&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Widget&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;respond_to&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
-    &lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;html&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# show.html.erb&lt;/span&gt;
-    &lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;json&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;render&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;json: &lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@widget&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;code class=&quot;hljs livecodeserver&quot;&gt;&lt;/code&gt;&lt;/p&gt;
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;show&lt;/span&gt;
-  &lt;span class=&quot;vi&quot;&gt;@widget&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Widget&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;respond_to&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
-    &lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;html&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# show.html.erb&lt;/span&gt;
-    &lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;json&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;render&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;json: &lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@widget&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-&lt;p&gt;&amp;lt;/code&amp;gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ruby&lt;/code&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;show&lt;/span&gt;
-  &lt;span class=&quot;vi&quot;&gt;@widget&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Widget&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;respond_to&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
-    &lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;html&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# show.html.erb&lt;/span&gt;
-    &lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;json&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;render&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;json: &lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@widget&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;matlab&lt;/code&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-matlab highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;cat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;...&lt;/span&gt;
-                 &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;% The EIG function is applied to each of the horizontal 'slices' of A.&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
-    &lt;span class=&quot;nb&quot;&gt;eig&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;squeeze&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,:,:)))&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;python&lt;/code&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ReqStrSugRepr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;__init__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cls&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bases&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;attrd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-        &lt;span class=&quot;nb&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ReqStrSugRepr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cls&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;__init__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bases&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;attrd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'__str__'&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;attrd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;raise&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;TypeError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Class requires overriding of __str__()&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'__repr__'&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;attrd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;warn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-                &lt;span class=&quot;s&quot;&gt;'Class suggets overrding of __repr__()&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;stacklevel&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;c/c++&lt;/code&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;int a = %d&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;JavaBeans.People.Administor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AcceptMember&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HttpServlet&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-
-    &lt;span class=&quot;cm&quot;&gt;/**
-     * Constructor of the object.
-     */&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;AcceptMember&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;kd&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;cm&quot;&gt;/**
-     * 
-     * @throws ServletException if an error occurred
-     * @throws IOException if an error occurred
-     */&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;doGet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;HttpServletRequest&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HttpServletResponse&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ServletException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IOException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-
-        &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setContentType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text/html&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;doPost&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
 &lt;p&gt;质能方程公式：&lt;script type=&quot;math/tex&quot;&gt;E=mc^2&lt;/script&gt;&lt;/p&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;\min_{x,y} \sum_{i=1}^{N} (x_i+ 10 + y_i)^2&lt;/script&gt;
@@ -1223,10 +958,10 @@ return shell_exec(“echo $input | $markdown_script”);&lt;/p&gt;
 
 &lt;p&gt;实现方式如下:&lt;/p&gt;
 
-&lt;p&gt;比如PHP&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; Markdown Extra &lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; 是这样的。&lt;/p&gt;
+&lt;p&gt;比如PHP&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; Markdown Extra &lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; 是这样的。&lt;/p&gt;
 
 &lt;h3 id=&quot;引用方式&quot;&gt;引用方式：&lt;/h3&gt;
-&lt;p&gt;I get 10 times more traffic from &lt;a href=&quot;http://google.com/&quot; title=&quot;Google&quot;&gt;Google&lt;/a&gt; than from &lt;a href=&quot;http://search.yahoo.com/&quot; title=&quot;Yahoo Search&quot;&gt;Yahoo&lt;/a&gt; or &lt;a href=&quot;http://search.msn.com/&quot; title=&quot;MSN Search&quot;&gt;MSN&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I get 10 times more traffic from &lt;a href=&quot;http://maxiang.info/client_zh&quot;&gt;Google&lt;/a&gt; than from &lt;a href=&quot;https://chrome.google.com/webstore/detail/kidnkfckhbdkfgbicccmdggmpgogehop&quot;&gt;Yahoo&lt;/a&gt; or &lt;a href=&quot;http://adrai.github.io/flowchart.js/&quot;&gt;MSN&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3 id=&quot;下划线&quot;&gt;下划线&lt;/h3&gt;
 
@@ -1243,8 +978,20 @@ return shell_exec(“echo $input | $markdown_script”);&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
+&lt;h2 id=&quot;反馈与建议&quot;&gt;反馈与建议&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;微博：&lt;a href=&quot;http://weibo.com/u/2788354117&quot;&gt;@马克飞象&lt;/a&gt;，&lt;a href=&quot;http://weibo.com/ggock&quot; title=&quot;开发者个人账号&quot;&gt;@GGock&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;邮箱：&lt;a href=&quot;mailto:hustgock@gmail.com&quot;&gt;hustgock@gmail.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;感谢阅读这份帮助文档。请点击右上角，绑定印象笔记账号，开启全新的记录与分享体验吧。&lt;/p&gt;
+
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
+    &lt;li id=&quot;fn:demo&quot;&gt;
+      &lt;p&gt;这是一个示例脚注。请查阅 &lt;a href=&quot;https://github.com/fletcher/MultiMarkdown/wiki/MultiMarkdown-Syntax-Guide#footnotes&quot;&gt;MultiMarkdown 文档&lt;/a&gt; 关于脚注的说明。 &lt;strong&gt;限制：&lt;/strong&gt; 印象笔记的笔记内容使用 &lt;a href=&quot;https://dev.yinxiang.com/doc/articles/enml.php&quot;&gt;ENML&lt;/a&gt; 格式，基于 HTML，但是不支持某些标签和属性，例如id，这就导致&lt;code class=&quot;highlighter-rouge&quot;&gt;脚注&lt;/code&gt;和&lt;code class=&quot;highlighter-rouge&quot;&gt;TOC&lt;/code&gt;无法正常点击。&amp;nbsp;&lt;a href=&quot;#fnref:demo&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
     &lt;li id=&quot;fn:1&quot;&gt;
       &lt;p&gt;Markdown是一种纯文本标记语言&amp;nbsp;&lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
@@ -1255,8 +1002,8 @@ return shell_exec(“echo $input | $markdown_script”);&lt;/p&gt;
 &lt;/div&gt;
 </description>
         <pubDate>Tue, 04 Apr 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2017/04/04/markdown_first/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/04/04/markdown_first/</guid>
+        <link>http://localhost:4000/2017/04/04/markdown_maxiang/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/04/04/markdown_maxiang/</guid>
         
         <category>markdown</category>
         
@@ -1291,620 +1038,7 @@ wireless sensor network (WSN).&lt;/p&gt;
       </item>
     
       <item>
-        <title>Example Post with Code Highlight</title>
-        <description>&lt;h2 id=&quot;foreword&quot;&gt;Foreword&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Here comes Module!&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;随着网站逐渐变成「互联网应用程序」，嵌入网页的 JavaScript 代码越来越庞大，越来越复杂。网页越来越像桌面程序，需要一个团队分工协作、进度管理、单元测试……我们不得不使用软件工程的方法，来管理网页的业务逻辑。&lt;/p&gt;
-
-&lt;p&gt;于是，JavaScript 的模块化成为迫切需求。在 ES6 Module 来临之前，JavaScript 社区提供了强大支持，尝试在现有的运行环境下，实现模块的效果。&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;catalog&quot;&gt;Catalog&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;#commonjs--node&quot;&gt;CommonJS &amp;amp; Node&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#history&quot;&gt;History&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#requirejs--amd&quot;&gt;RequireJS &amp;amp; AMD&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#seajs--cmd&quot;&gt;SeaJS &amp;amp; CMD&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#amd-vs-cmd&quot;&gt;AMD vs CMD&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#webpack&quot;&gt;WebPack&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;commonjs--node&quot;&gt;CommonJS &amp;amp; Node&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Javascript: not just for browsers any more! —— CommonJS Slogen&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;前端模块化的事实标准之一，2009 年 8 月，&lt;a href=&quot;http://wiki.commonjs.org/wiki/CommonJS&quot;&gt;CommonJS&lt;/a&gt; 诞生。&lt;/p&gt;
-
-&lt;p&gt;CommonJS 本质上只是一套规范（API 定义），而 Node.js 采用并实现了部分规范，CommonJS Module 的写法也因此广泛流行。&lt;/p&gt;
-
-&lt;p&gt;让我们看看 Node 中的实现：&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// 由于 Node 原生支持模块的作用域，并不需要额外的 wrapper&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// &quot;as though the module was wrapped in a function&quot;&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'./a'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// 加载模块（同步加载）&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;doSomething&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;         &lt;span class=&quot;c1&quot;&gt;// 等上一句执行完才会执行&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 暴露 b 函数接口&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;// do something&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;exports&lt;/code&gt;是一个内置对象，就像&lt;code class=&quot;highlighter-rouge&quot;&gt;require&lt;/code&gt;是一个内置加载函数一样。如果你希望直接赋值一个完整的对象或者构造函数，覆写&lt;code class=&quot;highlighter-rouge&quot;&gt;module.exports&lt;/code&gt;就可以了。&lt;/p&gt;
-
-&lt;p&gt;CommonJS 前身叫 ServerJS ，&lt;strong&gt;后来希望能更加 COMMON，成为通吃各种环境的模块规范，改名为 CommonJS&lt;/strong&gt; 。CommonJS 最初只专注于 Server-side 而非浏览器环境，因此它采用了同步加载的机制，这对服务器环境（硬盘 I/O 速度）不是问题，而对浏览器环境（网速）来说并不合适。&lt;/p&gt;
-
-&lt;p&gt;因此，各种适用于浏览器环境的模块框架与标准逐个诞生，他们的共同点是：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;采用异步加载（预先加载所有依赖的模块后回调执行，符合浏览器的网络环境）&lt;/li&gt;
-  &lt;li&gt;虽然代码风格不同，但其实都可以看作 CommonJS Modules 语法的变体。&lt;/li&gt;
-  &lt;li&gt;都在向着 &lt;strong&gt;COMMON&lt;/strong&gt; 的方向进化：&lt;strong&gt;兼容不同风格，兼容浏览器和服务器两种环境&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;本文接下来要讨论的典例是：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;RequireJS &amp;amp; AMD（异步加载，预执行，依赖前置。默认推荐 AMD 写法）&lt;/li&gt;
-  &lt;li&gt;SeaJS &amp;amp; CMD（异步加载，懒执行，依赖就近，默认推荐 CommonJS 写法）&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;history&quot;&gt;History&lt;/h2&gt;
-
-&lt;!--&lt;h2 id=&quot;history&quot;&gt; History &lt;/h2&gt;--&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;此段落参考自玉伯的 &lt;a href=&quot;https://github.com/seajs/seajs/issues/588&quot;&gt;前端模块化开发那点历史&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;09-10 年间，CommonJS（那时还叫 ServerJS） 社区推出 &lt;a href=&quot;http://wiki.commonjs.org/wiki/Modules&quot;&gt;Modules/1.0&lt;/a&gt; 规范，并且在 Node.js 等环境下取得了很不错的实践。&lt;/p&gt;
-
-&lt;p&gt;09年下半年这帮充满干劲的小伙子们想把 ServerJS 的成功经验进一步推广到浏览器端，于是将社区改名叫 CommonJS，同时激烈争论 Modules 的下一版规范。分歧和冲突由此诞生，逐步形成了三大流派：&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;strong&gt;Modules/1.x&lt;/strong&gt; 流派。这个观点觉得 1.x 规范已经够用，只要移植到浏览器端就好。要做的是新增 &lt;a href=&quot;http://wiki.commonjs.org/wiki/Modules/Transport&quot;&gt;Modules/Transport&lt;/a&gt; 规范，即在浏览器上运行前，先通过转换工具将模块转换为符合 Transport 规范的代码。主流代表是服务端的开发人员。现在值得关注的有两个实现：越来越火的 component 和走在前沿的 es6 module transpiler。&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Modules/Async&lt;/strong&gt; 流派。这个观点觉得浏览器有自身的特征，不应该直接用 Modules/1.x 规范。这个观点下的典型代表是 &lt;a href=&quot;http://wiki.commonjs.org/wiki/Modules/AsynchronousDefinition&quot;&gt;AMD&lt;/a&gt; 规范及其实现 &lt;a href=&quot;http://requirejs.org/&quot;&gt;RequireJS&lt;/a&gt;。这个稍后再细说。&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Modules/2.0&lt;/strong&gt; 流派。这个观点觉得浏览器有自身的特征，不应该直接用 Modules/1.x 规范，但应该尽可能与 Modules/1.x 规范保持一致。这个观点下的典型代表是 BravoJS 和 FlyScript 的作者。BravoJS 作者对 CommonJS 的社区的贡献很大，这份 Modules/2.0-draft 规范花了很多心思。FlyScript 的作者提出了 Modules/Wrappings 规范，这规范是 CMD 规范的前身。可惜的是 BravoJS 太学院派，FlyScript 后来做了自我阉割，将整个网站（flyscript.org）下线了。这个观点在本文中的典型代表就是 SeaJS 和 CMD 了&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;补一嘴：阿里 KISSY 的 KMD 其实跟 AMD 非常类似，只是用 &lt;code class=&quot;highlighter-rouge&quot;&gt;add&lt;/code&gt;和&lt;code class=&quot;highlighter-rouge&quot;&gt;use&lt;/code&gt; 两个源自于 YUI Modules 的函数名替换了 &lt;code class=&quot;highlighter-rouge&quot;&gt;define&lt;/code&gt; 和 &lt;code class=&quot;highlighter-rouge&quot;&gt;require&lt;/code&gt; ，但其原理更接近 RequireJS ，与 YUI Modules 的 &lt;code class=&quot;highlighter-rouge&quot;&gt;Y&lt;/code&gt; 沙箱 Attach 机制并不相同&lt;/p&gt;
-
-&lt;h2 id=&quot;requirejs--amd&quot;&gt;RequireJS &amp;amp; AMD&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://wiki.commonjs.org/wiki/Modules/AsynchronousDefinition&quot;&gt;AMD (Async Module Definition)&lt;/a&gt; 是 RequireJS 在推广过程中对模块定义的规范化产出。&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;RequireJS is a JavaScript file and module loader. It is optimized for in-browser use, but it can be used in other JavaScript environments&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;RequireJS 主要解决的还是 CommonJS 同步加载脚本不适合浏览器 这个问题：&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//CommonJS&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Employee&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;types/Employee&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Programmer&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;//do something&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;  
-
-&lt;span class=&quot;nx&quot;&gt;Programmer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;prototype&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Employee&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;//如果 require call 是异步的，那么肯定 error&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;//因为在执行这句前 Employee 模块肯定来不及加载进来&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;As the comment indicates above, if require() is async, this code will not work. However, loading scripts synchronously in the browser kills performance. So, what to do?&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;所以我们需要 &lt;strong&gt;Function Wrapping&lt;/strong&gt; 来获取依赖并且提前通过 script tag 提前加载进来&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//AMD Wrapper&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;define&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;types&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Employee&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;//依赖&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Employee&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;//这个回调会在所有依赖都被加载后才执行&lt;/span&gt;
-
-        &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Programmer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
-            &lt;span class=&quot;c1&quot;&gt;//do something&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-
-        &lt;span class=&quot;nx&quot;&gt;Programmer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;prototype&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Employee&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Programmer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;//return Constructor&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;当依赖模块非常多时，这种&lt;strong&gt;依赖前置&lt;/strong&gt;的写法会显得有点奇怪，所以 AMD 给了一个语法糖， &lt;strong&gt;simplified CommonJS wrapping&lt;/strong&gt;，借鉴了 CommonJS 的 require 就近风格，也更方便对 CommonJS 模块的兼容：&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;define&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;dependency1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'dependency1'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;dependency2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'dependency2'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{};&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;The AMD loader will parse out the &lt;code class=&quot;highlighter-rouge&quot;&gt;require('')&lt;/code&gt; calls by using &lt;code class=&quot;highlighter-rouge&quot;&gt;Function.prototype.toString()&lt;/code&gt;, then internally convert the above define call into this:&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;define&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'require'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dependency1'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dependency2'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;dependency1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'dependency1'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;dependency2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'dependency2'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{};&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;出于&lt;code class=&quot;highlighter-rouge&quot;&gt;Function.prototype.toString()&lt;/code&gt;兼容性和性能的考虑，最好的做法还是做一次 &lt;strong&gt;optimized build&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;AMD 和 CommonJS 的核心争议如下：&lt;/p&gt;
-
-&lt;h3 id=&quot;1-执行时机&quot;&gt;1. &lt;strong&gt;执行时机&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;p&gt;Modules/1.0:&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;./a&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 执行到此时，a.js 才同步下载并执行&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;AMD: （使用 require 的语法糖时）&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;define&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;require&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)){&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// 在这里，a.js 已经下载并且执行好了&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// 使用 require() 并不是 AMD 的推荐写法&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;./a&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 此处仅仅是取模块 a 的 exports&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;AMD 里提前下载 a.js 是出于对浏览器环境的考虑，只能采取异步下载，这个社区都认可（Sea.js 也是这么做的）&lt;/p&gt;
-
-&lt;p&gt;但是 AMD 的执行是 Early Executing，而 Modules/1.0 是第一次 require 时才执行。这个差异很多人不能接受，包括持 Modules/2.0 观点的人也不能接受。&lt;/p&gt;
-
-&lt;h3 id=&quot;2-书写风格&quot;&gt;2. &lt;strong&gt;书写风格&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;p&gt;AMD 推荐的风格并不使用&lt;code class=&quot;highlighter-rouge&quot;&gt;require&lt;/code&gt;，而是通过参数传入，破坏了&lt;strong&gt;依赖就近&lt;/strong&gt;：&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;define&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;a&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;b&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;c&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// 提前申明了并初始化了所有模块&lt;/span&gt;
-
-    &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//即便根本没用到模块 b，但 b 还是提前执行了。&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;不过，在笔者看来，风格喜好因人而异，主要还是&lt;strong&gt;预执行&lt;/strong&gt;和&lt;strong&gt;懒执行&lt;/strong&gt;的差异。&lt;/p&gt;
-
-&lt;p&gt;另外，require 2.0 也开始思考异步处理&lt;strong&gt;软依赖&lt;/strong&gt;（区别于一定需要的&lt;strong&gt;硬依赖&lt;/strong&gt;）的问题，提出了这样的方案：&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// 函数体内：&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;async&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'a'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;doSomething&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;seajs--cmd&quot;&gt;SeaJS &amp;amp; CMD&lt;/h2&gt;
-
-&lt;p&gt;CMD (Common Module Definition) 是 &lt;a href=&quot;http://seajs.org/docs/&quot;&gt;SeaJS&lt;/a&gt; 在推广过程中对模块定义的规范化产出，是 Modules/2.0 流派的支持者，因此 SeaJS 的模块写法尽可能与 Modules/1.x 规范保持一致。&lt;/p&gt;
-
-&lt;p&gt;不过目前国外的该流派都死得差不多了，RequireJS 目前成为浏览器端模块的事实标准，国内最有名气的就是玉伯的 Sea.js ，不过对国际的推广力度不够。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;CMD Specification
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://github.com/cmdjs/specification/blob/master/draft/module.md&quot;&gt;English (CMDJS-repo)&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://github.com/seajs/seajs/issues/242&quot;&gt;Chinese (SeaJS-repo)&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;CMD 主要有 define, factory, require, export 这么几个东西&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;define &lt;code class=&quot;highlighter-rouge&quot;&gt;define(id?, deps?, factory)&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;factory &lt;code class=&quot;highlighter-rouge&quot;&gt;factory(require, exports, module)&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;require &lt;code class=&quot;highlighter-rouge&quot;&gt;require(id)&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;exports &lt;code class=&quot;highlighter-rouge&quot;&gt;Object&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;CMD 推荐的 Code Style 是使用 CommonJS 风格的 &lt;code class=&quot;highlighter-rouge&quot;&gt;require&lt;/code&gt;：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;这个 require 实际上是一个全局函数，用于加载模块，这里实际就是传入而已&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;define&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;// 获取模块 a 的接口&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'./a'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// 调用模块 a 的方法&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;doSomething&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;// 对外提供 foo 属性&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;foo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'bar'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// 对外提供 doSomething 方法&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;doSomething&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{};&lt;/span&gt;
-
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;但是你也可以使用 AMD 风格，或者使用 return 来进行模块暴露&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;define&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'hello'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'jquery'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;// 模块代码...&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;// 直接通过 return 暴露接口&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'bar'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;doSomething&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Sea.js 借鉴了 RequireJS 的不少东西，比如将 FlyScript 中的 module.declare 改名为 define 等。Sea.js 更多地来自 Modules/2.0 的观点，但尽可能去掉了学院派的东西，加入了不少实战派的理念。&lt;/p&gt;
-
-&lt;h2 id=&quot;amd-vs-cmd&quot;&gt;AMD vs CMD&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;虽然两者目前都兼容各种风格，但其底层原理并不相同，从其分别推荐的写法就可以看出两者背后原理的不同：&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;对于依赖的模块，AMD 是&lt;strong&gt;提前执行&lt;/strong&gt;，CMD 是&lt;strong&gt;懒执行&lt;/strong&gt;。（都是先加载）
-    &lt;ul&gt;
-      &lt;li&gt;CMD 推崇&lt;strong&gt;依赖就近&lt;/strong&gt;，AMD 推崇&lt;strong&gt;依赖前置&lt;/strong&gt;。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;看代码：&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// AMD 默认推荐&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;define&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'./a'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'./b'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// 依赖前置，提前执行&lt;/span&gt;
-
-    &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;doSomething&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;doSomething&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-
-&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// CMD&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;define&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-
-    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'./a'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;doSomething&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-
-    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'./b'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 依赖就近，延迟执行&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;doSomething&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;webpack&quot;&gt;WebPack&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;working…&lt;/p&gt;
-&lt;/blockquote&gt;
-</description>
-        <pubDate>Mon, 25 May 2015 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2015/05/25/js-module-loader/</link>
-        <guid isPermaLink="true">http://localhost:4000/2015/05/25/js-module-loader/</guid>
-        
-        <category>前端开发</category>
-        
-        <category>JavaScript</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Example Post</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;This document is not completed and will be updated anytime.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;catagory&quot;&gt;Catagory&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;#unix&quot;&gt;Unix&lt;/a&gt;
-    &lt;ol&gt;
-      &lt;li&gt;&lt;a href=&quot;#bell-labs&quot;&gt;Bell Labs&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#xenix&quot;&gt;Xenix&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#bsd&quot;&gt;BSD&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#freebsd--apple&quot;&gt;FreeBSD &amp;amp; Apple&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#nextstep&quot;&gt;NeXTStep&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#darwin&quot;&gt;Darwin&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#posix&quot;&gt;POSIX&lt;/a&gt;&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#unix-like&quot;&gt;Unix-like&lt;/a&gt;
-    &lt;ol&gt;
-      &lt;li&gt;&lt;a href=&quot;#single-unix-specification&quot;&gt;Single Unix Specification&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#apple-ios&quot;&gt;Apple iOS&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#xnu-kernel&quot;&gt;XNU Kernel&lt;/a&gt;&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#linux&quot;&gt;Linux&lt;/a&gt;
-    &lt;ol&gt;
-      &lt;li&gt;&lt;a href=&quot;#linux-kernel&quot;&gt;Linux Kernel&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#gnu-project&quot;&gt;GNU Project&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#android&quot;&gt;Android&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#android-kernel&quot;&gt;Android Kernel&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#android-rom&quot;&gt;Android ROM&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#chrome-os&quot;&gt;Chrome OS&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#chromium-os&quot;&gt;Chromium OS&lt;/a&gt;&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;unix&quot;&gt;Unix&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Unix is a &lt;strong&gt;family&lt;/strong&gt; of multitasking, multiuser computer OS.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Derive from the original &lt;strong&gt;AT&amp;amp;T Unix&lt;/strong&gt;, Developed in the 1970s at &lt;strong&gt;Bell Labs&lt;/strong&gt; (贝尔实验室), initially intended for use inside the &lt;strong&gt;Bell System&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;h4 id=&quot;bell-labs&quot;&gt;Bell Labs&lt;/h4&gt;
-    &lt;p&gt;Bell 和 AT&amp;amp;A 在那时已经是一家了，可以看到那时的通信公司真是一线 IT 公司呢。
-&lt;strong&gt;C 语言也是 Bell Labs 的产物&lt;/strong&gt;，从一开始就是为了用于 Unix 而设计出来的。所以 Unix （在 73 年用 C 重写）在高校流行后，C 语言也获得了广泛支持。&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;AT&amp;amp;T licensed Unix to outside parties(第三方) from the late 1970s, leading to a variety of both &lt;strong&gt;academic&lt;/strong&gt; (最有有名的 BSD ) and &lt;strong&gt;commercial&lt;/strong&gt; (Microsoft Xenix, IBM AIX, SunOS Solaris)&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;h4 id=&quot;xenix&quot;&gt;Xenix&lt;/h4&gt;
-    &lt;p&gt;微软 1979 年从 AT&amp;amp;A 授权来的 Unix OS，配合着 x86 成为当时最受欢迎的 Unix 发行版。后来 M$ 和 IBM 合作开发 OS/2 操作系统后放弃，后来最终转向 &lt;strong&gt;Windows NT&lt;/strong&gt;。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;h4 id=&quot;bsd&quot;&gt;BSD&lt;/h4&gt;
-    &lt;p&gt;&lt;strong&gt;Barkeley Software Distribution&lt;/strong&gt;, also called Berkeley Unix. Today the term “BSD” is used to refer to any of the BSD descendants(后代) which together form a branch of the family of Unix-like OS.(共同组成了一个分支)&lt;/p&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;BSD 最大的贡献是在 BSD 中率先增加了虚拟存储器和 Internet 协议&lt;/strong&gt;，其 TCP/IP(IPv4 only) 代码仍然在现代 OS 上使用（ Microsoft Windows and most of the foundation of Apple’s OS X and iOS ）&lt;/li&gt;
-      &lt;li&gt;BSD 后来发展出了众多开源后代，包括 FreeBSD, OpenBSD, NetBSD 等等……很多闭源的 vendor Unix 也都从 BSD 衍生而来。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;h4 id=&quot;freebsd--apple&quot;&gt;FreeBSD &amp;amp; Apple&lt;/h4&gt;
-    &lt;p&gt;FreeBSD 不但是 Open Source BSD 中占有率最高的，还直接影响了 Apple Inc : NeXT Computer 的团队在 FreeBSD 上衍生出了 NeXTSTEP 操作系统，这货后来在 Apple 时期演化成了 &lt;strong&gt;Darwin&lt;/strong&gt; ，这个“达尔文”居然还是个开源系统，而且是 the Core of &lt;strong&gt;Mac OS X&lt;/strong&gt; and &lt;strong&gt;iOS&lt;/strong&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;h4 id=&quot;nextstep&quot;&gt;NeXTSTEP&lt;/h4&gt;
-    &lt;p&gt;An &lt;strong&gt;object-oriented&lt;/strong&gt;, multitasking OS. Low-level C but High-level OC language and runtime the first time, combined with an &lt;strong&gt;OO aplication layer&lt;/strong&gt; and including several “kits”.  &lt;br /&gt;
-大家都知道 NeXT 是 Steve Jobs 被 forced out of Apple 后和 a few of his coworkers 创办的，所以 &lt;strong&gt;NeXTSTEP 绝对是证明 Jobs 实力的作品。&lt;/strong&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;h4 id=&quot;darwin&quot;&gt;Darwin&lt;/h4&gt;
-    &lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Darwin_(operating_system\)&quot;&gt;Darwin&lt;/a&gt;, the core set of components upon which Mac OS X and iOS based, mostly POSIX compatible, but has never, by itself, been certified as being compatible with any version of &lt;strong&gt;POSIX&lt;/strong&gt;. (OS X, since Leopard, has been certified as compatible with the Single UNIX Specification version 3)&lt;br /&gt;
-&lt;strong&gt;所以说 Mac OS X 算是很正统 Unix 的了&lt;/strong&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;h4 id=&quot;posix&quot;&gt;POSIX&lt;/h4&gt;
-    &lt;p&gt;可移植操作系统接口, Portable Operating System Interface, is a family of standards specified by the IEEE from maintaining compatibility between OS, defines the API along with Command Line Shells and utility interfaces, for software comaptibility with variants of Unix and other OS.&lt;/p&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Fully POSIX compliant:
-        &lt;ul&gt;
-          &lt;li&gt;OS X&lt;/li&gt;
-          &lt;li&gt;QNX OS (BlackBerry)&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Mostly complicant:
-        &lt;ul&gt;
-          &lt;li&gt;Linux&lt;/li&gt;
-          &lt;li&gt;OpenBSD/FreeBSD&lt;/li&gt;
-          &lt;li&gt;Darwin (Core of &lt;strong&gt;iOS&lt;/strong&gt; &amp;amp; OS X)&lt;/li&gt;
-          &lt;li&gt;&lt;strong&gt;Android&lt;/strong&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Complicant via compatibility feature （通过兼容功能实现兼容）
-        &lt;ul&gt;
-          &lt;li&gt;Windows NT Kernel
-            &lt;ul&gt;
-              &lt;li&gt;Windows Server 2000, 2003, 2008, 2008 R2, 2012&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-          &lt;li&gt;Symbian OS (with PIPS)
-            &lt;ul&gt;
-              &lt;li&gt;Symbian was a closed-source OS.&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;unix-like&quot;&gt;Unix-like&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;A Unix-like (sometimes referred to as UN*X or *nix) operating system is one that behaves in a manner similar to a Unix system, while not necessarily conforming to or being certified to any version of the &lt;strong&gt;Single UNIX Specification&lt;/strong&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;There is no standard for defining the term.&lt;br /&gt;
-其实 Unix-like 是个相对模糊的概念：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;最狭义的 Unix 单指 Bell Labs’s Unix&lt;/li&gt;
-  &lt;li&gt;稍广义的 Unix 指代所有 Licensed Unix, 即通过了 SUS 的 Unix-like ，比如 OS X&lt;/li&gt;
-  &lt;li&gt;最广义的 Unix 即所有 Unix-like 系统，无论它是否通过过任何 SUS，包括 Linux，BSD Family 等&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;single-unix-specification&quot;&gt;Single UNIX Specification&lt;/h4&gt;
-&lt;p&gt;The Single UNIX Specification (SUS) is the collective name of a family of standards for computer OS, compliance with which is required to &lt;strong&gt;qualify for the name “Unix”&lt;/strong&gt;, like &lt;strong&gt;POSIX&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h4 id=&quot;apple-ios&quot;&gt;Apple iOS&lt;/h4&gt;
-&lt;p&gt;iOS is a &lt;strong&gt;Unix-like OS based on Darwin(BSD)&lt;/strong&gt; and OS X, which share some frameworks including Core Foundation, Founadtion and the Darwin foundation with OS X, but, Unix-like shell access is not avaliable for users and restricted for apps, &lt;strong&gt;making iOS not fully Unix-compatible either.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;The iOS kernal is &lt;strong&gt;XNU&lt;/strong&gt;, the kernal of Darwin.&lt;/p&gt;
-
-&lt;h4 id=&quot;xnu-kernel&quot;&gt;XNU Kernel&lt;/h4&gt;
-&lt;p&gt;XNU, the acronym(首字母缩写) for &lt;strong&gt;&lt;em&gt;X is Not Unix&lt;/em&gt;&lt;/strong&gt;, which is the &lt;strong&gt;Computer OS Kernel&lt;/strong&gt; developed at Apple Inc since Dec 1996 for use in the Mac OS X and released as free open source software as part of Darwin.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;linux&quot;&gt;Linux&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Linux is a Unix-like and mostly POSIX-compliant computer OS.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Unix_timeline.en.svg/800px-Unix_timeline.en.svg.png&quot; alt=&quot;Unix_timeline&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;linux-kernel&quot;&gt;Linux Kernel&lt;/h4&gt;
-
-&lt;p&gt;严格来讲，术语 Linux 只表示 &lt;a href=&quot;http://en.wikipedia.org/wiki/Linux_kernel&quot;&gt;Linux Kernel&lt;/a&gt; 操作系统内核本身，比如说 Android is Based on Linux (Kernel). Linus 编写的也只是这一部分，一个免费的 Unix-like Kernel，并不属于 GNU Project 的一部分。&lt;/p&gt;
-
-&lt;p&gt;但通常把 Linux 作为 Linux Kernel 与大量配合使用的 GNU Project Software Kit (包括 Bash, Lib, Compiler, 以及后期的 GUI etc) 所组合成的 OS 的统称。（包括各类 Distribution 发行版）&lt;/p&gt;
-
-&lt;p&gt;这类操作系统也被称为 &lt;strong&gt;GNU/Linux&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;gnu-project&quot;&gt;GNU Project&lt;/h4&gt;
-
-&lt;p&gt;The GNU Project is a &lt;strong&gt;free software, mass collaboration&lt;/strong&gt; project, which based on the following freedom rights:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Users are free to run the software, share (copy, distribute), study and modify it.&lt;/li&gt;
-  &lt;li&gt;GNU software guarantees these freedom-rights legally (via its license).&lt;/li&gt;
-  &lt;li&gt;So it is not only FREE but, more important, FREEDOM.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;In order to ensure that the &lt;em&gt;entire&lt;/em&gt; software of a computer grants its users all freedom rights (use, share, study, modify), even the most fundamental and important part, &lt;strong&gt;the operating system&lt;/strong&gt;, needed to be written.&lt;/p&gt;
-
-&lt;p&gt;This OS is decided to called &lt;strong&gt;GNU (a recursive acronym meaning “GNU is not Unix”)&lt;/strong&gt;. By 1992, the GNU Project had completed all of the major OS components except for their kernel, &lt;em&gt;GNU Hurd&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;With the release of the third-party &lt;strong&gt;Linux Kernel&lt;/strong&gt;, started independently by &lt;em&gt;Linus Torvalds&lt;/em&gt; in 1991 and released under the GPLv0.12 in 1992, for the first time it was possible to run an OS &lt;strong&gt;composed completely of free software&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Though the Linux kernel is not part of the GNU project, it was developed using GCC and other GNU programming tools and was released as free software under the GPL.&lt;/p&gt;
-
-&lt;p&gt;Anyway, there eventually comes to the &lt;strong&gt;GNU/Linux&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;GPL&lt;/strong&gt;: GNU General Public License&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;GCC&lt;/strong&gt;: GNU Compiler Collection&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;其他与 GPL 相关的自由/开源软件公共许可证：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Mozilla_Public_License&quot;&gt;Mozilla Public License&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/MIT_License&quot;&gt;MIT License&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/BSD_licenses&quot;&gt;BSD Public License&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;GPL 强制后续版本必须是自由软件，而 BSD 的后续可以选择继续开源或者封闭&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Apache_License&quot;&gt;Apache License&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://dl2.iteye.com/upload/attachment/0047/4142/d770c85a-49b7-3c7f-8ae2-cbb6451e00d8.png&quot; alt=&quot;Public License&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;android&quot;&gt;Android&lt;/h4&gt;
-
-&lt;p&gt;Android is a mobile OS based on &lt;strong&gt;Linux Kernel&lt;/strong&gt;, so it’s definitely &lt;strong&gt;Unix-like&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Linux is under GPL so Android has to be open source&lt;/strong&gt;.
-Android’s source code is released by Google under open source licenses, although most Android devices ultimately ship with a combination of open source and proprietary software, including proprietary software developed and licensed by Google &lt;em&gt;(GMS are all proprietary)&lt;/em&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;android-kernel&quot;&gt;Android Kernel&lt;/h4&gt;
-
-&lt;p&gt;Android’s kernel is based on one of the Linux kernel’s long-term support (LTS) branches.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Android’s variant of the Linux kernel&lt;/strong&gt; has further architectural changes that are implemented by Google outside the typical Linux kernel development cycle, and, certain features that Google contributed back to the Linux kernel. Google maintains a public code repo that contains their experimental work to re-base Android off the latest stable Linux versions.&lt;/p&gt;
-
-&lt;p&gt;Android Kernel 大概是 Linux Kernel 最得意的分支了，Android 也是 Linux 最流行的发行版。不过，也有一些 Google 工程师认为 Android is not Linux in the traditional Unix-like Linux distribution sense. 总之这类东西就算有各种协议也还是很难说清楚，在我理解里 Android Kernel 大概就是 fork Linux Kernel 之后改动和定制比较深的例子。&lt;/p&gt;
-
-&lt;h4 id=&quot;android-rom&quot;&gt;Android ROM&lt;/h4&gt;
-
-&lt;p&gt;既然提到 Android 就不得不提提 Android ROM&lt;/p&gt;
-
-&lt;p&gt;ROM 的本义实际上是只读内存：&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Read-only memory&lt;/strong&gt; (ROM) is a class of storage medium used in computers and other electronic devices. Data stored in ROM can only be modified slowly, with difficulty, or not at all, so it is &lt;strong&gt;mainly used to distribute firmware (固件)&lt;/strong&gt; (software that is very closely tied to specific hardware, and unlikely to need frequent updates).&lt;/p&gt;
-
-&lt;p&gt;ROM 在发展的过程中不断进化，从只读演变成了可编程可擦除，并最终演化成了 Flash&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;PROM (Programmable read-only memory)&lt;/li&gt;
-  &lt;li&gt;EPROM (Erasable programmable read-only memory)&lt;/li&gt;
-  &lt;li&gt;EEPROM (Electrically erasable programmable read-only memory)
-    &lt;ul&gt;
-      &lt;li&gt;Flash memory (闪存)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Flash 的出现是历史性的，它不但可以作为 ROM 使用，又因其极高的读写速度和稳定性，先后发展成为U盘（USB flash drives）、移动设备主要内置存储，和虐机械硬盘几条街的固态硬盘（SSD），可以说这货基本统一了高端存储市场的技术规格。&lt;/p&gt;
-
-&lt;p&gt;所以我们平时习惯说的 ROM 其实还是来源于老单片机时代，那时的 ROM 真的是写了就很难（需要上电复位）、甚至无法修改，所以那时往 ROM 里烧下去的程序就被称作 firmware ，固件。久而久之，虽然技术发展了，固件仍然指代那些不常需要更新的软件，而 ROM 这个词也就这么沿用下来了。&lt;/p&gt;
-
-&lt;p&gt;所以在 wiki 里是没有 Android ROM 这个词条的，只有 &lt;a href=&quot;http://en.wikipedia.org/wiki/List_of_custom_Android_firmwares&quot;&gt;List of custom Android firmwares&lt;/a&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;A custom firmware, also known as a custom ROM, ROM, or custom OS, is an aftermarket distribution of the Android operating system. They are based on the Android Open Source Project (AOSP), hence most are open-sourced releases, unlike proprietary modifications by device manufacturers.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;各类 Android ROM 在 Android 词类下也都是属于 &lt;strong&gt;Forks and distributions&lt;/strong&gt; 一类的。&lt;/p&gt;
-
-&lt;p&gt;所以我说，其实各类 Android ROM 也好，fork Android 之流的 YunOS、FireOS 也好，改了多少东西，碰到多深的 codebase ……&lt;strong&gt;其实 ROM 和 Distribution OS 的界限是很模糊的&lt;/strong&gt;，为什么 Android 就不可以是移动时代的 Linux ，为什么 Devlik/ART 就不能是移动时代的 GCC 呢？&lt;/p&gt;
-
-&lt;h4 id=&quot;chrome-os&quot;&gt;Chrome OS&lt;/h4&gt;
-
-&lt;p&gt;Chrome OS is an operating system based on the &lt;strong&gt;Linux kernel&lt;/strong&gt; and designed by Google to work with web applications and installed applications.&lt;/p&gt;
-
-&lt;p&gt;虽然目前只是个 Web Thin Client OS ，但是 RoadMap 非常酷……&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Chrome Packaged Application&lt;/strong&gt; (Support working offline and installed)&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Android App Runtime&lt;/strong&gt; (run Android applications natively…fxxking awesome)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;平复一下激动的心情，还是回到正题来：&lt;/p&gt;
-
-&lt;h4 id=&quot;chromium-os&quot;&gt;Chromium OS&lt;/h4&gt;
-
-&lt;p&gt;Chrome OS is based on Chromium OS, which is the open-source development version of Chrome OS, which is a &lt;strong&gt;Linux distribution&lt;/strong&gt; designed by Google.&lt;/p&gt;
-
-&lt;p&gt;For Detail, Chromium OS based on &lt;a href=&quot;http://en.wikipedia.org/wiki/Gentoo_Linux&quot;&gt;Gentoo Linux&lt;/a&gt;, emm…&lt;/p&gt;
-</description>
-        <pubDate>Tue, 14 Apr 2015 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2015/04/14/unix-linux-note/</link>
-        <guid isPermaLink="true">http://localhost:4000/2015/04/14/unix-linux-note/</guid>
-        
-        <category>markdown</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Action Recognition &amp; Categories via Spatial-Temporal Features</title>
+        <title>基于时空特征点与词袋模型的动作识别</title>
         <description>&lt;h2 id=&quot;正文&quot;&gt;正文&lt;/h2&gt;
 
 &lt;p&gt;春学期修了一门《图像与视频分析》课程，很随机地选了大作业，叫”行为检测与识别”。看了一些论文，通过作者提供的代码大致了解了下这个领域的基本内容，然后复现并改善了一些算法。浙大分春夏秋冬四个学期，每个学期共八周课，而我这春季学期需要修五门课，加上自己的研究项目，总的来看，时间是相当紧凑的。虽然如此，在这个充满生机与朝气的四月天里，我依旧能感受到懒散的味道。&amp;lt;/pre&amp;gt;
@@ -1923,50 +1057,480 @@ Android’s source code is released by Google under open source licenses, althou
         <link>http://localhost:4000/2014/04/15/action-recognition/</link>
         <guid isPermaLink="true">http://localhost:4000/2014/04/15/action-recognition/</guid>
         
-        <category>action recognition</category>
+        <category>Action Recognition</category>
+        
+        <category>Computer Vision</category>
+        
+        <category>Machine Learning</category>
         
         
       </item>
     
       <item>
-        <title>Variational Bayes</title>
-        <description>&lt;p&gt;&lt;strong&gt;&lt;em&gt;关键词&lt;/em&gt;&lt;/strong&gt;
- **贝叶斯推断，平均场理论，变分估计，贝叶斯推断，KL散度，确定性估计&lt;/p&gt;
+        <title>变分消息传播模型与算法</title>
+        <description>&lt;p&gt;&lt;strong&gt;关键词&lt;/strong&gt; &lt;a href=&quot;http://jmlr.csail.mit.edu/papers/volume6/winn05a/winn05a.pdf&quot;&gt;Variational Message Passing&lt;/a&gt;, 
+&lt;a href=&quot;http://en.wikipedia.org/wiki/Bayesian_networks&quot;&gt;Bayesian networks&lt;/a&gt;, 
+&lt;a href=&quot;http://en.wikipedia.org/wiki/Exponential_family&quot;&gt;Exponential Family&lt;/a&gt;, Sufficient Statistics.&lt;/p&gt;
 
-&lt;p&gt;一、前言&lt;/p&gt;
+&lt;p&gt;传统的变分贝叶斯方法对模型的推导是繁琐而复杂的。J. Winn, Bishop [1] [2] 
+考虑了贝叶斯网络中的共轭指数网络 (conjugate-exponential networks) 
+提出变分消息传播 (VMP, Variational Message Passing) 。这种方法使得充分统计量与自然参数都有一个标准形式，现在该方法已经取代了手工推导，
+成为标准的变分贝叶斯推断方法。而对于非共轭指数网络 (比如混合模型) ，也能通过进一步的近似转化为标准形式。&lt;/p&gt;
+
+&lt;h3 id=&quot;理论基础&quot;&gt;理论基础&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Bayesian networks&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;变分信息传播方法是建立在贝叶斯网络[3]上的，如图所示，对于一个节点&lt;script type=&quot;math/tex&quot;&gt;{H_j}&lt;/script&gt;,它的父节点为&lt;script type=&quot;math/tex&quot;&gt;p{a_j}&lt;/script&gt;，子节点为&lt;script type=&quot;math/tex&quot;&gt;c{h_j}&lt;/script&gt;,
+子节点&lt;script type=&quot;math/tex&quot;&gt;{x_k}&lt;/script&gt;的父节点为&lt;script type=&quot;math/tex&quot;&gt;cp_k^{(j)} \equiv p{a_k}\backslash {H_j}&lt;/script&gt;。所有节点统称为&lt;script type=&quot;math/tex&quot;&gt;{H_j}&lt;/script&gt;的马尔科夫毯，对于变分贝叶斯推理，
+我们只需要关心这个模型，&lt;script type=&quot;math/tex&quot;&gt;H&lt;/script&gt;为参数或潜在变量，其父节点为它的超参数，子节点为数据样本, co-parents为其他参数或潜在变量。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/variational_message_passing/vmp-1.png&quot; alt=&quot;贝叶斯网络&quot; /&gt;
+图-1 贝叶斯网络 (马尔科夫毯)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Exponential Family&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;设&lt;script type=&quot;math/tex&quot;&gt;(X,B\|{p_\theta }:\theta \in \Theta \|)&lt;/script&gt;是可控参数统计结构，其密度函数可表示为如下形式：&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;p_{\theta}(x) = c(\theta) \exp \{ \sum\limits_{i = 1}^k c_j(\theta ){T_j}(x) \} h(x)&lt;/script&gt;
+
+&lt;p&gt;并且它的支撑&lt;script type=&quot;math/tex&quot;&gt;\{ x:{p_\theta }(x) &gt; 0\}&lt;/script&gt;不依赖于θ，则称此结构为指数型的统计结构，简称指数结构，其中的分布族为指数分布族。
+&lt;script type=&quot;math/tex&quot;&gt;% &lt;![CDATA[
+0 &lt; c(\theta ),{c_1}(\theta ),...,{c_k}(\theta ) &lt; \infty ,{T_j}(x) %]]&gt;&lt;/script&gt;都与θ无关，且取有限值的B可测函数，k为正整数，&lt;script type=&quot;math/tex&quot;&gt;h\left( x \right) &gt; 0&lt;/script&gt;，常见指数分布族，如二项分布，二元正态分布，伽马分布。&lt;/p&gt;
+
+&lt;p&gt;对于一个条件分布，如果它能写成如下形式，则称它属于指数分布族，&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;P(X\|Y) = \exp [\phi {(Y)^T}u(X) + f(X) + g(Y)]&lt;/script&gt;
+
+&lt;p&gt;其中&lt;script type=&quot;math/tex&quot;&gt;\phi (Y)&lt;/script&gt;称为自然参数 (natural parameter) 向量，&lt;script type=&quot;math/tex&quot;&gt;u(X)&lt;/script&gt;称为自然统计 (natural statistic) 向量。&lt;script type=&quot;math/tex&quot;&gt;g(Y)&lt;/script&gt;作为归一化函数使得对于任意的Y都能整合到统一的形式。指数分布族的好处是它的对数形式是可计算的并且它的状态可以用自然参数向量所概括。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Conjugate-Exponential Model&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;当变量X关于父节点Y的条件概率分布P(X|Y)为指数分布族，且为父节点分布P(Y)的共轭先验，那么称这样的模型是共轭指数模 (Conjugate-Exponential Model) 。
+考虑共轭指数模型，其后验的每个因子与它的先验都有相同的形式，因而只需要关心参数的变化，而无需整个函数。所谓相同的形式是指属于同样的分布，
+比如都属于正态分布，伽马分布，多项式分布等。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Sufficient Statistics&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;如果知道自然参数向量&lt;script type=&quot;math/tex&quot;&gt;\phi (Y)&lt;/script&gt;，那么就能找到自然统计量的期望。重写指数分布族，用&lt;script type=&quot;math/tex&quot;&gt;\phi&lt;/script&gt;作为参数，&lt;script type=&quot;math/tex&quot;&gt;g&lt;/script&gt;重新参数化为&lt;script type=&quot;math/tex&quot;&gt;\tilde g&lt;/script&gt;则,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;P(X\|\phi ) = \exp [{\phi ^T}u(X) + f(X) + \tilde g(\phi )]&lt;/script&gt;
+
+&lt;p&gt;对&lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt;积分有，&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\int_X {\exp [{\phi ^T}u(X) + f(X) + \tilde g(\phi )]} dX = \int_X {P(X\|\phi )dX} = 1&lt;/script&gt;
+
+&lt;p&gt;然后对&lt;script type=&quot;math/tex&quot;&gt;\phi&lt;/script&gt;微分，&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\int_X {\frac{d}\exp [{\phi ^T}u(X) + f(X) + \tilde g(\phi )]} dX = \frac{d}{ d\phi}(1) = 0&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\int_X P(X \|\phi)\left[ u(X) + \frac{d\tilde g(\phi )}{d\phi} \right] dX = 0&lt;/script&gt;
+
+&lt;p&gt;得自然统计量的期望，&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\left\langle u(X) \right\rangle _{P(X\|\phi )} = - \frac{d\tilde g(\phi )}{d\phi}&lt;/script&gt; (1)&lt;/p&gt;
+
+&lt;h3 id=&quot;变分消息传播模型&quot;&gt;变分消息传播模型&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;变分分布Q在共轭指数模型下的最优化&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;不失一般性，考虑变分分布的一个因子&lt;script type=&quot;math/tex&quot;&gt;Q\left( Y \right)&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt;为马尔科夫毯上一个节点,子节点为&lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt;，如图-2所示&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/variational_message_passing/vmp-2.png&quot; alt=&quot;马尔科夫毯&quot; /&gt;
+图-2 马尔科夫毯&lt;/p&gt;
+
+&lt;p&gt;根据指数族条件分布的一般形式，则变量Y关于父节点的条件概率为，&lt;/p&gt;
+
+&lt;p&gt;为了更新Q(Y),需要找到(2),(3)关于除Y外其他因子的期望。对任何指数族的自然统计量u的期望都可以用自然参数向量ϕ带入 (2-19) 式得到。即对于任何变量Ａ，都可以找到&lt;script type=&quot;math/tex&quot;&gt;{\left\langle u_A(A) \right\rangle _Q}&lt;/script&gt;。特别的，当A为被观测量时，我们能直接计算得&lt;script type=&quot;math/tex&quot;&gt;{\left\langle {u_A(A)} \right\rangle_Q} = u_A(A)&lt;/script&gt;。&lt;/p&gt;
+
+&lt;p&gt;从(3)，(4)式可以看出&lt;script type=&quot;math/tex&quot;&gt;\ln P(X\|Y,c{p_Y})&lt;/script&gt;与&lt;script type=&quot;math/tex&quot;&gt;u_X(X),u_Y(Y)&lt;/script&gt;分布成线性关系。而共轭要求对数条件分布也会与所有的&lt;script type=&quot;math/tex&quot;&gt;{u_Z}(Z)&lt;/script&gt;成线性，&lt;script type=&quot;math/tex&quot;&gt;Z \in c{p_Y}&lt;/script&gt;。因而看得出&lt;script type=&quot;math/tex&quot;&gt;\ln P(X\|Y,c{p_Y})&lt;/script&gt;是一个关于u的多线性函数。&lt;/p&gt;
+
+&lt;p&gt;考虑Y的变分更新方程，&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\ln Q_Y^*(Y) = {\left\langle \phi_Y{(p{a_Y})^T}u_Y(Y) + {f_Y}(Y) + g_Y(p{a_Y}) \right\rangle _{\sim Q(Y)}} +&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\sum\limits_{k \in c{h_Y}} \left\langle \phi_{XY}{(X,c{p_Y})^T}u_Y(Y) + \lambda (X,c{p_Y}) \right\rangle_{\sim Q(Y)} + const.&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;{\rm{ = }} {\left[ {\langle \phi_Y{(p{a_Y})} \rangle}_{\sim Q(Y)} + \sum\limits_{k \in ch_Y} {\langle \phi_{XY{(X,cp_Y)}} \rangle }_{\sim Q(Y)} \right]^T}{u_Y(Y)} + {f_Y}(Y) + const.&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;{\rm{ = }}{\left[ {\phi_Y^*} \right]^T}u_Y(Y) + {f_Y}(Y) + const.&lt;/script&gt;
+
+&lt;p&gt;其中，&lt;script type=&quot;math/tex&quot;&gt;\phi_Y^* = \left\langle {\phi_Y{(p{a_Y})^T}} \right\rangle _{\sim Q(Y)} + \sum\limits_{k \in c{h_Y}} \left\langle {\phi_{XY}{(X,c{p_Y})^T}} \right\rangle_{\sim Q(Y)}&lt;/script&gt;      (5)&lt;/p&gt;
+
+&lt;p&gt;正如以上所解释的，&lt;script type=&quot;math/tex&quot;&gt;\phi_Y&lt;/script&gt;和&lt;script type=&quot;math/tex&quot;&gt;\phi_{XY}&lt;/script&gt;的期望都是相应的自然统计向量期望的多线性函数。因而有可能将以上期望重新参数化为&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\tilde{\phi_Y}\left( \left\{ \left. \left\langle u_i \right\rangle  \right\} \right._{i \in p{a_Y}} \right) = \left\langle \phi_Y(p{a_Y}) \right\rangle&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\tilde{\phi_{XY}}(\langle u_X\rangle ,\{\langle u_j \rangle\}_{j \in cp_Y}) = \langle \phi_{XY}(X,c{p_Y}) \rangle&lt;/script&gt;
+
+&lt;p&gt;&lt;strong&gt;举例&lt;/strong&gt;：如果X服从&lt;script type=&quot;math/tex&quot;&gt;N(Y,{\beta ^{ - 1}})&lt;/script&gt;，那么&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\ln P(X\|Y,\beta ) = {\left[ \begin{array}{l}\beta Y\\ - \beta/2\end{array} \right]^T}\left[ \begin{array}{l}X{X^2}\end{array} \right] + \frac{1}{2}(\ln \beta - \beta {Y^2} - \ln 2\pi)&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;= {\left[ \begin{array}{l}\beta X\\- \beta /2\end{array} \right]^T}\left[ \begin{array}{l}Y{Y^2}\end{array} \right] +\frac{1}{2}(\ln \beta - \beta {X^2} - \ln 2\pi )&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;= {\left[ \begin{array}{c}-\frac{1}{2}(X - Y)^2\\\frac{1}{2} \end{array}\right]^T}\left[\begin{array}{l} \beta\\\ln \beta\end{array} \right] - \frac{1}{2}\ln 2\pi&lt;/script&gt;
+
+&lt;p&gt;其中&lt;script type=&quot;math/tex&quot;&gt;u_X(X) = \left[ \begin{array}{l}X\\{X^2}\end{array} \right]&lt;/script&gt;,&lt;script type=&quot;math/tex&quot;&gt;u_Y(Y) = \left[ \begin{array}{l}Y\\{Y^2}\end{array} \right]&lt;/script&gt;,&lt;script type=&quot;math/tex&quot;&gt;{u_\beta}(\beta) = \left[ \begin{array}{l}\beta \\\ln \beta \end{array} \right].&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\phi_{XY}(X,\beta ) = \left[ \begin{array}{l}\beta X\\ - \beta /2\end{array} \right]&lt;/script&gt;可以重参数化为&lt;script type=&quot;math/tex&quot;&gt;{\tilde{\phi} _{XY}}(\langle u_X \rangle ,\langle {u_\beta} \rangle ) = \left[ \begin{array}{l} \langle {u_\beta} \rangle_{0} \langle u_X \rangle_{0} \\ - \langle {u_\beta} \rangle_{0} /2 \end{array} \right]&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;其中&lt;script type=&quot;math/tex&quot;&gt;\langle {u_\beta} \rangle_{0}&lt;/script&gt;和&lt;script type=&quot;math/tex&quot;&gt;\langle u_X \rangle_{0}&lt;/script&gt;分别表示&lt;script type=&quot;math/tex&quot;&gt;\langle {u_\beta} \rangle&lt;/script&gt;和&lt;script type=&quot;math/tex&quot;&gt;\langle u_X \rangle&lt;/script&gt;的第一个元素。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;变分消息传播模型&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;在贝叶斯网络中,由于Q可因式分解，则有&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;L(Q) = \left\langle {\ln P(H,V)} \right\rangle - \left\langle {Q(H)} \right\rangle&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \sum\limits_i {\left\langle {\ln P({X_i}\|p{a_i})} \right\rangle - \sum\limits_{i \in H} {\left\langle {\ln {Q_i}({H_i})} \right\rangle } }&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\overset{\text{def}}{=} \sum\limits_i&lt;/script&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;L\left( Q \right)&lt;/script&gt;被分解为每一个节点上的贡献值&lt;script type=&quot;math/tex&quot;&gt;\left\{  \right\}&lt;/script&gt;，如节点&lt;script type=&quot;math/tex&quot;&gt;{H_j}&lt;/script&gt;的贡献值为&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;{L_j} = \left\langle {\ln P({H_i}\|p{a_j})} \right\rangle - \left\langle {\ln {Q_i}({H_i})} \right\rangle&lt;/script&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\rm{ = } \langle {\phi _j}(p{a_j})^T \rangle \langle u_j(H_j) \rangle + \langle {f_j}(H_j) \rangle&lt;/script&gt;+&lt;script type=&quot;math/tex&quot;&gt;\langle g_j(p{a_j}) \rangle - \left[ {\phi _j^*}^T \langle u_j(H_j) \rangle + \langle {f_j}(H_j) \rangle + \tilde{g}_j(\phi _j^*) \right]&lt;/script&gt;&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;{\rm{ = }}{\left( {\langle {\phi_j(p{a_j})} \rangle - \phi _j^*} \right)^T}\langle {u_j({H_j})} \rangle + \langle {g_j(p{a_j})} \rangle - \tilde{g}_j(\phi _j^*)&lt;/script&gt;
+
+&lt;p&gt;注意到&lt;script type=&quot;math/tex&quot;&gt;\left\langle {\phi_j(p{a_j})} \right\rangle&lt;/script&gt;和&lt;script type=&quot;math/tex&quot;&gt;\phi _j^*&lt;/script&gt;在求&lt;script type=&quot;math/tex&quot;&gt;{H_j}&lt;/script&gt;的后验分布时就已经计算了；&lt;script type=&quot;math/tex&quot;&gt;\left\langle {u_j({H_j})} \right\rangle&lt;/script&gt;在&lt;script type=&quot;math/tex&quot;&gt;{H_j}&lt;/script&gt;传出消息的时候也已经计算了，这样降低了下界的计算成本。&lt;/p&gt;
+
+&lt;p&gt;特别地，对于每个观测变量&lt;script type=&quot;math/tex&quot;&gt;{V_k}&lt;/script&gt;对下界的贡献值则更简单，&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;{L_k} = \left\langle {\ln P({V_k}\|p{a_k})} \right\rangle&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;{\rm{ = }}{\left\langle {\phi_j(p{a_j})} \right\rangle ^T}{u_k}({V_k}) + {f_k}({V_k}) + {\tilde g_k}\left( {\left\langle {\phi_j(p{a_j})} \right\rangle } \right)&lt;/script&gt;
+
+&lt;h3 id=&quot;变分消息传播算法&quot;&gt;变分消息传播算法&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;变分消息的定义&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;来自父节点的消息 (Message from parents) ：父节点传播给子节点的消息只是自然统计量的期望：&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;m_{Y \to X} = \left\langle {u_Y}\right\rangle .&lt;/script&gt;   (6)&lt;/p&gt;
+
+&lt;p&gt;消息传播给父节点 (Message to parents) ：依赖于X之前从Y的co-parents接收到的消息；对任何节点A，如果A是被观测量，那么&lt;script type=&quot;math/tex&quot;&gt;\left\langle {u_A} \right\rangle = u_A&lt;/script&gt;,&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;m_{X \to Y} = \tilde{\phi}_{XY}\left( \left\langle u_X \right\rangle ,{\left\{ m_{i \to X} \right\}}_{i \in c{p_Y}} \right)&lt;/script&gt;   (7)&lt;/p&gt;
+
+&lt;p&gt;用Y接收来自父节点与子节点的所有消息来计算&lt;script type=&quot;math/tex&quot;&gt;\phi_Y^*&lt;/script&gt;，然后我们就能通过计算更新后的自然参数向量&lt;script type=&quot;math/tex&quot;&gt;\phi_Y^*&lt;/script&gt;来找到Y的更新后的后验分布&lt;script type=&quot;math/tex&quot;&gt;Q_Y^*&lt;/script&gt;，&lt;script type=&quot;math/tex&quot;&gt;\phi_Y^*&lt;/script&gt;的计算公式如下，&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\phi_Y^* = \tilde{\phi_Y}\left( \left\{ m_{i \to Y} \right\}_{i \in p{a_Y}} \right) + \sum\limits_{j \in c{h_Y}} m_{j \to Y}&lt;/script&gt;.   (8)&lt;/p&gt;
+
+&lt;p&gt;该式与 (5) 式一致。从 (1) 式可以看出自然统计量的期望&lt;script type=&quot;math/tex&quot;&gt;{\left\langle {u_Y} \right\rangle _{Q_Y^*}}&lt;/script&gt;是&lt;script type=&quot;math/tex&quot;&gt;Q_Y^*&lt;/script&gt;的单一函数，这样我们就可以用它来计算期望的新值。变分消息传播算法通过迭代的消息传播来最优化变分分布Q.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;算法描述&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step1&lt;/strong&gt;. 通过初始化相关的矩向量&lt;script type=&quot;math/tex&quot;&gt;\left\langle {u_j({X_j})} \right\rangle&lt;/script&gt;来初始化每个因子分布&lt;script type=&quot;math/tex&quot;&gt;{Q_j}&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step2.&lt;/strong&gt; 对于每一个节点&lt;script type=&quot;math/tex&quot;&gt;{X_j}&lt;/script&gt;，&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;从父节点和子节点接收 (6),(7)式所定义的消息。前提是子节点已经从&lt;script type=&quot;math/tex&quot;&gt;{X_j}&lt;/script&gt;的co-parents接收到消息。&lt;/li&gt;
+  &lt;li&gt;使用 (8) 式更新自然参数向量&lt;script type=&quot;math/tex&quot;&gt;\phi _j^*&lt;/script&gt;；&lt;/li&gt;
+  &lt;li&gt;根据新的参数向量更新距向量&lt;script type=&quot;math/tex&quot;&gt;\left\langle {u_j({X_j})} \right\rangle&lt;/script&gt;；&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Step3.&lt;/strong&gt; 计算新的下界&lt;script type=&quot;math/tex&quot;&gt;L(Q)&lt;/script&gt;；&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step4.&lt;/strong&gt; 如果经过数次迭代已经无法增加下界值，或者各边缘分布达到稳定值，则结束；否则回到&lt;strong&gt;Step2&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;举例&lt;/strong&gt;：对于单一高斯模型消息传播过程如下图&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/variational_message_passing/vmp-3.png&quot; alt=&quot;消息传播过程&quot; /&gt;
+图-3 单一高斯模型消息传播过程&lt;/p&gt;
+
+&lt;h3 id=&quot;混合模型&quot;&gt;混合模型&lt;/h3&gt;
+
+&lt;p&gt;到目前为止只考虑了来自指数族的分布。而通常来讲，混合模型并非来自指数族，比如高斯混合模型，通常需要将混合分布转化为指数族分布形式。&lt;/p&gt;
+
+&lt;p&gt;考虑高斯混合模型，通常有如下形式，&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;P(X\|\{ \pi_k\} ,\{ \theta_k\} ) = \sum\limits_{k = 1}^K {\pi_kP_k(X\|\theta_k)}&lt;/script&gt;
+
+&lt;p&gt;可以引入一个离散型潜在变量λ,表示每个观测点是属于哪个单高斯分布。重写分布函数为：&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;P(X\|\lambda ,\{ \theta_k\} ) = \sum\limits_{k = 1}^K P_k{(X\|\theta_k)}^{\delta_{\lambda k}}&lt;/script&gt;
+
+&lt;p&gt;加入该λ变量后该分布属于指数分布族，可写成&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\ln P(X\|\lambda ,\{ \theta_k\} ) = \sum\limits_k {\delta (\lambda ,k)\left[ {\phi_k{(\theta_k)^T}{u_k}(X) + {f_k}(X) + {g_k}(\theta_k)} \right]}&lt;/script&gt;
+
+&lt;p&gt;如果X有子节点Z，那么共轭条件要求每一个成分都有相同的自然统计向量，
+统一定义为&lt;script type=&quot;math/tex&quot;&gt;{u_1}(X) = {u_2}(X) = ... = {u_K}(X)\overset{\text{def}}{=}u_X(X)&lt;/script&gt;。
+另外，我们可能要使模型的其他部分也有相同的形式，虽然不要求共轭，即&lt;script type=&quot;math/tex&quot;&gt;{f_1} = {f_2} = ... = {f_K}\overset{\text{def}}{=} {f_X}&lt;/script&gt;。
+在这种情况下，混合模型的每个成分都有相同的形式，可写成，&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\ln P(X\|\lambda ,\{ \theta_k\} ) = {\left[ {\sum\limits_k {\delta (\lambda ,k)\phi_k(\theta_k)} } \right]^T}u_X(X) 
++ {f_X}(X) + \sum\limits_k {\delta (\lambda ,k){g_k}(\theta_k)}&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;{\rm{ = }}{\phi _X}{(\lambda ,\{ \theta_k\} )^T}u_X(X) + {f_X}(X) + {\tilde g_X}({\phi _X}(\lambda ,\{ \theta_k\} ))&lt;/script&gt;
+
+&lt;p&gt;其中定义&lt;script type=&quot;math/tex&quot;&gt;{\phi _X} = \sum\limits_k {\delta (\lambda ,k)\phi_k(\theta_k)}&lt;/script&gt;。这样对于每个成分来说条件分布都有了
+与指数分布族一样的形式，便可以应用变分消息传播算法。&lt;/p&gt;
+
+&lt;p&gt;从某个节点X传播个子节点的消息为&lt;script type=&quot;math/tex&quot;&gt;\left\langle {u_X(X)} \right\rangle&lt;/script&gt;，而这是通过混合参数向量&lt;script type=&quot;math/tex&quot;&gt;{\phi _X}(\lambda ,\{ \theta_k\} )&lt;/script&gt;计算的。
+相似地，节点X到父亲节点&lt;script type=&quot;math/tex&quot;&gt;\theta_k&lt;/script&gt;的消息是那些以它为父节点的子节点发出的，而节点X中哪些属于&lt;script type=&quot;math/tex&quot;&gt;\theta_k&lt;/script&gt;是由指标变量&lt;script type=&quot;math/tex&quot;&gt;Q(\lambda = k)&lt;/script&gt;的后验确定的。最后，从X到的消息是一个K维向量，其中第k个元素为&lt;script type=&quot;math/tex&quot;&gt;\left\langle {\ln P_k(X\|\theta_k)} \right\rangle&lt;/script&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;算法分析&quot;&gt;算法分析&lt;/h2&gt;
+
+&lt;h3 id=&quot;vb算法与em算法比较&quot;&gt;VB算法与EM算法比较&lt;/h3&gt;
+
+&lt;p&gt;EM算法计算随机变量 (或归类于参数) 后验分布的点估计，但估计隐变量的真实后验分布。用这些参数的众数作为点估计，无任何其他信息。
+而在VB算法作为一个分布估计 (Distributional Approximation) 方法，计算所有变量的真实后验分布的估计，包括参数和隐变量。
+在贝叶斯推断中，计算点估计一般使用常用的均值而非众数。与此同时，应该注意的是计算参数在VB中与EM有不同的意义。
+EM算法计算贝叶斯网络本身的参数的最优值。而VB计算用于近似参数和隐变量的贝叶斯网络的参数最佳值，VB会先找一个合适的参数分布，
+通常是一个先验分布的形式，然后计算这个分布的参数值，更准确说是超参数，最后得到联合分布的各参数的分布。&lt;/p&gt;
+
+&lt;h3 id=&quot;算法复杂性&quot;&gt;算法复杂性&lt;/h3&gt;
+
+&lt;p&gt;变分贝叶斯估计方法是众多概率函数估计技术之一。还有许多其他被广泛使用的估计算法，一般分为确定性 (deterministic) 和随机性 (stochastic) 的方法，比如基于点估计的极大似然估计、极大后验概率估计，基于局部估计的Laplace估计，基于spline估计的B-样条估计，还有经验性估计，利用随机采用的如MCMC方法。变分贝叶斯方法作为平均场估计，能够在计算复杂度和精度之间保持一个良好的关系，如图-4所示。变分贝叶斯方法主要的计算压力在于它的IVB算法——一系列为求取变分边缘概率相关的矩估计而进行的迭代。如果只关心计算代价而对精度要求不高，那么可以用简单的估计方法来代替变分边缘概率，或者减少估计迭代的次数，这样变分估计的路径将沿着虚线往下。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/variational_message_passing/vmp-4.png&quot; alt=&quot;VB方法的精度与复杂性之间的关系&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;图-4 VB方法的精度与复杂性之间的关系&lt;/p&gt;
+
+&lt;h2 id=&quot;小结&quot;&gt;小结&lt;/h2&gt;
+
+&lt;p&gt;本文对基于贝叶斯网络的变分消息传播方法从理论基础到算法流程展开论述。
+特别地与EM算法进行比较，分析了变分贝叶斯方法的算法复杂性。
+下一篇将给出高斯混合模型的例子，以及MATLAB实现源代码。&lt;/p&gt;
+
+&lt;h2 id=&quot;参考文献&quot;&gt;参考文献&lt;/h2&gt;
+
+&lt;p&gt;[1] John M. Winn, M. Bishop, Variational Message Passing, Journal of Machine Learning Research, 2004&lt;/p&gt;
+
+&lt;p&gt;[2] John M. Winn, Variational Message Passing and its Applications, University of Cambridge, 2003&lt;/p&gt;
+
+&lt;p&gt;[3] Michael I. Jordan, An Introduction to Variational Methods for Graphical Models, Machine Learning, 1999&lt;/p&gt;
+
+&lt;p&gt;完整文章下载: &lt;a href=&quot;/pdf/intro_vb_2013.pdf&quot;&gt;[pdf]&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sat, 23 Mar 2013 09:47:14 +0800</pubDate>
+        <link>http://localhost:4000/2013/03/23/variational-message-passing/</link>
+        <guid isPermaLink="true">http://localhost:4000/2013/03/23/variational-message-passing/</guid>
+        
+        <category>Bayesian Networks</category>
+        
+        <category>Machine Learning</category>
+        
+        <category>Variational Inference</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>变分贝叶斯算法理解与推导</title>
+        <description>&lt;p&gt;&lt;strong&gt;关键词&lt;/strong&gt;: 贝叶斯推断，平均场理论，变分估计，贝叶斯推断，KL散度，确定性估计&lt;/p&gt;
+
+&lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
 
 &lt;p&gt;上世纪90年代，变分推断在概率模型上得到迅速发展，在贝叶斯框架下一般的变分法由Attias的两篇文章给出。Matthew J.Beal的博士论文《Variational Algorithms for Approximate Bayesian Inference》中有比较充分地论述，作者将其应用于隐马尔科夫模型，混合因子分析，线性动力学，图模型等。变分贝叶斯是一类用于贝叶斯估计和机器学习领域中近似计算复杂（intractable）积分的技术。它主要应用于复杂的统计模型中，这种模型一般包括三类变量：观测变量(observed variables, data)，未知参数（parameters）和潜变量（latent variables）。在贝叶斯推断中，参数和潜变量统称为不可观测变量(unobserved variables)。变分贝叶斯方法主要是两个目的:&lt;/p&gt;
 
-&lt;p&gt;(1)   近似不可观测变量的后验概率，以便通过这些变量作出统计推断。&lt;/p&gt;
-
-&lt;p&gt;(2)   对一个特定的模型，给出观测变量的边缘似然函数（或称为证据，evidence）的下界。主要用于模型的选择，认为模型的边缘似然值越高，则模型对数据拟合程度越好，该模型产生Data的概率也越高。&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;近似不可观测变量的后验概率，以便通过这些变量作出统计推断。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;对一个特定的模型，给出观测变量的边缘似然函数（或称为证据，evidence）的下界。主要用于模型的选择，认为模型的边缘似然值越高，则模型对数据拟合程度越好，该模型产生Data的概率也越高。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;p&gt;对于第一个目的，蒙特卡洛模拟，特别是用Gibbs取样的MCMC方法，可以近似计算复杂的后验分布，能很好地应用到贝叶斯统计推断。此方法通过大量的样本估计真实的后验，因而近似结果带有一定的随机性。与此不同的是，变分贝叶斯方法提供一种局部最优，但具有确定解的近似后验方法。&lt;/p&gt;
 
 &lt;p&gt;从某种角度看，变分贝叶斯可以看做是EM算法的扩展，因为它也是采用极大后验估计(MAP)，即用单个最有可能的参数值来代替完全贝叶斯估计。另外，变分贝叶斯也通过一组相互依然（mutually dependent）的等式进行不断的迭代来获得最优解。&lt;/p&gt;
 
-&lt;p&gt;二、问题描述&lt;/p&gt;
+&lt;h2 id=&quot;问题描述&quot;&gt;问题描述&lt;/h2&gt;
 
-&lt;p&gt;重新考虑一个问题：1）有一组观测数据$D$，
-并且已知模型的形式，求参数与潜变量（或不可观测变量）&lt;script type=&quot;math/tex&quot;&gt;Z = \{ {Z_1},...,{Z_n}\}&lt;/script&gt; 的后验分布:&lt;script type=&quot;math/tex&quot;&gt;P(Z|D)&lt;/script&gt;。&lt;/p&gt;
+&lt;p&gt;重新考虑一个问题：1）有一组观测数据&lt;script type=&quot;math/tex&quot;&gt;D&lt;/script&gt;，并且已知模型的形式，求参数与潜变量（或不可观测变量）&lt;script type=&quot;math/tex&quot;&gt;Z = \{ {Z_1},...,{Z_n}\}&lt;/script&gt; 的后验分布: P(Z | D)。&lt;/p&gt;
 
-&lt;p&gt;\begin{equation} \label{beta_Gamma}
-P(\beta_k) = \mathcal{G}(c_0,d_0), \forall k.
-\end{equation}&lt;/p&gt;
+&lt;p&gt;正如上文所描述的后验概率的形式通常是很复杂(Intractable)的,对于一种算法如果不能在多项式时间内求解，往往不是我们所考虑的。因而我们想能不能在误差允许的范围内，用更简单、容易理解(tractable)的数学形式Q(Z)来近似P(Z|D),即 &lt;script type=&quot;math/tex&quot;&gt;P(Z\|D) \approx Q(Z)&lt;/script&gt;。&lt;/p&gt;
+
+&lt;p&gt;由此引出如下两个问题：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;假设存在这样的Q(Z),那么如何度量Q(Z)与P(Z|D)之间的差异性 (dissimilarity).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;如何得到简单的Q(Z)?&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;p&gt;对于问题一，幸运的是，我们不需要重新定义一个度量指标。在信息论中，已经存在描述两个随机分布之间距离的度量，即相对熵，或者称为Kullback-Leibler散度。&lt;/p&gt;
 
-&lt;p&gt;三、Kullback-Leibler散度&lt;/p&gt;
+&lt;p&gt;对于问题二，显然我们可以自主决定Q(Z)的分布，只要它足够简单，且与P(Z|D)接近。然而不可能每次都手工给出一个与P(Z|D)接近且简单的Q(Z)，其方法本身已经不具备可操作性。所以需要一种通用的形式帮助简化问题。那么数学形式复杂的原因是什么？在“模型的选择”部分，曾提到Occam’s razor，认为一个模型的参数个数越多，那么模型复杂的概率越大;此外，如果参数之间具有相互依赖关系(mutually dependent)，那么通常很难对参数的边缘概率精确求解。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://blog.huajh7.com/2013/03/06/variational-bayes/vb-1/&quot;&gt;&lt;img src=&quot;http://blog.huajh7.com/wp-content/uploads/2013/03/vb-1-300x235.png&quot; alt=&quot;vb-1&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;幸运的是，统计物理学界很早就关注了高维概率函数与它的简单形式，并发展了平均场理论。简单讲就是：系统中个体的局部相互作用可以产生宏观层面较为稳定的行为。于是我们可以作出后验条件独立（posterior independence）的假设。即，&lt;script type=&quot;math/tex&quot;&gt;\forall i,p(Z \| D) = p(Z_i \| D)p({Z_{-i}}\|D)&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;四、平均场理论（Mean Field Method）&lt;/p&gt;
+&lt;h2 id=&quot;kullback-leibler散度&quot;&gt;Kullback-Leibler散度&lt;/h2&gt;
+
+&lt;p&gt;在统计学中，相对熵对应的是似然比的对数期望，相对熵 &lt;script type=&quot;math/tex&quot;&gt;D(p\|\|q)&lt;/script&gt; 度量当真实分布为 P而假定分布为Q时的无效性。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;定义&lt;/strong&gt;  两个概率密度函数为&lt;script type=&quot;math/tex&quot;&gt;p(x)&lt;/script&gt;和&lt;script type=&quot;math/tex&quot;&gt;q(x)&lt;/script&gt;之间的相对熵定义为&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;D_{KL}(p\|\|q) = \sum_{x} p(x) \log \frac{p(x)}{q(x)}&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;KL散度有如下性质：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;{D_{KL}}(p\|\|q) \ne {D_{KL}}(q\|\|p)&lt;/script&gt;;&lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;{D_{KL}}(p\|\|q) \ge 0&lt;/script&gt; ，当且仅当&lt;script type=&quot;math/tex&quot;&gt;p=q&lt;/script&gt;时为零；&lt;/li&gt;
+  &lt;li&gt;不满足三角不等式。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Q分布与P分布的KL散度为：&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;D_{KL}(Q\|\|P) = \sum\limits_Z Q(Z)\log \frac{Q(Z)}{P(Z\|D)} = \sum\limits_Z Q(Z)\log \frac{Q(Z)}{P(Z,D)} + \log P(D)&lt;/script&gt;
+
+&lt;p&gt;或者&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\log P(D) = {D_{KL}}(Q\|\|P) - \sum\limits_Z {Q(Z)\log \frac{Q(Z)}{P(Z,D)}} ={D_{KL}}(Q\|\|P) + L(Q).&lt;/script&gt;
+
+&lt;p&gt;由于对数证据&lt;script type=&quot;math/tex&quot;&gt;logP(D)&lt;/script&gt;被相应的Q所固定，为了使KL散度最小，则只要极大化&lt;script type=&quot;math/tex&quot;&gt;L(Q)&lt;/script&gt;。通过选择合适的Q，使&lt;script type=&quot;math/tex&quot;&gt;L(Q)&lt;/script&gt;便于计算和求极值。这样就可以得到后验P(Z|D)的近似解析表达式和证据（log evidence）的下界&lt;script type=&quot;math/tex&quot;&gt;L(Q)&lt;/script&gt;，又称为变分自由能（variational free energy）：&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;L(Q)=\sum\limits_Z {Q(Z)\log P(Z,D)}-\sum\limits_Z {Q(Z)\log Q(Z)}={E_Q}[\log P(Z,D)]+H(Q)&lt;/script&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/variational-bayes/vb-1.png&quot; alt=&quot;vb1&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;平均场理论mean-field-method&quot;&gt;平均场理论（Mean Field Method）&lt;/h2&gt;
 
 &lt;p&gt;数学上说，平均场的适用范围只能是完全图，或者说系统结构是well-mixed，在这种情况下，系统中的任何一个个体以等可能接触其他个体。反观物理，平均场与其说是一种方法，不如说是一种思想。其实统计物理的研究目的就是期望对宏观的热力学现象给予合理的微观理论。物理学家坚信，即便不满足完全图的假设，但既然这种“局部”到“整体”的作用得以实现，那么个体之间的局部作用相较于“全局”的作用是可以忽略不计的。&lt;/p&gt;
 
+&lt;p&gt;根据平均场理论，变分分布Q(Z)可以通过参数和潜在变量的划分（partition）因式分解，比如将&lt;script type=&quot;math/tex&quot;&gt;Z&lt;/script&gt;划分为&lt;script type=&quot;math/tex&quot;&gt;{Z_1} \ldots {Z_M}&lt;/script&gt;&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;Q(Z) = \prod\limits_{i = 1}^M {q(Z_i\|D)}&lt;/script&gt;
+
 &lt;p&gt;注意这里并非一个不可观测变量一个划分，而应该根据实际情况做决定。当然你也可以这么做，但是有时候，将几个潜变量放在一起会更容易处理。&lt;/p&gt;
 
-&lt;p&gt;参考文献&lt;/p&gt;
+&lt;h3 id=&quot;平均场方法的合理性&quot;&gt;平均场方法的合理性&lt;/h3&gt;
+
+&lt;p&gt;在量子多体问题中，用一个（单体）有效场来代替电子所受到的其他电子的库仑相互作用。这个有效场包含所有其他电受到的其他电子的库仑相互作用。这个有效场包含了所有其他电子对该电子的相互作用。利用有效场取代电子之间的库仑相互作用之后，每一个电子在一个有效场中运动，电子与电子之间的运动是独立的(除了需要考虑泡利不相容原理)，原来的多体问题转化为单体问题。&lt;/p&gt;
+
+&lt;p&gt;同样在变分分布Q(Z)这个系统中，我们也可以将每一个潜变量划分看成是一个单体，其他划分对其的影响都可以用一个看做是其自身的作用。采用的办法是迭代(Iterative VB(IVB) algorithm)。这是由于当变分自由能取得最大值的时候，划分&lt;script type=&quot;math/tex&quot;&gt;Z_i&lt;/script&gt;与它的互斥集&lt;script type=&quot;math/tex&quot;&gt;{Z_{-i}}&lt;/script&gt;(或者更进一步，马尔科夫毯(Markov blanket), &lt;script type=&quot;math/tex&quot;&gt;mb(Z_i) )&lt;/script&gt;具有一个简单的关系：&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;Q(Z_i) \propto \frac{1}{C}\exp {\left\langle {\ln P(Z_i,{Z_{-i}},D)} \right\rangle _{Q({Z_{-i}}) or Q(mb(Z_i))}}&lt;/script&gt;
+
+&lt;p&gt;（为保持文章的连贯性，此处先不证明，下文将详细说明）&lt;/p&gt;
+
+&lt;p&gt;于是，对于某个划分&lt;script type=&quot;math/tex&quot;&gt;Z_i&lt;/script&gt;,我们可以先保持其他划分&lt;script type=&quot;math/tex&quot;&gt;{Z_{-i}}&lt;/script&gt;不变，然后用以上关系式更新&lt;script type=&quot;math/tex&quot;&gt;Z_i&lt;/script&gt;。相同步骤应用于其他划分的更新，使得每个划分之间充分相互作用，最终达到稳定值。&lt;/p&gt;
+
+&lt;p&gt;具体更新边缘概率（VB-marginal）步骤如下：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;初始化&lt;script type=&quot;math/tex&quot;&gt;{Q^{(0)}}(Z_i)&lt;/script&gt;，可随机取；&lt;/li&gt;
+  &lt;li&gt;在第k步，计算&lt;script type=&quot;math/tex&quot;&gt;{Z_{-i}}&lt;/script&gt;的边缘密度&lt;script type=&quot;math/tex&quot;&gt;Q^{[k]}({Z_{-i}}\|D) \propto \exp \int\limits_{Z_i^*} Q^{[k - 1]}(Z_i\|D) \log P(Z_i,Z_{-i},D)dZ_i&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;计算&lt;script type=&quot;math/tex&quot;&gt;Z_i&lt;/script&gt;的边缘密度&lt;script type=&quot;math/tex&quot;&gt;Q^{[k]}(Z_i\|D) \propto \exp \int\limits_{Z_{-i}^*} Q^{[k]}({Z_{-i}}\|D) \log P(Z_i,{Z_{-i}},D)d{Z_{-i}}&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;理论上&lt;script type=&quot;math/tex&quot;&gt;{Q^{[\infty ]}}(Z_i\|D)&lt;/script&gt;将会收敛，则反复执行(2), (3)直到&lt;script type=&quot;math/tex&quot;&gt;Q(Z_i)&lt;/script&gt;,&lt;script type=&quot;math/tex&quot;&gt;Q({Z_{-i}})&lt;/script&gt;稳定，或稳定在某个小范围内。&lt;/li&gt;
+  &lt;li&gt;最后，得 &lt;script type=&quot;math/tex&quot;&gt;Q(Z) = Q(Z_i\|D)Q({Z_{-i}}\|D)&lt;/script&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;平均场估计下边缘概率的无意义性-vb-marginals&quot;&gt;平均场估计下边缘概率的无意义性 (VB-marginals)&lt;/h3&gt;
+
+&lt;p&gt;注意到Q(Z)估计的是联合概率密度，而对于每一个&lt;script type=&quot;math/tex&quot;&gt;Q_i(Z_i)&lt;/script&gt;，其与真实的边缘概率密度&lt;script type=&quot;math/tex&quot;&gt;{P_i}(Z_i)&lt;/script&gt;的差别可能是很大的。不应该用&lt;script type=&quot;math/tex&quot;&gt;Q_i(Z_i)&lt;/script&gt;来估计真实的边缘密度，比如在一个贝叶斯网络中，你不应该用它来推测某个节点的状态。而这其实是很糟糕的，相比于其他能够使用节点状态信息来进行局部推测的算法，变分贝叶斯方法更不利于调试。&lt;/p&gt;
+
+&lt;p&gt;比如一个标准的高斯联合分布&lt;script type=&quot;math/tex&quot;&gt;P(\mu ,x)&lt;/script&gt;和最优的平均场高斯估计&lt;script type=&quot;math/tex&quot;&gt;Q(\mu ,x)&lt;/script&gt;。Q选择了在它自己作用域中的高斯分布，因而变得很窄。此时边缘密度&lt;script type=&quot;math/tex&quot;&gt;{Q_x}(x)&lt;/script&gt;变得非常小，完全与&lt;script type=&quot;math/tex&quot;&gt;{P_x}(x)&lt;/script&gt;不同。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/variational-bayes/vb-2.png&quot; alt=&quot;vb2&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;边缘密度vb-marginal公式的推导&quot;&gt;边缘密度（VB-marginal）公式的推导&lt;/h2&gt;
+
+&lt;p&gt;上文已经提到我们要找到一个更加简单的函数&lt;script type=&quot;math/tex&quot;&gt;D(Z)&lt;/script&gt;来近似P(Z|D)，同时问题转化为求解证据&lt;script type=&quot;math/tex&quot;&gt;logP(Z)&lt;/script&gt;的下界&lt;script type=&quot;math/tex&quot;&gt;L(Q)&lt;/script&gt;，或者&lt;script type=&quot;math/tex&quot;&gt;L(Q(Z))&lt;/script&gt;。应该注意到&lt;script type=&quot;math/tex&quot;&gt;L(Q)&lt;/script&gt;并非普通的函数，而是以整个函数为自变量的函数，这便是泛函。我们先介绍一下什么是泛函，以及泛函取得极值的必要条件。&lt;/p&gt;
+
+&lt;h3 id=&quot;泛函的概念&quot;&gt;泛函的概念&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;泛函&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;设对于(某一函数集合内的)任意一个函数&lt;script type=&quot;math/tex&quot;&gt;y(x)&lt;/script&gt;，有另一个数&lt;script type=&quot;math/tex&quot;&gt;J[y]&lt;/script&gt;与之对应，则称&lt;script type=&quot;math/tex&quot;&gt;J[y]&lt;/script&gt;为&lt;script type=&quot;math/tex&quot;&gt;y(x)&lt;/script&gt;的泛函。泛函可以看成是函数概念的推广。
+这里的函数集合，即泛函的定义域，通常要求&lt;script type=&quot;math/tex&quot;&gt;y(x)&lt;/script&gt; 满足一定的边界条件，并且具有连续的二阶导数．这样的&lt;script type=&quot;math/tex&quot;&gt;y(x)&lt;/script&gt;称为可取函数。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;泛函不同于复合函数&lt;/strong&gt;，&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;例如&lt;script type=&quot;math/tex&quot;&gt;g=g(f(x))&lt;/script&gt;; 对于后者，给定一个&lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt;值，仍然是有一个&lt;script type=&quot;math/tex&quot;&gt;g&lt;/script&gt;值与之对应；
+对于前者，则必须给出某一区间上的函数&lt;script type=&quot;math/tex&quot;&gt;y(x)&lt;/script&gt;，才能得到一个泛函值&lt;script type=&quot;math/tex&quot;&gt;J[y]&lt;/script&gt;。(定义在同一区间上的)函数不同，泛函值当然不同，
+为了强调泛函值&lt;script type=&quot;math/tex&quot;&gt;J[y]&lt;/script&gt;与函数&lt;script type=&quot;math/tex&quot;&gt;y(x)&lt;/script&gt;之间的依赖关系，常常又把函数&lt;script type=&quot;math/tex&quot;&gt;y(x)&lt;/script&gt;称为变量函数。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;泛函的形式多种多样，通常可以积分形式：&lt;script type=&quot;math/tex&quot;&gt;J[y] = \int_{x_0}^{x_1} {F(x,y,y')} dx&lt;/script&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;泛函取极值的必要条件&quot;&gt;泛函取极值的必要条件&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;泛函的极值&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;“当变量函数为&lt;script type=&quot;math/tex&quot;&gt;y(x)&lt;/script&gt;时，泛函&lt;script type=&quot;math/tex&quot;&gt;J [y]&lt;/script&gt;取极大值”的含义就是：对于极值函数&lt;script type=&quot;math/tex&quot;&gt;y(x)&lt;/script&gt;及其“附近”的变量函数&lt;script type=&quot;math/tex&quot;&gt;y(x) + \delta y(x)&lt;/script&gt;，恒有&lt;script type=&quot;math/tex&quot;&gt;J\left[ {y + \delta y} \right] \le J[y]&lt;/script&gt;;&lt;/p&gt;
+
+&lt;p&gt;所谓函数&lt;script type=&quot;math/tex&quot;&gt;y(x) + \delta y(x)&lt;/script&gt;在另一个函数&lt;script type=&quot;math/tex&quot;&gt;y(x)&lt;/script&gt;的“附近”，指的是：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;% &lt;![CDATA[
+\|\delta y(x)\| &lt; \varepsilon %]]&gt;&lt;/script&gt;;&lt;/li&gt;
+  &lt;li&gt;有时还要求&lt;script type=&quot;math/tex&quot;&gt;% &lt;![CDATA[
+\|(\delta y)'(x) \| &lt; \varepsilon %]]&gt;&lt;/script&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;这里的&lt;script type=&quot;math/tex&quot;&gt;\delta y(x)&lt;/script&gt;称为函数&lt;script type=&quot;math/tex&quot;&gt;y(x)&lt;/script&gt;的变分。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Euler–Lagrange方程&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;可以仿造函数极值必要条件的导出办法，导出泛函取极值的必要条件，这里不做严格的证明，直接给出。
+泛函&lt;script type=&quot;math/tex&quot;&gt;J[y]&lt;/script&gt;取到极大值的必要条件是一级变分&lt;script type=&quot;math/tex&quot;&gt;\delta J[y]&lt;/script&gt;为0，其微分形式一般为二阶常微分方程，即Euler-Largange方程：&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\frac{\partial F}\partial y - \frac{d}dx\frac{\partial F}\partial y' = 0&lt;/script&gt;
+
+&lt;p&gt;&lt;strong&gt;泛函的条件极值&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;在约束条件 下求函数&lt;script type=&quot;math/tex&quot;&gt;J[y]&lt;/script&gt;的极值，可以引入Largange乘子&lt;script type=&quot;math/tex&quot;&gt;\lambda&lt;/script&gt;，从而定义一个新的泛函，
+&lt;script type=&quot;math/tex&quot;&gt;\tilde J[y] = J[y] - \lambda {J_0}[y]&lt;/script&gt;。仍将&lt;script type=&quot;math/tex&quot;&gt;\delta y&lt;/script&gt;看成是独立的，则泛函&lt;script type=&quot;math/tex&quot;&gt;\tilde J[y]&lt;/script&gt;在边界条件下取极值的必要条件就是，&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;(\frac{\partial}{\partial y} - \frac{d}{dx} \frac{\partial}{\partial y'})
+(F - \lambda G) = 0&lt;/script&gt;
+
+&lt;h3 id=&quot;问题求解&quot;&gt;问题求解&lt;/h3&gt;
+
+&lt;p&gt;对于&lt;script type=&quot;math/tex&quot;&gt;L(Q(Z)) = {E_Q(Z)}[\ln P(Z,D)] + H(Q(Z))&lt;/script&gt;，将右式第一项定义为能量(Energy)，第二项看做是信息熵(Shannon entropy)。我们只考虑自然对数的形式，因为对于任何底数的对数总是可以通过换底公式将其写成自然对数与一个常量的乘积形式。另外根据平均场假设可以得到如下积分形式，&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;L(Q(Z)) = \int {(\prod\limits_i {Q_i(Z_i)})} \ln P(Z,D)dZ - \int {(\prod\limits_k {Q_k({Z_k})} )} \sum\limits_i {\ln Q_i(Z_i)} dZ&lt;/script&gt;
+
+&lt;p&gt;其中&lt;script type=&quot;math/tex&quot;&gt;Q(Z) = \prod\limits_i {Q_i(Z_i)}&lt;/script&gt;，且满足 &lt;script type=&quot;math/tex&quot;&gt;\forall i.{\rm{ }}\int {Q_i(Z_i)} dZ_i = 1&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;考虑划分&lt;script type=&quot;math/tex&quot;&gt;Z = \left\{ Z_i,{\rm{ }}{Z_{-i}} \right\}&lt;/script&gt;，其中&lt;script type=&quot;math/tex&quot;&gt;Z_{-i} = Z\backslash Z_i&lt;/script&gt;，先考虑能量项(Energy)（第一项），&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;{E_Q(Z)}[\ln P(Z,D)]&lt;/script&gt;
+&lt;script type=&quot;math/tex&quot;&gt;= \int {(\prod\limits_i {Q_i(Z_i)} )} \ln P(Z, D)dZ&lt;/script&gt;
+&lt;script type=&quot;math/tex&quot;&gt;=\int Q_i(Z_i)dZ_i\int Q_{-i}({Z_{-i}})\ln P(Z, D)d{Z_{-i}}&lt;/script&gt;
+&lt;script type=&quot;math/tex&quot;&gt;=\int Q_i(Z_i){\left\langle \ln P(Z, D) \right\rangle }_{Q_{-i}(Z_{-i})}dZ_i&lt;/script&gt;
+&lt;script type=&quot;math/tex&quot;&gt;=\int Q_i(Z_i)\ln \exp { \left\langle {\ln P(Z,D)} \right\rangle }_{Q_{-i}({Z_{-i}})} dZ_i&lt;/script&gt;
+&lt;script type=&quot;math/tex&quot;&gt;=\int Q_i(Z_i) \ln Q_i^*(Z_i) dZ_i + \ln C&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;其中定义&lt;script type=&quot;math/tex&quot;&gt;Q_i^*(Z_i) = \frac{1}{C}\exp {\left\langle {\ln P(Z,D)} \right\rangle _{Q_{-i}({Z_{-i}})}}&lt;/script&gt;，&lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt;为的归一化常数。再考虑熵量(entropy)（第二项），&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;H(Q(Z)) = -\sum\limits_i {\int {(\prod\limits_k {Q_k({Z_k})} )} \ln Q_i(Z_i)dZ} =-\sum\limits_i {\int {\int {Q_i(Z_i)Q_{-i}({Z_{-i}})\ln Q_i(Z_i dZ_id{Z_{-i}}} } }&lt;/script&gt;
+ &lt;script type=&quot;math/tex&quot;&gt;=-{\sum\limits_i {\left\langle {\int {Q_i(Z_i)\ln Q_i(Z_i)dZ_i} } \right\rangle } _{Q_{-i}({Z_{-i}})}}&lt;/script&gt;
+ &lt;script type=&quot;math/tex&quot;&gt;=-\sum\limits_i {\int {Q_i(Z_i)\ln Q_i(Z_i)dZ_i} }&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;此时得到泛函，&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;L(Q(Z)) = \int {Q_i(Z_i)\ln Q_i^*(Z_i)} dZ_i-\sum\limits_i {\int {Q_i(Z_i)\ln Q_i(Z_i)dZ_i} } + {\rm{lnC}}&lt;/script&gt;
+&lt;script type=&quot;math/tex&quot;&gt;= (\int {Q_i(Z_i)\ln Q_i^*(Z_i)} dZ_i - \int {Q_i(Z_i)\ln Q_i(Z_i)dZ_i} )-\sum\limits_{k \ne i} {\int {Q_k({Z_k})\ln Q_k({Z_k})d{Z_k}} } + {\rm{lnC}}&lt;/script&gt;
+&lt;script type=&quot;math/tex&quot;&gt;=\int Q_i(Z_i)\ln \frac{Q_i^*(Z_i)}{Q_i(Z_i)} dZ_i-\sum\limits_{k \ne i} \int Q_k({Z_k})\ln Q_k({Z_k})d{Z_k} +\ln C&lt;/script&gt;
+&lt;script type=&quot;math/tex&quot;&gt;= - {D_{KL}}(Q_i(Z_i)\|\|Q_i^*(Z_i)) + H[Q_{-i}({Z_{-i}})] + \ln C&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;注意到&lt;script type=&quot;math/tex&quot;&gt;L(Q(Z))&lt;/script&gt; 并非只有一个等式，如果不可观测变量有M个划分。 那么将有M个方程。 为了使得&lt;script type=&quot;math/tex&quot;&gt;L(Q(Z))&lt;/script&gt;达到最大值, 同时注意到约束条件, 根据泛函求条件极值的必要条件, 得,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\forall i. \frac{\partial}{\partial Q_i(Z_i)} \{- {D_{KL}}[Q_i(Z_i)\|\|Q_i^*(Z_i)] - {\lambda _i}(\int {Q_i(Z_i)} dZ_i - 1)\} : = 0&lt;/script&gt;
+
+&lt;p&gt;直接求解将得到Gibbs分布，略显复杂;实际上，注意到KL散度，我们可以直接得到KL散度等于0的时候，&lt;script type=&quot;math/tex&quot;&gt;L(D)&lt;/script&gt;达到最大值，最终得到&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;Q_i(Z_i) = Q_i^*(Z_i) = \frac{1}{C}\exp {\left\langle {\ln P(Z_i,{Z_{-i}},D)} \right\rangle _{Q_{-i}({Z_{-i}})}}&lt;/script&gt;
+
+&lt;p&gt;C为归一化常数&lt;script type=&quot;math/tex&quot;&gt;C = \int \exp \left\langle {\ln (Z_i,{Z_{-i}},D)} \right\rangle_{Q_{-i}({Z_{-i}})} d Z_{-i}&lt;/script&gt; , &lt;script type=&quot;math/tex&quot;&gt;Q(Z_i)&lt;/script&gt;为联合概率函数在除&lt;script type=&quot;math/tex&quot;&gt;Z_i&lt;/script&gt;本身外的其他划分下的对数期望。又可以写为 &lt;script type=&quot;math/tex&quot;&gt;\ln Q_i(Z_i) = {\left\langle {\ln P(Z_i,{Z_{-i}},D)} \right\rangle_{Q_{-i}({Z_{-i}})}} + const&lt;/script&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;参考文献&quot;&gt;参考文献&lt;/h2&gt;
 
 &lt;p&gt;[1] Smídl, Václav, and Anthony Quinn. &lt;em&gt;The variational Bayes method in signal processing&lt;/em&gt;. Springer, 2006.&lt;/p&gt;
 
@@ -1978,14 +1542,13 @@ P(\beta_k) = \mathcal{G}(c_0,d_0), \forall k.
 
 &lt;p&gt;[5] Attias, Hagai. “A variational Bayesian framework for graphical models.”&lt;em&gt;Advances in neural information processing systems&lt;/em&gt; 12.1-2 (2000): 209-215.&lt;/p&gt;
 
-&lt;p&gt;全文下载：&lt;a href=&quot;http://blog.huajh7.com/wp-content/uploads/2013/03/Variational-Inference-full.pdf&quot;&gt;&lt;strong&gt;Variational Inference -full.pdf&lt;/strong&gt;&lt;/a&gt;&lt;a href=&quot;http://blog.huajh7.com/wp-content/uploads/2013/03/Variational-Inference1.pdf&quot;&gt;
-&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;完整文章下载: &lt;a href=&quot;/pdf/intro_vb_2013.pdf&quot;&gt;[pdf]&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt; &lt;/p&gt;
 </description>
         <pubDate>Thu, 07 Mar 2013 01:34:54 +0800</pubDate>
-        <link>http://localhost:4000/variational-bayes</link>
-        <guid isPermaLink="true">http://localhost:4000/variational-bayes</guid>
+        <link>http://localhost:4000/2013/03/07/variational-bayes/</link>
+        <guid isPermaLink="true">http://localhost:4000/2013/03/07/variational-bayes/</guid>
         
         <category>Machine Learning</category>
         

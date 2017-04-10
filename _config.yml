@@ -17,7 +17,7 @@ github_username:    huajh
 twitter_username:    
 facebook_username:   
 linkedin_username:  junhao-hua-01b03150
-googleschloar_username: neG8uIIAAAAJ&hl
+googleschloar_username: #neG8uIIAAAAJ&hl
 
 
 
@@ -60,7 +60,7 @@ duoshuo_share: true                     # set to false if you want to use Commen
 
 # Analytics settings
 # Baidu Analytics 
-ba_track_id: 32d5043f5e31b2de0d1f27fa0dec9da9
+#ba_track_id: 32d5043f5e31b2de0d1f27fa0dec9da9
 
 # Google Analytics
 #ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx

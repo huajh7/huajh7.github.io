@@ -6,21 +6,17 @@ author:     "huajh7"
 catalog:    true
 header-img: "img/post-bg-universe.jpg"
 tags:
-  - Computer vision
+  - Computer Vision
   - Image Processing
   - Image Haze Removal
 date: 2017-4-7  20:02:02
 --- 
 
-# 除雾算法最新进展
+除雾算法主要包括 1) 图像增强方法，和2) 基于物理模型的方法。
 
-## 1. 图像增强方法
+后者又包括(1)基于景物深度信息, (2)基于大气光偏振特性, 以及(3)基于雾天图像的先验知识。
 
-## 2. 基于物理模型
-
-### 2.1 基于景物深度信息
-### 2.2 基于大气光偏振特性
-### 2.3 基于雾天图像的先验知识
+下面总结下基于雾天图像的先验知识的去雾算法。
 
 #### Maximum Contrast 
  
@@ -93,8 +89,6 @@ Project page: [https://github.com/JiamingMai/Color-Attenuation-Prior-Dehazing](h
 
 `expermental results`
 ![img](/img/posts/haze-removal/post-haze-removal-zhu2016.jpg)
-
-![img2](img/posts/haze-removal/post-haze-removal-zhu2016.jpg)
 
 ## 3. 综述
 

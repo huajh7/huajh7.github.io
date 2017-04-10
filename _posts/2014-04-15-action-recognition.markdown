@@ -1,11 +1,14 @@
 ---
 layout: post
-title: "Action Recognition & Categories via Spatial-Temporal Features"
-tags:
-  - action recognition
-author: "huajh7"
+title: "基于时空特征点与词袋模型的动作识别"
+subtitle:   "Action Recognition & Categories via Spatial-Temporal Features"
+author:     "huajh7"
 catalog:    true
-header-img: "img/post-bg-2015.jpg"
+header-img: "img/post-bg-universe.jpg"
+tags:
+  - Action Recognition
+  - Computer Vision
+  - Machine Learning
 date: 2014-04-15 15:30:25
 ---
 

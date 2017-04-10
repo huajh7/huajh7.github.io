@@ -157,14 +157,31 @@
 <style type="text/css">
     header.intro-header{
         position: relative;
-        background-image: url('/img/home-bg-geek.jpg')
+        background-image: url('/img/bg_mr_white.jpg')
     }
 
     
+
+    .t2title{
+      font-weight: 400; /*bold*/
+      color: rgb(0,132,0);
+    }
+
+    .paragraph{
+        font-size:24px; 
+        font-weight:500;
+    }
+
+    .tdate {
+      font-size: 18px;
+      font-weight: 400;
+      color: rgb(132,0,0);
+    }
+
 </style>
 
 <!-- Page Header -->
-<header class="intro-header" style="background-image: url('/img/home-bg-geek.jpg')">
+<header class="intro-header" style="background-image: url('/img/bg_mr_white.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -184,44 +201,69 @@
 
     <!-- Post Container -->
             <div class="
-                col-lg-8 col-lg-offset-2
+                col-lg-9 col-lg-offset-2
                 col-md-10 col-md-offset-1
-                post-container">
+                post-container" style="font-size:18px; font-weight:300;margin-top:50px;margin-bottom:50px;">
 
-			     <blockquote>
-					<p>“Yet another web site. ”</p>
-				</blockquote>
-				<h2 id="begin">Bio</h2>
-				<p>I am Junhao Hua, a PhD student at ZJU working on Machine Learning. My <a href="http://www.huajh7.com/">academic website</a>  has much more information. </p>
+                <p>My <a href="http://www.huajh7.com/">academic website</a> has much more information. </p>
 
-				<hr>
-				<h2 id="main">Interests</h2>
+                <hr />
+                
+                <span class="paragraph">Bio.</span>                
+                 I am currently a PhD Student at <a href="http://www.isee.zju.edu.cn/">College of ISEE</a>, Zhejiang University, China, working with <a href="http://mypage.zju.edu.cn/cgli">Chunguang Li</a> on <span class="t2title">Variational Bayesian Algorithms and their applications in Distributed Systems</span>. 
 
-				<p>nothing. </p>
-	
-				<h2 id='end'>Publication</h2>
-				<p> nothing.</p>
+                 <hr />
 
+                <span class="paragraph"> Research interests</span>
+                
+                <p>My Ph.D research work covers a range of issues: <span class="t2title">variational Bayesian inference, stochastic / distributed optimization</span>, probabilistic graphical models, transfer learning, multitask learning and sensor networks. </p>
 
-				<hr style="visibility: hidden;">
+                <p>Currently, I am interesting in varies approaches to <span class="t2title">deep learning</span> (CNN, GAN, Deep Bayesian Learning, etc.) and their applications to computer vision (image processing, video analysis, etc.).  </p>
 
+                <p>
+                On a side for fun I  maintain several Projects (e.g. <a href="https://github.com/huajh/action_recognition">ActionRecognition</a>, <a href="https://github.com/huajh/Age_Estimation_via_fastAAMs">AgeEstimation</a>, <a href="https://github.com/huajh/variational_bayesian_clusterings">VBClusterings</a>, <a href="https://github.com/huajh/unix_file_sys">UnixFileSystem</a>).</p>
+
+                 <hr />
+
+                <span class="paragraph">Education &amp; Experience.</span>  
+                <br><br>
+                <ul>
+                    <li><span class="tdate">2013 - now:</span> Ph.D. student, Circuits and Systems, Zhejiang University. 
+                    Adviser: <a href="http://mypage.zju.edu.cn/cgli">Chunguang Li</a>. </li>     
+
+                    <li><span class="tdate">Summer 2012:</span> C/C++ Engineer Internship at State Stree(Hangzhou).</li>     
+
+                    <li><span class="tdate">2009-2013:</span> Bachelor's Degree, double major in Computer Science and Automation, 
+                    Zhejiang University of Technology. Adviser: <a href="http://sychen.com/">Shengyong Chen</a>.</li>
+                </ul>
+
+                <hr />
+
+                <span class="paragraph">Publications</span>  
+                <a style="font-size: 18px; font-weight: 400;" target="_blank" href="https://scholar.google.com/citations?neG8uIIAAAAJ&hl"> [Google scholar]</a>
+                <br><br>                 
+                <ul>
+                    <li>
+                    <strong>Junhao Hua</strong>, Chunguang Li, <span class="t2title">Distributed Robust Kalman Filtering By Variational Bayesian Approximations</span>, 
+                    in preparing. 
+                    </li>
+                    <li><strong>Junhao Hua,</strong> Chunguang Li, <span class="t2title">Distributed Jointly Sparse Bayesian Learning with Quantized Communication</span>, 
+                    submitted to IEEE Transactions on Cybernetics, 2017. 
+                    </li>    
+                    <li>
+                    <strong>Junhao Hua</strong>, Chunguang Li, Hui-Liang Shen, 
+                    <span class="t2title">Distributed Learning of Predictive Structures from Multiple Tasks Over Networks</span>, 
+                    IEEE Transactions on Industrial Electronics(<strong>TIE</strong>), preprint, DOI: 10.1109/TIE.2016.2588463.
+                    </li>                    
+                    <li>
+                    <strong>Junhao Hua</strong>, Chunguang Li, <span class="t2title">Distributed Variational Bayesian Algorithms over Sensor Networks</span>, 
+                    IEEE Transactions on Signal Processing (<strong>TSP</strong>), vol.64, no.3, pp.783-798, Feb. 2016.
+                    </li>
+                </ul>
+                <hr />
 			</div>  
 
 	    <!-- Side Catalog Container -->
-	        
-	            <div class="
-	                col-lg-2 col-lg-offset-0
-	                visible-lg-block
-	                sidebar-container
-	                catalog-container">
-	                <div class="side-catalog">
-	                    <hr class="hidden-sm hidden-xs">
-	                    <h5>
-	                        <a class="catalog-toggle" href="#pre">CATALOG</a>
-	                    </h5>
-	                    <ul class="catalog-body"></ul>
-	                </div>
-	            </div>
 	        
 
         </div>
@@ -308,15 +350,6 @@
                     </li>
                     
 
-                    
-                    <li>
-                        <a target="_blank" href="https://scholar.google.com/citations?user=hua-jun-hao">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-google fa-stack-1x  fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
                     
 
                     <!-- add Weibo, Zhihu by Hux, add target = "_blank" to <a> by Hux -->
@@ -439,68 +472,10 @@
 
 <!-- Baidu Tongji -->
 
-<script>
-    // dynamic User by Hux
-    var _baId = '32d5043f5e31b2de0d1f27fa0dec9da9';
-
-    // Originial
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?" + _baId;
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-</script>
-
 
 
 
 <!-- Side Catalog -->
-
-<script type="text/javascript">
-    function generateCatalog (selector) {
-        var P = $('div.post-container'),a,n,t,l,i,c;
-        a = P.find('h1,h2,h3,h4,h5,h6');
-        a.each(function () {
-            n = $(this).prop('tagName').toLowerCase();
-            i = "#"+$(this).prop('id');
-            t = $(this).text();
-            c = $('<a href="'+i+'" rel="nofollow">'+t+'</a>');
-            l = $('<li class="'+n+'_nav"></li>').append(c);
-            $(selector).append(l);
-        });
-        return true;    
-    }
-
-    generateCatalog(".catalog-body");
-
-    // toggle side catalog
-    $(".catalog-toggle").click((function(e){
-        e.preventDefault();
-        $('.side-catalog').toggleClass("fold")
-    }))
-
-    /*
-     * Doc: https://github.com/davist11/jQuery-One-Page-Nav
-     * Fork by Hux to support padding
-     */
-    async("/js/jquery.nav.js", function () {
-        $('.catalog-body').onePageNav({
-            currentClass: "active",
-            changeHash: !1,
-            easing: "swing",
-            filter: "",
-            scrollSpeed: 700,
-            scrollOffset: 0,
-            scrollThreshold: .2,
-            begin: null,
-            end: null,
-            scrollChange: null,
-            padding: 80
-        });
-    });
-</script>
 
 
 

@@ -10,7 +10,7 @@
     <meta name="keywords"  content="华俊豪, huajh, huajh7, Junhao Hua, @huajh, 华俊豪的博客, huajh7's Blog, 博客, 机器学习, 贝叶斯">
     <meta name="theme-color" content="#000000">
     
-    <title>Action Recognition & Categories via Spatial-Temporal Features - Junhao Hua 博客 | huajh7's Blog</title>
+    <title>基于时空特征点与词袋模型的动作识别 - Junhao Hua 博客 | huajh7's Blog</title>
 
     <!-- Web App Manifest -->
     <link rel="manifest" href="/pwa/manifest.json">
@@ -155,13 +155,13 @@
 
     <!-- Image to hack wechat -->
 <!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
-<!-- <img src="/img/post-bg-2015.jpg" width="0" height="0"> -->
+<!-- <img src="/img/post-bg-universe.jpg" width="0" height="0"> -->
 
 <!-- Post Header -->
 <style type="text/css">
     header.intro-header{
         position: relative;
-        background-image: url('/img/post-bg-2015.jpg')
+        background-image: url('/img/post-bg-universe.jpg')
     }
 
     
@@ -174,13 +174,17 @@
                 <div class="post-heading">
                     <div class="tags">
                         
-                        <a class="tag" href="/tags/#action recognition" title="action recognition">action recognition</a>
+                        <a class="tag" href="/tags/#Action Recognition" title="Action Recognition">Action Recognition</a>
+                        
+                        <a class="tag" href="/tags/#Computer Vision" title="Computer Vision">Computer Vision</a>
+                        
+                        <a class="tag" href="/tags/#Machine Learning" title="Machine Learning">Machine Learning</a>
                         
                     </div>
-                    <h1>Action Recognition & Categories via Spatial-Temporal Features</h1>
+                    <h1>基于时空特征点与词袋模型的动作识别</h1>
                     
                     
-                    <h2 class="subheading"></h2>
+                    <h2 class="subheading">Action Recognition & Categories via Spatial-Temporal Features</h2>
                     
                     <span class="meta">Posted by huajh7 on April 15, 2014</span>
                 </div>
@@ -222,9 +226,9 @@
                 <div class="ds-share"
                     style="text-align: right"
                     data-thread-key="/2014/04/15/action-recognition"
-                    data-title="Action Recognition & Categories via Spatial-Temporal Features"
+                    data-title="基于时空特征点与词袋模型的动作识别"
                     data-url="http://localhost:4000/2014/04/15/action-recognition/"
-                    data-images="http://localhost:4000/img/post-bg-2015.jpg"
+                    data-images="http://localhost:4000/img/post-bg-universe.jpg"
                     data-content="正文
 
 春学期修了一门《图像与视频分析》课程，很随机地选了大作业，叫”行为检测与识别”。看了一些论文，通过作者提供的代码大致了解了下这个领域的基本内容，然... | Junhao Hua 博客 | huajh7's Blog " >
@@ -250,17 +254,17 @@
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/variational-bayes" data-toggle="tooltip" data-placement="top" title="Variational Bayes">
+                        <a href="/2013/03/23/variational-message-passing/" data-toggle="tooltip" data-placement="top" title="变分消息传播模型与算法">
                         Previous<br>
-                        <span>Variational Bayes</span>
+                        <span>变分消息传播模型与算法</span>
                         </a>
                     </li>
                     
                     
                     <li class="next">
-                        <a href="/2015/04/14/unix-linux-note/" data-toggle="tooltip" data-placement="top" title="Example Post">
+                        <a href="/2016/12/15/dvb/" data-toggle="tooltip" data-placement="top" title="分布式变分贝叶斯 ">
                         Next<br>
-                        <span>Example Post</span>
+                        <span>分布式变分贝叶斯 </span>
                         </a>
                     </li>
                     
@@ -272,7 +276,7 @@
                 <div class="comment">
                     <div class="ds-thread"
                         data-thread-key="/2014/04/15/action-recognition"
-                        data-title="Action Recognition & Categories via Spatial-Temporal Features"
+                        data-title="基于时空特征点与词袋模型的动作识别"
                         data-url="http://localhost:4000/2014/04/15/action-recognition/" >
                     </div>
                 </div>
@@ -314,13 +318,13 @@
                     <div class="tags">
         				
                             
-                				<a href="/tags/#Machine Learning" title="Machine Learning" rel="2">
+                				<a href="/tags/#Machine Learning" title="Machine Learning" rel="4">
                                     Machine Learning
                                 </a>
                             
         				
                             
-                				<a href="/tags/#Variational Inference" title="Variational Inference" rel="2">
+                				<a href="/tags/#Variational Inference" title="Variational Inference" rel="3">
                                     Variational Inference
                                 </a>
                             
@@ -328,13 +332,11 @@
                             
         				
                             
-                				<a href="/tags/#markdown" title="markdown" rel="3">
-                                    markdown
+        				
+                            
+                				<a href="/tags/#Computer Vision" title="Computer Vision" rel="3">
+                                    Computer Vision
                                 </a>
-                            
-        				
-                            
-        				
                             
         				
                             
@@ -471,15 +473,6 @@
                     
 
                     
-                    <li>
-                        <a target="_blank" href="https://scholar.google.com/citations?user=hua-jun-hao">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-google fa-stack-1x  fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
 
                     <!-- add Weibo, Zhihu by Hux, add target = "_blank" to <a> by Hux -->
                     
@@ -600,20 +593,6 @@
 
 
 <!-- Baidu Tongji -->
-
-<script>
-    // dynamic User by Hux
-    var _baId = '32d5043f5e31b2de0d1f27fa0dec9da9';
-
-    // Originial
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?" + _baId;
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-</script>
 
 
 
