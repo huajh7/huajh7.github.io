@@ -79,12 +79,22 @@ Jean-Philippe Tarel, **Fast visibility restoration from a single color or gray l
 > 
 
 #### Color  Attenuation Prior 
-
-> 颜色衰减先验（CAP）是一种与暗通道先验（DCP）相似的先验特征。观察发现雾霾会同时导致图像饱和度的降低和亮度的增加，整体上表现为颜色的衰减。根据颜色衰减先验，亮度和饱和度的差值被应用于估计雾霾的浓度.
+> 
+> 作者提出了一个简单，但是很有效的先验：颜色衰减先验（CAP），用来通过仅仅输入一张有雾的图像来去除雾的影响。这是一种与暗通道先验（DCP）相似的先验特征。
+> 
+> 作者观察发现雾霾会同时导致图像饱和度的降低和亮度的增加，整体上表现为颜色的衰减。根据颜色衰减先验，亮度和饱和度的差值被应用于估计雾霾的浓度.
+> 
+> 作者创建了一个线性回归模型，利用颜色衰减先验这个新奇的先验，通过对有雾图像场景深度的建模，利用有监督学习的方法学习到的参数，深度信息会被很好的恢复。利用有雾图像的深度图，我们可以很容易的恢复一张有雾的图像。
+> 
 
 Qingsong Zhu, **A fast single image haze removal algorithm using color attenuation prior**, TIP, `2015`, cited by `60+`
 
+Project page: [https://github.com/JiamingMai/Color-Attenuation-Prior-Dehazing](https://github.com/JiamingMai/Color-Attenuation-Prior-Dehazing)
+
+`expermental results`
 ![img](/img/posts/haze-removal/post-haze-removal-zhu2016.jpg)
+
+![img2](img/posts/haze-removal/post-haze-removal-zhu2016.jpg)
 
 ## 3. 综述
 
@@ -93,14 +103,20 @@ Qingsong Zhu, **A fast single image haze removal algorithm using color attenuati
 ## 4. 最新文献
 
 
+`deep learning`
 > DehazeNet是一个特殊设计的深度卷积网络，利用深度学习去智能地学习雾霾特征，解决手工特征设计的难点和痛点。
+> 
 
 Bolun Cai, **DehazeNet: An End-to-End System for Single Image Haze Removal**, `2016`, cited by `9`
 
+* Project page: [http://caibolun.github.io/DehazeNet/](http://caibolun.github.io/DehazeNet/)
+* Code: [https://github.com/caibolun/DehazeNet](https://github.com/caibolun/DehazeNet)
+
 Dana Berman, **Non-Local Image Dehazing**, CVPR, 2016, cited by `7`
 
-Mostafa M. El-Hashash, **High-speed video haze removal algorithm for embedded systems**, `2016`
+Mostafa M. El-Hashash, **High-speed video haze removal algorithm for embedded systems**, `2016`, cited by `0`
 
+* Real-time video processing
 * uses the dark channel prior 
 * eight frames per second at 720 x 480 video frame resolution
 

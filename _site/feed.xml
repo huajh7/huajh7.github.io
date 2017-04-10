@@ -5,9 +5,155 @@
     <description>Imagination is more important than knowledge. -Albert Einstein</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 07 Apr 2017 22:17:33 +0800</pubDate>
-    <lastBuildDate>Fri, 07 Apr 2017 22:17:33 +0800</lastBuildDate>
+    <pubDate>Sun, 09 Apr 2017 12:31:11 +0800</pubDate>
+    <lastBuildDate>Sun, 09 Apr 2017 12:31:11 +0800</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
+    
+      <item>
+        <title>除雾算法最新进展</title>
+        <description>&lt;h1 id=&quot;除雾算法最新进展&quot;&gt;除雾算法最新进展&lt;/h1&gt;
+
+&lt;h2 id=&quot;1-图像增强方法&quot;&gt;1. 图像增强方法&lt;/h2&gt;
+
+&lt;h2 id=&quot;2-基于物理模型&quot;&gt;2. 基于物理模型&lt;/h2&gt;
+
+&lt;h3 id=&quot;21-基于景物深度信息&quot;&gt;2.1 基于景物深度信息&lt;/h3&gt;
+&lt;h3 id=&quot;22-基于大气光偏振特性&quot;&gt;2.2 基于大气光偏振特性&lt;/h3&gt;
+&lt;h3 id=&quot;23-基于雾天图像的先验知识&quot;&gt;2.3 基于雾天图像的先验知识&lt;/h3&gt;
+
+&lt;h4 id=&quot;maximum-contrast&quot;&gt;Maximum Contrast&lt;/h4&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;基于统计信息, 认为无雾图像相对于有雾图像来说对比度要高得多&lt;/p&gt;
+
+  &lt;p&gt;根据大气散射模型，雾霾会降低物体成像的对比度. 因此，基于这个推论可利用局部对比度来近似估计雾霾的浓度。同时，也可以通过最大化局部对比度来还原图像的颜色和能见度。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;RT Tan, &lt;strong&gt;Visibility in bad weather from a single image&lt;/strong&gt;, CVPR, &lt;code class=&quot;highlighter-rouge&quot;&gt;2008&lt;/code&gt;, cited by &lt;code class=&quot;highlighter-rouge&quot;&gt;1000+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;fattal&quot;&gt;Fattal&lt;/h4&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;这种方法是基于物理的复原模型, 复原图像自然且能求出良好的深度图. 然而, 这种方法是基于彩色图像的统计特性的,因而该方法也无法作用于灰度图像, 而且这个统计特性在浓雾区域和低信噪比区域会失效&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Raanan Fattal, &lt;strong&gt;Single image dehazing&lt;/strong&gt;, TOG, &lt;code class=&quot;highlighter-rouge&quot;&gt;2008&lt;/code&gt;, cited by &lt;code class=&quot;highlighter-rouge&quot;&gt;1100+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;dark-channel-prior&quot;&gt;Dark Channel Prior&lt;/h4&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;说起去雾特征，不得不提起的暗通道先验（DCP）。大道之行在于简，DCP作为CVPR 2009的最佳论文，以简洁有效的先验假设解决了雾霾浓度估计问题。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;观察发现，清晰图像块的RGB颜色空间中有一个通道很暗（数值很低甚至接近于零）。因此基于暗通道先验，雾的浓度可由最暗通道的数值近似表示.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Kaiming He, &lt;strong&gt;Single Image Haze Removal Using Dark Channel Prior&lt;/strong&gt;, CVPR/PAMI, &lt;code class=&quot;highlighter-rouge&quot;&gt;2009/2011&lt;/code&gt;, cited by &lt;code class=&quot;highlighter-rouge&quot;&gt;1800+&lt;/code&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;该方法具有革命性, 简单有效, 去雾效果理想, 处理后图像颜色自然逼真, 少有地用一个简单得不可思议的方法使一个复杂问题的实验效果得到巨大的提升.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;propose the &lt;strong&gt;Dark Channel Prior&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;soft matting过程比较复杂，并且执行速度非常慢&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Kaiming He, &lt;strong&gt;Guided Image Filtering&lt;/strong&gt;, ECCV/PAMI, &lt;code class=&quot;highlighter-rouge&quot;&gt;2010/2013&lt;/code&gt;, cited by &lt;code class=&quot;highlighter-rouge&quot;&gt;1990+&lt;/code&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;导向滤波来代替soft matting的过程，且速度很快&lt;/p&gt;
+
+  &lt;p&gt;暗通道先验去雾算法的参数需要根据不同的图像手动地作出调整, 无法自适应调整.
+该方法所使用的软抠图算法需要进行大型稀疏矩阵的运算,时间和空间复杂度都极高,无法实时处理大幅图片, 而且当景物颜色与天空颜色接近且没有阴影时, 暗原色先验失效, 该算法也随之失效。&lt;/p&gt;
+
+  &lt;p&gt;后来该文献的作者 He 又使用了引导滤波替代软抠图处理, 较大地提高了效率 (600像素 x 400 像素图像处理时间从 10 秒变为 0.1 秒)的同时, 去雾效果基本不变&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;…&lt;/p&gt;
+
+&lt;p&gt;有很多改进算法&lt;/p&gt;
+
+&lt;p&gt;…&lt;/p&gt;
+
+&lt;p&gt;Zhengguo Li, &lt;strong&gt;Weighted Guided Image Filtering&lt;/strong&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;2015&lt;/code&gt;, cited by &lt;code class=&quot;highlighter-rouge&quot;&gt;40+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;tarel&quot;&gt;Tarel&lt;/h4&gt;
+
+&lt;p&gt;Tarel 假设大气耗散函数 (Atmosphericveil) 在局部上变化平缓, 因此用中值滤波代替 He等的算法中的最小值滤波来对介质透射系数进行估计.&lt;/p&gt;
+
+&lt;p&gt;Jean-Philippe Tarel, &lt;strong&gt;Fast visibility restoration from a single color or gray level image&lt;/strong&gt;, CVPR, &lt;code class=&quot;highlighter-rouge&quot;&gt;2009&lt;/code&gt;, cited by &lt;code class=&quot;highlighter-rouge&quot;&gt;600+&lt;/code&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;He与Tarel的方法简单有效,尤其He提出的暗原色先验去雾算法是图像去雾领域的一个&lt;code class=&quot;highlighter-rouge&quot;&gt;重要突破&lt;/code&gt;, 为图像去雾的研究人员提供了一个新思路,后来出现的许多去雾算法都是基于这两种算法的改进或补充&lt;/p&gt;
+
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;color--attenuation-prior&quot;&gt;Color  Attenuation Prior&lt;/h4&gt;
+&lt;blockquote&gt;
+
+  &lt;p&gt;作者提出了一个简单，但是很有效的先验：颜色衰减先验（CAP），用来通过仅仅输入一张有雾的图像来去除雾的影响。这是一种与暗通道先验（DCP）相似的先验特征。&lt;/p&gt;
+
+  &lt;p&gt;作者观察发现雾霾会同时导致图像饱和度的降低和亮度的增加，整体上表现为颜色的衰减。根据颜色衰减先验，亮度和饱和度的差值被应用于估计雾霾的浓度.&lt;/p&gt;
+
+  &lt;p&gt;作者创建了一个线性回归模型，利用颜色衰减先验这个新奇的先验，通过对有雾图像场景深度的建模，利用有监督学习的方法学习到的参数，深度信息会被很好的恢复。利用有雾图像的深度图，我们可以很容易的恢复一张有雾的图像。&lt;/p&gt;
+
+&lt;/blockquote&gt;
+
+&lt;p&gt;Qingsong Zhu, &lt;strong&gt;A fast single image haze removal algorithm using color attenuation prior&lt;/strong&gt;, TIP, &lt;code class=&quot;highlighter-rouge&quot;&gt;2015&lt;/code&gt;, cited by &lt;code class=&quot;highlighter-rouge&quot;&gt;60+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Project page: &lt;a href=&quot;https://github.com/JiamingMai/Color-Attenuation-Prior-Dehazing&quot;&gt;https://github.com/JiamingMai/Color-Attenuation-Prior-Dehazing&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;expermental results&lt;/code&gt;
+&lt;img src=&quot;/img/posts/haze-removal/post-haze-removal-zhu2016.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;img/posts/haze-removal/post-haze-removal-zhu2016.jpg&quot; alt=&quot;img2&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;3-综述&quot;&gt;3. 综述&lt;/h2&gt;
+
+&lt;p&gt;吴迪, &lt;strong&gt;图像去雾的最新研究进展&lt;/strong&gt;, 自动化学报, &lt;code class=&quot;highlighter-rouge&quot;&gt;2015&lt;/code&gt;, cited by &lt;code class=&quot;highlighter-rouge&quot;&gt;55&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;4-最新文献&quot;&gt;4. 最新文献&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;deep learning&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;DehazeNet是一个特殊设计的深度卷积网络，利用深度学习去智能地学习雾霾特征，解决手工特征设计的难点和痛点。&lt;/p&gt;
+
+&lt;/blockquote&gt;
+
+&lt;p&gt;Bolun Cai, &lt;strong&gt;DehazeNet: An End-to-End System for Single Image Haze Removal&lt;/strong&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;2016&lt;/code&gt;, cited by &lt;code class=&quot;highlighter-rouge&quot;&gt;9&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Project page: &lt;a href=&quot;http://caibolun.github.io/DehazeNet/&quot;&gt;http://caibolun.github.io/DehazeNet/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Code: &lt;a href=&quot;https://github.com/caibolun/DehazeNet&quot;&gt;https://github.com/caibolun/DehazeNet&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Dana Berman, &lt;strong&gt;Non-Local Image Dehazing&lt;/strong&gt;, CVPR, 2016, cited by &lt;code class=&quot;highlighter-rouge&quot;&gt;7&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Mostafa M. El-Hashash, &lt;strong&gt;High-speed video haze removal algorithm for embedded systems&lt;/strong&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;2016&lt;/code&gt;, cited by &lt;code class=&quot;highlighter-rouge&quot;&gt;0&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Real-time video processing&lt;/li&gt;
+  &lt;li&gt;uses the dark channel prior&lt;/li&gt;
+  &lt;li&gt;eight frames per second at 720 x 480 video frame resolution&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Adobe, Photoshop Lightroom CC, &lt;a href=&quot;http://www.adobe.com/products/photoshop-lightroom/features.html&quot;&gt;http://www.adobe.com/products/photoshop-lightroom/features.html&lt;/a&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 08 Apr 2017 04:02:02 +0800</pubDate>
+        <link>http://localhost:4000/2017/04/08/Image-dehazing/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/04/08/Image-dehazing/</guid>
+        
+        <category>Computer vision</category>
+        
+        <category>Image Processing</category>
+        
+        <category>Image Haze Removal</category>
+        
+        
+      </item>
     
       <item>
         <title>运动检测 (Motion Detection)</title>
