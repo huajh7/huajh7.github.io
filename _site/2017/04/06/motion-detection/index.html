@@ -167,7 +167,7 @@
 
     
 </style>
-<header class="intro-header" >
+<header class="intro-header" >              
     <div class="header-mask"></div>
     <div class="container">
         <div class="row">
@@ -194,7 +194,9 @@
 
 <!-- Post Content -->
 <article>
+
     <div class="container">
+
         <div class="row">
 
     <!-- Post Container -->
@@ -757,39 +759,6 @@ a large, heterogeneous benchmark with 59 sequences and pixel-accurate ground tru
                 <hr style="visibility: hidden;">
 
                 
-                <!-- 多说 Share start -->
-                <div class="ds-share"
-                    style="text-align: right"
-                    data-thread-key="/2017/04/06/motion-detection"
-                    data-title="运动检测文献综述"
-                    data-url="http://localhost:4000/2017/04/06/motion-detection/"
-                    data-images="http://localhost:4000/img/post-bg-universe.jpg"
-                    data-content="
-  又名：运动侦测，移动侦测，移动检测
-
-
-方法和思路
-
-1. 帧差分法 (frame differencing)
-
-  Frame differenc... | Junhao Hua 博客 | huajh7's Blog " >
-                    <div class="ds-share-inline">
-                      <style> 
-                        .ds-share-icons-16 {display:none;} 
-                      </style>
-                      <ul class="ds-share-icons-16">
-                        <li data-toggle="ds-share-icons-more"><a class="ds-more" href="#">分享到：</a></li>
-                        <li><a class="ds-wechat flat" href="javascript:void(0);" data-service="wechat">微信</a></li>
-                        <li><a class="ds-weibo flat" href="javascript:void(0);" data-service="weibo">微博</a></li>
-                        <li><a class="ds-douban flat" href="javascript:void(0);" data-service="douban">豆瓣</a></li>
-                      </ul>
-                      <div class="ds-share-icons-more">
-                      </div>
-                    </div>
-                <hr>
-                </div>
-                <!-- 多说 Share end-->
-                
 
 
                 <ul class="pager">
@@ -813,18 +782,16 @@ a large, heterogeneous benchmark with 59 sequences and pixel-accurate ground tru
 
 
                 
-                <!-- 多说评论框 start -->
-                <div class="comment">
-                    <div class="ds-thread"
-                        data-thread-key="/2017/04/06/motion-detection"
-                        data-title="运动检测文献综述"
-                        data-url="http://localhost:4000/2017/04/06/motion-detection/" >
-                    </div>
-                </div>
-                <!-- 多说评论框 end -->
-                
 
                 
+
+                <!-- 网易云跟帖 start -->
+                
+                <div class="comment">  
+                <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>                
+                </div>
+                
+                <!-- 网易云跟帖  end -->
 
             </div>  
 
@@ -911,23 +878,23 @@ a large, heterogeneous benchmark with 59 sequences and pixel-accurate ground tru
 
 
 
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-    // dynamic User by Hux
-    var _user = 'huajh7';
+ 
 
-    // duoshuo comment query.
-    var duoshuoQuery = {short_name: _user };
-    (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
-        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0]
-         || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
+<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>                    
+<script type="text/javascript">
+    var cloudTieConfig = {
+      url: document.location.href, 
+      sourceId: "",
+      productKey: "e8d529a21f5b4e9a9b3f9f61f540d563",
+      target: "cloud-tie-wrapper"
+    };
+    var yunManualLoad = true;
+    Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
 </script>
-<!-- 多说公共JS代码 end -->
+
+
+
+
 
 
 
@@ -1134,6 +1101,20 @@ a large, heterogeneous benchmark with 59 sequences and pixel-accurate ground tru
 
 
 <!-- Baidu Tongji -->
+
+<script>
+    // dynamic User by Hux
+    var _baId = '32d5043f5e31b2de0d1f27fa0dec9da9';
+
+    // Originial
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?" + _baId;
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
 
 
 

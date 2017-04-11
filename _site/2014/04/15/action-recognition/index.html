@@ -167,7 +167,7 @@
 
     
 </style>
-<header class="intro-header" >
+<header class="intro-header" >              
     <div class="header-mask"></div>
     <div class="container">
         <div class="row">
@@ -196,7 +196,9 @@
 
 <!-- Post Content -->
 <article>
+
     <div class="container">
+
         <div class="row">
 
     <!-- Post Container -->
@@ -223,33 +225,6 @@
                 <hr style="visibility: hidden;">
 
                 
-                <!-- 多说 Share start -->
-                <div class="ds-share"
-                    style="text-align: right"
-                    data-thread-key="/2014/04/15/action-recognition"
-                    data-title="基于时空特征点与词袋模型的动作识别"
-                    data-url="http://localhost:4000/2014/04/15/action-recognition/"
-                    data-images="http://localhost:4000/img/post-bg-universe.jpg"
-                    data-content="正文
-
-春学期修了一门《图像与视频分析》课程，很随机地选了大作业，叫”行为检测与识别”。看了一些论文，通过作者提供的代码大致了解了下这个领域的基本内容，然... | Junhao Hua 博客 | huajh7's Blog " >
-                    <div class="ds-share-inline">
-                      <style> 
-                        .ds-share-icons-16 {display:none;} 
-                      </style>
-                      <ul class="ds-share-icons-16">
-                        <li data-toggle="ds-share-icons-more"><a class="ds-more" href="#">分享到：</a></li>
-                        <li><a class="ds-wechat flat" href="javascript:void(0);" data-service="wechat">微信</a></li>
-                        <li><a class="ds-weibo flat" href="javascript:void(0);" data-service="weibo">微博</a></li>
-                        <li><a class="ds-douban flat" href="javascript:void(0);" data-service="douban">豆瓣</a></li>
-                      </ul>
-                      <div class="ds-share-icons-more">
-                      </div>
-                    </div>
-                <hr>
-                </div>
-                <!-- 多说 Share end-->
-                
 
 
                 <ul class="pager">
@@ -273,18 +248,16 @@
 
 
                 
-                <!-- 多说评论框 start -->
-                <div class="comment">
-                    <div class="ds-thread"
-                        data-thread-key="/2014/04/15/action-recognition"
-                        data-title="基于时空特征点与词袋模型的动作识别"
-                        data-url="http://localhost:4000/2014/04/15/action-recognition/" >
-                    </div>
-                </div>
-                <!-- 多说评论框 end -->
-                
 
                 
+
+                <!-- 网易云跟帖 start -->
+                
+                <div class="comment">  
+                <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>                
+                </div>
+                
+                <!-- 网易云跟帖  end -->
 
             </div>  
 
@@ -371,23 +344,23 @@
 
 
 
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-    // dynamic User by Hux
-    var _user = 'huajh7';
+ 
 
-    // duoshuo comment query.
-    var duoshuoQuery = {short_name: _user };
-    (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
-        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0]
-         || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
+<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>                    
+<script type="text/javascript">
+    var cloudTieConfig = {
+      url: document.location.href, 
+      sourceId: "",
+      productKey: "e8d529a21f5b4e9a9b3f9f61f540d563",
+      target: "cloud-tie-wrapper"
+    };
+    var yunManualLoad = true;
+    Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
 </script>
-<!-- 多说公共JS代码 end -->
+
+
+
+
 
 
 
@@ -594,6 +567,20 @@
 
 
 <!-- Baidu Tongji -->
+
+<script>
+    // dynamic User by Hux
+    var _baId = '32d5043f5e31b2de0d1f27fa0dec9da9';
+
+    // Originial
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?" + _baId;
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
 
 
 

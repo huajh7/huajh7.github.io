@@ -49,19 +49,22 @@ kramdown:
 
 
 # Disqus settings
-#disqus_username: _your_disqus_short_name_
+# disqus_username: huajh7
 
 # Duoshuo settings
-duoshuo_username: huajh7
+# duoshuo_username: huajh7
 # Share component is depend on Comment so we can NOT use share only.
-duoshuo_share: true                     # set to false if you want to use Comment without Sharing
+# duoshuo_share: true                     # set to false if you want to use Comment without Sharing
 
+
+# gentie.163  wangyiyun
+wangyiyun_username: huajh7
 
 
 
 # Analytics settings
 # Baidu Analytics 
-#ba_track_id: 32d5043f5e31b2de0d1f27fa0dec9da9
+ba_track_id: 32d5043f5e31b2de0d1f27fa0dec9da9
 
 # Google Analytics
 #ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
