@@ -69,6 +69,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
+            <a class="navbar-brand" href="http://huajh7.com" > Academic Website</a>
             <a class="navbar-brand" href="/">huajh7's Blog</a>
         </div>
 
@@ -204,27 +205,31 @@
                 col-md-10 col-md-offset-1
                 post-container"> <!-- style="width:70%"  col-lg-9 col-lg-offset-1  col-lg-8 col-lg-offset-2 -->
 
-				<p><strong>关键词</strong> <a href="http://jmlr.csail.mit.edu/papers/volume6/winn05a/winn05a.pdf">Variational Message Passing</a>, 
+				<blockquote>
+  <p><strong>关键词</strong> <a href="http://jmlr.csail.mit.edu/papers/volume6/winn05a/winn05a.pdf">Variational Message Passing</a>, 
 <a href="http://en.wikipedia.org/wiki/Bayesian_networks">Bayesian networks</a>, 
 <a href="http://en.wikipedia.org/wiki/Exponential_family">Exponential Family</a>, Sufficient Statistics.</p>
+</blockquote>
 
 <p>传统的变分贝叶斯方法对模型的推导是繁琐而复杂的。J. Winn, Bishop [1] [2] 
 考虑了贝叶斯网络中的共轭指数网络 (conjugate-exponential networks) 
 提出变分消息传播 (VMP, Variational Message Passing) 。这种方法使得充分统计量与自然参数都有一个标准形式，现在该方法已经取代了手工推导，
 成为标准的变分贝叶斯推断方法。而对于非共轭指数网络 (比如混合模型) ，也能通过进一步的近似转化为标准形式。</p>
 
+<hr />
+
 <h3 id="理论基础">理论基础</h3>
 
-<p><strong>Bayesian networks</strong></p>
+<h4 id="bayesian-networks">Bayesian networks</h4>
 
 <p>变分信息传播方法是建立在贝叶斯网络[3]上的，如图所示，对于一个节点<script type="math/tex">{H_j}</script>,它的父节点为<script type="math/tex">p{a_j}</script>，子节点为<script type="math/tex">c{h_j}</script>,
 子节点<script type="math/tex">{x_k}</script>的父节点为<script type="math/tex">cp_k^{(j)} \equiv p{a_k}\backslash {H_j}</script>。所有节点统称为<script type="math/tex">{H_j}</script>的马尔科夫毯，对于变分贝叶斯推理，
 我们只需要关心这个模型，<script type="math/tex">H</script>为参数或潜在变量，其父节点为它的超参数，子节点为数据样本, co-parents为其他参数或潜在变量。</p>
 
-<p><img src="/img/posts/variational_message_passing/vmp-1.png" alt="贝叶斯网络" />
-图-1 贝叶斯网络 (马尔科夫毯)</p>
+<p><img src="/img/posts/variational_message_passing/vmp-1.png" alt="贝叶斯网络 (马尔科夫毯) " width="60%" /></p>
+<center> 图-1 贝叶斯网络 (马尔科夫毯) </center>
 
-<p><strong>Exponential Family</strong></p>
+<h4 id="exponential-family">Exponential Family</h4>
 
 <p>设<script type="math/tex">(X,B\|{p_\theta }:\theta \in \Theta \|)</script>是可控参数统计结构，其密度函数可表示为如下形式：</p>
 
@@ -240,13 +245,13 @@
 
 <p>其中<script type="math/tex">\phi (Y)</script>称为自然参数 (natural parameter) 向量，<script type="math/tex">u(X)</script>称为自然统计 (natural statistic) 向量。<script type="math/tex">g(Y)</script>作为归一化函数使得对于任意的Y都能整合到统一的形式。指数分布族的好处是它的对数形式是可计算的并且它的状态可以用自然参数向量所概括。</p>
 
-<p><strong>Conjugate-Exponential Model</strong></p>
+<h4 id="conjugate-exponential-model">Conjugate-Exponential Model</h4>
 
 <p>当变量X关于父节点Y的条件概率分布P(X|Y)为指数分布族，且为父节点分布P(Y)的共轭先验，那么称这样的模型是共轭指数模 (Conjugate-Exponential Model) 。
 考虑共轭指数模型，其后验的每个因子与它的先验都有相同的形式，因而只需要关心参数的变化，而无需整个函数。所谓相同的形式是指属于同样的分布，
 比如都属于正态分布，伽马分布，多项式分布等。</p>
 
-<p><strong>Sufficient Statistics</strong></p>
+<h4 id="sufficient-statistics">Sufficient Statistics</h4>
 
 <p>如果知道自然参数向量<script type="math/tex">\phi (Y)</script>，那么就能找到自然统计量的期望。重写指数分布族，用<script type="math/tex">\phi</script>作为参数，<script type="math/tex">g</script>重新参数化为<script type="math/tex">\tilde g</script>则,</p>
 
@@ -258,22 +263,29 @@
 
 <p>然后对<script type="math/tex">\phi</script>微分，</p>
 
-<script type="math/tex; mode=display">\int_X {\frac{d}\exp [{\phi ^T}u(X) + f(X) + \tilde g(\phi )]} dX = \frac{d}{ d\phi}(1) = 0</script>
-
-<script type="math/tex; mode=display">\int_X P(X \|\phi)\left[ u(X) + \frac{d\tilde g(\phi )}{d\phi} \right] dX = 0</script>
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{align*}
+\int_X {\frac{d}\exp [{\phi ^T}u(X) + f(X) + \tilde g(\phi )]} dX &= \frac{d}{ d\phi}(1) = 0\\
+\int_X P(X \|\phi)\left[ u(X) + \frac{d\tilde g(\phi )}{d\phi} \right] dX &= 0
+\end{align*} %]]></script>
 
 <p>得自然统计量的期望，</p>
 
-<p><script type="math/tex">\left\langle u(X) \right\rangle _{P(X\|\phi )} = - \frac{d\tilde g(\phi )}{d\phi}</script> (1)</p>
+<script type="math/tex; mode=display">\left\langle u(X) \right\rangle _{P(X\|\phi )} = - \frac{d\tilde g(\phi )}{d\phi} \tag{1}</script>
+
+<hr />
 
 <h3 id="变分消息传播模型">变分消息传播模型</h3>
 
-<p><strong>变分分布Q在共轭指数模型下的最优化</strong></p>
+<h4 id="变分分布q在共轭指数模型下的最优化">变分分布Q在共轭指数模型下的最优化</h4>
 
 <p>不失一般性，考虑变分分布的一个因子<script type="math/tex">Q\left( Y \right)</script>, <script type="math/tex">Y</script>为马尔科夫毯上一个节点,子节点为<script type="math/tex">X</script>，如图-2所示</p>
 
-<p><img src="/img/posts/variational_message_passing/vmp-2.png" alt="马尔科夫毯" />
-图-2 马尔科夫毯</p>
+<!-- ![马尔科夫毯](/img/posts/variational_message_passing/vmp-2.png "马尔科夫毯") -->
+
+<!-- width="300" height="300" -->
+<p><img src="/img/posts/variational_message_passing/vmp-2.png" alt="马尔科夫毯" width="40%" /></p>
+<center> 图-2 马尔科夫毯</center>
 
 <p>根据指数族条件分布的一般形式，则变量Y关于父节点的条件概率为，</p>
 
@@ -283,15 +295,17 @@
 
 <p>考虑Y的变分更新方程，</p>
 
-<script type="math/tex; mode=display">\ln Q_Y^*(Y) = {\left\langle \phi_Y{(p{a_Y})^T}u_Y(Y) + {f_Y}(Y) + g_Y(p{a_Y}) \right\rangle _{\sim Q(Y)}} +</script>
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{align}
+\ln Q_Y^*(Y) &= {\left\langle \phi_Y{(p{a_Y})^T}u_Y(Y) + {f_Y}(Y) + g_Y(p{a_Y}) \right\rangle _{\sim Q(Y)}} \\
+&\quad +\sum\limits_{k \in c{h_Y}} \left\langle \phi_{XY}{(X,c{p_Y})^T}u_Y(Y) + \lambda (X,c{p_Y}) \right\rangle_{\sim Q(Y)} + const. \\
+&= {\left[ {\langle \phi_Y{(p{a_Y})} \rangle}_{\sim Q(Y)} + \sum\limits_{k \in ch_Y} {\langle \phi_{XY{(X,cp_Y)}} \rangle }_{\sim Q(Y)} \right]^T}{u_Y(Y)} + {f_Y}(Y) + const.\\
+&= \left[ {\phi_Y^*} \right]^T u_Y(Y) + {f_Y}(Y) + const.\\
+\end{align} %]]></script>
 
-<script type="math/tex; mode=display">\sum\limits_{k \in c{h_Y}} \left\langle \phi_{XY}{(X,c{p_Y})^T}u_Y(Y) + \lambda (X,c{p_Y}) \right\rangle_{\sim Q(Y)} + const.</script>
+<p>其中，</p>
 
-<script type="math/tex; mode=display">{\rm{ = }} {\left[ {\langle \phi_Y{(p{a_Y})} \rangle}_{\sim Q(Y)} + \sum\limits_{k \in ch_Y} {\langle \phi_{XY{(X,cp_Y)}} \rangle }_{\sim Q(Y)} \right]^T}{u_Y(Y)} + {f_Y}(Y) + const.</script>
-
-<script type="math/tex; mode=display">{\rm{ = }}{\left[ {\phi_Y^*} \right]^T}u_Y(Y) + {f_Y}(Y) + const.</script>
-
-<p>其中，<script type="math/tex">\phi_Y^* = \left\langle {\phi_Y{(p{a_Y})^T}} \right\rangle _{\sim Q(Y)} + \sum\limits_{k \in c{h_Y}} \left\langle {\phi_{XY}{(X,c{p_Y})^T}} \right\rangle_{\sim Q(Y)}</script>      (5)</p>
+<script type="math/tex; mode=display">\phi_Y^* = \left\langle {\phi_Y{(p{a_Y})^T}} \right\rangle _{\sim Q(Y)} + \sum\limits_{k \in c{h_Y}} \left\langle {\phi_{XY}{(X,c{p_Y})^T}} \right\rangle_{\sim Q(Y)} \tag{2}</script>
 
 <p>正如以上所解释的，<script type="math/tex">\phi_Y</script>和<script type="math/tex">\phi_{XY}</script>的期望都是相应的自然统计向量期望的多线性函数。因而有可能将以上期望重新参数化为</p>
 
@@ -299,13 +313,18 @@
 
 <script type="math/tex; mode=display">\tilde{\phi_{XY}}(\langle u_X\rangle ,\{\langle u_j \rangle\}_{j \in cp_Y}) = \langle \phi_{XY}(X,c{p_Y}) \rangle</script>
 
-<p><strong>举例</strong>：如果X服从<script type="math/tex">N(Y,{\beta ^{ - 1}})</script>，那么</p>
+<p><strong>举例</strong>：</p>
 
-<script type="math/tex; mode=display">\ln P(X\|Y,\beta ) = {\left[ \begin{array}{l}\beta Y\\ - \beta/2\end{array} \right]^T}\left[ \begin{array}{l}X{X^2}\end{array} \right] + \frac{1}{2}(\ln \beta - \beta {Y^2} - \ln 2\pi)</script>
+<p>如果X服从<script type="math/tex">N(Y,{\beta ^{ - 1}})</script>，那么</p>
 
-<script type="math/tex; mode=display">= {\left[ \begin{array}{l}\beta X\\- \beta /2\end{array} \right]^T}\left[ \begin{array}{l}Y{Y^2}\end{array} \right] +\frac{1}{2}(\ln \beta - \beta {X^2} - \ln 2\pi )</script>
-
-<script type="math/tex; mode=display">= {\left[ \begin{array}{c}-\frac{1}{2}(X - Y)^2\\\frac{1}{2} \end{array}\right]^T}\left[\begin{array}{l} \beta\\\ln \beta\end{array} \right] - \frac{1}{2}\ln 2\pi</script>
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{equation}
+\begin{split}
+\ln P(X\|Y,\beta ) & = {\left[ \begin{array}{l}\beta Y\\ - \beta/2\end{array} \right]^T}\left[ \begin{array}{l}X{X^2}\end{array} \right] + \frac{1}{2}(\ln \beta - \beta {Y^2} - \ln 2\pi)\\
+ & = {\left[ \begin{array}{l}\beta X\\- \beta /2\end{array} \right]^T}\left[ \begin{array}{l}Y{Y^2}\end{array} \right] +\frac{1}{2}(\ln \beta - \beta {X^2} - \ln 2\pi )\\
+ & = {\left[ \begin{array}{c}-\frac{1}{2}(X - Y)^2\\\frac{1}{2} \end{array}\right]^T}\left[\begin{array}{l} \beta\\\ln \beta\end{array} \right] - \frac{1}{2}\ln 2\pi
+\end{split}
+\end{equation} %]]></script>
 
 <p>其中<script type="math/tex">u_X(X) = \left[ \begin{array}{l}X\\{X^2}\end{array} \right]</script>,<script type="math/tex">u_Y(Y) = \left[ \begin{array}{l}Y\\{Y^2}\end{array} \right]</script>,<script type="math/tex">{u_\beta}(\beta) = \left[ \begin{array}{l}\beta \\\ln \beta \end{array} \right].</script></p>
 
@@ -313,70 +332,110 @@
 
 <p>其中<script type="math/tex">\langle {u_\beta} \rangle_{0}</script>和<script type="math/tex">\langle u_X \rangle_{0}</script>分别表示<script type="math/tex">\langle {u_\beta} \rangle</script>和<script type="math/tex">\langle u_X \rangle</script>的第一个元素。</p>
 
-<p><strong>变分消息传播模型</strong></p>
+<h4 id="变分消息传播模型-1">变分消息传播模型</h4>
 
 <p>在贝叶斯网络中,由于Q可因式分解，则有</p>
 
-<script type="math/tex; mode=display">L(Q) = \left\langle {\ln P(H,V)} \right\rangle - \left\langle {Q(H)} \right\rangle</script>
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{align*}
+L(Q) &= \left\langle {\ln P(H,V)} \right\rangle - \left\langle {Q(H)} \right\rangle\\
+ &= \sum\limits_i {\left\langle {\ln P({X_i}\|p{a_i})} \right\rangle - \sum\limits_{i \in H} {\left\langle {\ln {Q_i}({H_i})} \right\rangle } } \\
+&\overset{\text{def}}{=} \sum\limits_i L_i
+\end{align*} %]]></script>
 
-<script type="math/tex; mode=display">= \sum\limits_i {\left\langle {\ln P({X_i}\|p{a_i})} \right\rangle - \sum\limits_{i \in H} {\left\langle {\ln {Q_i}({H_i})} \right\rangle } }</script>
+<p><script type="math/tex">L\left( Q \right)</script>被分解为每一个节点上的贡献值
+<script type="math/tex">\left\{  L_i \right\}</script>，如节点<script type="math/tex">{H_j}</script>的贡献值为</p>
 
-<script type="math/tex; mode=display">\overset{\text{def}}{=} \sum\limits_i</script>
-
-<p><script type="math/tex">L\left( Q \right)</script>被分解为每一个节点上的贡献值<script type="math/tex">\left\{  \right\}</script>，如节点<script type="math/tex">{H_j}</script>的贡献值为</p>
-
-<script type="math/tex; mode=display">{L_j} = \left\langle {\ln P({H_i}\|p{a_j})} \right\rangle - \left\langle {\ln {Q_i}({H_i})} \right\rangle</script>
-
-<p><script type="math/tex">\rm{ = } \langle {\phi _j}(p{a_j})^T \rangle \langle u_j(H_j) \rangle + \langle {f_j}(H_j) \rangle</script>+<script type="math/tex">\langle g_j(p{a_j}) \rangle - \left[ {\phi _j^*}^T \langle u_j(H_j) \rangle + \langle {f_j}(H_j) \rangle + \tilde{g}_j(\phi _j^*) \right]</script></p>
-
-<script type="math/tex; mode=display">{\rm{ = }}{\left( {\langle {\phi_j(p{a_j})} \rangle - \phi _j^*} \right)^T}\langle {u_j({H_j})} \rangle + \langle {g_j(p{a_j})} \rangle - \tilde{g}_j(\phi _j^*)</script>
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{align*}
+{L_j} &= \left\langle {\ln P({H_i}\|p{a_j})} \right\rangle - \left\langle {\ln {Q_i}({H_i})} \right\rangle\\
+& =\langle {\phi _j}(p{a_j})^T \rangle \langle u_j(H_j) \rangle + \langle {f_j}(H_j) \rangle  
++ \langle g_j(p{a_j}) \rangle - \left[ {\phi _j^*}^T \langle u_j(H_j) \rangle + \langle {f_j}(H_j) \rangle + \tilde{g}_j(\phi _j^*) \right]\\
+& ={\left( {\langle {\phi_j(p{a_j})} \rangle - \phi _j^*} \right)^T}\langle {u_j({H_j})} \rangle + \langle {g_j(p{a_j})} \rangle - \tilde{g}_j(\phi _j^*)
+\end{align*} %]]></script>
 
 <p>注意到<script type="math/tex">\left\langle {\phi_j(p{a_j})} \right\rangle</script>和<script type="math/tex">\phi _j^*</script>在求<script type="math/tex">{H_j}</script>的后验分布时就已经计算了；<script type="math/tex">\left\langle {u_j({H_j})} \right\rangle</script>在<script type="math/tex">{H_j}</script>传出消息的时候也已经计算了，这样降低了下界的计算成本。</p>
 
 <p>特别地，对于每个观测变量<script type="math/tex">{V_k}</script>对下界的贡献值则更简单，</p>
 
-<script type="math/tex; mode=display">{L_k} = \left\langle {\ln P({V_k}\|p{a_k})} \right\rangle</script>
+<script type="math/tex; mode=display">{L_k} = \left\langle {\ln P({V_k}\|p{a_k})} \right\rangle = {\left\langle {\phi_j(p{a_j})} \right\rangle ^T}{u_k}({V_k}) + {f_k}({V_k}) + {\tilde g_k}\left( {\left\langle {\phi_j(p{a_j})} \right\rangle } \right)</script>
 
-<script type="math/tex; mode=display">{\rm{ = }}{\left\langle {\phi_j(p{a_j})} \right\rangle ^T}{u_k}({V_k}) + {f_k}({V_k}) + {\tilde g_k}\left( {\left\langle {\phi_j(p{a_j})} \right\rangle } \right)</script>
+<hr />
 
 <h3 id="变分消息传播算法">变分消息传播算法</h3>
 
-<p><strong>变分消息的定义</strong></p>
+<h4 id="变分消息的定义">变分消息的定义</h4>
 
 <p>来自父节点的消息 (Message from parents) ：父节点传播给子节点的消息只是自然统计量的期望：</p>
 
-<p><script type="math/tex">m_{Y \to X} = \left\langle {u_Y}\right\rangle .</script>   (6)</p>
+<p><script type="math/tex">\begin{equation} 
+m_{Y \to X} = \left\langle {u_Y}\right\rangle.
+\end{equation} \tag{3}</script>  </p>
 
 <p>消息传播给父节点 (Message to parents) ：依赖于X之前从Y的co-parents接收到的消息；对任何节点A，如果A是被观测量，那么<script type="math/tex">\left\langle {u_A} \right\rangle = u_A</script>,</p>
 
-<p><script type="math/tex">m_{X \to Y} = \tilde{\phi}_{XY}\left( \left\langle u_X \right\rangle ,{\left\{ m_{i \to X} \right\}}_{i \in c{p_Y}} \right)</script>   (7)</p>
+<script type="math/tex; mode=display">m_{X \to Y} = \tilde{\phi}_{XY}\left( \left\langle u_X \right\rangle ,{\left\{ m_{i \to X} \right\}}_{i \in c{p_Y}} \right) \tag{4}</script>
 
 <p>用Y接收来自父节点与子节点的所有消息来计算<script type="math/tex">\phi_Y^*</script>，然后我们就能通过计算更新后的自然参数向量<script type="math/tex">\phi_Y^*</script>来找到Y的更新后的后验分布<script type="math/tex">Q_Y^*</script>，<script type="math/tex">\phi_Y^*</script>的计算公式如下，</p>
 
-<p><script type="math/tex">\phi_Y^* = \tilde{\phi_Y}\left( \left\{ m_{i \to Y} \right\}_{i \in p{a_Y}} \right) + \sum\limits_{j \in c{h_Y}} m_{j \to Y}</script>.   (8)</p>
+<p><script type="math/tex">\phi_Y^* = \tilde{\phi_Y}\left( \left\{ m_{i \to Y} \right\}_{i \in p{a_Y}} \right) + \sum\limits_{j \in c{h_Y}} m_{j \to Y} \tag{5}</script>.</p>
 
-<p>该式与 (5) 式一致。从 (1) 式可以看出自然统计量的期望<script type="math/tex">{\left\langle {u_Y} \right\rangle _{Q_Y^*}}</script>是<script type="math/tex">Q_Y^*</script>的单一函数，这样我们就可以用它来计算期望的新值。变分消息传播算法通过迭代的消息传播来最优化变分分布Q.</p>
+<p>该式与 (2) 式一致。从 (1) 式可以看出自然统计量的期望<script type="math/tex">{\left\langle {u_Y} \right\rangle _{Q_Y^*}}</script>是<script type="math/tex">Q_Y^*</script>的单一函数，这样我们就可以用它来计算期望的新值。变分消息传播算法通过迭代的消息传播来最优化变分分布Q.</p>
 
-<p><strong>算法描述</strong></p>
+<h4 id="算法描述">算法描述</h4>
 
-<p><strong>Step1</strong>. 通过初始化相关的矩向量<script type="math/tex">\left\langle {u_j({X_j})} \right\rangle</script>来初始化每个因子分布<script type="math/tex">{Q_j}</script>.</p>
+<table>
+  <tbody>
+    <tr>
+      <td><strong>Step1</strong>. 通过初始化相关的矩向量<script type="math/tex">\left\langle {u_j({X_j})} \right\rangle</script>来初始化每个因子分布<script type="math/tex">{Q_j}</script>.</td>
+    </tr>
+  </tbody>
+</table>
 
-<p><strong>Step2.</strong> 对于每一个节点<script type="math/tex">{X_j}</script>，</p>
+<table>
+  <tbody>
+    <tr>
+      <td><strong>Step2.</strong> 对于每一个节点<script type="math/tex">{X_j}</script>，</td>
+    </tr>
+  </tbody>
+</table>
 
-<ul>
-  <li>从父节点和子节点接收 (6),(7)式所定义的消息。前提是子节点已经从<script type="math/tex">{X_j}</script>的co-parents接收到消息。</li>
-  <li>使用 (8) 式更新自然参数向量<script type="math/tex">\phi _j^*</script>；</li>
-  <li>根据新的参数向量更新距向量<script type="math/tex">\left\langle {u_j({X_j})} \right\rangle</script>；</li>
-</ul>
+<table>
+  <tbody>
+    <tr>
+      <td>1)   从父节点和子节点接收 (3),(4) 式所定义的消息。 前提是子节点已经从<script type="math/tex">{X_j}</script>的co-parents接收到消息。</td>
+    </tr>
+    <tr>
+      <td>2)  使用 (5) 式更新自然参数向量<script type="math/tex">\phi _j^*</script>；</td>
+    </tr>
+    <tr>
+      <td>3)  根据新的参数向量更新距向量<script type="math/tex">\left\langle {u_j({X_j})} \right\rangle</script>；</td>
+    </tr>
+  </tbody>
+</table>
 
-<p><strong>Step3.</strong> 计算新的下界<script type="math/tex">L(Q)</script>；</p>
+<table>
+  <tbody>
+    <tr>
+      <td><strong>Step3.</strong> 计算新的下界<script type="math/tex">L(Q)</script>;</td>
+    </tr>
+  </tbody>
+</table>
 
-<p><strong>Step4.</strong> 如果经过数次迭代已经无法增加下界值，或者各边缘分布达到稳定值，则结束；否则回到<strong>Step2</strong>。</p>
+<table>
+  <tbody>
+    <tr>
+      <td><strong>Step4.</strong> 如果经过数次迭代已经无法增加下界值，或者各边缘分布达到稳定值，则结束；否则回到<strong>Step2</strong>。</td>
+    </tr>
+  </tbody>
+</table>
 
 <p><strong>举例</strong>：对于单一高斯模型消息传播过程如下图</p>
 
-<p><img src="/img/posts/variational_message_passing/vmp-3.png" alt="消息传播过程" />
-图-3 单一高斯模型消息传播过程</p>
+<p><img src="/img/posts/variational_message_passing/vmp-3.png" alt="消息传播过程" /></p>
+<center>图-3 单一高斯模型消息传播过程</center>
+
+<hr />
 
 <h3 id="混合模型">混合模型</h3>
 
@@ -399,10 +458,12 @@
 另外，我们可能要使模型的其他部分也有相同的形式，虽然不要求共轭，即<script type="math/tex">{f_1} = {f_2} = ... = {f_K}\overset{\text{def}}{=} {f_X}</script>。
 在这种情况下，混合模型的每个成分都有相同的形式，可写成，</p>
 
-<script type="math/tex; mode=display">\ln P(X\|\lambda ,\{ \theta_k\} ) = {\left[ {\sum\limits_k {\delta (\lambda ,k)\phi_k(\theta_k)} } \right]^T}u_X(X) 
-+ {f_X}(X) + \sum\limits_k {\delta (\lambda ,k){g_k}(\theta_k)}</script>
-
-<script type="math/tex; mode=display">{\rm{ = }}{\phi _X}{(\lambda ,\{ \theta_k\} )^T}u_X(X) + {f_X}(X) + {\tilde g_X}({\phi _X}(\lambda ,\{ \theta_k\} ))</script>
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{align*}
+\ln P(X\|\lambda ,\{ \theta_k\} ) &= {\left[ {\sum\limits_k {\delta (\lambda ,k)\phi_k(\theta_k)} } \right]^T}u_X(X) 
++ {f_X}(X) + \sum\limits_k {\delta (\lambda ,k){g_k}(\theta_k)}\\
+&={\phi _X}{(\lambda ,\{ \theta_k\} )^T}u_X(X) + {f_X}(X) + {\tilde g_X}({\phi _X}(\lambda ,\{ \theta_k\} )) 
+\end{align*} %]]></script>
 
 <p>其中定义<script type="math/tex">{\phi _X} = \sum\limits_k {\delta (\lambda ,k)\phi_k(\theta_k)}</script>。这样对于每个成分来说条件分布都有了
 与指数分布族一样的形式，便可以应用变分消息传播算法。</p>
@@ -410,9 +471,10 @@
 <p>从某个节点X传播个子节点的消息为<script type="math/tex">\left\langle {u_X(X)} \right\rangle</script>，而这是通过混合参数向量<script type="math/tex">{\phi _X}(\lambda ,\{ \theta_k\} )</script>计算的。
 相似地，节点X到父亲节点<script type="math/tex">\theta_k</script>的消息是那些以它为父节点的子节点发出的，而节点X中哪些属于<script type="math/tex">\theta_k</script>是由指标变量<script type="math/tex">Q(\lambda = k)</script>的后验确定的。最后，从X到的消息是一个K维向量，其中第k个元素为<script type="math/tex">\left\langle {\ln P_k(X\|\theta_k)} \right\rangle</script>.</p>
 
-<h2 id="算法分析">算法分析</h2>
+<hr />
+<h3 id="算法分析">算法分析</h3>
 
-<h3 id="vb算法与em算法比较">VB算法与EM算法比较</h3>
+<h4 id="vb算法与em算法比较">VB算法与EM算法比较</h4>
 
 <p>EM算法计算随机变量 (或归类于参数) 后验分布的点估计，但估计隐变量的真实后验分布。用这些参数的众数作为点估计，无任何其他信息。
 而在VB算法作为一个分布估计 (Distributional Approximation) 方法，计算所有变量的真实后验分布的估计，包括参数和隐变量。
@@ -420,21 +482,20 @@
 EM算法计算贝叶斯网络本身的参数的最优值。而VB计算用于近似参数和隐变量的贝叶斯网络的参数最佳值，VB会先找一个合适的参数分布，
 通常是一个先验分布的形式，然后计算这个分布的参数值，更准确说是超参数，最后得到联合分布的各参数的分布。</p>
 
-<h3 id="算法复杂性">算法复杂性</h3>
+<h4 id="算法复杂性">算法复杂性</h4>
 
 <p>变分贝叶斯估计方法是众多概率函数估计技术之一。还有许多其他被广泛使用的估计算法，一般分为确定性 (deterministic) 和随机性 (stochastic) 的方法，比如基于点估计的极大似然估计、极大后验概率估计，基于局部估计的Laplace估计，基于spline估计的B-样条估计，还有经验性估计，利用随机采用的如MCMC方法。变分贝叶斯方法作为平均场估计，能够在计算复杂度和精度之间保持一个良好的关系，如图-4所示。变分贝叶斯方法主要的计算压力在于它的IVB算法——一系列为求取变分边缘概率相关的矩估计而进行的迭代。如果只关心计算代价而对精度要求不高，那么可以用简单的估计方法来代替变分边缘概率，或者减少估计迭代的次数，这样变分估计的路径将沿着虚线往下。</p>
 
 <p><img src="/img/posts/variational_message_passing/vmp-4.png" alt="VB方法的精度与复杂性之间的关系" /></p>
+<center>图-4 VB方法的精度与复杂性之间的关系</center>
 
-<p>图-4 VB方法的精度与复杂性之间的关系</p>
-
-<h2 id="小结">小结</h2>
+<h3 id="小结">小结</h3>
 
 <p>本文对基于贝叶斯网络的变分消息传播方法从理论基础到算法流程展开论述。
 特别地与EM算法进行比较，分析了变分贝叶斯方法的算法复杂性。
 下一篇将给出高斯混合模型的例子，以及MATLAB实现源代码。</p>
 
-<h2 id="参考文献">参考文献</h2>
+<h3 id="参考文献">参考文献</h3>
 
 <p>[1] John M. Winn, M. Bishop, Variational Message Passing, Journal of Machine Learning Research, 2004</p>
 
@@ -455,9 +516,10 @@ EM算法计算贝叶斯网络本身的参数的最优值。而VB计算用于近�
                     data-title="变分消息传播模型与算法"
                     data-url="http://localhost:4000/2013/03/23/variational-message-passing/"
                     data-images="http://localhost:4000/img/post-bg-2015.jpg"
-                    data-content="关键词 Variational Message Passing, 
+                    data-content="
+  关键词 Variational Message Passing, 
 Bayesian networks, 
-Exponential Family, Suf... | Junhao Hua 博客 | huajh7's Blog " >
+Exponential Family, ... | Junhao Hua 博客 | huajh7's Blog " >
                     <div class="ds-share-inline">
                       <style> 
                         .ds-share-icons-16 {display:none;} 
@@ -729,7 +791,7 @@ Exponential Family, Suf... | Junhao Hua 博客 | huajh7's Blog " >
                 <p class="copyright text-muted">
                     Copyright &copy; huajh7's Blog 2017
                     <br>
-                    Theme by <a href="https://github.com/Huxpro/huxpro.github.io">Hux</a>
+<!--                     Theme by <a href="https://github.com/Huxpro/huxpro.github.io">Hux</a> -->
                 </p>
             </div>
         </div>

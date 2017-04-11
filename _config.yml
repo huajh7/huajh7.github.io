@@ -1,11 +1,12 @@
 # Site settings
 title: huajh7's Blog
+toptitle: Academic Website
 SEOTitle: Junhao Hua 博客 | huajh7's Blog
 header-img: img/home-bg.jpg
 email: huajh7@gmail.com
 description: "Imagination is more important than knowledge. -Albert Einstein"
 keyword: "华俊豪, huajh, huajh7, Junhao Hua, @huajh, 华俊豪的博客, huajh7's Blog, 博客, 机器学习, 贝叶斯"
-url: "https://blog2.huajh7.com"              # your host, for absolute URL
+url: "http://blog.huajh7.com"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 

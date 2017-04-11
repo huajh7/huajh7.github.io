@@ -5,8 +5,8 @@
     <description>Imagination is more important than knowledge. -Albert Einstein</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 10 Apr 2017 22:46:22 +0800</pubDate>
-    <lastBuildDate>Mon, 10 Apr 2017 22:46:22 +0800</lastBuildDate>
+    <pubDate>Tue, 11 Apr 2017 11:13:47 +0800</pubDate>
+    <lastBuildDate>Tue, 11 Apr 2017 11:13:47 +0800</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
       <item>
@@ -714,37 +714,30 @@ a large, heterogeneous benchmark with 59 sequences and pixel-accurate ground tru
     
       <item>
         <title>Markdown简介</title>
-        <description>&lt;h1 id=&quot;欢迎使用马克飞象&quot;&gt;欢迎使用马克飞象&lt;/h1&gt;
-
-&lt;ul&gt;
+        <description>&lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;功能丰富&lt;/strong&gt; ：支持高亮代码块、&lt;em&gt;LaTeX&lt;/em&gt; 公式、流程图，本地图片以及附件上传，甚至截图粘贴，工作学习好帮手；&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;得心应手&lt;/strong&gt; ：简洁高效的编辑器，提供&lt;a href=&quot;http://maxiang.info/client_zh&quot;&gt;桌面客户端&lt;/a&gt;以及&lt;a href=&quot;https://chrome.google.com/webstore/detail/kidnkfckhbdkfgbicccmdggmpgogehop&quot;&gt;离线Chrome App&lt;/a&gt;，支持移动端 Web；&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;深度整合&lt;/strong&gt; ：支持选择笔记本和添加标签，支持从印象笔记跳转编辑，轻松管理。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
 
 &lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#欢迎使用马克飞象&quot; id=&quot;markdown-toc-欢迎使用马克飞象&quot;&gt;欢迎使用马克飞象&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#markdown简介&quot; id=&quot;markdown-toc-markdown简介&quot;&gt;Markdown简介&lt;/a&gt;        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;#代码块&quot; id=&quot;markdown-toc-代码块&quot;&gt;代码块&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#latex-公式&quot; id=&quot;markdown-toc-latex-公式&quot;&gt;LaTeX 公式&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#表格&quot; id=&quot;markdown-toc-表格&quot;&gt;表格&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#流程图&quot; id=&quot;markdown-toc-流程图&quot;&gt;流程图&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#复选框&quot; id=&quot;markdown-toc-复选框&quot;&gt;复选框&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#脚注footnote&quot; id=&quot;markdown-toc-脚注footnote&quot;&gt;脚注（footnote）&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#引用方式&quot; id=&quot;markdown-toc-引用方式&quot;&gt;引用方式：&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#下划线&quot; id=&quot;markdown-toc-下划线&quot;&gt;下划线&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#images&quot; id=&quot;markdown-toc-images&quot;&gt;Images&lt;/a&gt;            &lt;ul&gt;
-              &lt;li&gt;&lt;a href=&quot;#内联方式&quot; id=&quot;markdown-toc-内联方式&quot;&gt;内联方式：&lt;/a&gt;&lt;/li&gt;
-              &lt;li&gt;&lt;a href=&quot;#引用方式-1&quot; id=&quot;markdown-toc-引用方式-1&quot;&gt;引用方式：&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#markdown简介&quot; id=&quot;markdown-toc-markdown简介&quot;&gt;Markdown简介&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#代码块&quot; id=&quot;markdown-toc-代码块&quot;&gt;代码块&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#latex-公式&quot; id=&quot;markdown-toc-latex-公式&quot;&gt;LaTeX 公式&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#表格&quot; id=&quot;markdown-toc-表格&quot;&gt;表格&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#流程图&quot; id=&quot;markdown-toc-流程图&quot;&gt;流程图&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#复选框&quot; id=&quot;markdown-toc-复选框&quot;&gt;复选框&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#脚注footnote&quot; id=&quot;markdown-toc-脚注footnote&quot;&gt;脚注（footnote）&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#引用方式&quot; id=&quot;markdown-toc-引用方式&quot;&gt;引用方式：&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#下划线&quot; id=&quot;markdown-toc-下划线&quot;&gt;下划线&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#images&quot; id=&quot;markdown-toc-images&quot;&gt;Images&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#内联方式&quot; id=&quot;markdown-toc-内联方式&quot;&gt;内联方式：&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#引用方式-1&quot; id=&quot;markdown-toc-引用方式-1&quot;&gt;引用方式：&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#反馈与建议&quot; id=&quot;markdown-toc-反馈与建议&quot;&gt;反馈与建议&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#反馈与建议&quot; id=&quot;markdown-toc-反馈与建议&quot;&gt;反馈与建议&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;markdown简介&quot;&gt;Markdown简介&lt;/h2&gt;
@@ -1068,27 +1061,31 @@ wireless sensor network (WSN).&lt;/p&gt;
     
       <item>
         <title>变分消息传播模型与算法</title>
-        <description>&lt;p&gt;&lt;strong&gt;关键词&lt;/strong&gt; &lt;a href=&quot;http://jmlr.csail.mit.edu/papers/volume6/winn05a/winn05a.pdf&quot;&gt;Variational Message Passing&lt;/a&gt;, 
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;关键词&lt;/strong&gt; &lt;a href=&quot;http://jmlr.csail.mit.edu/papers/volume6/winn05a/winn05a.pdf&quot;&gt;Variational Message Passing&lt;/a&gt;, 
 &lt;a href=&quot;http://en.wikipedia.org/wiki/Bayesian_networks&quot;&gt;Bayesian networks&lt;/a&gt;, 
 &lt;a href=&quot;http://en.wikipedia.org/wiki/Exponential_family&quot;&gt;Exponential Family&lt;/a&gt;, Sufficient Statistics.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;传统的变分贝叶斯方法对模型的推导是繁琐而复杂的。J. Winn, Bishop [1] [2] 
 考虑了贝叶斯网络中的共轭指数网络 (conjugate-exponential networks) 
 提出变分消息传播 (VMP, Variational Message Passing) 。这种方法使得充分统计量与自然参数都有一个标准形式，现在该方法已经取代了手工推导，
 成为标准的变分贝叶斯推断方法。而对于非共轭指数网络 (比如混合模型) ，也能通过进一步的近似转化为标准形式。&lt;/p&gt;
 
+&lt;hr /&gt;
+
 &lt;h3 id=&quot;理论基础&quot;&gt;理论基础&lt;/h3&gt;
 
-&lt;p&gt;&lt;strong&gt;Bayesian networks&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&quot;bayesian-networks&quot;&gt;Bayesian networks&lt;/h4&gt;
 
 &lt;p&gt;变分信息传播方法是建立在贝叶斯网络[3]上的，如图所示，对于一个节点&lt;script type=&quot;math/tex&quot;&gt;{H_j}&lt;/script&gt;,它的父节点为&lt;script type=&quot;math/tex&quot;&gt;p{a_j}&lt;/script&gt;，子节点为&lt;script type=&quot;math/tex&quot;&gt;c{h_j}&lt;/script&gt;,
 子节点&lt;script type=&quot;math/tex&quot;&gt;{x_k}&lt;/script&gt;的父节点为&lt;script type=&quot;math/tex&quot;&gt;cp_k^{(j)} \equiv p{a_k}\backslash {H_j}&lt;/script&gt;。所有节点统称为&lt;script type=&quot;math/tex&quot;&gt;{H_j}&lt;/script&gt;的马尔科夫毯，对于变分贝叶斯推理，
 我们只需要关心这个模型，&lt;script type=&quot;math/tex&quot;&gt;H&lt;/script&gt;为参数或潜在变量，其父节点为它的超参数，子节点为数据样本, co-parents为其他参数或潜在变量。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/img/posts/variational_message_passing/vmp-1.png&quot; alt=&quot;贝叶斯网络&quot; /&gt;
-图-1 贝叶斯网络 (马尔科夫毯)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/posts/variational_message_passing/vmp-1.png&quot; alt=&quot;贝叶斯网络 (马尔科夫毯) &quot; width=&quot;60%&quot; /&gt;&lt;/p&gt;
+&lt;center&gt; 图-1 贝叶斯网络 (马尔科夫毯) &lt;/center&gt;
 
-&lt;p&gt;&lt;strong&gt;Exponential Family&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&quot;exponential-family&quot;&gt;Exponential Family&lt;/h4&gt;
 
 &lt;p&gt;设&lt;script type=&quot;math/tex&quot;&gt;(X,B\|{p_\theta }:\theta \in \Theta \|)&lt;/script&gt;是可控参数统计结构，其密度函数可表示为如下形式：&lt;/p&gt;
 
@@ -1104,13 +1101,13 @@ wireless sensor network (WSN).&lt;/p&gt;
 
 &lt;p&gt;其中&lt;script type=&quot;math/tex&quot;&gt;\phi (Y)&lt;/script&gt;称为自然参数 (natural parameter) 向量，&lt;script type=&quot;math/tex&quot;&gt;u(X)&lt;/script&gt;称为自然统计 (natural statistic) 向量。&lt;script type=&quot;math/tex&quot;&gt;g(Y)&lt;/script&gt;作为归一化函数使得对于任意的Y都能整合到统一的形式。指数分布族的好处是它的对数形式是可计算的并且它的状态可以用自然参数向量所概括。&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Conjugate-Exponential Model&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&quot;conjugate-exponential-model&quot;&gt;Conjugate-Exponential Model&lt;/h4&gt;
 
 &lt;p&gt;当变量X关于父节点Y的条件概率分布P(X|Y)为指数分布族，且为父节点分布P(Y)的共轭先验，那么称这样的模型是共轭指数模 (Conjugate-Exponential Model) 。
 考虑共轭指数模型，其后验的每个因子与它的先验都有相同的形式，因而只需要关心参数的变化，而无需整个函数。所谓相同的形式是指属于同样的分布，
 比如都属于正态分布，伽马分布，多项式分布等。&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Sufficient Statistics&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&quot;sufficient-statistics&quot;&gt;Sufficient Statistics&lt;/h4&gt;
 
 &lt;p&gt;如果知道自然参数向量&lt;script type=&quot;math/tex&quot;&gt;\phi (Y)&lt;/script&gt;，那么就能找到自然统计量的期望。重写指数分布族，用&lt;script type=&quot;math/tex&quot;&gt;\phi&lt;/script&gt;作为参数，&lt;script type=&quot;math/tex&quot;&gt;g&lt;/script&gt;重新参数化为&lt;script type=&quot;math/tex&quot;&gt;\tilde g&lt;/script&gt;则,&lt;/p&gt;
 
@@ -1122,22 +1119,29 @@ wireless sensor network (WSN).&lt;/p&gt;
 
 &lt;p&gt;然后对&lt;script type=&quot;math/tex&quot;&gt;\phi&lt;/script&gt;微分，&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\int_X {\frac{d}\exp [{\phi ^T}u(X) + f(X) + \tilde g(\phi )]} dX = \frac{d}{ d\phi}(1) = 0&lt;/script&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\int_X P(X \|\phi)\left[ u(X) + \frac{d\tilde g(\phi )}{d\phi} \right] dX = 0&lt;/script&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{align*}
+\int_X {\frac{d}\exp [{\phi ^T}u(X) + f(X) + \tilde g(\phi )]} dX &amp;= \frac{d}{ d\phi}(1) = 0\\
+\int_X P(X \|\phi)\left[ u(X) + \frac{d\tilde g(\phi )}{d\phi} \right] dX &amp;= 0
+\end{align*} %]]&gt;&lt;/script&gt;
 
 &lt;p&gt;得自然统计量的期望，&lt;/p&gt;
 
-&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\left\langle u(X) \right\rangle _{P(X\|\phi )} = - \frac{d\tilde g(\phi )}{d\phi}&lt;/script&gt; (1)&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\left\langle u(X) \right\rangle _{P(X\|\phi )} = - \frac{d\tilde g(\phi )}{d\phi} \tag{1}&lt;/script&gt;
+
+&lt;hr /&gt;
 
 &lt;h3 id=&quot;变分消息传播模型&quot;&gt;变分消息传播模型&lt;/h3&gt;
 
-&lt;p&gt;&lt;strong&gt;变分分布Q在共轭指数模型下的最优化&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&quot;变分分布q在共轭指数模型下的最优化&quot;&gt;变分分布Q在共轭指数模型下的最优化&lt;/h4&gt;
 
 &lt;p&gt;不失一般性，考虑变分分布的一个因子&lt;script type=&quot;math/tex&quot;&gt;Q\left( Y \right)&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt;为马尔科夫毯上一个节点,子节点为&lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt;，如图-2所示&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/img/posts/variational_message_passing/vmp-2.png&quot; alt=&quot;马尔科夫毯&quot; /&gt;
-图-2 马尔科夫毯&lt;/p&gt;
+&lt;!-- ![马尔科夫毯](/img/posts/variational_message_passing/vmp-2.png &quot;马尔科夫毯&quot;) --&gt;
+
+&lt;!-- width=&quot;300&quot; height=&quot;300&quot; --&gt;
+&lt;p&gt;&lt;img src=&quot;/img/posts/variational_message_passing/vmp-2.png&quot; alt=&quot;马尔科夫毯&quot; width=&quot;40%&quot; /&gt;&lt;/p&gt;
+&lt;center&gt; 图-2 马尔科夫毯&lt;/center&gt;
 
 &lt;p&gt;根据指数族条件分布的一般形式，则变量Y关于父节点的条件概率为，&lt;/p&gt;
 
@@ -1147,15 +1151,17 @@ wireless sensor network (WSN).&lt;/p&gt;
 
 &lt;p&gt;考虑Y的变分更新方程，&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\ln Q_Y^*(Y) = {\left\langle \phi_Y{(p{a_Y})^T}u_Y(Y) + {f_Y}(Y) + g_Y(p{a_Y}) \right\rangle _{\sim Q(Y)}} +&lt;/script&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{align}
+\ln Q_Y^*(Y) &amp;= {\left\langle \phi_Y{(p{a_Y})^T}u_Y(Y) + {f_Y}(Y) + g_Y(p{a_Y}) \right\rangle _{\sim Q(Y)}} \\
+&amp;\quad +\sum\limits_{k \in c{h_Y}} \left\langle \phi_{XY}{(X,c{p_Y})^T}u_Y(Y) + \lambda (X,c{p_Y}) \right\rangle_{\sim Q(Y)} + const. \\
+&amp;= {\left[ {\langle \phi_Y{(p{a_Y})} \rangle}_{\sim Q(Y)} + \sum\limits_{k \in ch_Y} {\langle \phi_{XY{(X,cp_Y)}} \rangle }_{\sim Q(Y)} \right]^T}{u_Y(Y)} + {f_Y}(Y) + const.\\
+&amp;= \left[ {\phi_Y^*} \right]^T u_Y(Y) + {f_Y}(Y) + const.\\
+\end{align} %]]&gt;&lt;/script&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\sum\limits_{k \in c{h_Y}} \left\langle \phi_{XY}{(X,c{p_Y})^T}u_Y(Y) + \lambda (X,c{p_Y}) \right\rangle_{\sim Q(Y)} + const.&lt;/script&gt;
+&lt;p&gt;其中，&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;{\rm{ = }} {\left[ {\langle \phi_Y{(p{a_Y})} \rangle}_{\sim Q(Y)} + \sum\limits_{k \in ch_Y} {\langle \phi_{XY{(X,cp_Y)}} \rangle }_{\sim Q(Y)} \right]^T}{u_Y(Y)} + {f_Y}(Y) + const.&lt;/script&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;{\rm{ = }}{\left[ {\phi_Y^*} \right]^T}u_Y(Y) + {f_Y}(Y) + const.&lt;/script&gt;
-
-&lt;p&gt;其中，&lt;script type=&quot;math/tex&quot;&gt;\phi_Y^* = \left\langle {\phi_Y{(p{a_Y})^T}} \right\rangle _{\sim Q(Y)} + \sum\limits_{k \in c{h_Y}} \left\langle {\phi_{XY}{(X,c{p_Y})^T}} \right\rangle_{\sim Q(Y)}&lt;/script&gt;      (5)&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\phi_Y^* = \left\langle {\phi_Y{(p{a_Y})^T}} \right\rangle _{\sim Q(Y)} + \sum\limits_{k \in c{h_Y}} \left\langle {\phi_{XY}{(X,c{p_Y})^T}} \right\rangle_{\sim Q(Y)} \tag{2}&lt;/script&gt;
 
 &lt;p&gt;正如以上所解释的，&lt;script type=&quot;math/tex&quot;&gt;\phi_Y&lt;/script&gt;和&lt;script type=&quot;math/tex&quot;&gt;\phi_{XY}&lt;/script&gt;的期望都是相应的自然统计向量期望的多线性函数。因而有可能将以上期望重新参数化为&lt;/p&gt;
 
@@ -1163,13 +1169,18 @@ wireless sensor network (WSN).&lt;/p&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;\tilde{\phi_{XY}}(\langle u_X\rangle ,\{\langle u_j \rangle\}_{j \in cp_Y}) = \langle \phi_{XY}(X,c{p_Y}) \rangle&lt;/script&gt;
 
-&lt;p&gt;&lt;strong&gt;举例&lt;/strong&gt;：如果X服从&lt;script type=&quot;math/tex&quot;&gt;N(Y,{\beta ^{ - 1}})&lt;/script&gt;，那么&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;举例&lt;/strong&gt;：&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\ln P(X\|Y,\beta ) = {\left[ \begin{array}{l}\beta Y\\ - \beta/2\end{array} \right]^T}\left[ \begin{array}{l}X{X^2}\end{array} \right] + \frac{1}{2}(\ln \beta - \beta {Y^2} - \ln 2\pi)&lt;/script&gt;
+&lt;p&gt;如果X服从&lt;script type=&quot;math/tex&quot;&gt;N(Y,{\beta ^{ - 1}})&lt;/script&gt;，那么&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;= {\left[ \begin{array}{l}\beta X\\- \beta /2\end{array} \right]^T}\left[ \begin{array}{l}Y{Y^2}\end{array} \right] +\frac{1}{2}(\ln \beta - \beta {X^2} - \ln 2\pi )&lt;/script&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;= {\left[ \begin{array}{c}-\frac{1}{2}(X - Y)^2\\\frac{1}{2} \end{array}\right]^T}\left[\begin{array}{l} \beta\\\ln \beta\end{array} \right] - \frac{1}{2}\ln 2\pi&lt;/script&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{equation}
+\begin{split}
+\ln P(X\|Y,\beta ) &amp; = {\left[ \begin{array}{l}\beta Y\\ - \beta/2\end{array} \right]^T}\left[ \begin{array}{l}X{X^2}\end{array} \right] + \frac{1}{2}(\ln \beta - \beta {Y^2} - \ln 2\pi)\\
+ &amp; = {\left[ \begin{array}{l}\beta X\\- \beta /2\end{array} \right]^T}\left[ \begin{array}{l}Y{Y^2}\end{array} \right] +\frac{1}{2}(\ln \beta - \beta {X^2} - \ln 2\pi )\\
+ &amp; = {\left[ \begin{array}{c}-\frac{1}{2}(X - Y)^2\\\frac{1}{2} \end{array}\right]^T}\left[\begin{array}{l} \beta\\\ln \beta\end{array} \right] - \frac{1}{2}\ln 2\pi
+\end{split}
+\end{equation} %]]&gt;&lt;/script&gt;
 
 &lt;p&gt;其中&lt;script type=&quot;math/tex&quot;&gt;u_X(X) = \left[ \begin{array}{l}X\\{X^2}\end{array} \right]&lt;/script&gt;,&lt;script type=&quot;math/tex&quot;&gt;u_Y(Y) = \left[ \begin{array}{l}Y\\{Y^2}\end{array} \right]&lt;/script&gt;,&lt;script type=&quot;math/tex&quot;&gt;{u_\beta}(\beta) = \left[ \begin{array}{l}\beta \\\ln \beta \end{array} \right].&lt;/script&gt;&lt;/p&gt;
 
@@ -1177,70 +1188,110 @@ wireless sensor network (WSN).&lt;/p&gt;
 
 &lt;p&gt;其中&lt;script type=&quot;math/tex&quot;&gt;\langle {u_\beta} \rangle_{0}&lt;/script&gt;和&lt;script type=&quot;math/tex&quot;&gt;\langle u_X \rangle_{0}&lt;/script&gt;分别表示&lt;script type=&quot;math/tex&quot;&gt;\langle {u_\beta} \rangle&lt;/script&gt;和&lt;script type=&quot;math/tex&quot;&gt;\langle u_X \rangle&lt;/script&gt;的第一个元素。&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;变分消息传播模型&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&quot;变分消息传播模型-1&quot;&gt;变分消息传播模型&lt;/h4&gt;
 
 &lt;p&gt;在贝叶斯网络中,由于Q可因式分解，则有&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;L(Q) = \left\langle {\ln P(H,V)} \right\rangle - \left\langle {Q(H)} \right\rangle&lt;/script&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{align*}
+L(Q) &amp;= \left\langle {\ln P(H,V)} \right\rangle - \left\langle {Q(H)} \right\rangle\\
+ &amp;= \sum\limits_i {\left\langle {\ln P({X_i}\|p{a_i})} \right\rangle - \sum\limits_{i \in H} {\left\langle {\ln {Q_i}({H_i})} \right\rangle } } \\
+&amp;\overset{\text{def}}{=} \sum\limits_i L_i
+\end{align*} %]]&gt;&lt;/script&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \sum\limits_i {\left\langle {\ln P({X_i}\|p{a_i})} \right\rangle - \sum\limits_{i \in H} {\left\langle {\ln {Q_i}({H_i})} \right\rangle } }&lt;/script&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;L\left( Q \right)&lt;/script&gt;被分解为每一个节点上的贡献值
+&lt;script type=&quot;math/tex&quot;&gt;\left\{  L_i \right\}&lt;/script&gt;，如节点&lt;script type=&quot;math/tex&quot;&gt;{H_j}&lt;/script&gt;的贡献值为&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\overset{\text{def}}{=} \sum\limits_i&lt;/script&gt;
-
-&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;L\left( Q \right)&lt;/script&gt;被分解为每一个节点上的贡献值&lt;script type=&quot;math/tex&quot;&gt;\left\{  \right\}&lt;/script&gt;，如节点&lt;script type=&quot;math/tex&quot;&gt;{H_j}&lt;/script&gt;的贡献值为&lt;/p&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;{L_j} = \left\langle {\ln P({H_i}\|p{a_j})} \right\rangle - \left\langle {\ln {Q_i}({H_i})} \right\rangle&lt;/script&gt;
-
-&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\rm{ = } \langle {\phi _j}(p{a_j})^T \rangle \langle u_j(H_j) \rangle + \langle {f_j}(H_j) \rangle&lt;/script&gt;+&lt;script type=&quot;math/tex&quot;&gt;\langle g_j(p{a_j}) \rangle - \left[ {\phi _j^*}^T \langle u_j(H_j) \rangle + \langle {f_j}(H_j) \rangle + \tilde{g}_j(\phi _j^*) \right]&lt;/script&gt;&lt;/p&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;{\rm{ = }}{\left( {\langle {\phi_j(p{a_j})} \rangle - \phi _j^*} \right)^T}\langle {u_j({H_j})} \rangle + \langle {g_j(p{a_j})} \rangle - \tilde{g}_j(\phi _j^*)&lt;/script&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{align*}
+{L_j} &amp;= \left\langle {\ln P({H_i}\|p{a_j})} \right\rangle - \left\langle {\ln {Q_i}({H_i})} \right\rangle\\
+&amp; =\langle {\phi _j}(p{a_j})^T \rangle \langle u_j(H_j) \rangle + \langle {f_j}(H_j) \rangle  
++ \langle g_j(p{a_j}) \rangle - \left[ {\phi _j^*}^T \langle u_j(H_j) \rangle + \langle {f_j}(H_j) \rangle + \tilde{g}_j(\phi _j^*) \right]\\
+&amp; ={\left( {\langle {\phi_j(p{a_j})} \rangle - \phi _j^*} \right)^T}\langle {u_j({H_j})} \rangle + \langle {g_j(p{a_j})} \rangle - \tilde{g}_j(\phi _j^*)
+\end{align*} %]]&gt;&lt;/script&gt;
 
 &lt;p&gt;注意到&lt;script type=&quot;math/tex&quot;&gt;\left\langle {\phi_j(p{a_j})} \right\rangle&lt;/script&gt;和&lt;script type=&quot;math/tex&quot;&gt;\phi _j^*&lt;/script&gt;在求&lt;script type=&quot;math/tex&quot;&gt;{H_j}&lt;/script&gt;的后验分布时就已经计算了；&lt;script type=&quot;math/tex&quot;&gt;\left\langle {u_j({H_j})} \right\rangle&lt;/script&gt;在&lt;script type=&quot;math/tex&quot;&gt;{H_j}&lt;/script&gt;传出消息的时候也已经计算了，这样降低了下界的计算成本。&lt;/p&gt;
 
 &lt;p&gt;特别地，对于每个观测变量&lt;script type=&quot;math/tex&quot;&gt;{V_k}&lt;/script&gt;对下界的贡献值则更简单，&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;{L_k} = \left\langle {\ln P({V_k}\|p{a_k})} \right\rangle&lt;/script&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;{L_k} = \left\langle {\ln P({V_k}\|p{a_k})} \right\rangle = {\left\langle {\phi_j(p{a_j})} \right\rangle ^T}{u_k}({V_k}) + {f_k}({V_k}) + {\tilde g_k}\left( {\left\langle {\phi_j(p{a_j})} \right\rangle } \right)&lt;/script&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;{\rm{ = }}{\left\langle {\phi_j(p{a_j})} \right\rangle ^T}{u_k}({V_k}) + {f_k}({V_k}) + {\tilde g_k}\left( {\left\langle {\phi_j(p{a_j})} \right\rangle } \right)&lt;/script&gt;
+&lt;hr /&gt;
 
 &lt;h3 id=&quot;变分消息传播算法&quot;&gt;变分消息传播算法&lt;/h3&gt;
 
-&lt;p&gt;&lt;strong&gt;变分消息的定义&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&quot;变分消息的定义&quot;&gt;变分消息的定义&lt;/h4&gt;
 
 &lt;p&gt;来自父节点的消息 (Message from parents) ：父节点传播给子节点的消息只是自然统计量的期望：&lt;/p&gt;
 
-&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;m_{Y \to X} = \left\langle {u_Y}\right\rangle .&lt;/script&gt;   (6)&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\begin{equation} 
+m_{Y \to X} = \left\langle {u_Y}\right\rangle.
+\end{equation} \tag{3}&lt;/script&gt;  &lt;/p&gt;
 
 &lt;p&gt;消息传播给父节点 (Message to parents) ：依赖于X之前从Y的co-parents接收到的消息；对任何节点A，如果A是被观测量，那么&lt;script type=&quot;math/tex&quot;&gt;\left\langle {u_A} \right\rangle = u_A&lt;/script&gt;,&lt;/p&gt;
 
-&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;m_{X \to Y} = \tilde{\phi}_{XY}\left( \left\langle u_X \right\rangle ,{\left\{ m_{i \to X} \right\}}_{i \in c{p_Y}} \right)&lt;/script&gt;   (7)&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;m_{X \to Y} = \tilde{\phi}_{XY}\left( \left\langle u_X \right\rangle ,{\left\{ m_{i \to X} \right\}}_{i \in c{p_Y}} \right) \tag{4}&lt;/script&gt;
 
 &lt;p&gt;用Y接收来自父节点与子节点的所有消息来计算&lt;script type=&quot;math/tex&quot;&gt;\phi_Y^*&lt;/script&gt;，然后我们就能通过计算更新后的自然参数向量&lt;script type=&quot;math/tex&quot;&gt;\phi_Y^*&lt;/script&gt;来找到Y的更新后的后验分布&lt;script type=&quot;math/tex&quot;&gt;Q_Y^*&lt;/script&gt;，&lt;script type=&quot;math/tex&quot;&gt;\phi_Y^*&lt;/script&gt;的计算公式如下，&lt;/p&gt;
 
-&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\phi_Y^* = \tilde{\phi_Y}\left( \left\{ m_{i \to Y} \right\}_{i \in p{a_Y}} \right) + \sum\limits_{j \in c{h_Y}} m_{j \to Y}&lt;/script&gt;.   (8)&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\phi_Y^* = \tilde{\phi_Y}\left( \left\{ m_{i \to Y} \right\}_{i \in p{a_Y}} \right) + \sum\limits_{j \in c{h_Y}} m_{j \to Y} \tag{5}&lt;/script&gt;.&lt;/p&gt;
 
-&lt;p&gt;该式与 (5) 式一致。从 (1) 式可以看出自然统计量的期望&lt;script type=&quot;math/tex&quot;&gt;{\left\langle {u_Y} \right\rangle _{Q_Y^*}}&lt;/script&gt;是&lt;script type=&quot;math/tex&quot;&gt;Q_Y^*&lt;/script&gt;的单一函数，这样我们就可以用它来计算期望的新值。变分消息传播算法通过迭代的消息传播来最优化变分分布Q.&lt;/p&gt;
+&lt;p&gt;该式与 (2) 式一致。从 (1) 式可以看出自然统计量的期望&lt;script type=&quot;math/tex&quot;&gt;{\left\langle {u_Y} \right\rangle _{Q_Y^*}}&lt;/script&gt;是&lt;script type=&quot;math/tex&quot;&gt;Q_Y^*&lt;/script&gt;的单一函数，这样我们就可以用它来计算期望的新值。变分消息传播算法通过迭代的消息传播来最优化变分分布Q.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;算法描述&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&quot;算法描述&quot;&gt;算法描述&lt;/h4&gt;
 
-&lt;p&gt;&lt;strong&gt;Step1&lt;/strong&gt;. 通过初始化相关的矩向量&lt;script type=&quot;math/tex&quot;&gt;\left\langle {u_j({X_j})} \right\rangle&lt;/script&gt;来初始化每个因子分布&lt;script type=&quot;math/tex&quot;&gt;{Q_j}&lt;/script&gt;.&lt;/p&gt;
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Step1&lt;/strong&gt;. 通过初始化相关的矩向量&lt;script type=&quot;math/tex&quot;&gt;\left\langle {u_j({X_j})} \right\rangle&lt;/script&gt;来初始化每个因子分布&lt;script type=&quot;math/tex&quot;&gt;{Q_j}&lt;/script&gt;.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
-&lt;p&gt;&lt;strong&gt;Step2.&lt;/strong&gt; 对于每一个节点&lt;script type=&quot;math/tex&quot;&gt;{X_j}&lt;/script&gt;，&lt;/p&gt;
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Step2.&lt;/strong&gt; 对于每一个节点&lt;script type=&quot;math/tex&quot;&gt;{X_j}&lt;/script&gt;，&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;从父节点和子节点接收 (6),(7)式所定义的消息。前提是子节点已经从&lt;script type=&quot;math/tex&quot;&gt;{X_j}&lt;/script&gt;的co-parents接收到消息。&lt;/li&gt;
-  &lt;li&gt;使用 (8) 式更新自然参数向量&lt;script type=&quot;math/tex&quot;&gt;\phi _j^*&lt;/script&gt;；&lt;/li&gt;
-  &lt;li&gt;根据新的参数向量更新距向量&lt;script type=&quot;math/tex&quot;&gt;\left\langle {u_j({X_j})} \right\rangle&lt;/script&gt;；&lt;/li&gt;
-&lt;/ul&gt;
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1)   从父节点和子节点接收 (3),(4) 式所定义的消息。 前提是子节点已经从&lt;script type=&quot;math/tex&quot;&gt;{X_j}&lt;/script&gt;的co-parents接收到消息。&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2)  使用 (5) 式更新自然参数向量&lt;script type=&quot;math/tex&quot;&gt;\phi _j^*&lt;/script&gt;；&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3)  根据新的参数向量更新距向量&lt;script type=&quot;math/tex&quot;&gt;\left\langle {u_j({X_j})} \right\rangle&lt;/script&gt;；&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
-&lt;p&gt;&lt;strong&gt;Step3.&lt;/strong&gt; 计算新的下界&lt;script type=&quot;math/tex&quot;&gt;L(Q)&lt;/script&gt;；&lt;/p&gt;
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Step3.&lt;/strong&gt; 计算新的下界&lt;script type=&quot;math/tex&quot;&gt;L(Q)&lt;/script&gt;;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
-&lt;p&gt;&lt;strong&gt;Step4.&lt;/strong&gt; 如果经过数次迭代已经无法增加下界值，或者各边缘分布达到稳定值，则结束；否则回到&lt;strong&gt;Step2&lt;/strong&gt;。&lt;/p&gt;
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Step4.&lt;/strong&gt; 如果经过数次迭代已经无法增加下界值，或者各边缘分布达到稳定值，则结束；否则回到&lt;strong&gt;Step2&lt;/strong&gt;。&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
 &lt;p&gt;&lt;strong&gt;举例&lt;/strong&gt;：对于单一高斯模型消息传播过程如下图&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/img/posts/variational_message_passing/vmp-3.png&quot; alt=&quot;消息传播过程&quot; /&gt;
-图-3 单一高斯模型消息传播过程&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/posts/variational_message_passing/vmp-3.png&quot; alt=&quot;消息传播过程&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;图-3 单一高斯模型消息传播过程&lt;/center&gt;
+
+&lt;hr /&gt;
 
 &lt;h3 id=&quot;混合模型&quot;&gt;混合模型&lt;/h3&gt;
 
@@ -1263,10 +1314,12 @@ wireless sensor network (WSN).&lt;/p&gt;
 另外，我们可能要使模型的其他部分也有相同的形式，虽然不要求共轭，即&lt;script type=&quot;math/tex&quot;&gt;{f_1} = {f_2} = ... = {f_K}\overset{\text{def}}{=} {f_X}&lt;/script&gt;。
 在这种情况下，混合模型的每个成分都有相同的形式，可写成，&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\ln P(X\|\lambda ,\{ \theta_k\} ) = {\left[ {\sum\limits_k {\delta (\lambda ,k)\phi_k(\theta_k)} } \right]^T}u_X(X) 
-+ {f_X}(X) + \sum\limits_k {\delta (\lambda ,k){g_k}(\theta_k)}&lt;/script&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;{\rm{ = }}{\phi _X}{(\lambda ,\{ \theta_k\} )^T}u_X(X) + {f_X}(X) + {\tilde g_X}({\phi _X}(\lambda ,\{ \theta_k\} ))&lt;/script&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{align*}
+\ln P(X\|\lambda ,\{ \theta_k\} ) &amp;= {\left[ {\sum\limits_k {\delta (\lambda ,k)\phi_k(\theta_k)} } \right]^T}u_X(X) 
++ {f_X}(X) + \sum\limits_k {\delta (\lambda ,k){g_k}(\theta_k)}\\
+&amp;={\phi _X}{(\lambda ,\{ \theta_k\} )^T}u_X(X) + {f_X}(X) + {\tilde g_X}({\phi _X}(\lambda ,\{ \theta_k\} )) 
+\end{align*} %]]&gt;&lt;/script&gt;
 
 &lt;p&gt;其中定义&lt;script type=&quot;math/tex&quot;&gt;{\phi _X} = \sum\limits_k {\delta (\lambda ,k)\phi_k(\theta_k)}&lt;/script&gt;。这样对于每个成分来说条件分布都有了
 与指数分布族一样的形式，便可以应用变分消息传播算法。&lt;/p&gt;
@@ -1274,9 +1327,10 @@ wireless sensor network (WSN).&lt;/p&gt;
 &lt;p&gt;从某个节点X传播个子节点的消息为&lt;script type=&quot;math/tex&quot;&gt;\left\langle {u_X(X)} \right\rangle&lt;/script&gt;，而这是通过混合参数向量&lt;script type=&quot;math/tex&quot;&gt;{\phi _X}(\lambda ,\{ \theta_k\} )&lt;/script&gt;计算的。
 相似地，节点X到父亲节点&lt;script type=&quot;math/tex&quot;&gt;\theta_k&lt;/script&gt;的消息是那些以它为父节点的子节点发出的，而节点X中哪些属于&lt;script type=&quot;math/tex&quot;&gt;\theta_k&lt;/script&gt;是由指标变量&lt;script type=&quot;math/tex&quot;&gt;Q(\lambda = k)&lt;/script&gt;的后验确定的。最后，从X到的消息是一个K维向量，其中第k个元素为&lt;script type=&quot;math/tex&quot;&gt;\left\langle {\ln P_k(X\|\theta_k)} \right\rangle&lt;/script&gt;.&lt;/p&gt;
 
-&lt;h2 id=&quot;算法分析&quot;&gt;算法分析&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;h3 id=&quot;算法分析&quot;&gt;算法分析&lt;/h3&gt;
 
-&lt;h3 id=&quot;vb算法与em算法比较&quot;&gt;VB算法与EM算法比较&lt;/h3&gt;
+&lt;h4 id=&quot;vb算法与em算法比较&quot;&gt;VB算法与EM算法比较&lt;/h4&gt;
 
 &lt;p&gt;EM算法计算随机变量 (或归类于参数) 后验分布的点估计，但估计隐变量的真实后验分布。用这些参数的众数作为点估计，无任何其他信息。
 而在VB算法作为一个分布估计 (Distributional Approximation) 方法，计算所有变量的真实后验分布的估计，包括参数和隐变量。
@@ -1284,21 +1338,20 @@ wireless sensor network (WSN).&lt;/p&gt;
 EM算法计算贝叶斯网络本身的参数的最优值。而VB计算用于近似参数和隐变量的贝叶斯网络的参数最佳值，VB会先找一个合适的参数分布，
 通常是一个先验分布的形式，然后计算这个分布的参数值，更准确说是超参数，最后得到联合分布的各参数的分布。&lt;/p&gt;
 
-&lt;h3 id=&quot;算法复杂性&quot;&gt;算法复杂性&lt;/h3&gt;
+&lt;h4 id=&quot;算法复杂性&quot;&gt;算法复杂性&lt;/h4&gt;
 
 &lt;p&gt;变分贝叶斯估计方法是众多概率函数估计技术之一。还有许多其他被广泛使用的估计算法，一般分为确定性 (deterministic) 和随机性 (stochastic) 的方法，比如基于点估计的极大似然估计、极大后验概率估计，基于局部估计的Laplace估计，基于spline估计的B-样条估计，还有经验性估计，利用随机采用的如MCMC方法。变分贝叶斯方法作为平均场估计，能够在计算复杂度和精度之间保持一个良好的关系，如图-4所示。变分贝叶斯方法主要的计算压力在于它的IVB算法——一系列为求取变分边缘概率相关的矩估计而进行的迭代。如果只关心计算代价而对精度要求不高，那么可以用简单的估计方法来代替变分边缘概率，或者减少估计迭代的次数，这样变分估计的路径将沿着虚线往下。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/img/posts/variational_message_passing/vmp-4.png&quot; alt=&quot;VB方法的精度与复杂性之间的关系&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;图-4 VB方法的精度与复杂性之间的关系&lt;/center&gt;
 
-&lt;p&gt;图-4 VB方法的精度与复杂性之间的关系&lt;/p&gt;
-
-&lt;h2 id=&quot;小结&quot;&gt;小结&lt;/h2&gt;
+&lt;h3 id=&quot;小结&quot;&gt;小结&lt;/h3&gt;
 
 &lt;p&gt;本文对基于贝叶斯网络的变分消息传播方法从理论基础到算法流程展开论述。
 特别地与EM算法进行比较，分析了变分贝叶斯方法的算法复杂性。
 下一篇将给出高斯混合模型的例子，以及MATLAB实现源代码。&lt;/p&gt;
 
-&lt;h2 id=&quot;参考文献&quot;&gt;参考文献&lt;/h2&gt;
+&lt;h3 id=&quot;参考文献&quot;&gt;参考文献&lt;/h3&gt;
 
 &lt;p&gt;[1] John M. Winn, M. Bishop, Variational Message Passing, Journal of Machine Learning Research, 2004&lt;/p&gt;
 
@@ -1323,7 +1376,9 @@ EM算法计算贝叶斯网络本身的参数的最优值。而VB计算用于近�
     
       <item>
         <title>变分贝叶斯算法理解与推导</title>
-        <description>&lt;p&gt;&lt;strong&gt;关键词&lt;/strong&gt;: 贝叶斯推断，平均场理论，变分估计，贝叶斯推断，KL散度，确定性估计&lt;/p&gt;
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;关键词&lt;/strong&gt;: 贝叶斯推断，平均场理论，变分估计，贝叶斯推断，KL散度，确定性估计&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
 
@@ -1342,58 +1397,64 @@ EM算法计算贝叶斯网络本身的参数的最优值。而VB计算用于近�
 
 &lt;p&gt;从某种角度看，变分贝叶斯可以看做是EM算法的扩展，因为它也是采用极大后验估计(MAP)，即用单个最有可能的参数值来代替完全贝叶斯估计。另外，变分贝叶斯也通过一组相互依然（mutually dependent）的等式进行不断的迭代来获得最优解。&lt;/p&gt;
 
+&lt;hr /&gt;
+
 &lt;h2 id=&quot;问题描述&quot;&gt;问题描述&lt;/h2&gt;
 
-&lt;p&gt;重新考虑一个问题：1）有一组观测数据&lt;script type=&quot;math/tex&quot;&gt;D&lt;/script&gt;，并且已知模型的形式，求参数与潜变量（或不可观测变量）&lt;script type=&quot;math/tex&quot;&gt;Z = \{ {Z_1},...,{Z_n}\}&lt;/script&gt; 的后验分布: P(Z | D)。&lt;/p&gt;
+&lt;p&gt;重新考虑一个问题：1）有一组观测数据&lt;script type=&quot;math/tex&quot;&gt;D&lt;/script&gt;，并且已知模型的形式，求参数与潜变量（或不可观测变量）&lt;script type=&quot;math/tex&quot;&gt;Z = \{ {Z_1},...,{Z_n}\}&lt;/script&gt; 的后验分布: &lt;script type=&quot;math/tex&quot;&gt;P(Z \vert D)&lt;/script&gt;。&lt;/p&gt;
 
-&lt;p&gt;正如上文所描述的后验概率的形式通常是很复杂(Intractable)的,对于一种算法如果不能在多项式时间内求解，往往不是我们所考虑的。因而我们想能不能在误差允许的范围内，用更简单、容易理解(tractable)的数学形式Q(Z)来近似P(Z|D),即 &lt;script type=&quot;math/tex&quot;&gt;P(Z\|D) \approx Q(Z)&lt;/script&gt;。&lt;/p&gt;
+&lt;p&gt;正如上文所描述的后验概率的形式通常是很复杂(Intractable)的,对于一种算法如果不能在多项式时间内求解，往往不是我们所考虑的。因而我们想能不能在误差允许的范围内，用更简单、容易理解(tractable)的数学形式Q(Z)来近似&lt;script type=&quot;math/tex&quot;&gt;P(Z \vert D)&lt;/script&gt;,即 &lt;script type=&quot;math/tex&quot;&gt;P(Z  \vert  D) \approx Q(Z)&lt;/script&gt;。&lt;/p&gt;
 
 &lt;p&gt;由此引出如下两个问题：&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
-    &lt;p&gt;假设存在这样的Q(Z),那么如何度量Q(Z)与P(Z|D)之间的差异性 (dissimilarity).&lt;/p&gt;
+    &lt;p&gt;假设存在这样的&lt;script type=&quot;math/tex&quot;&gt;Q(Z)&lt;/script&gt;,那么如何度量&lt;script type=&quot;math/tex&quot;&gt;Q(Z)&lt;/script&gt;与&lt;script type=&quot;math/tex&quot;&gt;P(Z \vert D)&lt;/script&gt;之间的差异性 (dissimilarity).&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;如何得到简单的Q(Z)?&lt;/p&gt;
+    &lt;p&gt;如何得到简单的&lt;script type=&quot;math/tex&quot;&gt;Q(Z)&lt;/script&gt;?&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;对于问题一，幸运的是，我们不需要重新定义一个度量指标。在信息论中，已经存在描述两个随机分布之间距离的度量，即相对熵，或者称为Kullback-Leibler散度。&lt;/p&gt;
 
-&lt;p&gt;对于问题二，显然我们可以自主决定Q(Z)的分布，只要它足够简单，且与P(Z|D)接近。然而不可能每次都手工给出一个与P(Z|D)接近且简单的Q(Z)，其方法本身已经不具备可操作性。所以需要一种通用的形式帮助简化问题。那么数学形式复杂的原因是什么？在“模型的选择”部分，曾提到Occam’s razor，认为一个模型的参数个数越多，那么模型复杂的概率越大;此外，如果参数之间具有相互依赖关系(mutually dependent)，那么通常很难对参数的边缘概率精确求解。&lt;/p&gt;
+&lt;p&gt;对于问题二，显然我们可以自主决定&lt;script type=&quot;math/tex&quot;&gt;Q(Z)&lt;/script&gt;的分布，只要它足够简单，且与&lt;script type=&quot;math/tex&quot;&gt;P(Z \vert D)&lt;/script&gt;接近。然而不可能每次都手工给出一个与&lt;script type=&quot;math/tex&quot;&gt;P(Z \vert D)&lt;/script&gt;接近且简单的&lt;script type=&quot;math/tex&quot;&gt;Q(Z)&lt;/script&gt;，其方法本身已经不具备可操作性。所以需要一种通用的形式帮助简化问题。那么数学形式复杂的原因是什么？在“模型的选择”部分，曾提到Occam’s razor，认为一个模型的参数个数越多，那么模型复杂的概率越大;此外，如果参数之间具有相互依赖关系(mutually dependent)，那么通常很难对参数的边缘概率精确求解。&lt;/p&gt;
 
-&lt;p&gt;幸运的是，统计物理学界很早就关注了高维概率函数与它的简单形式，并发展了平均场理论。简单讲就是：系统中个体的局部相互作用可以产生宏观层面较为稳定的行为。于是我们可以作出后验条件独立（posterior independence）的假设。即，&lt;script type=&quot;math/tex&quot;&gt;\forall i,p(Z \| D) = p(Z_i \| D)p({Z_{-i}}\|D)&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;幸运的是，统计物理学界很早就关注了高维概率函数与它的简单形式，并发展了平均场理论。简单讲就是：系统中个体的局部相互作用可以产生宏观层面较为稳定的行为。于是我们可以作出后验条件独立（posterior independence）的假设。即，&lt;script type=&quot;math/tex&quot;&gt;\forall i,p(Z  \vert  D) = p(Z_i  \vert  D)p({Z_{-i}} \vert D)&lt;/script&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
 
 &lt;h2 id=&quot;kullback-leibler散度&quot;&gt;Kullback-Leibler散度&lt;/h2&gt;
 
-&lt;p&gt;在统计学中，相对熵对应的是似然比的对数期望，相对熵 &lt;script type=&quot;math/tex&quot;&gt;D(p\|\|q)&lt;/script&gt; 度量当真实分布为 P而假定分布为Q时的无效性。&lt;/p&gt;
+&lt;p&gt;在统计学中，相对熵对应的是似然比的对数期望，相对熵 &lt;script type=&quot;math/tex&quot;&gt;D(p \vert  \vert q)&lt;/script&gt; 度量当真实分布为 P而假定分布为Q时的无效性。&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;定义&lt;/strong&gt;  两个概率密度函数为&lt;script type=&quot;math/tex&quot;&gt;p(x)&lt;/script&gt;和&lt;script type=&quot;math/tex&quot;&gt;q(x)&lt;/script&gt;之间的相对熵定义为&lt;/p&gt;
 
-&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;D_{KL}(p\|\|q) = \sum_{x} p(x) \log \frac{p(x)}{q(x)}&lt;/script&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;D_{KL}(p \vert  \vert q) = \sum_{x} p(x) \log \frac{p(x)}{q(x)}&lt;/script&gt;.&lt;/p&gt;
 
 &lt;p&gt;KL散度有如下性质：&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;{D_{KL}}(p\|\|q) \ne {D_{KL}}(q\|\|p)&lt;/script&gt;;&lt;/li&gt;
-  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;{D_{KL}}(p\|\|q) \ge 0&lt;/script&gt; ，当且仅当&lt;script type=&quot;math/tex&quot;&gt;p=q&lt;/script&gt;时为零；&lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;{D_{KL}}(p \vert  \vert q) \ne {D_{KL}}(q \vert  \vert p)&lt;/script&gt;;&lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;{D_{KL}}(p \vert  \vert q) \ge 0&lt;/script&gt; ，当且仅当&lt;script type=&quot;math/tex&quot;&gt;p=q&lt;/script&gt;时为零；&lt;/li&gt;
   &lt;li&gt;不满足三角不等式。&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;Q分布与P分布的KL散度为：&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;D_{KL}(Q\|\|P) = \sum\limits_Z Q(Z)\log \frac{Q(Z)}{P(Z\|D)} = \sum\limits_Z Q(Z)\log \frac{Q(Z)}{P(Z,D)} + \log P(D)&lt;/script&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;D_{KL}(Q \vert  \vert P) = \sum\limits_Z Q(Z)\log \frac{Q(Z)}{P(Z \vert D)} = \sum\limits_Z Q(Z)\log \frac{Q(Z)}{P(Z,D)} + \log P(D)&lt;/script&gt;
 
 &lt;p&gt;或者&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\log P(D) = {D_{KL}}(Q\|\|P) - \sum\limits_Z {Q(Z)\log \frac{Q(Z)}{P(Z,D)}} ={D_{KL}}(Q\|\|P) + L(Q).&lt;/script&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\log P(D) = {D_{KL}}(Q \vert  \vert P) - \sum\limits_Z {Q(Z)\log \frac{Q(Z)}{P(Z,D)}} ={D_{KL}}(Q \vert  \vert P) + L(Q).&lt;/script&gt;
 
-&lt;p&gt;由于对数证据&lt;script type=&quot;math/tex&quot;&gt;logP(D)&lt;/script&gt;被相应的Q所固定，为了使KL散度最小，则只要极大化&lt;script type=&quot;math/tex&quot;&gt;L(Q)&lt;/script&gt;。通过选择合适的Q，使&lt;script type=&quot;math/tex&quot;&gt;L(Q)&lt;/script&gt;便于计算和求极值。这样就可以得到后验P(Z|D)的近似解析表达式和证据（log evidence）的下界&lt;script type=&quot;math/tex&quot;&gt;L(Q)&lt;/script&gt;，又称为变分自由能（variational free energy）：&lt;/p&gt;
+&lt;p&gt;由于对数证据&lt;script type=&quot;math/tex&quot;&gt;logP(D)&lt;/script&gt;被相应的Q所固定，为了使KL散度最小，则只要极大化&lt;script type=&quot;math/tex&quot;&gt;L(Q)&lt;/script&gt;。通过选择合适的Q，使&lt;script type=&quot;math/tex&quot;&gt;L(Q)&lt;/script&gt;便于计算和求极值。这样就可以得到后验&lt;script type=&quot;math/tex&quot;&gt;P(Z \vert D)&lt;/script&gt;的近似解析表达式和证据（log evidence）的下界&lt;script type=&quot;math/tex&quot;&gt;L(Q)&lt;/script&gt;，又称为变分自由能（variational free energy）：&lt;/p&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;L(Q)=\sum\limits_Z {Q(Z)\log P(Z,D)}-\sum\limits_Z {Q(Z)\log Q(Z)}={E_Q}[\log P(Z,D)]+H(Q)&lt;/script&gt;
 
 &lt;p&gt;&lt;img src=&quot;/img/posts/variational-bayes/vb-1.png&quot; alt=&quot;vb1&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
 
 &lt;h2 id=&quot;平均场理论mean-field-method&quot;&gt;平均场理论（Mean Field Method）&lt;/h2&gt;
 
@@ -1401,7 +1462,7 @@ EM算法计算贝叶斯网络本身的参数的最优值。而VB计算用于近�
 
 &lt;p&gt;根据平均场理论，变分分布Q(Z)可以通过参数和潜在变量的划分（partition）因式分解，比如将&lt;script type=&quot;math/tex&quot;&gt;Z&lt;/script&gt;划分为&lt;script type=&quot;math/tex&quot;&gt;{Z_1} \ldots {Z_M}&lt;/script&gt;&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;Q(Z) = \prod\limits_{i = 1}^M {q(Z_i\|D)}&lt;/script&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;Q(Z) = \prod\limits_{i = 1}^M {q(Z_i \vert D)}&lt;/script&gt;
 
 &lt;p&gt;注意这里并非一个不可观测变量一个划分，而应该根据实际情况做决定。当然你也可以这么做，但是有时候，将几个潜变量放在一起会更容易处理。&lt;/p&gt;
 
@@ -1421,10 +1482,10 @@ EM算法计算贝叶斯网络本身的参数的最优值。而VB计算用于近�
 
 &lt;ol&gt;
   &lt;li&gt;初始化&lt;script type=&quot;math/tex&quot;&gt;{Q^{(0)}}(Z_i)&lt;/script&gt;，可随机取；&lt;/li&gt;
-  &lt;li&gt;在第k步，计算&lt;script type=&quot;math/tex&quot;&gt;{Z_{-i}}&lt;/script&gt;的边缘密度&lt;script type=&quot;math/tex&quot;&gt;Q^{[k]}({Z_{-i}}\|D) \propto \exp \int\limits_{Z_i^*} Q^{[k - 1]}(Z_i\|D) \log P(Z_i,Z_{-i},D)dZ_i&lt;/script&gt;&lt;/li&gt;
-  &lt;li&gt;计算&lt;script type=&quot;math/tex&quot;&gt;Z_i&lt;/script&gt;的边缘密度&lt;script type=&quot;math/tex&quot;&gt;Q^{[k]}(Z_i\|D) \propto \exp \int\limits_{Z_{-i}^*} Q^{[k]}({Z_{-i}}\|D) \log P(Z_i,{Z_{-i}},D)d{Z_{-i}}&lt;/script&gt;&lt;/li&gt;
-  &lt;li&gt;理论上&lt;script type=&quot;math/tex&quot;&gt;{Q^{[\infty ]}}(Z_i\|D)&lt;/script&gt;将会收敛，则反复执行(2), (3)直到&lt;script type=&quot;math/tex&quot;&gt;Q(Z_i)&lt;/script&gt;,&lt;script type=&quot;math/tex&quot;&gt;Q({Z_{-i}})&lt;/script&gt;稳定，或稳定在某个小范围内。&lt;/li&gt;
-  &lt;li&gt;最后，得 &lt;script type=&quot;math/tex&quot;&gt;Q(Z) = Q(Z_i\|D)Q({Z_{-i}}\|D)&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;在第k步，计算&lt;script type=&quot;math/tex&quot;&gt;{Z_{-i}}&lt;/script&gt;的边缘密度&lt;script type=&quot;math/tex&quot;&gt;Q^{[k]}({Z_{-i}} \vert D) \propto \exp \int\limits_{Z_i^*} Q^{[k - 1]}(Z_i \vert D) \log P(Z_i,Z_{-i},D)dZ_i&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;计算&lt;script type=&quot;math/tex&quot;&gt;Z_i&lt;/script&gt;的边缘密度&lt;script type=&quot;math/tex&quot;&gt;Q^{[k]}(Z_i \vert D) \propto \exp \int\limits_{Z_{-i}^*} Q^{[k]}({Z_{-i}} \vert D) \log P(Z_i,{Z_{-i}},D)d{Z_{-i}}&lt;/script&gt;&lt;/li&gt;
+  &lt;li&gt;理论上&lt;script type=&quot;math/tex&quot;&gt;{Q^{[\infty ]}}(Z_i \vert D)&lt;/script&gt;将会收敛，则反复执行(2), (3)直到&lt;script type=&quot;math/tex&quot;&gt;Q(Z_i)&lt;/script&gt;,&lt;script type=&quot;math/tex&quot;&gt;Q({Z_{-i}})&lt;/script&gt;稳定，或稳定在某个小范围内。&lt;/li&gt;
+  &lt;li&gt;最后，得 &lt;script type=&quot;math/tex&quot;&gt;Q(Z) = Q(Z_i \vert D)Q({Z_{-i}} \vert D)&lt;/script&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h3 id=&quot;平均场估计下边缘概率的无意义性-vb-marginals&quot;&gt;平均场估计下边缘概率的无意义性 (VB-marginals)&lt;/h3&gt;
@@ -1435,11 +1496,9 @@ EM算法计算贝叶斯网络本身的参数的最优值。而VB计算用于近�
 
 &lt;p&gt;&lt;img src=&quot;/img/posts/variational-bayes/vb-2.png&quot; alt=&quot;vb2&quot; /&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;边缘密度vb-marginal公式的推导&quot;&gt;边缘密度（VB-marginal）公式的推导&lt;/h2&gt;
-
-&lt;p&gt;上文已经提到我们要找到一个更加简单的函数&lt;script type=&quot;math/tex&quot;&gt;D(Z)&lt;/script&gt;来近似P(Z|D)，同时问题转化为求解证据&lt;script type=&quot;math/tex&quot;&gt;logP(Z)&lt;/script&gt;的下界&lt;script type=&quot;math/tex&quot;&gt;L(Q)&lt;/script&gt;，或者&lt;script type=&quot;math/tex&quot;&gt;L(Q(Z))&lt;/script&gt;。应该注意到&lt;script type=&quot;math/tex&quot;&gt;L(Q)&lt;/script&gt;并非普通的函数，而是以整个函数为自变量的函数，这便是泛函。我们先介绍一下什么是泛函，以及泛函取得极值的必要条件。&lt;/p&gt;
-
 &lt;h3 id=&quot;泛函的概念&quot;&gt;泛函的概念&lt;/h3&gt;
+
+&lt;p&gt;上文已经提到我们要找到一个更加简单的函数&lt;script type=&quot;math/tex&quot;&gt;D(Z)&lt;/script&gt;来近似&lt;script type=&quot;math/tex&quot;&gt;P(Z \vert D)&lt;/script&gt;，同时问题转化为求解证据&lt;script type=&quot;math/tex&quot;&gt;logP(Z)&lt;/script&gt;的下界&lt;script type=&quot;math/tex&quot;&gt;L(Q)&lt;/script&gt;，或者&lt;script type=&quot;math/tex&quot;&gt;L(Q(Z))&lt;/script&gt;。应该注意到&lt;script type=&quot;math/tex&quot;&gt;L(Q)&lt;/script&gt;并非普通的函数，而是以整个函数为自变量的函数，这便是泛函。我们先介绍一下什么是泛函，以及泛函取得极值的必要条件。&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;泛函&lt;/strong&gt;&lt;/p&gt;
 
@@ -1468,9 +1527,9 @@ EM算法计算贝叶斯网络本身的参数的最优值。而VB计算用于近�
 
 &lt;ol&gt;
   &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;% &lt;![CDATA[
-\|\delta y(x)\| &lt; \varepsilon %]]&gt;&lt;/script&gt;;&lt;/li&gt;
+\vert \delta y(x) \vert  &lt; \varepsilon %]]&gt;&lt;/script&gt;;&lt;/li&gt;
   &lt;li&gt;有时还要求&lt;script type=&quot;math/tex&quot;&gt;% &lt;![CDATA[
-\|(\delta y)'(x) \| &lt; \varepsilon %]]&gt;&lt;/script&gt;.&lt;/li&gt;
+\vert (\delta y)'(x)  \vert  &lt; \varepsilon %]]&gt;&lt;/script&gt;.&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;这里的&lt;script type=&quot;math/tex&quot;&gt;\delta y(x)&lt;/script&gt;称为函数&lt;script type=&quot;math/tex&quot;&gt;y(x)&lt;/script&gt;的变分。&lt;/p&gt;
@@ -1490,7 +1549,9 @@ EM算法计算贝叶斯网络本身的参数的最优值。而VB计算用于近�
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;(\frac{\partial}{\partial y} - \frac{d}{dx} \frac{\partial}{\partial y'})
 (F - \lambda G) = 0&lt;/script&gt;
 
-&lt;h3 id=&quot;问题求解&quot;&gt;问题求解&lt;/h3&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;问题求解&quot;&gt;问题求解&lt;/h2&gt;
 
 &lt;p&gt;对于&lt;script type=&quot;math/tex&quot;&gt;L(Q(Z)) = {E_Q(Z)}[\ln P(Z,D)] + H(Q(Z))&lt;/script&gt;，将右式第一项定义为能量(Energy)，第二项看做是信息熵(Shannon entropy)。我们只考虑自然对数的形式，因为对于任何底数的对数总是可以通过换底公式将其写成自然对数与一个常量的乘积形式。另外根据平均场假设可以得到如下积分形式，&lt;/p&gt;
 
@@ -1500,35 +1561,48 @@ EM算法计算贝叶斯网络本身的参数的最优值。而VB计算用于近�
 
 &lt;p&gt;考虑划分&lt;script type=&quot;math/tex&quot;&gt;Z = \left\{ Z_i,{\rm{ }}{Z_{-i}} \right\}&lt;/script&gt;，其中&lt;script type=&quot;math/tex&quot;&gt;Z_{-i} = Z\backslash Z_i&lt;/script&gt;，先考虑能量项(Energy)（第一项），&lt;/p&gt;
 
-&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;{E_Q(Z)}[\ln P(Z,D)]&lt;/script&gt;
-&lt;script type=&quot;math/tex&quot;&gt;= \int {(\prod\limits_i {Q_i(Z_i)} )} \ln P(Z, D)dZ&lt;/script&gt;
-&lt;script type=&quot;math/tex&quot;&gt;=\int Q_i(Z_i)dZ_i\int Q_{-i}({Z_{-i}})\ln P(Z, D)d{Z_{-i}}&lt;/script&gt;
-&lt;script type=&quot;math/tex&quot;&gt;=\int Q_i(Z_i){\left\langle \ln P(Z, D) \right\rangle }_{Q_{-i}(Z_{-i})}dZ_i&lt;/script&gt;
-&lt;script type=&quot;math/tex&quot;&gt;=\int Q_i(Z_i)\ln \exp { \left\langle {\ln P(Z,D)} \right\rangle }_{Q_{-i}({Z_{-i}})} dZ_i&lt;/script&gt;
-&lt;script type=&quot;math/tex&quot;&gt;=\int Q_i(Z_i) \ln Q_i^*(Z_i) dZ_i + \ln C&lt;/script&gt;&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{align}
+{E_Q(Z)}[\ln P(Z,D)] &amp; = \int {(\prod\limits_i {Q_i(Z_i)} )} \ln P(Z, D)dZ\\
+&amp; =\int Q_i(Z_i)dZ_i\int Q_{-i}({Z_{-i}})\ln P(Z, D)d{Z_{-i}}\\
+&amp; =\int Q_i(Z_i){\left\langle \ln P(Z, D) \right\rangle }_{Q_{-i}(Z_{-i})}dZ_i\\
+&amp; =\int Q_i(Z_i)\ln \exp { \left\langle {\ln P(Z,D)} \right\rangle }_{Q_{-i}({Z_{-i}})} dZ_i \\
+&amp; =\int Q_i(Z_i) \ln Q_i^*(Z_i) dZ_i + \ln C \\
+\end{align} %]]&gt;&lt;/script&gt;
 
 &lt;p&gt;其中定义&lt;script type=&quot;math/tex&quot;&gt;Q_i^*(Z_i) = \frac{1}{C}\exp {\left\langle {\ln P(Z,D)} \right\rangle _{Q_{-i}({Z_{-i}})}}&lt;/script&gt;，&lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt;为的归一化常数。再考虑熵量(entropy)（第二项），&lt;/p&gt;
 
-&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;H(Q(Z)) = -\sum\limits_i {\int {(\prod\limits_k {Q_k({Z_k})} )} \ln Q_i(Z_i)dZ} =-\sum\limits_i {\int {\int {Q_i(Z_i)Q_{-i}({Z_{-i}})\ln Q_i(Z_i dZ_id{Z_{-i}}} } }&lt;/script&gt;
- &lt;script type=&quot;math/tex&quot;&gt;=-{\sum\limits_i {\left\langle {\int {Q_i(Z_i)\ln Q_i(Z_i)dZ_i} } \right\rangle } _{Q_{-i}({Z_{-i}})}}&lt;/script&gt;
- &lt;script type=&quot;math/tex&quot;&gt;=-\sum\limits_i {\int {Q_i(Z_i)\ln Q_i(Z_i)dZ_i} }&lt;/script&gt;&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{align*}
+H(Q(Z)) 
+&amp; = -\sum\limits_i {\int {(\prod\limits_k {Q_k({Z_k})} )} \ln Q_i(Z_i)dZ} \\
+&amp; =-\sum\limits_i {\int {\int {Q_i(Z_i)Q_{-i}({Z_{-i}})\ln Q_i(Z_i dZ_id{Z_{-i}}} } }\\
+&amp; =-{\sum\limits_i {\left\langle {\int {Q_i(Z_i)\ln Q_i(Z_i)dZ_i} } \right\rangle } _{Q_{-i}({Z_{-i}})}} \\
+&amp; =-\sum\limits_i \int Q_i(Z_i)\ln Q_i(Z_i)dZ_i
+\end{align*} %]]&gt;&lt;/script&gt;
 
 &lt;p&gt;此时得到泛函，&lt;/p&gt;
 
-&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;L(Q(Z)) = \int {Q_i(Z_i)\ln Q_i^*(Z_i)} dZ_i-\sum\limits_i {\int {Q_i(Z_i)\ln Q_i(Z_i)dZ_i} } + {\rm{lnC}}&lt;/script&gt;
-&lt;script type=&quot;math/tex&quot;&gt;= (\int {Q_i(Z_i)\ln Q_i^*(Z_i)} dZ_i - \int {Q_i(Z_i)\ln Q_i(Z_i)dZ_i} )-\sum\limits_{k \ne i} {\int {Q_k({Z_k})\ln Q_k({Z_k})d{Z_k}} } + {\rm{lnC}}&lt;/script&gt;
-&lt;script type=&quot;math/tex&quot;&gt;=\int Q_i(Z_i)\ln \frac{Q_i^*(Z_i)}{Q_i(Z_i)} dZ_i-\sum\limits_{k \ne i} \int Q_k({Z_k})\ln Q_k({Z_k})d{Z_k} +\ln C&lt;/script&gt;
-&lt;script type=&quot;math/tex&quot;&gt;= - {D_{KL}}(Q_i(Z_i)\|\|Q_i^*(Z_i)) + H[Q_{-i}({Z_{-i}})] + \ln C&lt;/script&gt;&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{align}
+L(Q(Z)) 
+&amp; = \int {Q_i(Z_i)\ln Q_i^*(Z_i)} dZ_i-\sum\limits_i {\int {Q_i(Z_i)\ln Q_i(Z_i)dZ_i} } + {\rm{lnC}} \\
+&amp; = (\int {Q_i(Z_i)\ln Q_i^*(Z_i)} dZ_i - \int {Q_i(Z_i)\ln Q_i(Z_i)dZ_i} )-\sum\limits_{k \ne i} {\int {Q_k({Z_k})\ln Q_k({Z_k})d{Z_k}} } + {\rm{lnC}}\\
+&amp; =\int Q_i(Z_i)\ln \frac{Q_i^*(Z_i)}{Q_i(Z_i)} dZ_i-\sum\limits_{k \ne i} \int Q_k({Z_k})\ln Q_k({Z_k})d{Z_k} +\ln C\\
+&amp; = - {D_{KL}}(Q_i(Z_i) \vert  \vert Q_i^*(Z_i)) + H[Q_{-i}({Z_{-i}})] + \ln C
+\end{align} %]]&gt;&lt;/script&gt;
 
 &lt;p&gt;注意到&lt;script type=&quot;math/tex&quot;&gt;L(Q(Z))&lt;/script&gt; 并非只有一个等式，如果不可观测变量有M个划分。 那么将有M个方程。 为了使得&lt;script type=&quot;math/tex&quot;&gt;L(Q(Z))&lt;/script&gt;达到最大值, 同时注意到约束条件, 根据泛函求条件极值的必要条件, 得,&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\forall i. \frac{\partial}{\partial Q_i(Z_i)} \{- {D_{KL}}[Q_i(Z_i)\|\|Q_i^*(Z_i)] - {\lambda _i}(\int {Q_i(Z_i)} dZ_i - 1)\} : = 0&lt;/script&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\forall i. \frac{\partial}{\partial Q_i(Z_i)} \{- {D_{KL}}[Q_i(Z_i) \vert  \vert Q_i^*(Z_i)] - {\lambda _i}(\int {Q_i(Z_i)} dZ_i - 1)\} : = 0&lt;/script&gt;
 
 &lt;p&gt;直接求解将得到Gibbs分布，略显复杂;实际上，注意到KL散度，我们可以直接得到KL散度等于0的时候，&lt;script type=&quot;math/tex&quot;&gt;L(D)&lt;/script&gt;达到最大值，最终得到&lt;/p&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;Q_i(Z_i) = Q_i^*(Z_i) = \frac{1}{C}\exp {\left\langle {\ln P(Z_i,{Z_{-i}},D)} \right\rangle _{Q_{-i}({Z_{-i}})}}&lt;/script&gt;
 
 &lt;p&gt;C为归一化常数&lt;script type=&quot;math/tex&quot;&gt;C = \int \exp \left\langle {\ln (Z_i,{Z_{-i}},D)} \right\rangle_{Q_{-i}({Z_{-i}})} d Z_{-i}&lt;/script&gt; , &lt;script type=&quot;math/tex&quot;&gt;Q(Z_i)&lt;/script&gt;为联合概率函数在除&lt;script type=&quot;math/tex&quot;&gt;Z_i&lt;/script&gt;本身外的其他划分下的对数期望。又可以写为 &lt;script type=&quot;math/tex&quot;&gt;\ln Q_i(Z_i) = {\left\langle {\ln P(Z_i,{Z_{-i}},D)} \right\rangle_{Q_{-i}({Z_{-i}})}} + const&lt;/script&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
 
 &lt;h2 id=&quot;参考文献&quot;&gt;参考文献&lt;/h2&gt;
 
@@ -1541,6 +1615,8 @@ EM算法计算贝叶斯网络本身的参数的最优值。而VB计算用于近�
 &lt;p&gt;[4] Attias, Hagai. “Inferring parameters and structure of latent variable models by variational Bayes.” &lt;em&gt;Proceedings of the Fifteenth conference on Uncertainty in artificial intelligence&lt;/em&gt;. Morgan Kaufmann Publishers Inc., 1999.&lt;/p&gt;
 
 &lt;p&gt;[5] Attias, Hagai. “A variational Bayesian framework for graphical models.”&lt;em&gt;Advances in neural information processing systems&lt;/em&gt; 12.1-2 (2000): 209-215.&lt;/p&gt;
+
+&lt;hr /&gt;
 
 &lt;p&gt;完整文章下载: &lt;a href=&quot;/pdf/intro_vb_2013.pdf&quot;&gt;[pdf]&lt;/a&gt;&lt;/p&gt;
 
