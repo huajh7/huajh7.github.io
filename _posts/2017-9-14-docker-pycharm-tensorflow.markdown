@@ -37,7 +37,7 @@ tags:
 该教程在Ubuntu 16.04以及 Debian 3.16.36-1+deb8u2 (2016-10-19)上测试成功，主流的Linux发行版应该都可以。
 需要在机器上安装docker，docker-compose，nvidia-docker，nvidia-docker-compose
 需要安装PyCharm Professional 2017.1.4及以上版本。至于license么，懂得自然懂。
-阅读docker相关的文档，了解基本概念，熟悉常用命令。（注：docker官方文档非常清晰详实
+阅读docker相关的文档，了解基本概念，熟悉常用命令。（注：docker官方文档非常清晰详实）
 
 ---
 
