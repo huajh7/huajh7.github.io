@@ -49,9 +49,7 @@ tags:
 4. 按官方教程安装docker-compose，并按教程测试docker是否成功安装。
 5. 按教程安装nvidia-docker-compose
 
-`注意`
-
-3如果不用GPU不是必须的。4和5也不是必须的，但是为了在PyCharm中集成最好还是装上。
+`注意` 3如果不用GPU不是必须的。4和5也不是必须的，但是为了在PyCharm中集成最好还是装上。
 
 ---
 
