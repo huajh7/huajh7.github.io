@@ -49,7 +49,9 @@ tags:
 4. 按官方教程安装docker-compose，并按教程测试docker是否成功安装。
 5. 按教程安装nvidia-docker-compose
 
-==注意==：3如果不用GPU不是必须的。4和5也不是必须的，但是为了在PyCharm中集成最好还是装上
+`注意`
+
+3如果不用GPU不是必须的。4和5也不是必须的，但是为了在PyCharm中集成最好还是装上。
 
 ---
 
@@ -57,16 +59,14 @@ tags:
 
 不需要或者无法使用GUI环境的时候，用命令行就是可以直接在Docker容器内跑tensorflow了，tensorflow官网给出了官方维护的Docker镜像地址。
 如果成功安装了docker及nvidia-docker，在终端中运行
-
 ``` shell
 nvidia-docker run -it -p 8888:8888 tensorflow/tensorflow:latest-gpu
 ```
 就可以启动一个基于tensorflow/tensorflow:latest-gpu的docker container，命令中的参数含义可以参阅docker文档，这里的-it相当于是打开交互命令行窗口，-p则将container内的8888端口映射到host上的8888端口。tensorflow的这个镜像默认会启动jupyter notebook，根据命令行提示信息在本机浏览器中输入url地址如：
-
 ``` shell
 http://localhost:8888/?token=1af80c20f70246419099ecd6528d800147924a1c702def69
 ```
-就可以打开运行在docker容器内的notebook了
+就可以打开运行在docker容器内的notebook了。
 
 
 ![img](/img/posts/docker-pycharm-tensorflow/0.png)
@@ -95,6 +95,7 @@ RUN pip install -r requirements.txt
 #将当前目录复制到镜像/app目录下
 COPY . /app
 ```
+
 docker-compose.yml配置文件定义启动相关服务（service）的docker container。
 
 ``` shell
@@ -147,8 +148,10 @@ nvidia-docker-compose up
 随后选择要执行的脚本，这里注意Python Interpreter是刚才配置好的remote python。配置好后，不管是运行还是调试模式，PyCharm都会启动docker container在其中运行。
 
 ---
+
 ## 结语
-”纸上得来终觉浅，绝知此事要躬行“。还犹豫什么，自己动手试试吧
+
+”纸上得来终觉浅，绝知此事要躬行“。还犹豫什么，自己动手试试吧。
 
 
 
