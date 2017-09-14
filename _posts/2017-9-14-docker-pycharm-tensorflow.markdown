@@ -4,7 +4,7 @@ title:      "docker+pycharm+tensorflow开发深度学习项目"
 subtitle:   " "
 date:       2017-09-14
 author:     "周立峰"
-header-img: "img/post-bg-js-module.jpg"
+header-img: "img/post-bg-universe.jpg"
 catalog:    true
 tags:
     - docker
