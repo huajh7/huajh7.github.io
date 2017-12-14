@@ -4,6 +4,7 @@ title:    "运动检测文献综述"
 subtitle:   "Motion Detection, 运动侦测，移动侦测，移动检测"
 author:     "huajh7"
 catalog:    true
+comments: true
 header-img: "img/post-bg-universe.jpg"
 tags:
   - Motion Detection

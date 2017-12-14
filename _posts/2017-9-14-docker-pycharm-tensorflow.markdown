@@ -6,6 +6,7 @@ date:       2017-09-14
 author:     "板锅锅"
 header-img: "img/post-bg-universe.jpg"
 catalog:    true
+comments: true
 tags:
     - docker
     - pycharm

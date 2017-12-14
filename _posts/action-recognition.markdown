@@ -4,6 +4,7 @@ title: "基于时空特征点与词袋模型的动作识别"
 subtitle:   "Action Recognition & Categories via Spatial-Temporal Features"
 author:     "huajh7"
 catalog:    true
+comments: true
 header-img: "img/post-bg-universe.jpg"
 tags:
   - Action Recognition

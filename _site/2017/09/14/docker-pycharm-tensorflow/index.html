@@ -10,7 +10,7 @@
     <meta name="keywords"  content="华俊豪, huajh, huajh7, Junhao Hua, @huajh, 华俊豪的博客, huajh7's Blog, 博客, 机器学习, 贝叶斯">
     <meta name="theme-color" content="#000000">
     
-    <title>分布式变分贝叶斯  - Junhao Hua 博客 | huajh7's Blog</title>
+    <title>docker+pycharm+tensorflow开发深度学习项目 - Junhao Hua 博客 | huajh7's Blog</title>
 
     <!-- Web App Manifest -->
     <link rel="manifest" href="/pwa/manifest.json">
@@ -19,7 +19,7 @@
     <link rel="shortcut icon" href="/img/favicon.ico">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="http://localhost:4000/2016/12/15/dvb/">
+    <link rel="canonical" href="http://localhost:4000/2017/09/14/docker-pycharm-tensorflow/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -175,17 +175,21 @@
                 <div class="post-heading">
                     <div class="tags">
                         
-                        <a class="tag" href="/tags/#Machine Learning" title="Machine Learning">Machine Learning</a>
+                        <a class="tag" href="/tags/#docker" title="docker">docker</a>
                         
-                        <a class="tag" href="/tags/#Variational Inference" title="Variational Inference">Variational Inference</a>
+                        <a class="tag" href="/tags/#pycharm" title="pycharm">pycharm</a>
+                        
+                        <a class="tag" href="/tags/#tensorflow" title="tensorflow">tensorflow</a>
+                        
+                        <a class="tag" href="/tags/#deep learning" title="deep learning">deep learning</a>
                         
                     </div>
-                    <h1>分布式变分贝叶斯 </h1>
+                    <h1>docker+pycharm+tensorflow开发深度学习项目</h1>
                     
                     
-                    <h2 class="subheading">Distributed Variational Bayesian Algorithms over Sensor Networks</h2>
+                    <h2 class="subheading"> </h2>
                     
-                    <span class="meta">Posted by huajh7 on December 15, 2016</span>
+                    <span class="meta">Posted by 板锅锅 on September 14, 2017</span>
                 </div>
             </div>
         </div>
@@ -205,57 +209,200 @@
                 col-md-10 col-md-offset-1
                 post-container"> <!-- style="width:70%"  col-lg-9 col-lg-offset-1  col-lg-8 col-lg-offset-2 -->
 
-				<h2 id="paper">Paper</h2>
+				<hr />
 
-<p><strong>Hunhao Hua</strong>, Chunguang Li*, <a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=7303974">Distributed Variational Bayesian Algorithms over Sensor Networks</a>, IEEE Transactions on Signal Processing, vol.64, no.3, pp.783-798, Feb. 2016. <a href="http://huajh7.com/publications/dVB_hua2016TSP.pdf">[PDF]</a></p>
+<h2 id="前言">前言</h2>
 
-<h2 id="abstract">Abstract</h2>
+<p>在经历了无数次被安装开发环境导致的各种匪夷所思的错误折磨的一周啥也做不成的惨痛教训之后，我们终于决定用Docker容器来配置我们的日常开发环境。那么问题来了，Docker的好处都有啥？查阅官方文档有真相。对于我们而言最大的好处就是1. 简化开发环境的安装和配置；2. 环境隔离，不用担心不同底层依赖的冲突，如gcc版本，opencv版本等等。如此一来，算法同学们可以把99%的精力放到算法研发上来，远离环境安装和配置的苦恼。
+针对上面的问题，只需要在机器上配置好Docker环境，习惯于命令行和上古文本编辑器（vim，emacs）开发的大神们已经可以发车了。但是，对于像作者这种依赖IDE的菜鸡，还是希望引入Docker后不会影响日常的开发需求，具体包括：</p>
 
-<p>Distributed inference/estimation in Bayesian framework in the context of sensor networks has recently received much attention due to its broad applicability. The variationalBayesian (VB) algorithm is a technique for approximating intractable integrals arising in Bayesian inference. In this paper, we propose two novel distributed VB algorithms for general Bayesian inference problem, which can be applied to a very general class of conjugate-exponential models. In the first approach, the global natural parameters at each node are optimized using a stochastic natural gradient that utilizes the Riemannian geometry of the approximation space, followed by an information diffusion step for cooperationwiththeneighbors.Inthesecond method, a constrained optimization formulation for distributed estimation is established in natural parameter space and solved by alternating direction method of multipliers (ADMM). An application of the distributed inference/estimation of a Bayesian Gaussian mixture model is then presented, to evaluate the effectiveness of the proposed algorithms. Simulations on both synthetic and real datasets demonstrate that the proposed algorithms have excellent performance, which are almost as good as the corresponding centralized VB algorithm relying on all data available in a fusion center.</p>
+<ol>
+  <li>在Docekr环境下能像本地一样流畅地进行项目迭代，编辑-&gt;测试-&gt;运行一种循环。</li>
+  <li>能够在Docker环境下正常跑实验，即读取本地文件系统的数据，再将训练出的模型输出到本地。</li>
+  <li>在Docker容器内继续使用IDE的常用功能如代码补全、代码跳转、debug和profiling。</li>
+</ol>
 
-<p><strong>Index Terms</strong>-</p>
+<p>“世上本没有路，走的人多了，便成了路”。幸运的是，开源社区的老司机们早已为我们趟出了一条路。</p>
 
-<p>Alternating direction method of multipliers, distributed algorithm, stochastic natural gradient, variational Bayes,
-wireless sensor network (WSN).</p>
+<p>1和2用Docker的命令行工具加上一长串参数就可以满足，<a href="https://docs.docker.com/compose/">docker-compose</a>的出现极大地方便了基于Docker的开发和部署。为了让Docker容器能够正常使用GPU，NVIDIA自己推出了<a href="https://github.com/NVIDIA/nvidia-docker">nvidia-docker</a>，有人在此基础上开发了<a href="https://github.com/eywalker/nvidia-docker-compose">nvidia-docker-compose</a>。它们的命令行参数和原有的官方版本基本一致。</p>
+
+<p>3则需要IDE本身提供Docker的集成。目前主流的深度学习框架都提供良好的python API，所以用python IDE来开发深度学习相关的项目成为了不二选择。而<a href="https://blog.jetbrains.com/pycharm/2017/03/docker-compose-getting-flask-up-and-running/">PyCharm</a>在2017 Professional版本里集成了Docker和Docker Compose。如此一来，一套完整的基于Docker+IDE的日常开发环境已经呼之欲出了。下面就以基于<a href="https://www.tensorflow.org/">tensorflow</a>的demo为例，来演示如何用PyCharm完成日常开发和调试，并在Docker容器内用MNIST数据在GPU上训练一个手写数字的CNN分类模型，所有代码及配置文件在<a href="https://github.com/fanOfJava/tf-docker-pycharm-demo">这里</a>。只要按下面的教程配置成功，就可以在自己的机器上通过Docker运行示例代码。</p>
+
+<hr />
+
+<h2 id="准备工作">准备工作</h2>
+
+<p>该教程在Ubuntu 16.04以及 Debian 3.16.36-1+deb8u2 (2016-10-19)上测试成功，主流的Linux发行版应该都可以。
+需要在机器上安装docker，docker-compose，nvidia-docker，nvidia-docker-compose
+需要安装PyCharm Professional 2017.1.4及以上版本。至于license么，懂得自然懂。
+阅读docker相关的文档，了解基本概念，熟悉常用命令。（注：docker官方文档非常清晰详实）</p>
+
+<hr />
+
+<h2 id="安装配置docker">安装配置Docker</h2>
+
+<ol>
+  <li>按官方教程docker ce（community edtion），并按教程测试docker是否成功安装。</li>
+  <li>(可选）Linux环境下的权限变更，这样不用每次docker命令都加sudo，自己没服务器权限找管理员变更。</li>
+  <li>按教程安装nvidia-docker。</li>
+  <li>按官方教程安装docker-compose，并按教程测试docker是否成功安装。</li>
+  <li>按教程安装nvidia-docker-compose</li>
+</ol>
+
+<p><code class="highlighter-rouge">注意</code> 3如果不用GPU不是必须的。4和5也不是必须的，但是为了在PyCharm中集成最好还是装上。</p>
+
+<hr />
+
+<h2 id="在docker中使用tensorflow">在Docker中使用Tensorflow</h2>
+
+<p>不需要或者无法使用GUI环境的时候，用命令行就是可以直接在Docker容器内跑tensorflow了，tensorflow官网给出了官方维护的Docker镜像地址。
+如果成功安装了docker及nvidia-docker，在终端中运行</p>
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>nvidia-docker run -it -p 8888:8888 tensorflow/tensorflow:latest-gpu
+</code></pre>
+</div>
+<p>就可以启动一个基于tensorflow/tensorflow:latest-gpu的docker container，命令中的参数含义可以参阅docker文档，这里的-it相当于是打开交互命令行窗口，-p则将container内的8888端口映射到host上的8888端口。tensorflow的这个镜像默认会启动jupyter notebook，根据命令行提示信息在本机浏览器中输入url地址如：</p>
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>http://localhost:8888/?token<span class="o">=</span>1af80c20f70246419099ecd6528d800147924a1c702def69
+</code></pre>
+</div>
+<p>就可以打开运行在docker容器内的notebook了。</p>
+
+<p><img src="/img/posts/docker-pycharm-tensorflow/0.png" alt="img" /></p>
+
+<hr />
+
+<h2 id="在pycharm上集成docker">在Pycharm上集成Docker</h2>
+
+<p>为了演示如何在pycharm上集成docker来完成日常开发，将示例工程拉到自己本地并在PyCharm中打开，除了python代码外还有几个docker环境需要的配置文件。</p>
+
+<p>Dockerfile配置文件定义如何构建该工程的docker镜像。</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code><span class="c">#基于tensorflow/tensorflow:latest-gpu的docker镜像构建</span>
+FROM tensorflow/tensorflow:latest-gpu
+<span class="c">#暴露8888端口</span>
+EXPOSE 8888
+<span class="c">#执行mkdir命令</span>
+RUN mkdir /app
+<span class="c">#启动container后的默认路径为/app</span>
+WORKDIR /app
+<span class="c">#将requirements.txt文件复制到镜像中的/app/requirements.txt</span>
+COPY requirements.txt /app/requirements.txt
+<span class="c">#执行pip命令</span>
+RUN pip install -r requirements.txt
+<span class="c">#将当前目录复制到镜像/app目录下</span>
+COPY . /app
+</code></pre>
+</div>
+
+<p>docker-compose.yml配置文件定义启动相关服务（service）的docker container。</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code><span class="c"># yml配置文件格式版本为2</span>
+version: <span class="s1">'2'</span>
+services:
+<span class="c"># 定义一个名叫web的service</span>
+  web:
+<span class="c"># 基于当前目录构建镜像</span>
+    build: .
+<span class="c"># 镜像名为tf-demo/docker:0.0.1</span>
+    image: tf-demo/docker:0.0.1
+<span class="c"># 映射端口</span>
+    ports:
+    - <span class="s2">"8888:8888"</span>
+    - <span class="s2">"8887:6006"</span>
+<span class="c"># 映射文件路径</span>
+    volumes:
+    - .:/app
+</code></pre>
+</div>
+<p>docker和docker-compose的配置文件定义好后，我们利用nvidia-docker-compose来自动生成一个GPU版本的yml配置文件，在工程根目录下执行</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>nvidia-docker-compose up
+</code></pre>
+</div>
+<p>执行成功后会在根目录下生成一个nvidia-docker-compose.yml的配置文件，观察文件内容可以发现nvidia-docker-compose在配置文件里加入了GPU相关的内容，这个在配置PyCharm的时候要用到。</p>
+
+<p>打开PyCharm，在File-&gt;Settings-&gt;Build,Execution,Deployment→Docker中配置Docker（进入该界面时应该会自动生成一些配置）</p>
+
+<p><img src="/img/posts/docker-pycharm-tensorflow/1.png" alt="img" /></p>
+
+<p>注意Certificates folder一栏留空,然后在Project→Project Interpreter中配置</p>
+
+<p><img src="/img/posts/docker-pycharm-tensorflow/2.png" alt="img" /></p>
+
+<p>点击右侧小齿轮，选择add remote后</p>
+
+<p><img src="/img/posts/docker-pycharm-tensorflow/3.png" alt="img" /></p>
+
+<p>选择Docker Compose，剩下的一般自动生成，这里注意将Configuration file改为nvidia-docker-compose，这样通过PyCharm启动的docker container可以使用GPU。
+这个配置好后，在PyCharm编辑代码时，所有的代码补全和跳转都是基于docker image中的库，所以即便本地没有安装tensorflow，你也可以正常import。
+接下来创建一个可执行程序</p>
+
+<p><img src="/img/posts/docker-pycharm-tensorflow/4.png" alt="img" /></p>
+
+<p>点击右上角的向下箭头选择Edit Configuration</p>
+
+<p><img src="/img/posts/docker-pycharm-tensorflow/5.png" alt="img" /></p>
+
+<p>随后选择要执行的脚本，这里注意Python Interpreter是刚才配置好的remote python。配置好后，不管是运行还是调试模式，PyCharm都会启动docker container在其中运行。</p>
+
+<hr />
+
+<h2 id="结语">结语</h2>
+
+<p>”纸上得来终觉浅，绝知此事要躬行“。还犹豫什么，自己动手试试吧。</p>
 
 
 
                 <hr style="visibility: hidden;">
 
-                
+				
+				
+				<div id="disqus_thread"></div>
+				<script>
 
+				/**
+				*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+				*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+				/*
+				var disqus_config = function () {
+				this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+				this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+				};
+				*/
+				var disqus_username = 'huajh7';
+				
+				(function() { // DON'T EDIT BELOW THIS LINE
+				var d = document, s = d.createElement('script');
+				s.src = 'https://'+disqus_username+'.disqus.com/embed.js';
+				s.setAttribute('data-timestamp', +new Date());
+				(d.head || d.body).appendChild(s);
+				})();
+				</script>
+				<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+				
+				
+				
+				
+
+                <!-- 网易云跟帖 start -->
+                
+                <!-- 网易云跟帖  end -->
+							
 
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/2014/04/15/action-recognition/" data-toggle="tooltip" data-placement="top" title="基于时空特征点与词袋模型的动作识别">
+                        <a href="/2017/04/14/perception-knowledge-imaginiation/" data-toggle="tooltip" data-placement="top" title="信息的交叉获取与联想激活">
                         Previous<br>
-                        <span>基于时空特征点与词袋模型的动作识别</span>
+                        <span>信息的交叉获取与联想激活</span>
                         </a>
                     </li>
                     
-                    
-                    <li class="next">
-                        <a href="/2017/04/04/markdown_maxiang/" data-toggle="tooltip" data-placement="top" title="Markdown简介">
-                        Next<br>
-                        <span>Markdown简介</span>
-                        </a>
-                    </li>
                     
                 </ul>
 
 
-                
 
-                
 
-                <!-- 网易云跟帖 start -->
-                
-                <div class="comment">  
-                <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>                
-                </div>
-                
-                <!-- 网易云跟帖  end -->
 
             </div>  
 
@@ -290,13 +437,13 @@ wireless sensor network (WSN).</p>
                     <div class="tags">
         				
                             
-                				<a href="/tags/#Machine Learning" title="Machine Learning" rel="4">
+                				<a href="/tags/#Machine Learning" title="Machine Learning" rel="2">
                                     Machine Learning
                                 </a>
                             
         				
                             
-                				<a href="/tags/#Variational Inference" title="Variational Inference" rel="3">
+                				<a href="/tags/#Variational Inference" title="Variational Inference" rel="2">
                                     Variational Inference
                                 </a>
                             
@@ -306,9 +453,19 @@ wireless sensor network (WSN).</p>
                             
         				
                             
-                				<a href="/tags/#Computer Vision" title="Computer Vision" rel="3">
+        				
+                            
+                				<a href="/tags/#Computer Vision" title="Computer Vision" rel="2">
                                     Computer Vision
                                 </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
                             
         				
                             
@@ -342,26 +499,27 @@ wireless sensor network (WSN).</p>
 
 
 
- 
 
-<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
-<script>
-var cloudTieConfig = {
-  url: document.location.href, 
-  sourceId: "",
-  productKey: "e8d529a21f5b4e9a9b3f9f61f540d563",
-  target: "cloud-tie-wrapper"
-};
-var yunManualLoad = true;
-Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
+
+
+
+
+
+
+<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "huajh7";
+    var disqus_identifier = "/2017/09/14/docker-pycharm-tensorflow";
+    var disqus_url = "http://localhost:4000/2017/09/14/docker-pycharm-tensorflow/";
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
 </script>
-
-
-
-
-
-
-
+<!-- disqus 公共JS代码 end -->
 
 
 

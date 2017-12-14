@@ -4,6 +4,7 @@ title:    "信息的交叉获取与联想激活"
 subtitle:   "机器学习的胡思乱想"
 author:     "huajh7"
 catalog:    true
+comments: true
 header-img: "img/post-bg-universe.jpg"
 tags:
   - Ideas

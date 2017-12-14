@@ -5,6 +5,7 @@ subtitle: Variational Message Passing
 author: "huajh7"
 header-img: "img/post-bg-2015.jpg"
 catalog:    true
+comments: true
 tags:
   - Bayesian Networks
   - Machine Learning

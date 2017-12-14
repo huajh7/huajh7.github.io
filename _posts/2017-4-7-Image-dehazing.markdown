@@ -4,6 +4,7 @@ title:    "除雾算法最新进展"
 subtitle:   "Recent developments in Image Haze Removal"
 author:     "huajh7"
 catalog:    true
+comments: true
 header-img: "img/post-bg-universe.jpg"
 tags:
   - Computer Vision

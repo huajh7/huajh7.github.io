@@ -5,9 +5,224 @@
     <description>Imagination is more important than knowledge. -Albert Einstein</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 14 Apr 2017 10:16:24 +0800</pubDate>
-    <lastBuildDate>Fri, 14 Apr 2017 10:16:24 +0800</lastBuildDate>
+    <pubDate>Thu, 14 Dec 2017 10:44:47 +0800</pubDate>
+    <lastBuildDate>Thu, 14 Dec 2017 10:44:47 +0800</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
+    
+      <item>
+        <title>docker+pycharm+tensorflow开发深度学习项目</title>
+        <description>&lt;hr /&gt;
+
+&lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
+
+&lt;p&gt;在经历了无数次被安装开发环境导致的各种匪夷所思的错误折磨的一周啥也做不成的惨痛教训之后，我们终于决定用Docker容器来配置我们的日常开发环境。那么问题来了，Docker的好处都有啥？查阅官方文档有真相。对于我们而言最大的好处就是1. 简化开发环境的安装和配置；2. 环境隔离，不用担心不同底层依赖的冲突，如gcc版本，opencv版本等等。如此一来，算法同学们可以把99%的精力放到算法研发上来，远离环境安装和配置的苦恼。
+针对上面的问题，只需要在机器上配置好Docker环境，习惯于命令行和上古文本编辑器（vim，emacs）开发的大神们已经可以发车了。但是，对于像作者这种依赖IDE的菜鸡，还是希望引入Docker后不会影响日常的开发需求，具体包括：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;在Docekr环境下能像本地一样流畅地进行项目迭代，编辑-&amp;gt;测试-&amp;gt;运行一种循环。&lt;/li&gt;
+  &lt;li&gt;能够在Docker环境下正常跑实验，即读取本地文件系统的数据，再将训练出的模型输出到本地。&lt;/li&gt;
+  &lt;li&gt;在Docker容器内继续使用IDE的常用功能如代码补全、代码跳转、debug和profiling。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;“世上本没有路，走的人多了，便成了路”。幸运的是，开源社区的老司机们早已为我们趟出了一条路。&lt;/p&gt;
+
+&lt;p&gt;1和2用Docker的命令行工具加上一长串参数就可以满足，&lt;a href=&quot;https://docs.docker.com/compose/&quot;&gt;docker-compose&lt;/a&gt;的出现极大地方便了基于Docker的开发和部署。为了让Docker容器能够正常使用GPU，NVIDIA自己推出了&lt;a href=&quot;https://github.com/NVIDIA/nvidia-docker&quot;&gt;nvidia-docker&lt;/a&gt;，有人在此基础上开发了&lt;a href=&quot;https://github.com/eywalker/nvidia-docker-compose&quot;&gt;nvidia-docker-compose&lt;/a&gt;。它们的命令行参数和原有的官方版本基本一致。&lt;/p&gt;
+
+&lt;p&gt;3则需要IDE本身提供Docker的集成。目前主流的深度学习框架都提供良好的python API，所以用python IDE来开发深度学习相关的项目成为了不二选择。而&lt;a href=&quot;https://blog.jetbrains.com/pycharm/2017/03/docker-compose-getting-flask-up-and-running/&quot;&gt;PyCharm&lt;/a&gt;在2017 Professional版本里集成了Docker和Docker Compose。如此一来，一套完整的基于Docker+IDE的日常开发环境已经呼之欲出了。下面就以基于&lt;a href=&quot;https://www.tensorflow.org/&quot;&gt;tensorflow&lt;/a&gt;的demo为例，来演示如何用PyCharm完成日常开发和调试，并在Docker容器内用MNIST数据在GPU上训练一个手写数字的CNN分类模型，所有代码及配置文件在&lt;a href=&quot;https://github.com/fanOfJava/tf-docker-pycharm-demo&quot;&gt;这里&lt;/a&gt;。只要按下面的教程配置成功，就可以在自己的机器上通过Docker运行示例代码。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;准备工作&quot;&gt;准备工作&lt;/h2&gt;
+
+&lt;p&gt;该教程在Ubuntu 16.04以及 Debian 3.16.36-1+deb8u2 (2016-10-19)上测试成功，主流的Linux发行版应该都可以。
+需要在机器上安装docker，docker-compose，nvidia-docker，nvidia-docker-compose
+需要安装PyCharm Professional 2017.1.4及以上版本。至于license么，懂得自然懂。
+阅读docker相关的文档，了解基本概念，熟悉常用命令。（注：docker官方文档非常清晰详实）&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;安装配置docker&quot;&gt;安装配置Docker&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;按官方教程docker ce（community edtion），并按教程测试docker是否成功安装。&lt;/li&gt;
+  &lt;li&gt;(可选）Linux环境下的权限变更，这样不用每次docker命令都加sudo，自己没服务器权限找管理员变更。&lt;/li&gt;
+  &lt;li&gt;按教程安装nvidia-docker。&lt;/li&gt;
+  &lt;li&gt;按官方教程安装docker-compose，并按教程测试docker是否成功安装。&lt;/li&gt;
+  &lt;li&gt;按教程安装nvidia-docker-compose&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;注意&lt;/code&gt; 3如果不用GPU不是必须的。4和5也不是必须的，但是为了在PyCharm中集成最好还是装上。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;在docker中使用tensorflow&quot;&gt;在Docker中使用Tensorflow&lt;/h2&gt;
+
+&lt;p&gt;不需要或者无法使用GUI环境的时候，用命令行就是可以直接在Docker容器内跑tensorflow了，tensorflow官网给出了官方维护的Docker镜像地址。
+如果成功安装了docker及nvidia-docker，在终端中运行&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;nvidia-docker run -it -p 8888:8888 tensorflow/tensorflow:latest-gpu
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;就可以启动一个基于tensorflow/tensorflow:latest-gpu的docker container，命令中的参数含义可以参阅docker文档，这里的-it相当于是打开交互命令行窗口，-p则将container内的8888端口映射到host上的8888端口。tensorflow的这个镜像默认会启动jupyter notebook，根据命令行提示信息在本机浏览器中输入url地址如：&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;http://localhost:8888/?token&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1af80c20f70246419099ecd6528d800147924a1c702def69
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;就可以打开运行在docker容器内的notebook了。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/docker-pycharm-tensorflow/0.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;在pycharm上集成docker&quot;&gt;在Pycharm上集成Docker&lt;/h2&gt;
+
+&lt;p&gt;为了演示如何在pycharm上集成docker来完成日常开发，将示例工程拉到自己本地并在PyCharm中打开，除了python代码外还有几个docker环境需要的配置文件。&lt;/p&gt;
+
+&lt;p&gt;Dockerfile配置文件定义如何构建该工程的docker镜像。&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#基于tensorflow/tensorflow:latest-gpu的docker镜像构建&lt;/span&gt;
+FROM tensorflow/tensorflow:latest-gpu
+&lt;span class=&quot;c&quot;&gt;#暴露8888端口&lt;/span&gt;
+EXPOSE 8888
+&lt;span class=&quot;c&quot;&gt;#执行mkdir命令&lt;/span&gt;
+RUN mkdir /app
+&lt;span class=&quot;c&quot;&gt;#启动container后的默认路径为/app&lt;/span&gt;
+WORKDIR /app
+&lt;span class=&quot;c&quot;&gt;#将requirements.txt文件复制到镜像中的/app/requirements.txt&lt;/span&gt;
+COPY requirements.txt /app/requirements.txt
+&lt;span class=&quot;c&quot;&gt;#执行pip命令&lt;/span&gt;
+RUN pip install -r requirements.txt
+&lt;span class=&quot;c&quot;&gt;#将当前目录复制到镜像/app目录下&lt;/span&gt;
+COPY . /app
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;docker-compose.yml配置文件定义启动相关服务（service）的docker container。&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# yml配置文件格式版本为2&lt;/span&gt;
+version: &lt;span class=&quot;s1&quot;&gt;'2'&lt;/span&gt;
+services:
+&lt;span class=&quot;c&quot;&gt;# 定义一个名叫web的service&lt;/span&gt;
+  web:
+&lt;span class=&quot;c&quot;&gt;# 基于当前目录构建镜像&lt;/span&gt;
+    build: .
+&lt;span class=&quot;c&quot;&gt;# 镜像名为tf-demo/docker:0.0.1&lt;/span&gt;
+    image: tf-demo/docker:0.0.1
+&lt;span class=&quot;c&quot;&gt;# 映射端口&lt;/span&gt;
+    ports:
+    - &lt;span class=&quot;s2&quot;&gt;&quot;8888:8888&quot;&lt;/span&gt;
+    - &lt;span class=&quot;s2&quot;&gt;&quot;8887:6006&quot;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# 映射文件路径&lt;/span&gt;
+    volumes:
+    - .:/app
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;docker和docker-compose的配置文件定义好后，我们利用nvidia-docker-compose来自动生成一个GPU版本的yml配置文件，在工程根目录下执行&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;nvidia-docker-compose up
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;执行成功后会在根目录下生成一个nvidia-docker-compose.yml的配置文件，观察文件内容可以发现nvidia-docker-compose在配置文件里加入了GPU相关的内容，这个在配置PyCharm的时候要用到。&lt;/p&gt;
+
+&lt;p&gt;打开PyCharm，在File-&amp;gt;Settings-&amp;gt;Build,Execution,Deployment→Docker中配置Docker（进入该界面时应该会自动生成一些配置）&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/docker-pycharm-tensorflow/1.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;注意Certificates folder一栏留空,然后在Project→Project Interpreter中配置&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/docker-pycharm-tensorflow/2.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;点击右侧小齿轮，选择add remote后&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/docker-pycharm-tensorflow/3.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;选择Docker Compose，剩下的一般自动生成，这里注意将Configuration file改为nvidia-docker-compose，这样通过PyCharm启动的docker container可以使用GPU。
+这个配置好后，在PyCharm编辑代码时，所有的代码补全和跳转都是基于docker image中的库，所以即便本地没有安装tensorflow，你也可以正常import。
+接下来创建一个可执行程序&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/docker-pycharm-tensorflow/4.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;点击右上角的向下箭头选择Edit Configuration&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/docker-pycharm-tensorflow/5.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;随后选择要执行的脚本，这里注意Python Interpreter是刚才配置好的remote python。配置好后，不管是运行还是调试模式，PyCharm都会启动docker container在其中运行。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;
+
+&lt;p&gt;”纸上得来终觉浅，绝知此事要躬行“。还犹豫什么，自己动手试试吧。&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 14 Sep 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/09/14/docker-pycharm-tensorflow/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/09/14/docker-pycharm-tensorflow/</guid>
+        
+        <category>docker</category>
+        
+        <category>pycharm</category>
+        
+        <category>tensorflow</category>
+        
+        <category>deep learning</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>信息的交叉获取与联想激活</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;非常草率的笔记&lt;/p&gt;
+
+  &lt;p&gt;胡思乱想，千万别当真&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;感知信息的交叉获取&quot;&gt;感知信息的交叉获取&lt;/h2&gt;
+
+&lt;p&gt;信息的获取并非只由单方面的感知，可能是由于多个感知的交叉作用，比如，鼻子闻到香味，眼睛看到物体，耳朵听到声音，以及大脑对历史事件 (人，物，情绪) 的联想。他们之间是如何相互作用的，他们的最终结果是不是引起了想象？&lt;/p&gt;
+
+&lt;p&gt;潜意识构造了一个场景，人类的视觉味觉触觉听觉感受到的感觉作用到这个场景中，存储的知识（画面等）也推送到这个场景中。此时，对动作、物体的判断，是如何快速有效的完成。&lt;/p&gt;
+
+&lt;p&gt;当你置身于一个新环境中，你会对环境中每个未曾见过的物体感兴趣，信息量很大。&lt;/p&gt;
+
+&lt;p&gt;当你坐在熟悉的办公室里，你对办公室的每个物体都有潜意识的判断，这是存储在大脑中的记忆，对你而言，办公室的信息量很低。但有大致的轮廓，这也是大脑记忆的部分。 你不会关注每一个细节，这是人类的大脑策略？
+当你在某一刻在集中注意力的时候，对细节的观察却容易被激活。这也是种策略？&lt;/p&gt;
+
+&lt;p&gt;机器如何调度自己存储的知识，如何在合适的场景下只学习最恰当的知识，并合适的时刻触发激活相关知识。&lt;/p&gt;
+
+&lt;p&gt;高级的激活是想象引起的吗？&lt;/p&gt;
+
+&lt;p&gt;想象不只是：联系，相关，相似性。也不只是局部的，想象可以天马行空，具有&lt;strong&gt;跳跃性&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;p&gt;当实验室师弟说：“他们&lt;code class=&quot;highlighter-rouge&quot;&gt;宿舍&lt;/code&gt;还没去吃饭”的时候，其他人都知道师弟是口误，其实说的是“他们&lt;code class=&quot;highlighter-rouge&quot;&gt;实验室&lt;/code&gt;还没去吃饭”。
+而此时，联想的不只是自然语言层面（或者文字层面）的语义相关性。此时，人会想象这样一个场景，这样一幅画面以及画面所拥有的含义。这种想象被&lt;code class=&quot;highlighter-rouge&quot;&gt;语言/文本&lt;/code&gt;激活的。另一方面，这种想象又激活了&lt;code class=&quot;highlighter-rouge&quot;&gt;实验室&lt;/code&gt;这个概念。&lt;/p&gt;
+
+&lt;p&gt;想象是人比机器高明得多的东西。&lt;/p&gt;
+
+&lt;p&gt;那么，想象是什么，什么才能引发想象？对当前事物的感知，触发了历史的记忆，经过大脑的推理， 或者激活了历史中出现过的，或者生成了虚构的画面。&lt;/p&gt;
+
+&lt;h2 id=&quot;想象潜意识以及做梦&quot;&gt;想象，潜意识，以及做梦&lt;/h2&gt;
+
+&lt;p&gt;人类会做梦，做梦会反应潜意识心理。做梦的内容，跟在睡前思考的东西或者有意识无意识接触的东西相关。做梦跟想象有什么区别。做梦没有新信息的引入（真的没有吗）。机器是不会做梦的，能让机器在做梦(无信息输入)吗, 为了某种目的，是否能够（睡前）输入某种扰动干扰梦境吗？&lt;/p&gt;
+
+&lt;p&gt;Hinton 1995年的wake-sleep algorithm在概念上在某种程度上是否是一种很浅显的&lt;strong&gt;睡眠学习&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;h2 id=&quot;知识的交叉学习&quot;&gt;知识的交叉学习&lt;/h2&gt;
+
+&lt;p&gt;如何对各种领域知识进行交叉学习（图像，语言，文字，气味，触觉），想象的场景是这些交叉学习结果的最终呈现吗。&lt;/p&gt;
+
+&lt;p&gt;如何评价不同信息之间的相互作用。&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 14 Apr 2017 19:07:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/04/14/perception-knowledge-imaginiation/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/04/14/perception-knowledge-imaginiation/</guid>
+        
+        <category>Ideas</category>
+        
+        <category>Imaginiation</category>
+        
+        
+      </item>
     
       <item>
         <title>除雾算法最新进展</title>
@@ -999,62 +1214,6 @@ Bob--&amp;gt;Alice: I am good thanks!
         <guid isPermaLink="true">http://localhost:4000/2017/04/04/markdown_maxiang/</guid>
         
         <category>markdown</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>分布式变分贝叶斯 </title>
-        <description>&lt;h2 id=&quot;paper&quot;&gt;Paper&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Hunhao Hua&lt;/strong&gt;, Chunguang Li*, &lt;a href=&quot;http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=7303974&quot;&gt;Distributed Variational Bayesian Algorithms over Sensor Networks&lt;/a&gt;, IEEE Transactions on Signal Processing, vol.64, no.3, pp.783-798, Feb. 2016. &lt;a href=&quot;http://huajh7.com/publications/dVB_hua2016TSP.pdf&quot;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;abstract&quot;&gt;Abstract&lt;/h2&gt;
-
-&lt;p&gt;Distributed inference/estimation in Bayesian framework in the context of sensor networks has recently received much attention due to its broad applicability. The variationalBayesian (VB) algorithm is a technique for approximating intractable integrals arising in Bayesian inference. In this paper, we propose two novel distributed VB algorithms for general Bayesian inference problem, which can be applied to a very general class of conjugate-exponential models. In the first approach, the global natural parameters at each node are optimized using a stochastic natural gradient that utilizes the Riemannian geometry of the approximation space, followed by an information diffusion step for cooperationwiththeneighbors.Inthesecond method, a constrained optimization formulation for distributed estimation is established in natural parameter space and solved by alternating direction method of multipliers (ADMM). An application of the distributed inference/estimation of a Bayesian Gaussian mixture model is then presented, to evaluate the effectiveness of the proposed algorithms. Simulations on both synthetic and real datasets demonstrate that the proposed algorithms have excellent performance, which are almost as good as the corresponding centralized VB algorithm relying on all data available in a fusion center.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Index Terms&lt;/strong&gt;-&lt;/p&gt;
-
-&lt;p&gt;Alternating direction method of multipliers, distributed algorithm, stochastic natural gradient, variational Bayes,
-wireless sensor network (WSN).&lt;/p&gt;
-
-</description>
-        <pubDate>Thu, 15 Dec 2016 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2016/12/15/dvb/</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/12/15/dvb/</guid>
-        
-        <category>Machine Learning</category>
-        
-        <category>Variational Inference</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>基于时空特征点与词袋模型的动作识别</title>
-        <description>&lt;h2 id=&quot;正文&quot;&gt;正文&lt;/h2&gt;
-
-&lt;p&gt;春学期修了一门《图像与视频分析》课程，很随机地选了大作业，叫”行为检测与识别”。看了一些论文，通过作者提供的代码大致了解了下这个领域的基本内容，然后复现并改善了一些算法。浙大分春夏秋冬四个学期，每个学期共八周课，而我这春季学期需要修五门课，加上自己的研究项目，总的来看，时间是相当紧凑的。虽然如此，在这个充满生机与朝气的四月天里，我依旧能感受到懒散的味道。&amp;lt;/pre&amp;gt;
-视频比较大，还是上传文件大小的限制，等我把php.ini配置完再放出来。这里先给几个较小的视频看看吧~&lt;/p&gt;
-
-&lt;h2 id=&quot;附件&quot;&gt;附件&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Report&lt;/strong&gt;: 行为检测与识别方法研究.[&lt;a href=&quot;http://www.blog.huajh7.com/wp-content/uploads/2014/04/ActionRecog.pdf&quot;&gt;PDF&lt;/a&gt;]&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Slides&lt;/strong&gt;: Action Recognition_Junhao Hua.[&lt;a href=&quot;https://github.com/huajh/action_recognition/blob/master/%5Bslides%5DAction%20Recognition_Junhao%20Hua.pdf&quot;&gt;PDF&lt;/a&gt;]&lt;/p&gt;
-
-&lt;p&gt;(放在github上，还是上传文件大小限制的问题)&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Code&lt;/strong&gt;:  &lt;a href=&quot;https://github.com/huajh/action_recognition&quot;&gt;https://github.com/huajh/action_recognition&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Tue, 15 Apr 2014 23:30:25 +0800</pubDate>
-        <link>http://localhost:4000/2014/04/15/action-recognition/</link>
-        <guid isPermaLink="true">http://localhost:4000/2014/04/15/action-recognition/</guid>
-        
-        <category>Action Recognition</category>
-        
-        <category>Computer Vision</category>
-        
-        <category>Machine Learning</category>
         
         
       </item>
