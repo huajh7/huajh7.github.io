@@ -8,6 +8,7 @@ tags:
   - Variational Inference
 author: "huajh7"
 header-img: "img/post-bg-2015.jpg"
+comments: true
 date: 2013-03-06 17:34:54
 ---
 
